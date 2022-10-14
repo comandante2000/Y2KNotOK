@@ -1,26 +1,55 @@
 #pda-screen {
-    height: 420px;
+  height: 420px;
+  .row-2 {
+    padding: 0px;
+    height: 420px; ///new1
+    width: 330px;
+  }
+  .inner-row-left {
+    width: 15%;
+  }
+  .inner-row-center {
+    background-color: #47b9b2;
+    width: 100% !important;
+    marquee {
+      font-size: 60px;
+    }
+  }
+
+  .inner-row-right {
+    width: 15%;
+  }
+
+  @media (max-width: 575.98px) {
     .row-2 {
-        padding: 0px;
-        height: 420px; ///new1
-        .inner-row-left {
-          width: 15%;
-        }
+      /*background-image: url("../img/gray-mobile-ui-screen.png");*/
+      background-repeat: repeat-y;
+      background-size: cover;
+      background-position: center;
+      margin: auto;
+      width: 100vw;
+      padding: 0px;
+  }
 
-        .inner-row-center {
-          background-color: #47b9b2;
-          width: 100%;
-          marquee {
-            font-size: 60px;
-          }
-        }
+      .inner-row-left {
+        background-color: #737272;
+        width: 1% !important;
+      }
 
-        .inner-row-right {
-          width: 15%;
+      .inner-row-center {
+        width: 100vw;
+        margin-top: -2%;
+      margin-bottom: -1%;
+        marquee {
+          font-family: "Palm Os" "sans-serif";
+          font-size: 60px;
         }
       }
 
-      .row-3 {
-        height: 78px; 
+      .inner-row-right {
+        background-color: #737272;
+        width: 1% !important;
       }
+  
+  }
 }

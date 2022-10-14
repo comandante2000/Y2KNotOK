@@ -1,6 +1,5 @@
-import "./screen.scss";
+import "./Screen.scss";
 export default function Screen() {
-  //   <div class="box" style={{width: '194px',margin: '21% 25%'}}>
   return (
     <div
       id="pda-screen"
