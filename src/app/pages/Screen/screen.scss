@@ -1,0 +1,26 @@
+#pda-screen {
+    height: 420px;
+    .row-2 {
+        padding: 0px;
+        height: 420px; ///new1
+        .inner-row-left {
+          width: 15%;
+        }
+
+        .inner-row-center {
+          background-color: #47b9b2;
+          width: 100%;
+          marquee {
+            font-size: 60px;
+          }
+        }
+
+        .inner-row-right {
+          width: 15%;
+        }
+      }
+
+      .row-3 {
+        height: 78px; 
+      }
+}
