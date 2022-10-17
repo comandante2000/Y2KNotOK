@@ -1,0 +1,14 @@
+#pda-buttons {
+  .row-1 {
+    height: 74px;
+  }
+  @media (max-width: 575.98px) {
+    .row-1 {
+      background-image: url("../../../assets/img/gray-mobile-ui-bottom.png");
+      background-size: cover;
+      background-position: center;
+      margin: auto;
+      width: 100vw;
+    }
+  }
+}

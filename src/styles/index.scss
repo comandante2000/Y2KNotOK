@@ -1,8 +1,15 @@
-.app{
-  min-height: 100vh;
-  background-color: #343434;
-  color: whitesmoke;
+
+.app {
+  font-family: "Palm Os";
+  background: url("../assets/backgrounds/BG.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
 }
-// body{
-//   font-family: 'Palm Os' !important;
-// }
+@media (max-width: 575.98px) {
+  .app {
+    background-image: none;
+  }
+}
