@@ -1,5 +1,4 @@
 #pda-screen {
-  height: 420px;
   .row-2 {
     padding: 0px;
     height: 420px; ///new1
@@ -10,7 +9,9 @@
   }
   .inner-row-center {
     background-color: #47b9b2;
-    width: 100% !important;
+    width: 100%;
+    border-radius: 4px;
+    border: 2px solid #3c3838 ;
     marquee {
       font-size: 60px;
     }
@@ -22,34 +23,34 @@
 
   @media (max-width: 575.98px) {
     .row-2 {
-      /*background-image: url("../img/gray-mobile-ui-screen.png");*/
       background-repeat: repeat-y;
       background-size: cover;
       background-position: center;
       margin: auto;
       width: 100vw;
       padding: 0px;
-  }
+      height: 77vh !important;
+    }
 
-      .inner-row-left {
-        background-color: #737272;
-        width: 1% !important;
-      }
+    .inner-row-left {
+      background-color: #737272;
+      width: 1% !important;
+    }
 
-      .inner-row-center {
-        width: 100vw;
-        margin-top: -2%;
-      margin-bottom: -1%;
-        marquee {
-          font-family: "Palm Os" "sans-serif";
-          font-size: 60px;
-        }
-      }
+    .inner-row-center {
+      width: 100vw;
+      border: 2px solid #1c1c1c;
+      margin: -2%;
 
-      .inner-row-right {
-        background-color: #737272;
-        width: 1% !important;
+      height: 85vh marquee {
+        font-family: "Palm Os" "sans-serif";
+        font-size: 60px;
       }
-  
+    }
+
+    .inner-row-right {
+      background-color: none !important;
+      width: 1% !important;
+    }
   }
 }
