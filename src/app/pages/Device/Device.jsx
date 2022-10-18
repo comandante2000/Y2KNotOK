@@ -5,11 +5,11 @@ import Header from "../Header/Header";
 export default function Device() {
   return (
     <div id="pda-device">
-      <div class="container v2 d-flex justify-content-center gx-0 gy-0">
-        <div class="box">
-          <Header />
-          <Screen />
-          <Buttons />
+      <div className="container v2 d-flex justify-content-center gx-0 gy-0">
+        <div className="box">
+          <Header/>
+          <Screen/>
+          <Buttons/>
         </div>
       </div>
     </div>

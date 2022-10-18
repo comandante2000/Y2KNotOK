@@ -2,6 +2,7 @@ import Layout from "./pages/layout/Layout";
 import Documentation from "./pages/documentation/Documentation";
 import { Route, Routes } from "react-router-dom";
 import Device from "./pages/Device/Device";
+
 function App() {
   return (
     <div className="container-fluid app d-flex justify-content-center">
@@ -9,6 +10,7 @@ function App() {
         <Route path="/" element={<Layout />} />
         <Route path="/documentation" element={<Documentation />} />
         <Route path="/Device" element={<Device />} />
+      
       </Routes>
     </div>
   );
