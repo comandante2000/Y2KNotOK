@@ -1,5 +1,4 @@
 import "./screen.scss";
-import Home from "./Home/Home";
 export default function Screen() {
   return (
     <div id="pda-screen">
@@ -9,7 +8,6 @@ export default function Screen() {
           <marquee behavior="" direction="left">
             hellow v2 world
           </marquee>
-          <div>new</div>
         </div>
         <div className="inner-row-right"></div>
       </div>
