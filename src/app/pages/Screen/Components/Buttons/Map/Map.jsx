@@ -1,9 +1,10 @@
 import "./Map.scss";
 import { useState, useEffect } from "react";
-export default function MapButton() {
+export default function MapButton({ showScreen}) {
   const [active5, setActive5] = useState(false);
   const handleClick5 = () => {
     setActive5((prev) => !prev);
+    showScreen("MapScreen");
   };
 
   return (

@@ -1,9 +1,10 @@
 import "./Message.scss";
 import { useState, useEffect } from "react";
-export default function MessageButton() {
+export default function MessageButton({showScreen}) {
   const [active4, setActive4] = useState(false);
   const handleClick4 = () => {
     setActive4((prev) => !prev);
+    showScreen("MessageScreen");
   };
 
   return (

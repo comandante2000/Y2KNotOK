@@ -1,9 +1,10 @@
 import "./Phone.scss";
 import { useState, useEffect } from "react";
-export default function PhoneButton() {
+export default function PhoneButton({ showScreen}) {
   const [active3, setActive3] = useState(false);
   const handleClick3 = () => {
     setActive3((prev) => !prev);
+    showScreen("PhoneScreen");
   };
 
   return (

@@ -8,11 +8,16 @@
     background-position: center;
     padding-left: 25px;
     width: 329px;
-    background-image: url("../../../assets/img/BOTTOM BAR.png");
+    background-image: url("../../../../../assets/img/BOTTOM BAR.png");
     border-radius: 6px;
     padding-top: 3%;
-  }
-
+    -webkit-border-radius: 6px;
+    -moz-bord1111er-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    -moz-border-radius: 6px;
+}
+    
   @media (max-width: 575.98px) {
     .row-1 {
       background-image: url("../../../assets/img/gray-mobile-ui-bottom.png");
@@ -21,9 +26,9 @@
       margin: auto;
       width: 100vw;
       .buttns {
-        background-image: url("../../../assets/img/BOTTOM BAR M.png");
+        background-image: url("../../../../../assets/img/BOTTOM BAR M.png");
         background-color: none;
-        height: 74px;
+        height: 85px;
         background-size: cover !important;
         background-position: center !important;
         width: 100vw !important;
@@ -34,6 +39,6 @@
           width: 100vw;
         }
       }
-    }
+    } 
   }
 }

@@ -2,6 +2,7 @@ import Layout from "./pages/layout/Layout";
 import Documentation from "./pages/documentation/Documentation";
 import { Route, Routes } from "react-router-dom";
 import Device from "./pages/Device/Device";
+// import RadioPage from "./pages/Intro/Radio";
 
 function App() {
   return (
@@ -9,9 +10,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />} />
         <Route path="/documentation" element={<Documentation />} />
-        <Route path="/Device" element={<Device />} />
-      
+        <Route path="/Device" element={<Device />}/>
+   
       </Routes>
+     
     </div>
   );
 }

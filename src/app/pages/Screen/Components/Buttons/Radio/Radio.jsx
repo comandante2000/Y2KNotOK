@@ -1,9 +1,10 @@
 import "./Radio.scss";
 import { useState, useEffect } from "react";
-export default function RadioButton() {
+export default function RadioButton({ showScreen}) {
   const [active1, setActive1] = useState(false);
   const handleClick1 = () => {
     setActive1((prev) => !prev);
+    showScreen("RadioScreen")
   };
 
   return (

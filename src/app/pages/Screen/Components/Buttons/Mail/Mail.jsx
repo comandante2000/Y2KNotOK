@@ -1,9 +1,13 @@
 import "./Mail.scss";
+
 import { useState, useEffect } from "react";
-export default function MailButton() {
+
+export default function MailButton({showScreen}) {
   const [active2, setActive2] = useState(false);
+
   const handleClick2 = () => {
     setActive2((prev) => !prev);
+    showScreen("MailScreen");
   };
 
   return (

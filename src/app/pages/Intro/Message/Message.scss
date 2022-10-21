@@ -1,4 +1,4 @@
-#pda-home-screen {
+#pda-message-screen {
   .row-2 {
     padding: 0px;
     height: 420px; ///new1
@@ -12,13 +12,11 @@
     width: 100%;
     border-radius: 4px;
     border: 2px solid #3c3838;
-    // marquee {
-    //   font-size: 60px;
-    // }
-    .the-image-home {
+    
+    .the-image-message{
       height: 427px; ///new1
-      background-image: url("../../../assets/backgrounds/introhomev1.png");
-      background-repeat: no-repeat;
+    background-image: url("../../../../assets/backgrounds/messagev2.png");
+    background-repeat: no-repeat;
     }
   }
 
@@ -48,10 +46,9 @@
       margin: -2%;
       margin-bottom: 0%;
 
-      // height: 85vh;
-
-      .the-image-home {
-        background-image: none;
+      height: 85vh marquee {
+        font-family: "Palm Os" "sans-serif";
+        font-size: 60px;
       }
     }
 
