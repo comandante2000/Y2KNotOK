@@ -15,9 +15,17 @@
     // marquee {
     //   font-size: 60px;
     // }
-    .the-image-home {
-      height: 427px; ///new1
-      background-image: url("../../../assets/backgrounds/introhomev1.png");
+    .bat-bar {
+      background-image: url("../../../assets/backgrounds/barv1.png");
+      background-repeat: no-repeat;
+      height: 44px;
+      background-position: center;
+    }
+    .the-image-logo {
+      height: 100px; ///new1
+      background-position: center;
+      margin-top: 140px;
+      background-image: url("../../../assets/backgrounds/logo v3.png");
       background-repeat: no-repeat;
     }
   }
@@ -49,8 +57,7 @@
       margin-bottom: 0%;
 
       // height: 85vh;
-
-      .the-image-home {
+      .bat-bar {
         background-image: none;
       }
     }

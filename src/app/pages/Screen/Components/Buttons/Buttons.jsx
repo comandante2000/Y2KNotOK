@@ -20,7 +20,7 @@ export default function Buttons({showScreen}) {
             <MapButton showScreen={showScreen}/>  
           </li>
         </div>          
-   /+  </div> 
+    </div> 
     </div> 
   );
 }                

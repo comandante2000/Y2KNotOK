@@ -4,7 +4,7 @@ import HomeScreen from "../Screen/Screen";
 import Buttons from "../../pages/Screen/Components/Buttons/Buttons";
 import Header from "../Header/Header";
 import MessagePage from "../Intro/Message/Message";
-import PhonePage from "../Intro/Phone";
+import PhonePage from "../Intro/Phone/Phone";
 import MailPage from "../Intro/Mail/Mail";
 import RadioPage from "../Intro/Radio/Radio";
 import MapPage from "../Intro/Map/Map";
