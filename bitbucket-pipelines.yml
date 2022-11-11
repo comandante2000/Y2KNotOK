@@ -18,6 +18,7 @@ pipelines:
           - build/**
     - step:
         name: Deploy Artifacts to Staging
+        deployment: test
         script:
           - pipe: atlassian/scp-deploy:0.3.3
             variables:
