@@ -22,7 +22,7 @@ pipelines:
         script:
           - pipe: atlassian/scp-deploy:0.3.3
             variables:
-              USER: ubuntu
+              USER: root
               SERVER: 143.198.88.40
               REMOTE_PATH: '~/apps/y2k'
               LOCAL_PATH: 'build/*'
