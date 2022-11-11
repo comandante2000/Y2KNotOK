@@ -15,7 +15,7 @@ pipelines:
           - npm install
           - npm run build
         artifacts:
-          - build/**
+          - dist/**
     - step:
         name: Deploy Artifacts to Staging
         deployment: test
@@ -25,5 +25,5 @@ pipelines:
               USER: root
               SERVER: 143.198.88.40
               REMOTE_PATH: '/var/www/html'
-              LOCAL_PATH: 'build/*'
+              LOCAL_PATH: 'dist/*'
             
