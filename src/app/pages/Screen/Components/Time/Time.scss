@@ -1,0 +1,68 @@
+#time-component{
+    .screen-head {
+        height: 38px;
+  
+        .bar {
+          background-image: url("../../../../../assets/img/barv1.png");
+          height: 24px;
+          width: 44px;
+          background-repeat: no-repeat;
+          margin: 8px;
+        }
+        .battery {
+          background-image: url("../../../../../assets/img/bat.png");
+          background-repeat: no-repeat;
+          height: 21px;
+          width: 107px;
+          margin-top: 10px;
+        }
+        .time {
+          background-color: black;
+          height: 28px;
+          width: 178px;
+          margin-top: 7px;
+          margin-right: 2px;
+          margin-bottom: auto;
+          margin-left: 4.5px;
+          .clock {
+            font-family: "Palm Os";
+            font-size: 24px;
+            color: #47b9b2;
+          }
+        }
+      }
+      .line {
+        background-color: #060606;
+        height: 3px;
+        width: 236px;
+        margin-bottom: 2px;
+        margin-left: 7px;
+        margin-top: -4px;
+      }
+
+      @media (max-width: 575.98px) {
+
+        .screen-head {
+            height: 38px;
+    
+            .time {
+              background-color: #060606;
+              height: 31px;
+              width: 61vw;
+              margin-top: 7px;
+              margin-right: 9px;
+              margin-bottom: auto;
+              margin-left: 25vw;
+            }
+          }
+    
+          .line {
+            background-color: #060606;
+            height: 3px;
+            width: 71vw;
+            margin-bottom: 2px;
+            margin-left: 1vw;
+            margin-top: -4px; 
+          }
+      }
+}

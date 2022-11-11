@@ -6,7 +6,7 @@ import Header from "../Header/Header";
 import MessagePage from "../Intro/Message/Message";
 import PhonePage from "../Intro/Phone/Phone";
 import MailPage from "../Intro/Mail/Mail";
-import RadioPage from "../Intro/Radio/Radio";
+import VoiceMailPage from "../Intro/VoiceMail/VoiceMailPage";
 import MapPage from "../Intro/Map/Map";
 export default function Device() {
   const [screen,showScreen]= useState("HomeScreen");
@@ -19,10 +19,9 @@ export default function Device() {
           {screen === "HomeScreen" && <HomeScreen />}
           {screen === "MailScreen" && <MailPage />}
           {screen === "MapScreen" && <MapPage />}
-          {screen === "RadioScreen" && <RadioPage />}
+          {screen === "VoicemailScreen" && <VoiceMailPage />}
           {screen === "MessageScreen" && <MessagePage />}
           {screen === "PhoneScreen" && <PhonePage />}
-        
           <Buttons
             showScreen={showScreen}
           />
