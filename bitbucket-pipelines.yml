@@ -24,6 +24,6 @@ pipelines:
             variables:
               USER: root
               SERVER: 143.198.88.40
-              REMOTE_PATH: '~/apps/y2k'
+              REMOTE_PATH: '/var/www/html'
               LOCAL_PATH: 'build/*'
             
