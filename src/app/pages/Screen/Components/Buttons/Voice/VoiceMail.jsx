@@ -1,18 +1,18 @@
-import "./Radio.scss";
+import "./VoiceMail.scss";
 import { useState, useEffect } from "react";
-export default function RadioButton({ showScreen}) {
+export default function VoiceMailButton({ showScreen }) {
   const [active1, setActive1] = useState(false);
   const handleClick1 = () => {
     setActive1((prev) => !prev);
-    showScreen("RadioScreen")
+    showScreen("VoicemailScreen");
   };
 
   return (
-    <div id="radio-button">
+    <div id="voice-button">
       <div
         className="button-1"
         type="button"
-        name="radio"
+        name="voice"
         onClick={handleClick1}
         style={{
           backgroundColor: active1 ? "red" : "black",
