@@ -16,7 +16,7 @@ export default function MailPage() {
                 <div className="red-icon "></div>
                 <div className="mail-icon"></div>
                 <div className="d-flex align-items-start flex-column bd-highlight justify-content-center">
-                  <div className="email-name mx-2 fs-5">admin@redwest.com</div>
+                  <div className="email-name mx-2 fs-5">admin@redwest.com </div>
                   <div className="email-subject mx-2 fs-5">Subject Line</div>
                 </div>
               </div>
