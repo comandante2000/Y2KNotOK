@@ -1,0 +1,87 @@
+#pda-mail-screen {
+  .row-2 {
+    padding: 0px;
+    height: 420px; ///new1
+    width: 330px;
+  }
+  .inner-row-left {
+    width: 15%;
+  }
+  .inner-row-center {
+    background-color: #47b9b2;
+    width: 76%;
+    border-radius: 4px;
+    border: 2px solid #3c3838;
+  }
+.red-icon{
+  background-image: url("../../../../assets/backgrounds/redicon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 25px;
+}
+.unred-icon{
+  background-image: url("../../../../assets/backgrounds/unredicon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 25px;
+}
+.mail-icon{
+  background-image: url("../../../../assets/backgrounds/mailicon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 51px;
+ 
+}
+  // .screen-dash {
+  //   .email {
+  //     background-color: #070808;
+  //     height: 21px;
+  //     width: 100px;
+  //     margin-top: 10px;
+  //     margin-left: 3px;
+  //     .text-email {
+  //       color: rgb(30, 219, 232);
+  //     }
+  //   }
+  //   .logo {
+  //     background-image: url("../../../../assets/backgrounds/slogov2.png");
+  //     background-repeat: no-repeat;
+  //     height: 28px;
+  //     width: 96px;
+  //     margin-top: 16px;
+  //   }
+  // }
+
+  .inner-row-right {
+    width: 15%;
+  }
+
+  @media (max-width: 575.98px) {
+    .row-2 {
+      background-repeat: repeat-y;
+      background-size: cover;
+      background-position: center;
+      margin: auto;
+      width: 100vw;
+      padding: 0px;
+      height: 77vh !important;
+    }
+
+    .inner-row-left {
+      background-color: #737272;
+      width: 1% !important;
+    }
+
+    .inner-row-center {
+      width: 100vw;
+      border: 3px solid #1c1c1c;
+      margin: -2%;
+      margin-bottom: 0%;
+    }
+
+    .inner-row-right {
+      background-color: none !important;
+      width: 1% !important;
+    }
+  }
+}
