@@ -10,7 +10,7 @@ export default function PhonePage() {
           <div className="inner-row-left"></div>
           <div className="inner-row-center">
           <Time />
-            <Header/>
+            <Header name="Phone"/>
           </div>
           <div className="inner-row-right"></div>
         </div>
