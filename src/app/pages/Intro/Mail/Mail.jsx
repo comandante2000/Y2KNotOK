@@ -10,49 +10,92 @@ export default function MailPage() {
         <div className="inner-row-center">
           <div>
             <Time />
-            <Header />
+            <Header name="Mail" />
             <div>
-              <div className=" d-flex justify-content-evenly mx-1 border border-dark py-0">
+            
+              <div className=" d-flex justify-content-evenly mx-1 me-3 border border-dark py-0 g-5" type = "button" >
                 <div className="red-icon "></div>
                 <div className="mail-icon"></div>
-                <div className="d-flex align-items-start flex-column bd-highlight justify-content-center">
-                  <div className="email-name mx-2 fs-5">admin@redwest.com</div>
-                  <div className="email-subject mx-2 fs-5">Subject Line</div>
+                <div>
+                  <div className="d-flex justify-content-center ">
+                    <div className="mail-name">admin@redwest.com</div>
+                    <div className="ms-4">12/30</div>
+                  </div>
+                  <div>
+                    <div className="subject">Subject Line</div>
+                  </div>
                 </div>
               </div>
-              <div className=" d-flex justify-content-evenly mx-1 border border-dark py-0">
+
+              <div className=" d-flex justify-content-evenly mx-1 me-3 border border-dark py-0 g-5 border-top-0">
                 <div className="red-icon "></div>
                 <div className="mail-icon"></div>
-                <div className="d-flex align-items-start flex-column bd-highlight justify-content-center">
-                  <div className="email-name mx-2 fs-5">admin@redwest.com</div>
-                  <div className="email-subject mx-2 fs-5">Subject Line</div>
+                <div>
+                  <div className="d-flex justify-content-center ">
+                    <div className="mail-name">admin@redwest.com</div>
+                    <div className="ms-4">12/30</div>
+                  </div>
+                  <div>
+                    <div className="subject">Subject Line</div>
+                  </div>
                 </div>
               </div>
-              <div className=" d-flex justify-content-evenly mx-1 border border-dark py-0">
+
+              <div className=" d-flex justify-content-evenly mx-1 me-3 border border-dark py-0 g-5 border-top-0">
                 <div className="unred-icon "></div>
                 <div className="mail-icon"></div>
-                <div className="d-flex align-items-start flex-column bd-highlight justify-content-center">
-                  <div className="email-name mx-2 fs-5">admin@redwest.com</div>
-                  <div className="email-subject mx-2 fs-5">Subject Line</div>
+                <div>
+                  <div className="d-flex justify-content-center ">
+                    <div className="mail-name">admin@redwest.com</div>
+                    <div className="ms-4">12/30</div>
+                  </div>
+                  <div>
+                    <div className="subject">Subject Line</div>
+                  </div>
                 </div>
               </div>
-              <div className=" d-flex justify-content-evenly mx-1 border border-dark py-0">
+
+              <div className=" d-flex justify-content-evenly mx-1 me-3 border border-dark py-0 g-5 border-top-0">
                 <div className="unred-icon "></div>
                 <div className="mail-icon"></div>
-                <div className="d-flex align-items-start flex-column bd-highlight justify-content-center">
-                  <div className="email-name mx-2 fs-5">admin@redwest.com</div>
-                  <div className="email-subject mx-2 fs-5">Subject Line</div>
+                <div>
+                  <div className="d-flex justify-content-center ">
+                    <div className="mail-name">admin@redwest.com</div>
+                    <div className="ms-4">12/30</div>
+                  </div>
+                  <div>
+                    <div className="subject">Subject Line</div>
+                  </div>
                 </div>
               </div>
-              <div className=" d-flex justify-content-evenly mx-1 border border-dark py-0">
+
+              <div className=" d-flex justify-content-evenly mx-1 me-3 border border-dark py-0 g-5 border-top-0">
                 <div className="unred-icon "></div>
                 <div className="mail-icon"></div>
-                <div className="d-flex align-items-start flex-column bd-highlight justify-content-center">
-                  <div className="email-name mx-2 fs-5">admin@redwest.com</div>
-                  <div className="email-subject mx-2 fs-5">Subject Line</div>
+                <div>
+                  <div className="d-flex justify-content-center ">
+                    <div className="mail-name">admin@redwest.com</div>
+                    <div className="ms-4">12/30</div>
+                  </div>
+                  <div>
+                    <div className="subject">Subject Line</div>
+                  </div>
                 </div>
               </div>
-              
+
+              <div className=" d-flex justify-content-evenly mx-1 me-3 border border-dark py-0 g-5 border-top-0">
+                <div className="unred-icon "></div>
+                <div className="mail-icon"></div>
+                <div>
+                  <div className="d-flex justify-content-center ">
+                    <div className="mail-name">admin@redwest.com</div>
+                    <div className="ms-4">12/30</div>
+                  </div>
+                  <div>
+                    <div className="subject">Subject Line</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

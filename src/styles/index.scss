@@ -1,5 +1,11 @@
+@import "/node_modules/bootstrap/scss/bootstrap";
+
+@font-face {
+  font-family: "Palm OS";
+  src: url("../assets/fonts/palm-os.ttf");
+}
 .app {
-  font-family: "Palm Os";
+  font-family: "Palm OS";
   background: url("../assets/backgrounds/BG.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -7,7 +13,6 @@
   height: 100vh;
   width: 100vw;
   box-shadow: inset 0 0rem 8rem 6rem #060606d4;
-  // box-shadow: inset 0 0 135px 175px rgb(6 6 6 / 95%);
 }
 @media (max-width: 575.98px) {
   .app {
