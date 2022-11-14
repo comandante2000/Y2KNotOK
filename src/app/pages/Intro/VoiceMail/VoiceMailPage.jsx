@@ -9,12 +9,12 @@ export default function VoiceMailPage() {
         <div className="inner-row-left"></div>
         <div className="inner-row-center">
           <Time />
-          <Header />
+          <Header name="VoiceMail"/>
 
-          <div className=" d-flex justify-content-evenly mx-2 border border-dark py-0 g-5">
+          <div className=" d-flex justify-content-evenly mx-1 me-3 border border-dark py-0 g-5">
             <div className="red-icon "></div>
             <div className="voice-icon "></div>
-            <div className="d-flex align-items-start flex-column bd-highlight justify-content-evenly">
+            <div className="d-flex align-items-start flex-column  justify-content-evenly">
               <div className="d-flex justify-content-center">
                 <div className="email-name">Timothee</div>
                 <div className="ms-5">12/30</div>
@@ -26,10 +26,10 @@ export default function VoiceMailPage() {
             </div>
           </div>
 
-          <div className=" d-flex justify-content-evenly mx-2 border border-dark py-0 g-5">
+          <div className=" d-flex justify-content-evenly mx-1 me-3 border border-dark py-0 g-5 border-top-0">
             <div className="red-icon "></div>
             <div className="voice-icon "></div>
-            <div className="d-flex align-items-start flex-column bd-highlight justify-content-evenly">
+            <div className="d-flex align-items-start flex-column  justify-content-evenly">
               <div className="d-flex justify-content-center">
                 <div className="email-name">Timothee</div>
                 <div className="ms-5">12/30</div>
@@ -42,10 +42,10 @@ export default function VoiceMailPage() {
           </div>
 
 
-          <div className=" d-flex justify-content-evenly mx-2 border border-dark py-0 g-5">
+          <div className=" d-flex justify-content-evenly mx-1 me-3 border border-dark py-0 g-5 border-top-0">
             <div className="unred-icon "></div>
             <div className="voice-icon "></div>
-            <div className="d-flex align-items-start flex-column bd-highlight justify-content-evenly">
+            <div className="d-flex align-items-start flex-column  justify-content-evenly">
               <div className="d-flex justify-content-center">
                 <div className="email-name">Timothee</div>
                 <div className="ms-5">12/30</div>
@@ -58,10 +58,10 @@ export default function VoiceMailPage() {
           </div>
 
 
-          <div className=" d-flex justify-content-evenly mx-2 border border-dark py-0 g-5">
+          <div className=" d-flex justify-content-evenly mx-1 me-3 border border-dark py-0 g-5 border-top-0">
             <div className="unred-icon "></div>
             <div className="voice-icon "></div>
-            <div className="d-flex align-items-start flex-column bd-highlight justify-content-evenly">
+            <div className="d-flex align-items-start flex-column  justify-content-evenly">
               <div className="d-flex justify-content-center">
                 <div className="email-name">Timothee</div>
                 <div className="ms-5">12/30</div>
@@ -74,10 +74,10 @@ export default function VoiceMailPage() {
           </div>
 
 
-          <div className=" d-flex justify-content-evenly mx-2 border border-dark py-0 g-5">
+          <div className=" d-flex justify-content-evenly mx-1 me-3 border border-dark py-0 g-5 border-top-0">
             <div className="unred-icon "></div>
             <div className="voice-icon "></div>
-            <div className="d-flex align-items-start flex-column bd-highlight justify-content-evenly">
+            <div className="d-flex align-items-start flex-column  justify-content-evenly">
               <div className="d-flex justify-content-center">
                 <div className="email-name">Timothee</div>
                 <div className="ms-5">12/30</div>
@@ -90,10 +90,10 @@ export default function VoiceMailPage() {
           </div>
 
 
-          <div className=" d-flex justify-content-evenly mx-2 border border-dark py-0 g-5">
+          <div className=" d-flex justify-content-evenly mx-1 me-3 border border-dark py-0 g-5 ">
             <div className="unred-icon "></div>
             <div className="voice-icon "></div>
-            <div className="d-flex align-items-start flex-column bd-highlight justify-content-evenly">
+            <div className="d-flex align-items-start flex-column justify-content-evenly">
               <div className="d-flex justify-content-center">
                 <div className="email-name">Timothee</div>
                 <div className="ms-5">12/30</div>
