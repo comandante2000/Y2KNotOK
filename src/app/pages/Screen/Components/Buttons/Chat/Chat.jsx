@@ -1,6 +1,6 @@
-import "./Message.scss";
+import "./Chat.scss";
 import { useState, useEffect } from "react";
-export default function MessageButton({showScreen}) {
+export default function ChatButton({showScreen}) {
   const [active4, setActive4] = useState(false);
   const handleClick4 = () => {
     setActive4((prev) => !prev);
@@ -8,11 +8,11 @@ export default function MessageButton({showScreen}) {
   };
 
   return (
-    <div id="message-button">
+    <div id="chat-button">
       <div
         className="button-4"
         type="button"
-        name="message"
+        name="chat"
         onClick={handleClick4}
         style={{
           backgroundColor: active4 ? "red" : "black",

@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import HomeScreen from "../Screen/Screen";
 import Buttons from "../../pages/Screen/Components/Buttons/Buttons";
 import Header from "../Header/Header";
-import MessagePage from "../Intro/Message/Message";
+import ChatPage from "../Intro/Chat/Chat";
 import PhonePage from "../Intro/Phone/Phone";
 import MailPage from "../Intro/Mail/Mail";
 import VoiceMailPage from "../Intro/VoiceMail/VoiceMailPage";
@@ -20,7 +20,7 @@ export default function Device() {
           {screen === "MailScreen" && <MailPage />}
           {screen === "MapScreen" && <MapPage />}
           {screen === "VoicemailScreen" && <VoiceMailPage />}
-          {screen === "MessageScreen" && <MessagePage />}
+          {screen === "MessageScreen" && <ChatPage />}
           {screen === "PhoneScreen" && <PhonePage />}
           <Buttons
             showScreen={showScreen}

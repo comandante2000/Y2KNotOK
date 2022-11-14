@@ -18,18 +18,23 @@
       background-image: url("../../../../assets/backgrounds/redicon.png");
       background-repeat: no-repeat;
       background-position: center;
-     width: 62px;
+     width: 26px;
     }
-    .cam-icon{
-      background-image: url("../../../../assets/backgrounds/cam.png");
+
+    .unred-icon{
+      background-image: url("../../../../assets/backgrounds/unredicon.png");
       background-repeat: no-repeat;
       background-position: center;
-      width: 32px;
-      
-      
+      width: 25px;
+    }
+    .voice-icon{
+      background-image: url("../../../../assets/backgrounds/voice.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 52px;
     }
    
-    .pay-icon{
+    .play-icon{
       background-image: url("../../../../assets/backgrounds/pay.png");
       background-repeat: no-repeat;
       background-position: center;
