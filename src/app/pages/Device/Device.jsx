@@ -1,6 +1,6 @@
 import "./Device.scss";
 import { useState, useEffect } from "react";
-import HomeScreen from "../Screen/Screen";
+import HomeScreen from "../Screen/HomeScreen";
 import Buttons from "../../pages/Screen/Components/Buttons/Buttons";
 import Header from "../Header/Header";
 import ChatPage from "../Intro/Chat/Chat";
@@ -9,7 +9,9 @@ import MailPage from "../Intro/Mail/Mail";
 import VoiceMailPage from "../Intro/VoiceMail/VoiceMailPage";
 import MapPage from "../Intro/Map/Map";
 export default function Device() {
+
   const [screen,showScreen]= useState("HomeScreen");
+ 
 
   return ( 
     <div id="pda-device">

@@ -12,49 +12,16 @@
     width: 76%;
     border-radius: 4px;
     border: 2px solid #3c3838;
-  }
-.red-icon{
-  background-image: url("../../../../assets/backgrounds/redicon.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 25px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
 }
-.unred-icon{
-  background-image: url("../../../../assets/backgrounds/unredicon.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 25px;
-}
-.mail-icon{
-  background-image: url("../../../../assets/backgrounds/mailicon.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 51px;
- 
-}
-  // .screen-dash {
-  //   .email {
-  //     background-color: #070808;
-  //     height: 21px;
-  //     width: 100px;
-  //     margin-top: 10px;
-  //     margin-left: 3px;
-  //     .text-email {
-  //       color: rgb(30, 219, 232);
-  //     }
-  //   }
-  //   .logo {
-  //     background-image: url("../../../../assets/backgrounds/slogov2.png");
-  //     background-repeat: no-repeat;
-  //     height: 28px;
-  //     width: 96px;
-  //     margin-top: 16px;
-  //   }
-  // }
 
   .inner-row-right {
     width: 15%;
   }
+  
 
   @media (max-width: 575.98px) {
     .row-2 {
@@ -83,5 +50,8 @@
       background-color: none !important;
       width: 1% !important;
     }
+
   }
-}
+  
+  }
+

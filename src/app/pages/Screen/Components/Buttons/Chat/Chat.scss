@@ -1,11 +1,20 @@
 #chat-button{
     .button-4 {
-      background-image: url("../../../../../../assets/buttons/Mask Group 10v3.png");
+      background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/chat-b.png");
       height: 46px;
       width: 46px;
       background-repeat: no-repeat;
       margin: auto;
       margin-inline: 3px;
       }
+
+      .red {
+        box-shadow: inset 0px 0px 12px 3px  #862a2ad4;
+        border-radius: 25px;
+      }
+      .black{
+        box-shadow: inset 0px 0px 12px 3px  #101010d4;
+        border-radius: 25px;
+    }
        
 }

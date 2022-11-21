@@ -1,6 +1,6 @@
 #phone-button {
   .button-3 {
-    background-image: url("../../../../../../assets/buttons/Mask Group 8v3.png");
+    background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/phone-b.png");
     height: 60px;
     width: 59px;
     background-repeat: no-repeat;
@@ -8,4 +8,14 @@
     margin-inline: 3px;
     margin-top: -8px;
   }
+  .red {
+    box-shadow: inset 0px 0px 12px 3px rgb(153 5 5 / 83%);
+    border-radius: 29px;
+  
+}
+  .black{
+    box-shadow: inset 0px 0px 12px 3px  #101010d4;
+    border-radius: 29px;
+  
+}
 }
