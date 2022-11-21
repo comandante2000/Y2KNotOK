@@ -8,10 +8,13 @@
     width: 15%;
   }
   .inner-row-center {
+    background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/pda-crack-screen.png");
     background-color: #47b9b2;
+    background-blend-mode: multiply;
     width: 76%;
     border-radius: 4px;
     border: 2px solid #3c3838;
+    background-size: contain;
     // marquee {
     //   font-size: 60px;
     // }
@@ -60,6 +63,7 @@
       background-position: center;
       margin-top: 140px;
       background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/homelogo.png");
+      //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/redwest-logo.svg");
       background-repeat: no-repeat;
     }
   }

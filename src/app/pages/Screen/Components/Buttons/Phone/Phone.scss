@@ -7,15 +7,16 @@
     margin: auto;
     margin-inline: 3px;
     margin-top: -8px;
+    background-position: center;
   }
   .red {
-    box-shadow: inset 0px 0px 12px 3px rgb(153 5 5 / 83%);
-    border-radius: 29px;
+    border-radius: 50%;
+    border: 4px solid rgba(134,42,42,0.72);
   
 }
   .black{
-    box-shadow: inset 0px 0px 12px 3px  #101010d4;
     border-radius: 29px;
+    border: 4px solid rgba(16, 16, 16, 0.75);
   
 }
 }

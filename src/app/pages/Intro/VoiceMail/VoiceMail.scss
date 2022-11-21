@@ -10,7 +10,10 @@
       width: 15%;
     }
     .inner-row-center {
+      background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/pda-crack-screen.png");
       background-color: #47b9b2;
+      background-blend-mode: multiply;
+      background-size: contain;
       width: 76%;
       border-radius: 4px;
       border: 2px solid #3c3838;
@@ -23,18 +26,21 @@
     
     .red-icon{
       background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/redicon.png");
+      //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/Read.svg");
       background-repeat: no-repeat;
       background-position: center;
      width: 26px;
     }
     .unred-icon{
       background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/unredicon.png");
+      //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/Unread.svg");
       background-repeat: no-repeat;
       background-position: center;
       width: 25px;
     }
     .voice-icon{
       background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/voice.png");
+      //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/Voicemail.svg");
       background-repeat: no-repeat;
       background-position: center;
       width: 52px;
@@ -42,6 +48,7 @@
    
     .play-icon{
       background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/pay.png");
+      //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/Play.svg");
       background-repeat: no-repeat;
       background-position: center;
       height: 27px;
@@ -51,6 +58,7 @@
     }
     .sound-icon {
       background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/sound.png");
+      //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/Sample-Audiowave.svg");
            background-repeat: no-repeat;
            background-position: x;
            width: 75px;
