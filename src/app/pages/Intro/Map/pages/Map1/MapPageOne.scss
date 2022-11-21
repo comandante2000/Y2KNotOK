@@ -1,0 +1,31 @@
+#map-pageone-screen {
+  .image {
+    margin-top: -71px;
+    .image-map {
+      background-image: url("./map3.png");
+      width: 240px;
+      height: 409px;
+      background-repeat: no-repeat;
+      transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      -o-transform: scale(1.1);
+}
+  }
+
+  @media (max-width: 575.98px) {
+
+    .image {
+        margin-top: -71px;
+        .image-map {
+          background-image: url("./rmap.png");
+          width: 100vw;
+          height: 80vh;
+          background-repeat: no-repeat;
+        }
+      }
+
+
+  }
+}
