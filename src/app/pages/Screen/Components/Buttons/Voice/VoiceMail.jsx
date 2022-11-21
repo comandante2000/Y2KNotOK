@@ -1,24 +1,24 @@
 import "./VoiceMail.scss";
 import { useState, useEffect } from "react";
-export default function VoiceMailButton({ showScreen }) {
-  const [active1, setActive1] = useState(false);
-  const handleClick1 = () => {
-    setActive1((prev) => !prev);
+export default function VoiceMailButton({ showScreen,setActive ,color}) {
+
+
+
+
+
+  const handleClick = () => {
     showScreen("VoicemailScreen");
+    setActive("voice");
+    
   };
 
   return (
     <div id="voice-button">
       <div
-        className="button-1"
+        className={`button-1 ${color=="voice"? "red":"black"}`}
         type="button"
         name="voice"
-        onClick={handleClick1}
-        style={{
-          backgroundColor: active1 ? "red" : "black",
-          borderRadius: "25px",
-          border: active1 ? "2px solid #e32828f7" : "none",
-        }}
+        onClick={handleClick}
       ></div>
     </div>
   );

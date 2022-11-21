@@ -1,10 +1,18 @@
 #map-button{
     .button-5 {
-      background-image: url("../../../../../../assets/buttons/Mask Group 11v3.png");
+      background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/map-b.png");
       background-repeat: no-repeat;
       height: 46px;
       width: 46px;
       margin: auto;
       margin-inline: 3px;
       }
+      .red {
+        box-shadow: inset 0px 0px 12px 3px  #862a2ad4;
+        border-radius: 25px;
+      }
+      .black{
+        box-shadow: inset 0px 0px 12px 3px  #101010d4;
+        border-radius: 25px;
+    }
 }

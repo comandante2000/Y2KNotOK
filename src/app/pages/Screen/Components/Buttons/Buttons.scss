@@ -8,7 +8,7 @@
     background-position: center;
     padding-left: 25px;
     width: 329px;
-    background-image: url("../../../../../assets/img/BOTTOM BAR.png");
+    background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/BOTTOM_BAR.png");
     border-radius: 6px;
     padding-top: 3%;
     -webkit-border-radius: 6px;
@@ -20,13 +20,13 @@
     
   @media (max-width: 575.98px) {
     .row-1 {
-      background-image: url("../../../assets/img/gray-mobile-ui-bottom.png");
+      
       background-size: cover;
       background-position: center;
       margin: auto;
       width: 100vw;
       .buttns {
-        background-image: url("../../../../../assets/img/BOTTOM BAR M.png");
+        background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/BOTTOM-M.png");
         background-color: none;
         height: 85px;
         background-size: cover !important;
