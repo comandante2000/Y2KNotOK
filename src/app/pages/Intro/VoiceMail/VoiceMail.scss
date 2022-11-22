@@ -10,7 +10,8 @@
       width: 15%;
     }
     .inner-row-center {
-      background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/pda-crack-screen.png");
+      //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/pda-crack-screen.png");
+      background-image: url("https://images.stinkyfruit.com/PDA_Crack_Screen.svg");
       background-color: #47b9b2;
       background-blend-mode: multiply;
       background-size: contain;
@@ -25,30 +26,32 @@
     }
     
     .red-icon{
-      background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/redicon.png");
-      //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/Read.svg");
+      //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/redicon.png");
+      background-image: url("https://images.stinkyfruit.com/Read.svg");
       background-repeat: no-repeat;
       background-position: center;
-     width: 26px;
+      width: 26px;
+
     }
     .unred-icon{
-      background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/unredicon.png");
-      //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/Unread.svg");
+      //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/unredicon.png");
+      background-image: url("https://images.stinkyfruit.com/Un_read.svg");
       background-repeat: no-repeat;
       background-position: center;
       width: 25px;
+      background-size: 100%;
     }
     .voice-icon{
-      background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/voice.png");
-      //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/Voicemail.svg");
+      //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/voice.png");
+      background-image: url("https://images.stinkyfruit.com/Voicemail_icon.svg");
       background-repeat: no-repeat;
       background-position: center;
       width: 52px;
     }
    
     .play-icon{
-      background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/pay.png");
-      //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/Play.svg");
+      //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/pay.png");
+      background-image: url("https://images.stinkyfruit.com/Voicemail_Play.svg");
       background-repeat: no-repeat;
       background-position: center;
       height: 27px;
@@ -57,12 +60,12 @@
      
     }
     .sound-icon {
-      background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/sound.png");
-      //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/Sample-Audiowave.svg");
-           background-repeat: no-repeat;
-           background-position: x;
-           width: 75px;
-         }
+      //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/sound.png");
+      background-image: url("https://images.stinkyfruit.com/Sample_Audiowave.svg");
+     background-repeat: no-repeat;
+     background-position: x;
+     width: 75px;
+    }
     
 
     
