@@ -11,10 +11,11 @@
     }
     .inner-row-center {
       //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/pda-crack-screen.png");
-      background-image: url("//images.stinkyfruit.com/PDA_Crack_Screen.svg");
+      background-image: url("https://images.stinkyfruit.com/PDA_Crack_Screen.svg");
       background-color: #47b9b2;
       background-blend-mode: multiply;
-      background-size: contain;
+      background-size: cover;
+      background-repeat: no-repeat;
       width: 76%;
       border-radius: 4px;
       border: 2px solid #3c3838;
@@ -27,7 +28,7 @@
     
     .red-icon{
       //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/redicon.png");
-      background-image: url("//images.stinkyfruit.com/Read.svg");
+      background-image: url("https://images.stinkyfruit.com/Read.svg");
       background-repeat: no-repeat;
       background-position: center;
       width: 26px;
@@ -35,7 +36,7 @@
     }
     .unred-icon{
       //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/unredicon.png");
-      background-image: url("//images.stinkyfruit.com/Un_read.svg");
+      background-image: url("https://images.stinkyfruit.com/Un_read.svg");
       background-repeat: no-repeat;
       background-position: center;
       width: 25px;
@@ -43,7 +44,7 @@
     }
     .voice-icon{
       //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/voice.png");
-      background-image: url("//images.stinkyfruit.com/Voicemail_icon.svg");
+      background-image: url("https://images.stinkyfruit.com/Voicemail_icon.svg");
       background-repeat: no-repeat;
       background-position: center;
       width: 52px;
@@ -51,7 +52,7 @@
    
     .play-icon{
       //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/pay.png");
-      background-image: url("//images.stinkyfruit.com/Voicemail_Play.svg");
+      background-image: url("https://images.stinkyfruit.com/Voicemail_Play.svg");
       background-repeat: no-repeat;
       background-position: center;
       height: 27px;
@@ -61,7 +62,7 @@
     }
     .sound-icon {
       //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/sound.png");
-      background-image: url("//images.stinkyfruit.com/Sample_Audiowave.svg");
+      background-image: url("https://images.stinkyfruit.com/Sample_Audiowave.svg");
      background-repeat: no-repeat;
      background-position: x;
      width: 75px;
@@ -94,6 +95,8 @@
         border: 3px solid #1c1c1c;
         margin: -2%;
         margin-bottom: 0%;
+        background-size: cover;
+        background-repeat: no-repeat;
   
         .the-image-radio{
           height: 427px; ///new1
