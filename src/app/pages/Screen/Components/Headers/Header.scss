@@ -11,6 +11,7 @@
       background-repeat: no-repeat;
       .text-email {
         color: #47b9b2;
+        text-align: center;
       }
     }
     .logo {
@@ -21,6 +22,31 @@
       width: 105px;
       margin-top: 16px;
       background-size: 100%;
+    }
+  }
+}
+@media (max-width: 575.98px) and (orientation: portrait) {
+  #mail-screen-one{
+    .screen-dash{
+      height: 45px;
+      align-items: center;
+      .email{
+        height: 38px;
+        width: 30vw;
+        margin-top: 1px;
+        background-repeat: no-repeat;
+        background-position: center;
+        .text-email {
+          font-size: 24px;
+          text-align: center;
+        }
+      }
+      .logo{
+        width: 42vw;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        background-position: center;
+      }
     }
   }
 }
