@@ -6,17 +6,18 @@
           //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/barv1.png");
           background-image: url("https://images.stinkyfruit.com/Signal_Icon.svg");
           height: 24px;
-          width: 35px;
+          width: 42px;
           background-repeat: no-repeat;
           margin: 8px;
+          background-size: 100%;
         }
         .battery {
           //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/bat.png");
           background-image: url("https://images.stinkyfruit.com/Battery_Icon.svg");
           background-repeat: no-repeat;
           height: 21px;
-          width: 107px;
-          margin-top: 6px;
+          width: 100px;
+          margin-top: 11px;
           background-position: bottom left;
         }
         .time {

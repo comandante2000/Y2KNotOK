@@ -20,11 +20,13 @@
     
   @media (max-width: 575.98px) {
     .row-1 {
-      
+      height: 100%;
       background-size: cover;
       background-position: center;
       margin: auto;
       width: 100vw;
+      background-color: #818181;
+
       .buttns {
         background-image: url("https://images.stinkyfruit.com/BOTTOM-M.png");
         background-color: none;
