@@ -1,115 +1,129 @@
 #pda-voicemail-screen {
-  
+  .row-2 {
+    padding: 0px;
+    height: 420px; ///new1
+    width: 330px;
+  }
+
+  .inner-row-left {
+    width: 15%;
+  }
+  .inner-row-center {
+    //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/pda-crack-screen.png");
+    background-image: url("https://images.stinkyfruit.com/PDA_Crack_Screen.svg");
+    background-color: #47b9b2;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 76%;
+    border-radius: 4px;
+    border: 2px solid #3c3838;
+  }
+  .voice-pop-up {
+    background-image: url("https://images.stinkyfruit.com/VoiceMail_Popup.svg");
+    background-repeat: no-repeat;
+    width: 100vw;
+    background-position: center;
+    margin-top: -325px;
+    background-size: 200px;
+    z-index: 2;
+  }
+  .light {
+    background: rgb(35, 40, 35);
+    z-index: 1;
+    position: absolute;
+    width: 248px;
+    height: 415px;
+    opacity: 0.5;
+    margin-top: -390px;
+  }
+
+  .red-icon {
+    //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/redicon.png");
+    background-image: url("https://images.stinkyfruit.com/Read.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 26px;
+  }
+  .unred-icon {
+    //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/unredicon.png");
+    background-image: url("https://images.stinkyfruit.com/Un_read.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 25px;
+    background-size: 100%;
+  }
+  .voice-icon {
+    //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/voice.png");
+    background-image: url("https://images.stinkyfruit.com/Voicemail_icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 52px;
+  }
+
+  .play-icon {
+    //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/pay.png");
+    background-image: url("https://images.stinkyfruit.com/Voicemail_Play.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 27px;
+    width: 20px;
+    cursor: pointer;
+  }
+  .sound-icon {
+    //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/sound.png");
+    background-image: url("https://images.stinkyfruit.com/Sample_Audiowave.svg");
+    background-repeat: no-repeat;
+    background-position: x;
+    width: 75px;
+  }
+
+  .inner-row-right {
+    width: 15%;
+  }
+
+  @media (max-width: 575.98px) {
     .row-2 {
+      background-repeat: repeat-y;
+      background-size: cover;
+      background-position: center;
+      margin: auto;
+      width: 100vw;
       padding: 0px;
-      height: 420px; ///new1
-      width: 330px;
+      height: 77vh !important;
     }
- 
+    .light {
+      background: rgb(5, 5, 5);
+      z-index: 1;
+      position: absolute;
+      width: 100vw;
+      height: 78vh;
+      opacity: 0.5;
+      margin-top: -398px;
+    }
+
     .inner-row-left {
-      width: 15%;
+      background-color: #737272;
+      width: 1% !important;
     }
+
     .inner-row-center {
-      //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/pda-crack-screen.png");
-      background-image: url("https://images.stinkyfruit.com/PDA_Crack_Screen.svg");
-      background-color: #47b9b2;
-      background-blend-mode: multiply;
+      width: 100vw;
+      border: 3px solid #1c1c1c;
+      margin: -2%;
+      margin-bottom: 0%;
       background-size: cover;
       background-repeat: no-repeat;
-      width: 76%;
-      border-radius: 4px;
-      border: 2px solid #3c3838;
-    }
-    .pop-up{
-      background-image: url("./VoiceMailPage.jsx");
-      background-repeat:no-repeat;
-      width: 20px;
-    }
-    
-    .red-icon{
-      //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/redicon.png");
-      background-image: url("https://images.stinkyfruit.com/Read.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      width: 26px;
 
+      .the-image-radio {
+        height: 427px; ///new1
+        background-image: none;
+      }
     }
-    .unred-icon{
-      //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/unredicon.png");
-      background-image: url("https://images.stinkyfruit.com/Un_read.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      width: 25px;
-      background-size: 100%;
-    }
-    .voice-icon{
-      //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/voice.png");
-      background-image: url("https://images.stinkyfruit.com/Voicemail_icon.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      width: 52px;
-    }
-   
-    .play-icon{
-      //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/pay.png");
-      background-image: url("https://images.stinkyfruit.com/Voicemail_Play.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      height: 27px;
-      width: 20px;
-      cursor: pointer;
-     
-    }
-    .sound-icon {
-      //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/sound.png");
-      background-image: url("https://images.stinkyfruit.com/Sample_Audiowave.svg");
-     background-repeat: no-repeat;
-     background-position: x;
-     width: 75px;
-    }
-    
 
-    
     .inner-row-right {
-      width: 15%;
-    }
-  
-    @media (max-width: 575.98px) {
-      .row-2 {
-        background-repeat: repeat-y;
-        background-size: cover;
-        background-position: center;
-        margin: auto;
-        width: 100vw;
-        padding: 0px;
-        height: 77vh !important;
-      }
-  
-      .inner-row-left {
-        background-color: #737272;
-        width: 1% !important;
-      }
-  
-      .inner-row-center {
-        width: 100vw;
-        border: 3px solid #1c1c1c;
-        margin: -2%;
-        margin-bottom: 0%;
-        background-size: cover;
-        background-repeat: no-repeat;
-  
-        .the-image-radio{
-          height: 427px; ///new1
-        background-image:none;
-        }
-      }
-  
-      .inner-row-right {
-        background-color: none !important;
-        width: 1% !important;
-      }
-    
-     
+      background-color: none !important;
+      width: 1% !important;
     }
   }
-  
+}
