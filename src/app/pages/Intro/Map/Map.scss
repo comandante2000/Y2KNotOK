@@ -6,10 +6,7 @@
   }
   .inner-row-left {
     width: 15%;
-  }  
-  
-  
-    }
+  }
   .inner-row-center {
     //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/pda-crack-screen.png");
     background-image: url("https://images.stinkyfruit.com/PDA_Crack_Screen.svg");
@@ -20,11 +17,12 @@
     width: 76%;
     border-radius: 4px;
     border: 2px solid #3c3838;
+    background-position: center;
 
-.Locating-map {
+    .Locating-map {
       margin-top: 91px !important;
     }
-  
+
   }
 
   .inner-row-right {
@@ -54,7 +52,8 @@
       margin-bottom: 0%;
       background-size: cover;
       background-repeat: no-repeat;
-   
+      height: initial;
+
     }
 
     .inner-row-right {
@@ -62,4 +61,6 @@
       width: 1% !important;
     }
   }
+}
+
 
