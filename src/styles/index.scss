@@ -10,7 +10,7 @@ $urls: srcs('https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/');
 .app {
   
   font-family: "Palm OS";
-  background: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/BG.png");
+  background: url("https://images.stinkyfruit.com/BG.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -23,5 +23,13 @@ $urls: srcs('https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/');
 @media (max-width: 575.98px) {
   .app {
     background-image: none;
+  }
+}
+@media (max-width: 1199.98px) and (orientation: landscape) {
+  body {
+    .app{
+      height: 100%;
+      width: 100%;
+    }
   }
 }

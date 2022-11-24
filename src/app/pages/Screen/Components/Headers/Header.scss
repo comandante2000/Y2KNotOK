@@ -2,21 +2,51 @@
   .screen-dash {
     height: 38px;
     .email {
-      background-color: #070808;
+      background-image: url("https://images.stinkyfruit.com/Heading_Backdrop_v1.svg");
+      background-size: 100%;
       height: 21px;
       width: 100px;
       margin-top: 10px;
       margin-left: 3px;
+      background-repeat: no-repeat;
       .text-email {
-        color: rgb(30, 219, 232);
+        color: #47b9b2;
+        text-align: center;
       }
     }
     .logo {
-      background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/slogov2.png");
+      //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/slogov2.png");
+      background-image: url("https://images.stinkyfruit.com/Red_west_logo.svg");
       background-repeat: no-repeat;
       height: 28px;
-      width: 96px;
+      width: 105px;
       margin-top: 16px;
+      background-size: 100%;
+    }
+  }
+}
+@media (max-width: 575.98px) and (orientation: portrait) {
+  #mail-screen-one{
+    .screen-dash{
+      height: 45px;
+      align-items: center;
+      .email{
+        height: 38px;
+        width: 30vw;
+        margin-top: 1px;
+        background-repeat: no-repeat;
+        background-position: center;
+        .text-email {
+          font-size: 24px;
+          text-align: center;
+        }
+      }
+      .logo{
+        width: 42vw;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        background-position: center;
+      }
     }
   }
 }

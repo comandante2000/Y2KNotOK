@@ -24,7 +24,7 @@ export default function HomeScreen() {
         </div>
         <div className="inner-row-right"></div>
         <div className="logo"></div>
-        <div classname=""></div>
+        <div className=""></div>
       </div>
     </div>
   );

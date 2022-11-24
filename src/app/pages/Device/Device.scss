@@ -12,7 +12,7 @@
     width: 100vw;
 
     .box {
-      background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/Option-2B-black-icon-device.png");
+      background-image: url("https://images.stinkyfruit.com/Option-2B-black-icon-device.png");
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
@@ -21,9 +21,9 @@
       margin: auto;
     }
   }
-  @media (max-width: 575.98px) {
+  @media (max-width: 575.98px){
     .container {
-      background: gray;
+      background: #818181;
       .box {
         background-image: none;
         height: 0% !important;
@@ -33,3 +33,15 @@
     }
   }
 }
+@media (max-width: 991.98px) and (orientation: landscape) {
+  body {
+    #pda-device{
+      .container {
+        height: 100%;
+        width: 100%;
+        padding: 50px;
+      }
+    }
+  }
+}
+

@@ -8,7 +8,7 @@
     background-position: center;
     padding-left: 25px;
     width: 329px;
-    background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/BOTTOM_BAR.png");
+    background-image: url("https://images.stinkyfruit.com/BOTTOM_BAR.png");
     border-radius: 6px;
     padding-top: 3%;
     -webkit-border-radius: 6px;
@@ -20,13 +20,15 @@
     
   @media (max-width: 575.98px) {
     .row-1 {
-      
+      height: 100%;
       background-size: cover;
       background-position: center;
       margin: auto;
       width: 100vw;
+      background-color: #818181;
+
       .buttns {
-        background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/BOTTOM-M.png");
+        background-image: url("https://images.stinkyfruit.com/BOTTOM-M.png");
         background-color: none;
         height: 85px;
         background-size: cover !important;
