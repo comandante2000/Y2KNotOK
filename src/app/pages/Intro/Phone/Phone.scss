@@ -17,7 +17,7 @@
       width: 76%;
       border-radius: 4px;
       border: 2px solid #3c3838;
-     
+      background-position: center;
     }
   
     .inner-row-right {
@@ -47,6 +47,7 @@
         margin-bottom: 0%;
         background-size: cover;
         background-repeat: no-repeat;
+        height: initial;
   
         .the-image-radio{
           height: 427px; ///new1

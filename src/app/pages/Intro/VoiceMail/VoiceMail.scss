@@ -18,6 +18,7 @@
     width: 76%;
     border-radius: 4px;
     border: 2px solid #3c3838;
+    background-position: center;
   }
   .voice-pop-up {
     background-image: url("https://images.stinkyfruit.com/VoiceMail_Popup.svg");
@@ -114,6 +115,7 @@
       margin-bottom: 0%;
       background-size: cover;
       background-repeat: no-repeat;
+      height: initial;
 
       .the-image-radio {
         height: 427px; ///new1
