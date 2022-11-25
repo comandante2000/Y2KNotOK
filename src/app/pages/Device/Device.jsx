@@ -8,6 +8,7 @@ import PhonePage from "../Intro/Phone/Phone";
 import MailPage from "../Intro/Mail/Mail";
 import VoiceMailPage from "../Intro/VoiceMail/VoiceMailPage";
 import MapPage from "../Intro/Map/Map";
+import Boot from "../Screen/Boot/Boot";
 export default function Device() {
 
   const [screen,showScreen]= useState("HomeScreen");
@@ -18,7 +19,7 @@ export default function Device() {
       <div className="container v2 d-flex justify-content-center gx-0 gy-0">
         <div className="box">
          <Header />
-          {screen === "HomeScreen" && <HomeScreen />}
+          {screen === "HomeScreen" && <Boot />}
           {screen === "MailScreen" && <MailPage />}
           {screen === "MapScreen" && <MapPage />}
           {screen === "VoicemailScreen" && <VoiceMailPage />}

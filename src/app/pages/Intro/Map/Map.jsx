@@ -6,12 +6,11 @@ import MapPageTwo from "./pages/MapPageTwo/MapPageTwo";
 import MapLocatingPage from "./pages/Locating/Locating";
 import { useState, useEffect } from "react";
 export default function MapPage() {
-
   const [zoom, setZoom] = useState(true);
 
   console.log("the zoom", zoom);
 
- console.log("ttt",typeof setZoom);
+  console.log("ttt", typeof setZoom);
 
   return (
     <div id="pda-map-screen">
@@ -21,8 +20,12 @@ export default function MapPage() {
           <Time />
           <Header name="Map" />
           {/* <MapLocatingPage/> */}
-       
-          {zoom ?<MapPageTwo setZoom={setZoom}/>:<MapPageOne setZoom={setZoom}/>}
+
+          {zoom ? (
+            <MapPageOne setZoom={setZoom} />
+          ) : (
+            <MapPageTwo setZoom={setZoom} />
+          )}
         </div>
         <div className="inner-row-right"></div>
       </div>

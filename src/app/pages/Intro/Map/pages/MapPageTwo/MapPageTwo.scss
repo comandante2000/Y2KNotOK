@@ -11,7 +11,7 @@
       z-index: 3;
     }
     .image-popup {
-        background-image: url("./MapPopup.svg");
+      background-image: url("https://images.stinkyfruit.com/MapPopup.svg");
       background-position: center;
       background-repeat: no-repeat;
       height: 140px;
@@ -19,15 +19,14 @@
       background-size: contain;
       margin-top: 150px;
     }
-
   }
-    .zoomout{
-      background-image: url("./ZoomIn.svg");
-      background-repeat: no-repeat;
-      height: 65px;
-      width: 38px;
-      margin-left: 8px;
-   }
+  .zoomout {
+    background-image: url("https://images.stinkyfruit.com/ZoomIn.svg");
+    background-repeat: no-repeat;
+    height: 65px;
+    width: 38px;
+    margin-left: 8px;
+  }
   @media (max-width: 575.98px) {
     .image {
       .Mappagetwo {
