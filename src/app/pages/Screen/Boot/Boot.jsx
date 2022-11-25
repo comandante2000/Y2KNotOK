@@ -6,7 +6,9 @@ export default function Boot() {
       <div className=" row-2 d-flex justify-content-center">
         <div className="inner-row-left"></div>
         <div className="inner-row-center">
-          boot
+          <div className="pop">
+
+            </div>
         </div>
         <div className="inner-row-right"></div>
         <div className="logo"></div>

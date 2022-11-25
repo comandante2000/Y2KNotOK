@@ -2,7 +2,7 @@ import "./MapPageOne.scss";
 import { useState, useEffect } from "react";
 export default function MapPageOne({ setZoom }) {
   const Zoom = () => {
-    setZoom(true);
+    setZoom(false);
   };
 
   return (
