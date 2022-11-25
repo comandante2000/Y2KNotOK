@@ -4,11 +4,13 @@
       background-image: url("https://images.stinkyfruit.com/map1.png");
       background-position: center;
       background-repeat: no-repeat;
-      height: 417px;
+      height: 583px;
       width: 100vw;
       background-size: contain;
-      margin-top: -80px;
-      z-index: 3;
+      margin-top: -30px;
+      background-blend-mode: darken;
+      background-size: 413px;
+  }
     }
   }
   .zoomin {
@@ -16,16 +18,16 @@
     background-repeat: no-repeat;
     height: 65px;
     width: 38px;
-    margin-left: 8px;
+    margin-left: 10px;
   }
 
   @media (max-width: 575.98px) {
     .image {
       .image-map {
-        width: 100vw;
-        background-size: cover;
-        height: 77vh;
+        width: 100vw !important;
+        background-size: cover !important;
+        height: 70vh !important;
       }
     }
   }
-}
+
