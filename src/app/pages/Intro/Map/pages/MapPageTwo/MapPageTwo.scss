@@ -1,0 +1,39 @@
+#map-pagetwo-screen {
+  .image {
+    .Mappagetwo {
+      background-image: url("https://images.stinkyfruit.com/map4v2.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 583px;
+      width: 100vw;
+      background-size: contain;
+      margin-top: -30px;
+      background-blend-mode: darken;
+      background-size: 413px;
+    }
+    .image-popup {
+      background-image: url("https://images.stinkyfruit.com/MapPopup.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 190px;
+      width: 100%;
+      background-size: contain;
+      margin-top: 150px;
+    }
+  }
+  .zoomout {
+    background-image: url("https://images.stinkyfruit.com/ZoomIn.svg");
+    background-repeat: no-repeat;
+    height: 65px;
+    width: 38px;
+    margin-left: 10px;
+  }
+  @media (max-width: 575.98px) {
+    .image {
+      .Mappagetwo {
+        background-size: cover;
+        height: 70vh;
+      }
+    }
+  }
+}

@@ -1,12 +1,14 @@
 #pda-chat-screen {
   .row-2 {
     padding: 0px;
-    height: 420px; ///new1
-    width: 330px;
+    height: 643px;
+    width: 504px;
+    
   }
   .inner-row-left {
     width: 15%;
-  }
+
+}
   .inner-row-center {
     //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/pda-crack-screen.png");
     background-image: url("https://images.stinkyfruit.com/PDA_Crack_Screen.svg");
@@ -14,9 +16,11 @@
     background-blend-mode: multiply;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 76%;
-    border-radius: 4px;
+    background-position: center;
+    width: 94%;
+    border-radius: 10px;
     border: 2px solid #3c3838;
+    height: 99.5%;
   }
   .red-icon {
     //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/redicon.png");
@@ -68,6 +72,7 @@
       margin-bottom: 0%;
       background-size: cover;
       background-repeat: no-repeat;
+      height: initial;
 
       // height: 85vh marquee {
       //   font-family: "Palm Os" "sans-serif";
