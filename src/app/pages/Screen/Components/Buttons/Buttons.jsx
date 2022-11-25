@@ -29,9 +29,9 @@ console.log("voice")
 
   return (
     <div id="pda-buttons">
-      <div className=" row-1">
-        <div className="buttns d-inline-flex">
-          <li className="button-list d-flex justify-content-evenly mt-1">
+      <div className=" row-1 d-flex justify-content-center">
+        <div className="buttns d-inline-flex justify-content-center align-items-center">
+          <li className="button-list d-flex justify-content-center align-items-center mt-1 w-100">
             <MailButton showScreen={showScreen} setActive={setActive} color = {active} />
             <VoiceMailButton showScreen={showScreen} setActive={setActive} color = {active} />
             <PhoneButton showScreen={showScreen} setActive={setActive} color = {active}/>
