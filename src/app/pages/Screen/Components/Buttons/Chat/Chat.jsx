@@ -5,7 +5,6 @@ export default function ChatButton({ showScreen, setActive,color}) {
 
 
   const handleClick4 = () => {
-  
     showScreen("MessageScreen");
     setActive("message");
   };
