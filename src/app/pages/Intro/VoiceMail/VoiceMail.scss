@@ -6,7 +6,7 @@
   }
 
   .inner-row-left {
-    width: 15%;
+    width: 12%;
   }
   .inner-row-center {
     border-radius: 10px;
@@ -16,7 +16,8 @@
     background-blend-mode: multiply;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 94%;height: 99.5%;
+    width: 75.8%;
+    height: 99.5%;
 
     border: 2px solid #3c3838;
     background-position: center;
@@ -26,18 +27,17 @@
     background-repeat: no-repeat;
     width: 100vw;
     background-position: center;
-    margin-top: -325px;
-    background-size: 200px;
+    margin-top: -461px;
+    background-size: 236px;
     z-index: 2;
   }
   .light {
     background: rgb(35, 40, 35);
-    z-index: 1;
     position: absolute;
-    width: 248px;
-    height: 415px;
+    width: 381px;
+    height: 641px;
     opacity: 0.5;
-    margin-top: -390px;
+    margin-top: -517px;
   }
 
   .red-icon {
@@ -81,7 +81,7 @@
   }
 
   .inner-row-right {
-    width: 15%;
+    width: 12%;
   }
 
   @media (max-width: 575.98px) {
@@ -101,7 +101,7 @@
       width: 100vw;
       height: 78vh;
       opacity: 0.5;
-      margin-top: -398px;
+      margin-top: -509px;
     }
 
     .inner-row-left {

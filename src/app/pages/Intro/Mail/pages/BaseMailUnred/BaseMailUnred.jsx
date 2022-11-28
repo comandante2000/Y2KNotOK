@@ -8,7 +8,7 @@ export default function MailBaseUnred({name}) {
   return (
     <div id="pda-mail-base-unred">
       <div
-        className=" d-flex justify-content-evenly mx-1 me-3 border border-dark py-0 g-5"
+        className=" d-flex justify-content-evenly mx-1 me-3 border border-dark py-2  g-5"
         type="button"
       >
         <div className="unred-icon"></div>
