@@ -38,9 +38,11 @@
       margin-top: 3px;
 
       .clock {
-        font-family: "Palm Os";
-        font-size: 27px;
-        color: #47b9b2;
+        .date-time{
+          font-family: "Palm Os";
+          font-size: 27px;
+          color: #47b9b2;
+        }
       }
     }
   }
@@ -74,12 +76,13 @@
     .screen-head {
       height: 38px;
       max-width: 100vw;
+      overflow: hidden;
       .bar{
         margin-right: 5px;
         width: 28px;
       }
       .time {
-        margin-top: 3px;
+        margin-top: 5px;
         margin-left: 0px;
         margin-right: 0px;
         width: 45vw;

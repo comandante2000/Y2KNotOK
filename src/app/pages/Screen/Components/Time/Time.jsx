@@ -7,7 +7,11 @@ export default function Time() {
           <div className="bar"></div>
           <div className="battery"></div>
           <div className="time">
-            <div className="d-flex justify-content-center clock">Monday 10:AM</div>
+            <div className="d-flex justify-content-center clock">
+                <p className="date-time">
+                    Monday 10:AM
+                </p>
+            </div>
           </div>
         </div>
         <div className="line"></div>
