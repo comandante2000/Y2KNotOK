@@ -18,7 +18,7 @@ export default function VoiceMailPage() {
           <Time />
           <Header name="VoiceMail" />
 
-          <div className=" d-flex justify-content-evenly mx-1 me-3 border border-dark py-0 g-5">
+          <div className=" d-flex justify-content-evenly mx-1 me-3 border border-dark py-2 g-5">
             <div className="red-icon "></div>
             <div className="voice-icon "></div>
             <div className="d-flex align-items-start flex-column  justify-content-evenly">
@@ -37,7 +37,7 @@ export default function VoiceMailPage() {
             </div>
           </div>
 
-          <div className=" d-flex justify-content-evenly mx-1 me-3 border border-dark py-0 g-5 border-top-0">
+          <div className=" d-flex justify-content-evenly mx-1 me-3 border border-dark py-2 g-5 border-top-0">
             <div className="red-icon "></div>
             <div className="voice-icon "></div>
             <div className="d-flex align-items-start flex-column  justify-content-evenly">
@@ -56,7 +56,7 @@ export default function VoiceMailPage() {
             </div>
           </div>
 
-          <div className=" d-flex justify-content-evenly mx-1 me-3 border border-dark py-0 g-5 border-top-0">
+          <div className=" d-flex justify-content-evenly mx-1 me-3 border border-dark py-2 g-5 border-top-0">
             <div className="unred-icon "></div>
             <div className="voice-icon "></div>
             <div className="d-flex align-items-start flex-column  justify-content-evenly">
@@ -71,7 +71,7 @@ export default function VoiceMailPage() {
             </div>
           </div>
 
-          <div className=" d-flex justify-content-evenly mx-1 me-3 border border-dark py-0 g-5 border-top-0">
+          <div className=" d-flex justify-content-evenly mx-1 me-3 border border-dark py-2 g-5 border-top-0">
             <div className="unred-icon "></div>
             <div className="voice-icon "></div>
             <div className="d-flex align-items-start flex-column  justify-content-evenly">
@@ -86,7 +86,7 @@ export default function VoiceMailPage() {
             </div>
           </div>
 
-          <div className=" d-flex justify-content-evenly mx-1 me-3 border border-dark py-0 g-5 border-top-0">
+          <div className=" d-flex justify-content-evenly mx-1 me-3 border border-dark py-2 g-5 border-top-0">
             <div className="unred-icon "></div>
             <div className="voice-icon "></div>
             <div className="d-flex align-items-start flex-column  justify-content-evenly">
@@ -101,7 +101,7 @@ export default function VoiceMailPage() {
             </div>
           </div>
 
-          <div className=" d-flex justify-content-evenly mx-1 me-3 border border-dark py-0 g-5 border-top-0">
+          <div className=" d-flex justify-content-evenly mx-1 me-3 border border-dark py-2 g-5 border-top-0">
             <div className="unred-icon "></div>
             <div className="voice-icon "></div>
             <div className="d-flex align-items-start flex-column justify-content-evenly">
@@ -115,16 +115,18 @@ export default function VoiceMailPage() {
               </div>
             </div>
           </div>
-          {open ? (
-            <div className="d-flex justify-content-center">
-              <div className="light"></div>
-            </div>
-          ) : null}
-          {open ? (
-            <div className="d-flex justify-content-center">
-              <div className="voice-pop-up"></div>
-            </div>
-          ) : null}
+          
+            {open ? (
+              <div className="d-flex justify-content-center">
+                <div className="light"></div>
+              </div>
+            ) : null}
+            {open ? (
+              <div className="d-flex justify-content-center">
+                <div className="voice-pop-up"></div>
+              </div>
+            ) : null}
+          
         </div>
         <div className="inner-row-right"></div>
       </div>

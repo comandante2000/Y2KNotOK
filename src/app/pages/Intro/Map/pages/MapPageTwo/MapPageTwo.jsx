@@ -12,7 +12,7 @@ setZoom(true);
       <div className=" image d-flex justify-content-center">
         <div className="Mappagetwo position-relative">
           <div className="d-flex justify-content-center">
-            <div className="image-popup">
+            <div className="image-popup align-self-center">
               <div class="centered"></div>
             </div>
           </div>

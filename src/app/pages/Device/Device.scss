@@ -22,7 +22,7 @@
       margin: auto;
     }
   }
-  @media (max-width: 575.98px){
+  @media (max-width: 575.98px) {
     .container {
       background: #818181;
       .box {
@@ -30,13 +30,34 @@
         height: 0% !important;
         margin: 0;
         width: 100%;
+        zoom: normal !important;
       }
     }
   }
+  ///temporary for joe screen
+  @media (max-width: 1280px) {
+    .container {
+      height: 100vh;
+      width: 100vw;
+      .box {
+        zoom: 65%;
+      }
+    }
+  }
+  @media (min-width: 1281px) {
+    .container {
+      height: 100vh;
+      width: 100vw;
+      .box {
+        zoom: 100%;
+      }
+    }
+  }
+  ///temporary for joe screen
 }
 @media (max-width: 991.98px) and (orientation: landscape) {
   body {
-    #pda-device{
+    #pda-device {
       .container {
         height: 100%;
         width: 100%;
@@ -45,4 +66,3 @@
     }
   }
 }
-

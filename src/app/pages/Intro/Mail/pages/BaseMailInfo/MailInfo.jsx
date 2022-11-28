@@ -10,7 +10,7 @@ export default function MailInfo() {
 
   return (
     <div id="pda-mail-info">
-      <div className=" d-flex justify-content-evenly mx-1 me-3  py-0 g-5 ">
+      <div className=" d-flex justify-content-evenly mx-1 me-3  py-2 g-5 ">
         <div className="red-icon "></div>
         <div className="mail-icon"></div>
         <div>

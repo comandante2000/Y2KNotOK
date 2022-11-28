@@ -1,6 +1,6 @@
 #mail-screen-one {
   .screen-dash {
-    height: 38px;
+  
     .email {
       background-image: url("https://images.stinkyfruit.com/Heading_Backdrop_v1.svg");
       background-size: 100%;
@@ -28,7 +28,7 @@
 @media (max-width: 575.98px) and (orientation: portrait) {
   #mail-screen-one{
     .screen-dash{
-      height: 45px;
+    
       align-items: center;
       .email{
         height: 38px;

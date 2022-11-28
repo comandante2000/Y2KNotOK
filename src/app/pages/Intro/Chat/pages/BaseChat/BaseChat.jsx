@@ -7,7 +7,7 @@ export default function BaseChat({person,chat}) {
 
   return (
     <div id="pda-base-chat">
-      <div className=" d-flex justify-content-evenly mx-1 me-3 border border-dark py-0 g-5 position-relative">
+      <div className=" d-flex justify-content-evenly mx-1 me-3 border border-dark py-2 g-5 position-relative">
               <div className="red-icon "></div>
               <div className="chat-icon "></div>
               <div>

@@ -17,7 +17,10 @@ export default function MailPage() {
         <div className="inner-row-left"></div>
 
         <div className="inner-row-center">
-          <div>
+          <div >
+            <div>
+
+            </div>
             <Time />
             <Header name="Mail" />
             <div>
@@ -31,6 +34,8 @@ export default function MailPage() {
                   <MailBaseUnred name="admin@redwest.com" />
                   <MailBaseUnred name="admin@redwest.com" />
                   <MailBaseUnred name="admin@redwest.com" />
+                
+
                 </div>
               )}
              
