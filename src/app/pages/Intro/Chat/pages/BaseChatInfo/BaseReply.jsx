@@ -1,4 +1,4 @@
-import "./ChatInfo.scss";
+import "./BaseReply.scss";
 import ChatInfo from "./ChatInfo";
 import { useState } from "react";
 export default function ChatReply({ person, chat }) {
