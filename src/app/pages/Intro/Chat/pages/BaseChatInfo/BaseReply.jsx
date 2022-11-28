@@ -18,8 +18,7 @@ export default function ChatReply({ person, chat }) {
 
 
       <div className="d-flex justify-content-center mt-3">
-        <textarea type="text" rows="2">
-          r
+        <textarea className="txt-area-bg" type="text" rows="5" cols="60">
         </textarea>
         </div>
 
