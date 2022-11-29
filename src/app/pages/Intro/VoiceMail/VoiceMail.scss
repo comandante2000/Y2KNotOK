@@ -18,9 +18,11 @@
     background-repeat: no-repeat;
     width: 94%;
     height: 99.5%;
-
     border: 2px solid #3c3838;
     background-position: center;
+  }
+  .inner-row-right {
+    width: 15%;
   }
   .voice-mail-container{
     margin-left: 10px;
@@ -33,6 +35,16 @@
     width: 60%;
     margin-top: 10px !important;
     margin-bottom: 10px !important;
+    .email-name{
+      font-family: "Palm OS";
+      font-size: 24px;
+      line-height: 22px;
+    }
+    .voice-date{
+      font-size: 20px;
+      font-family: "Palm OS";
+      line-height: 18px;
+    }
   }
   .voice-pop-up {
     background-image: url("https://images.stinkyfruit.com/VoiceMail_Popup.svg");
@@ -99,9 +111,6 @@
     height: 17px;
   }
 
-  .inner-row-right {
-    width: 15%;
-  }
 
   @media (max-width: 575.98px) {
     .row-2 {
@@ -118,16 +127,15 @@
       z-index: 1;
       position: absolute;
       width: 100vw;
-      height: 78vh;
+      height: 71vh;
       opacity: 0.5;
-      margin-top: -509px;
+      margin-top: -516px;
     }
 
     .inner-row-left {
       background-color: #737272;
       width: 1% !important;
     }
-
     .inner-row-center {
       width: 100vw;
       border: 3px solid #1c1c1c;
@@ -142,7 +150,6 @@
         background-image: none;
       }
     }
-
     .inner-row-right {
       background-color: none !important;
       width: 1% !important;
