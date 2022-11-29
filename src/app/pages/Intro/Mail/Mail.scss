@@ -28,15 +28,17 @@
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
     height: 99.5%;
-    // overflow: scroll;
-   
+  
+   overflow: hidden;
 }
 
   .inner-row-right {
     width: 15%;
   }
   
-
+.scroll{
+  overflow-y: scroll;
+}
   @media (max-width: 575.98px) {
     .row-2 {
       background-repeat: repeat-y;
@@ -45,7 +47,7 @@
       margin: auto;
       width: 100vw;
       padding: 0px;
-      height: 77vh !important;
+      height: 70vh !important;
     }
 
     .inner-row-left {

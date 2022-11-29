@@ -1,5 +1,5 @@
-#pda-mail-base{
-
+#pda-mail-reply{
+    
 .base-mail-container {
   margin-left: 10px;
   margin-right: 30px;
@@ -48,6 +48,26 @@
     width: 25px;
     background-size: 100%;
   }
+ 
 }
-
-}
+    .back{
+        background-color: #47b9b2;
+        margin-left: 22px;
+        
+    }
+    .replay{
+        background-color: #47b9b2;
+        margin-top: 16px;
+       
+    }
+    .delete{
+        background-color: #47b9b2;
+        margin-top: 16px;
+    }
+    }
+    .txt-area-bg{
+      background-color: #288577;
+      border-radius: 10px;
+      border: 1px solid #288577;
+      font-family: "Palm OS";
+    }
