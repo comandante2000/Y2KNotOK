@@ -6,7 +6,7 @@
   }
 
   .inner-row-left {
-    width: 12%;
+    width: 15%;
   }
   .inner-row-center {
     border-radius: 10px;
@@ -16,7 +16,7 @@
     background-blend-mode: multiply;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 75.8%;
+    width: 94%;
     height: 99.5%;
 
     border: 2px solid #3c3838;
@@ -37,7 +37,7 @@
   .voice-pop-up {
     background-image: url("https://images.stinkyfruit.com/VoiceMail_Popup.svg");
     background-repeat: no-repeat;
-    width: 100vw;
+    width: 94%;
     background-position: center;
     margin-top: -461px;
     background-size: 236px;
@@ -47,9 +47,9 @@
     background: rgb(35, 40, 35);
     position: absolute;
     width: 381px;
-    height: 641px;
+    height: 636px;
     opacity: 0.5;
-    margin-top: -517px;
+    margin-top: -521px;
   }
 
   .red-icon {
@@ -100,7 +100,7 @@
   }
 
   .inner-row-right {
-    width: 12%;
+    width: 15%;
   }
 
   @media (max-width: 575.98px) {
