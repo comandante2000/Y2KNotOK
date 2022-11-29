@@ -4,12 +4,12 @@
       background-image: url("https://images.stinkyfruit.com/maptwo.svg");
       background-position: center;
       background-repeat: no-repeat;
-      height: 627.5px;
-      width: 100vw;
-      background-size: contain;
-      margin-top: -118px;
+      height: 636.5px;
+      width: 100%;
+      margin-top: -124px;
       background-blend-mode: darken;
       background-size: 383px;
+      background-size: cover;
     }
     .image-popup {
       background-image: url("https://images.stinkyfruit.com/MapPopup.svg");
@@ -32,7 +32,8 @@
     .image {
       .Mappagetwo {
         background-size: cover;
-        height: 77vh;
+        height: 63vh !important;
+        margin-top: -72px !important;
       }
     }
   }

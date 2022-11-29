@@ -25,7 +25,7 @@ export default function VoiceMailPage() {
             </div>
             <div className="info-container me-3 m-auto">
               <div className="d-flex w-100">
-                <div className="email-name w-50">Timothee</div>
+                <div className="email-name w-50">Timothee HR</div>
                 <div className="voice-date w-50 text-end">12/30</div>
               </div>
               <div className="d-flex w-100 align-items-center">
@@ -42,7 +42,7 @@ export default function VoiceMailPage() {
             </div>
             <div className="info-container me-3 m-auto">
               <div className="d-flex w-100">
-                <div className="email-name w-50">Timothee</div>
+                <div className="email-name w-50">Mom</div>
                 <div className="voice-date w-50 text-end">12/30</div>
               </div>
               <div className="d-flex w-100 align-items-center">
@@ -59,7 +59,7 @@ export default function VoiceMailPage() {
             </div>
             <div className="info-container me-3 m-auto">
               <div className="d-flex w-100">
-                <div className="email-name w-50">Timothee</div>
+                <div className="email-name w-50">Tony</div>
                 <div className="voice-date w-50 text-end">12/30</div>
               </div>
               <div className="d-flex w-100 align-items-center">
@@ -76,7 +76,7 @@ export default function VoiceMailPage() {
             </div>
             <div className="info-container me-3 m-auto">
               <div className="d-flex w-100">
-                <div className="email-name w-50">Timothee</div>
+                <div className="email-name w-50">Jessica</div>
                 <div className="voice-date w-50 text-end">12/30</div>
               </div>
               <div className="d-flex w-100 align-items-center">
@@ -93,7 +93,7 @@ export default function VoiceMailPage() {
             </div>
             <div className="info-container me-3 m-auto">
               <div className="d-flex w-100">
-                <div className="email-name w-50">Timothee</div>
+                <div className="email-name w-50">Esteban</div>
                 <div className="voice-date w-50 text-end">12/30</div>
               </div>
               <div className="d-flex w-100 align-items-center">
@@ -110,7 +110,7 @@ export default function VoiceMailPage() {
             </div>
             <div className="info-container me-3 m-auto">
               <div className="d-flex w-100">
-                <div className="email-name w-50">Timothee</div>
+                <div className="email-name w-50">Mike</div>
                 <div className="voice-date w-50 text-end">12/30</div>
               </div>
               <div className="d-flex w-100 align-items-center">
