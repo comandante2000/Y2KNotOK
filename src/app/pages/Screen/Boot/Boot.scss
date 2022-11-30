@@ -1,94 +1,56 @@
 #pda-boot-screen {
-    .row-2 {
-      padding: 0px;
-      height: 643px;
-      width: 504px;
-    }
-    .inner-row-left {
-      width: 15%;
-    }
-    .inner-row-center {
-      //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/pda-crack-screen.png");
-      background-image: url("https://images.stinkyfruit.com/PDA_Crack_Screen.svg");
-      background-color: #47b9b2;
-      background-blend-mode: multiply;
-      width: 76%;
-      border-radius: 4px;
-      border: 2px solid #3c3838;
-      background-size: cover;
+  // margin-block: 50%;
+
+  .pda-boot-container{
+    height: 636.5px;
+    width: 100%;
+  }
+  .info-popup-container {
+    width: 100%;
+    height: 100%;
+
+  }
+  .centered {
+    width: 100%;
+    height: 100%;
+    padding-left: 35px;
+    padding-right: 35px;
+    .Popup-Title {
+      background-image: url("https://images.stinkyfruit.com/Text_pop.svg");
       background-repeat: no-repeat;
+      height: 52px;
+      width: 247px;
+      background-size: 206px;
       background-position: center;
-      .pop{
-        background-image: url("./bootpopup.svg")
-      }
-      .the-image-logo {
-        height: 91%; ///new1
-        background-position: center;
-        //margin-top: 140px;
-        //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/homelogo.png");
-        background-image: url("https://images.stinkyfruit.com/Red_west_logo.svg");
-        background-size: 85%;
-        background-repeat: no-repeat;
-      }
     }
-  
-    .inner-row-right {
-      width: 15%;
+    .popup-text {
+      font-family: "Palm OS";
+      font-size: 32px;
+      line-height: 18px;
+     
     }
-  
-    @media (max-width: 575.98px) {
-      .row-2 {
-        background-repeat: repeat-y;
-        background-size: cover;
-        background-position: center;
-        margin: auto;
-        width: 100vw;
-        padding: 0px;
-        height: 77vh !important;
-      }
-  
-      .inner-row-left {
-        background-color: #737272;
-        width: 1% !important;
-      }
-  
-      .inner-row-center {
-        width: 100vw;
-        border: 3px solid #1c1c1c;
-        margin: -2%;
-        margin-bottom: 0%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: initial;
-  
-        // height: 85vh;
-        // .screen-head {
-        //   height: 40px;
-  
-        //   .time {
-        //     background-color: #060606;
-        //     height: 31px;
-        //     width: 61vw;
-        //     margin-top: 7px;
-        //     margin-right: 9px;
-        //     margin-bottom: auto;
-        //     margin-left: 25vw;
-        //   }
-        // }
-  
-        // .line {
-        //   background-color: #060606;
-        //   height: 3px;
-        //   width: 71vw;
-        //   margin-bottom: 2px;
-        //   margin-left: 1vw;
-        //   margin-top: -4px;
-        // }
-      }
-      .inner-row-right {
-        background-color: none !important;
-        width: 1% !important;
-      }
+    .instruction-text {
+      font-family: "Palm OS";
+      font-size: 26px;
+      line-height: 23px;
+    }
+    .next-button{
+      background-image: url("https://images.stinkyfruit.com/Button_Next.svg");
+      height: 36px;
+      width: 86px;
     }
   }
-  
+  .image-popup {
+    background-image: url("https://images.stinkyfruit.com/Popup_Container.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 317.95px;
+    width: 295.07px;
+    background-size: contain;
+  }
+  @media (max-width: 575.98px) {
+    .pda-boot-container{
+      height: 70vh;
+    }
+  }
+}
