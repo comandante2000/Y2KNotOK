@@ -16,33 +16,19 @@ export default function ChatReply({ person, chat }) {
       </div>
 
       <div className="d-flex justify-content-center mt-3">
-        <textarea
-          className="txt-area-bg"
-          type="text"
-          rows=""
-          cols="60"
+        <textarea className="txt-area-bg" type="text" rows="5" cols="60"
         ></textarea>
       </div>
 
       <div>
         <div className="d-flex justify-content-around mt-3">
-          <div
-            className="d-flex justify-content-center border border-dark px-3"
-            type="button"
-          >
+          <div className="btn-back d-flex justify-content-center border border-dark px-3" type="button">
             Back
           </div>
-          <div
-            className="d-flex justify-content-center border border-dark px-3"
-            type="button"
-            onClick={""}
-          >
-            Replay
+          <div className="btn-reply d-flex justify-content-center border border-dark px-3" type="button" onClick={""}>
+            Reply
           </div>
-          <div
-            className="d-flex justify-content-center border border-dark px-3"
-            type="button"
-          >
+          <div className="btn-delete d-flex justify-content-center border border-dark px-3" type="button">
             Delete
           </div>
         </div>
