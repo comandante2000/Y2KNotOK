@@ -20,13 +20,7 @@ export default function ChatPage() {
         <div className="inner-row-center">
           <Time />
           <Header name="Text" />
-        
-          {/* <BaseChat person="Finn" chat="Where are you n.."/>
-          <BaseChat person="Marcia" chat="The meeting has..."/>
-         <BaseChatUnred person="Tony" chat="What day is tras.."/>
-         <BaseChatUnred person="Tony" chat="What day is tras.."/>
-         <BaseChatUnred person="Tony" chat="What day is tras.."/>
-         <BaseChatUnred person="Tony" chat="What day is tras.."/> */}
+      
          {open ? (
                 <ChatReply />
               ) : (
