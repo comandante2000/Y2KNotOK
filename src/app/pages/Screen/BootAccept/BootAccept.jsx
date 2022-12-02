@@ -1,7 +1,6 @@
-import "./Boot.scss";
+import "./BootAccept.scss";
 import { useState } from "react";
-export default function Boot({ instruction, setpress }) {
-
+export default function BootAccept({instruction , setpress }) {
 
   function Next() {
     setpress(function (prevCount) {
@@ -9,7 +8,7 @@ export default function Boot({ instruction, setpress }) {
     });
   }
   return (
-    <div id="pda-boot-screen">
+    <div id="pda-boot-screen-accept">
       <div className="pda-boot-container">
         <div className="d-flex justify-content-center align-items-center info-popup-container">
           <div className="image-popup align-self-center">
@@ -19,10 +18,13 @@ export default function Boot({ instruction, setpress }) {
                 Before you BEGIN:
               </p>
               <p className="instruction-text m-0 text-center mt-2 mb-3">
-                {instruction}
+              {instruction}
               </p>
+              <div className="the_policy_check"></div>
+
+             
               <div
-                className="next-button m-0 text-center mt-2 mb-3"
+                className="accept-button m-0 text-center mt-3 mb-3"
                 type="button"
                 onClick={Next}
               ></div>
