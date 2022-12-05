@@ -1,0 +1,19 @@
+#voice-button {
+  .button-1 {
+    background-image: url("https://images.stinkyfruit.com/voice-b.png");
+    background-repeat: no-repeat;
+    height: 46px;
+    width: 46px;
+    margin: auto;
+    margin-inline: 3px;
+    background-position: center;
+  }
+  .red {
+    border-radius: 50%;
+    border: 4px solid rgba(134,42,42,0.72);
+  }
+  .black {
+    border-radius: 29px;
+    border: 4px solid rgba(16, 16, 16, 0.75);
+  }
+}

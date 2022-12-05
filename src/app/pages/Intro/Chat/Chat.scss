@@ -1,0 +1,86 @@
+#pda-chat-screen {
+  .row-2 {
+    padding: 0px;
+    height: 420px; ///new1
+    width: 330px;
+  }
+  .inner-row-left {
+    width: 15%;
+  }
+  .inner-row-center {
+    //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/pda-crack-screen.png");
+    background-image: url("https://images.stinkyfruit.com/PDA_Crack_Screen.svg");
+    background-color: #47b9b2;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 76%;
+    border-radius: 4px;
+    border: 2px solid #3c3838;
+  }
+  .red-icon {
+    //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/redicon.png");
+    background-image: url("https://images.stinkyfruit.com/Read.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 26px;
+  }
+  .chat-icon {
+    //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/chat-icon.png");
+    background-image: url("https://images.stinkyfruit.com/Text_Icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 73px;
+  }
+  .unred-icon {
+    //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/unredicon.png");
+    background-image: url("https://images.stinkyfruit.com/Un_read.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 25px;
+    background-size: 100%;
+  }
+
+  .inner-row-right {
+    width: 15%;
+  }
+
+  @media (max-width: 575.98px) {
+    .row-2 {
+      background-repeat: repeat-y;
+      background-size: cover;
+      background-position: center;
+      margin: auto;
+      width: 100vw;
+      padding: 0px;
+      height: 77vh !important;
+    }
+
+    .inner-row-left {
+      background-color: #737272;
+      width: 1% !important;
+    }
+
+    .inner-row-center {
+      width: 100vw;
+      border: 3px solid #1c1c1c;
+      margin: -2%;
+      margin-bottom: 0%;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      // height: 85vh marquee {
+      //   font-family: "Palm Os" "sans-serif";
+      //   font-size: 60px;
+      // }
+      .the-image-message {
+        background-image: none;
+      }
+    }
+
+    .inner-row-right {
+      background-color: none !important;
+      width: 1% !important;
+    }
+  }
+}
