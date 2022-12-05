@@ -12,23 +12,56 @@
     width: 100vw;
 
     .box {
-      background-image: url("../../../assets/epilogue/Option-2B-black-icon-device.png");
+      background-image: url("https://images.stinkyfruit.com/black_icon_device.png");
+      //background-image: url("https://images.stinkyfruit.com/Option-2B-black-icon-device.png");
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
-      width: 330px;
-      height: 580px;
+      width: 504px;
+      height: 883px;
       margin: auto;
     }
   }
   @media (max-width: 575.98px) {
     .container {
-      background:white;
+      background: #818181;
       .box {
         background-image: none;
         height: 0% !important;
         margin: 0;
         width: 100%;
+        zoom: normal !important;
+      }
+    }
+  }
+  ///temporary for joe screen
+  @media (max-width: 1280px) {
+    .container {
+      height: 100vh;
+      width: 100vw;
+      .box {
+        zoom: 65%;
+      }
+    }
+  }
+  @media (min-width: 1281px) {
+    .container {
+      height: 100vh;
+      width: 100vw;
+      .box {
+        zoom: 100%;
+      }
+    }
+  }
+  ///temporary for joe screen
+}
+@media (max-width: 991.98px) and (orientation: landscape) {
+  body {
+    #pda-device {
+      .container {
+        height: 100%;
+        width: 100%;
+        padding: 50px;
       }
     }
   }

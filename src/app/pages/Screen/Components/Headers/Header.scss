@@ -1,22 +1,71 @@
 #mail-screen-one {
   .screen-dash {
     height: 38px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    margin-left: 10px;
+    margin-right: 10px;
     .email {
-      background-color: #070808;
-      height: 21px;
-      width: 100px;
-      margin-top: 10px;
-      margin-left: 3px;
+      //background-image: url("https://images.stinkyfruit.com/Heading_Backdrop_v1.svg");
+      background-image: url("https://images.stinkyfruit.com/Text_Backdrop.svg");
+      background-size:cover;
+      height: 31px;
+      width: 26%;
+      //margin-left: 3px;
+      //margin-top: 10px;
+      background-repeat: no-repeat;
+      background-position: center;
       .text-email {
-        color: rgb(30, 219, 232);
+        color: #47b9b2;
+        text-align: center;
+        font-size: 21px;
+        text-transform: uppercase;
+        font-family: "Palm OS";
       }
     }
     .logo {
-      background-image: url("../../../../../assets/backgrounds/slogov2.png");
+      //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/slogov2.png");
+      background-image: url("https://images.stinkyfruit.com/Red_west_logo.svg");
       background-repeat: no-repeat;
-      height: 28px;
-      width: 96px;
-      margin-top: 16px;
+      height: 20px;
+      width: 137px;
+      background-size: 100%;
+      background-position: center;
+    }
+  }
+}
+
+@media (max-width: 320px) and (orientation: portrait) {
+  #mail-screen-one {
+    .screen-dash {
+      .email {
+        width: 30%;
+      }
+    }
+  }
+}
+
+@media (min-width: 321px) and  (max-width: 575.98px) and (orientation: portrait) {
+  #mail-screen-one{
+    .screen-dash{
+      height: 45px;
+      align-items: center;
+      .email{
+        height: 38px;
+        margin-top: 1px;
+        background-repeat: no-repeat;
+        background-position: center;
+        .text-email {
+          font-size: 24px;
+          text-align: center;
+        }
+      }
+      .logo{
+        width: 35vw;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        background-position: center;
+      }
     }
   }
 }

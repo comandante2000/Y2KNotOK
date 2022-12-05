@@ -1,0 +1,54 @@
+#pda-base-chat-unred{
+  .base-chat-unread-container{
+    margin-left: 10px;
+    margin-right: 30px;
+    .icon-container{
+      width: 40%;
+      .red-icon {
+        //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/redicon.png");
+        background-image: url("https://images.stinkyfruit.com/Read.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 26px;
+      }
+      .chat-icon {
+        //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/chat-icon.png");
+        background-image: url("https://images.stinkyfruit.com/Text_Icon.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 56px;
+        margin: 10px;
+        height: 36px;
+      }
+      .unred-icon {
+        //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/unredicon.png");
+        background-image: url("https://images.stinkyfruit.com/Un_read.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 27px;
+        background-size: 100%;
+        margin: 10px;
+        height: 14px;
+      }
+    }
+    .info-container{
+      width: 60%;
+      .person-name{
+        font-family: "Palm OS";
+        font-size: 24px;
+        text-transform: capitalize;
+        line-height: 22px;
+      }
+      .person-chat{
+        font-family: "Palm OS";
+        font-size: 22px;
+        line-height: 14px;
+      }
+      .chat-date{
+        font-family: "Palm OS";
+        font-size: 23px;
+        line-height: 21px;
+      }
+    }
+  }
+}

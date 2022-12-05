@@ -1,0 +1,58 @@
+#pda-base-chat-info{
+  .Chat-Info-container{
+    margin-left: 10px;
+    margin-right: 10px;
+    .icon-container{
+      width:30%;
+      .chat-icon {
+        //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/chat-icon.png");
+        background-image: url("https://images.stinkyfruit.com/Text_Icon.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 52px;
+        height: 36px;
+        margin: 10px;
+      }
+    }
+    .info-container{
+      width: 70%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      .person-name{
+        font-family: "Palm OS";
+        font-size: 24px;
+        text-transform: capitalize;
+        line-height: 22px;
+      }
+      .chat-date{
+        font-size:23px;
+        font-family: "Palm OS";
+        line-height: 21px;
+      }
+      .chat-info{
+        .person-chat{
+          font-family: "Palm OS";
+          font-size: 22px;
+          text-transform:capitalize;
+          line-height: 14px;
+        }
+        .chat-time-container{
+          .chat-time{
+            font-family: "Palm OS";
+            font-size: 14px;
+            line-height: 13px;
+          }
+        }
+      }
+    }
+  }
+}
+.pda-base-chat-reply{
+  .txt-area-bg{
+    background-image: url("https://images.stinkyfruit.com/Text_Input_Box.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+  }
+}

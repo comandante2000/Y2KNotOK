@@ -1,11 +1,29 @@
 #phone-button {
   .button-3 {
-    background-image: url("../../../../../../assets/buttons/Mask Group 8v3.png");
-    height: 60px;
-    width: 59px;
+    background-image: url("https://images.stinkyfruit.com/Phone_Normal_state.png");
+    height: 95px;
+    width: 95px;
     background-repeat: no-repeat;
     margin: auto;
     margin-inline: 3px;
     margin-top: -8px;
+    background-position: center;
+    background-size: cover;
+  }
+  .red {
+    border-radius: 50%;
+    box-shadow: 0px 1px 8px 3px rgb(123,42,42) inset;
+  }
+  .black{
+    border-radius: 50%;
+    //border: 4px solid rgba(16, 16, 16, 0.75);
+  }
+}
+@media (max-width: 320px) and (orientation: portrait) {
+  #phone-button{
+    .button-3{
+      height: 70px;
+      width: 70px;
+    }
   }
 }

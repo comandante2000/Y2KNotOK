@@ -1,10 +1,29 @@
-#mail-button{
+#mail-button {
     .button-2 {
-      background-image: url("../../../../../../assets/buttons/Mask Group 9v3.png");
-      height: 46px;
-      width: 46px;
+      background-image: url("https://images.stinkyfruit.com/Message_Normal_state.png");
+      height: 60px;
+      width: 60px;
       background-repeat: no-repeat;
       margin: auto;
       margin-inline: 3px;
-      }
+      background-position: center;
+      background-size: cover;
+      margin-top: -11px;
+    }
+    .red {
+      border-radius: 50%;
+      box-shadow: 0px 1px 8px 3px rgb(123,42,42) inset;
+    }
+    .black{
+      border-radius: 50%;
+      //border: -4px solid rgba(16, 16, 16, 0.75);
+    }
+}
+@media (max-width: 320px) and (orientation: portrait) {
+  #mail-button{
+    .button-2{
+      height: 50px;
+      width: 50px;
+    }
+  }
 }
