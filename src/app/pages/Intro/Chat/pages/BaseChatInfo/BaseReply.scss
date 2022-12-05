@@ -6,21 +6,34 @@
     font-family: "Palm OS";
   }
   .btn-back{
+    background-image: url("https://images.stinkyfruit.com/box_img_bckground.svg");
+    background-repeat: no-repeat;
     font-family: "Palm OS";
     font-size: 24px;
     line-height: 22px;
     border-radius: 5px;
+    width: 86.6px;
+    height: 36.67px;
   }
   .btn-reply{
+    background-image: url("https://images.stinkyfruit.com/box_img_bckground.svg");
+    background-repeat: no-repeat;
     font-family: "Palm OS";
     font-size: 24px;
     line-height: 22px;
     border-radius: 5px;
+    width: 86.6px;
+    height: 36.67px;
   }
   .btn-delete{
+    background-image: url("https://images.stinkyfruit.com/box_img_bckground_gray.svg");
+    background-repeat: no-repeat;
     font-family: "Palm OS";
+    color: #326462;
     font-size: 24px;
     line-height: 22px;
     border-radius: 5px;
+    width: 86.6px;
+    height: 36.67px;
   }
 }

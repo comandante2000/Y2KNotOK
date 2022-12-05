@@ -52,15 +52,10 @@ export default function MailReply({ name }) {
           ></textarea>
         </div>
       ) : null}
-
       <div className="d-flex justify-content-around mt-3">
-        <div className=" px-3 back_button" type="button" onClick={OpenBack}></div>
-        <div
-          className=" px-3 reply_button"
-          type="button"
-          onClick={OpenReplay}
-        ></div>
-        <div className="px-3 delete_button" type="button"></div>
+        <div className="back_button d-flex justify-content-center align-items-center" type="button" onClick={OpenBack}>Back</div>
+        <div className="reply_button d-flex justify-content-center align-items-center" type="button" onClick={OpenReplay}>Reply</div>
+        <div className="delete_button d-flex justify-content-center align-items-center" type="button">Delete</div>
       </div>
     </div>
   );

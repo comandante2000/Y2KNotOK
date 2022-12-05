@@ -28,7 +28,18 @@
     -o-border-radius: 4px;
     height: 99.5%;
     .Locating-map {
-      margin-top: 91px !important;
+      height: 67.5vh;
+      width: 100%;
+      margin-top: -124px;
+      .warning{
+        font-family: "Palm OS";
+        font-size: 39px;
+        line-height: 35px;
+        background-image: url("https://images.stinkyfruit.com/locating_bg_border.svg");
+        background-repeat: no-repeat;
+        width: 260px;
+        height: 92px;
+      }
     }
   }
   .inner-row-right {
