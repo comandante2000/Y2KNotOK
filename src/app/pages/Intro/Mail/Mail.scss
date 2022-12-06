@@ -28,8 +28,23 @@
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
     height: 99.5%;
-  
-   overflow: hidden;
+    overflow: hidden;
+    .mail-container{
+      padding-left: 10px;
+      height: 99.5%;
+      width: 100%;
+      overflow-y: scroll;
+      &::-webkit-scrollbar{
+        width: 10px;
+      }
+      &::-webkit-scrollbar-track{
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      }
+      &::-webkit-scrollbar-thumb{
+        background-color: darkgrey;
+        outline: 1px solid slategrey;
+      }
+    }
 }
 
   .inner-row-right {
