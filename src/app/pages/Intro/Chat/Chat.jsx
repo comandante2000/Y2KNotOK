@@ -25,12 +25,14 @@ export default function ChatPage() {
                 <ChatReply />
               ) : (
                 <div type="button" onClick={OpenMessage} >
-                  <BaseChat person="Finn" chat="Where are you n.."/>
-                  <BaseChat person="Marcia" chat="The meeting has..." />
-                  <BaseChatUnred person="Tony" chat="What day is tras.." />
-                  <BaseChatUnred person="Tony" chat="What day is tras.." />
-                  <BaseChatUnred person="Tony" chat="What day is tras.." />
-                  <BaseChatUnred person="Tony" chat="What day is tras.." />
+                  <div className="container-message">
+                    <BaseChat person="Finn" chat="Where are you n.."/>
+                    <BaseChat person="Marcia" chat="The meeting has..." />
+                    <BaseChatUnred person="Tony" chat="What day is tras.." />
+                    <BaseChatUnred person="Tony" chat="What day is tras.." />
+                    <BaseChatUnred person="Tony" chat="What day is tras.." />
+                    <BaseChatUnred person="Tony" chat="What day is tras.." />
+                  </div>
                 </div>
               )}
 
