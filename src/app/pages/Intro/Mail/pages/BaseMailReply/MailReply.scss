@@ -54,22 +54,35 @@
     }
   }
   .back_button {
-    background-image: url("https://images.stinkyfruit.com/back_button.svg");
-    width: 87px;
-    height: 37px;
-    margin-top: 16px;
+    background-image: url("https://images.stinkyfruit.com/box_img_bckground.svg");
+    background-repeat: no-repeat;
+    font-family: "Palm OS";
+    font-size: 24px;
+    line-height: 22px;
+    border-radius: 5px;
+    width: 86.6px;
+    height: 36.67px
   }
   .reply_button {
-    background-image: url("https://images.stinkyfruit.com/reply_button.svg");
-    width: 87px;
-    height: 37px;
-    margin-top: 16px;
+    background-image: url("https://images.stinkyfruit.com/box_img_bckground.svg");
+    background-repeat: no-repeat;
+    font-family: "Palm OS";
+    font-size: 24px;
+    line-height: 22px;
+    border-radius: 5px;
+    width: 86.6px;
+    height: 36.67px
   }
   .delete_button {
-    background-image: url("https://images.stinkyfruit.com/delete_button.svg");
-    width: 87px;
-    height: 37px;
-    margin-top: 16px;
+    background-image: url("https://images.stinkyfruit.com/box_img_bckground_gray.svg");
+    background-repeat: no-repeat;
+    font-family: "Palm OS";
+    color: #326462;
+    font-size: 24px;
+    line-height: 22px;
+    border-radius: 5px;
+    width: 86.6px;
+    height: 36.67px;
   }
 }
 .txt-area-bg {

@@ -19,7 +19,7 @@ export default function MapPage() {
         <div className="inner-row-center">
           <Time />
           <Header name="Map" />
-          {/* <MapLocatingPage/> */}
+           {/*<MapLocatingPage/>*/}
 
           {zoom ? (
             <MapPageOne setZoom={setZoom} />
