@@ -35,14 +35,6 @@ export default function MailPage() {
                     <MailBaseUnred name="admin@redwest.com" />
                     <MailBaseUnred name="admin@redwest.com" />
                     <MailBaseUnred name="admin@redwest.com" />
-                    <MailBaseUnred name="admin@redwest.com" />
-                    <MailBaseUnred name="admin@redwest.com" />
-                    <MailBaseUnred name="admin@redwest.com" />
-                    <MailBaseUnred name="admin@redwest.com" />
-                    <MailBaseUnred name="admin@redwest.com" />
-                    <MailBaseUnred name="admin@redwest.com" />
-                    <MailBaseUnred name="admin@redwest.com" />
-                    <MailBaseUnred name="admin@redwest.com" />
                   </div>
                 </div>
               )}
