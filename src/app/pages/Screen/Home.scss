@@ -3,7 +3,7 @@
     height: 527.5px;
     width: 100%;
   }
-     .the-image-logo {
+  .the-image-logo {
     height: 29.34px;
     width: 307.3px;
     background-position: center;
@@ -11,6 +11,20 @@
     background-size: 85%;
     background-repeat: no-repeat;
   }
-
- 
+}
+@media (max-width: 575.98px){
+  #home{
+    .logo-container{
+      height: 64vh;
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 320px){
+  #home{
+    .logo-container{
+      height: 60vh;
+      width: 100%;
+    }
+  }
 }

@@ -1,6 +1,6 @@
 import "./Map.scss";
 import { useState, useEffect } from "react";
-export default function MapButton({ showScreen, setActive, color }) {
+export default function MapButton({ showScreen, setActive, color ,press}) {
 
 
   const handleClick5 = () => {
@@ -14,7 +14,7 @@ export default function MapButton({ showScreen, setActive, color }) {
         className={`button-5 ${color == "map" ? "red" : "black"}`}
         type="button"
         name="map"
-        onClick={handleClick5}
+        onClick={press===6?handleClick5:null}
       ></div>
     </div>
   );

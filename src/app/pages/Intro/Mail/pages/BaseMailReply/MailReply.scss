@@ -1,94 +1,138 @@
 #pda-mail-reply {
-  .reply-mail {
-    line-height: 20px;
-    font-size: 29px;
-  }
-  .base-mail-container {
-    margin-left: 10px;
-    margin-right: 30px;
+  .mail-reply-container{
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 491px;
+    width: 100%;
+    margin-bottom: 20px;
+    overflow-y:auto;
+    position: relative;
+    &::-webkit-scrollbar{
+      width: 10px;
+      height: auto;
+      background-image: url("https://images.stinkyfruit.com/scroll-bar-bg.png");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    &::-webkit-scrollbar-track{
+      -webkit-box-shadow: #47b9b2;
+    }
+    &::-webkit-scrollbar-thumb{
+      background-image: url("https://images.stinkyfruit.com/scroll-bar-thumbnail.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .reply-mail {
+      line-height: 20px;
+      font-size: 29px;
+    }
+    .base-mail-container {
+      .icon-container {
+        width: 40%;
+        .red-icon {
+          background-image: url("https://images.stinkyfruit.com/Read.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          width: 26px;
+          margin: 10px;
+          height: 13px;
+        }
 
-    .icon-container {
-      width: 40%;
-      .red-icon {
-        background-image: url("https://images.stinkyfruit.com/Read.svg");
+        .mail-icon {
+          background-image: url("https://images.stinkyfruit.com/Mail_Icon.svg");
+          background-repeat: no-repeat;
+          background-position: center left;
+          width: 56px;
+          margin: 10px;
+          height: 36px;
+        }
+      }
+      .info-container {
+        width: 60%;
+        .person-name {
+          font-family: "Palm OS";
+          font-size: 24px;
+          line-height: 22px;
+        }
+        .subject {
+          font-family: "Palm OS";
+          font-size: 22px;
+          line-height: 14px;
+        }
+        .mail-date {
+          font-family: "Palm OS";
+          font-size: 23px;
+          line-height: 21px;
+        }
+      }
+      .unred-icon {
+        background-image: url("https://images.stinkyfruit.com/Un_read.svg");
         background-repeat: no-repeat;
         background-position: center;
-        width: 26px;
-        margin: 10px;
-        height: 13px;
-      }
-
-      .mail-icon {
-        background-image: url("https://images.stinkyfruit.com/Mail_Icon.svg");
-        background-repeat: no-repeat;
-        background-position: center left;
-        width: 56px;
-        margin: 10px;
-        height: 36px;
+        width: 25px;
+        background-size: 100%;
       }
     }
-    .info-container {
-      width: 60%;
-      .person-name {
-        font-family: "Palm OS";
-        font-size: 24px;
-        line-height: 22px;
-      }
-      .subject {
-        font-family: "Palm OS";
-        font-size: 22px;
-        line-height: 14px;
-      }
-      .mail-date {
-        font-family: "Palm OS";
-        font-size: 23px;
-        line-height: 21px;
-      }
-    }
-    .unred-icon {
-      background-image: url("https://images.stinkyfruit.com/Un_read.svg");
+    .back_button {
+      background-image: url("https://images.stinkyfruit.com/box_img_bckground.svg");
       background-repeat: no-repeat;
-      background-position: center;
-      width: 25px;
-      background-size: 100%;
+      font-family: "Palm OS";
+      font-size: 24px;
+      line-height: 22px;
+      border-radius: 5px;
+      width: 86.6px;
+      height: 36.67px
     }
-  }
-  .back_button {
-    background-image: url("https://images.stinkyfruit.com/box_img_bckground.svg");
-    background-repeat: no-repeat;
-    font-family: "Palm OS";
-    font-size: 24px;
-    line-height: 22px;
-    border-radius: 5px;
-    width: 86.6px;
-    height: 36.67px
-  }
-  .reply_button {
-    background-image: url("https://images.stinkyfruit.com/box_img_bckground.svg");
-    background-repeat: no-repeat;
-    font-family: "Palm OS";
-    font-size: 24px;
-    line-height: 22px;
-    border-radius: 5px;
-    width: 86.6px;
-    height: 36.67px
-  }
-  .delete_button {
-    background-image: url("https://images.stinkyfruit.com/box_img_bckground_gray.svg");
-    background-repeat: no-repeat;
-    font-family: "Palm OS";
-    color: #326462;
-    font-size: 24px;
-    line-height: 22px;
-    border-radius: 5px;
-    width: 86.6px;
-    height: 36.67px;
+    .reply_button {
+      background-image: url("https://images.stinkyfruit.com/box_img_bckground.svg");
+      background-repeat: no-repeat;
+      font-family: "Palm OS";
+      font-size: 24px;
+      line-height: 22px;
+      border-radius: 5px;
+      width: 86.6px;
+      height: 36.67px
+    }
+    .delete_button {
+      background-image: url("https://images.stinkyfruit.com/box_img_bckground_gray.svg");
+      background-repeat: no-repeat;
+      font-family: "Palm OS";
+      color: #326462;
+      font-size: 24px;
+      line-height: 22px;
+      border-radius: 5px;
+      width: 86.6px;
+      height: 36.67px;
+    }
+    .txt-area-bg {
+      background-color: #288577;
+      border-radius: 10px;
+      border: 1px solid #288577;
+      font-family: "Palm OS";
+      width: 100%;
+      height: 150px;
+      font-size: 20px;
+    }
   }
 }
-.txt-area-bg {
-  background-color: #288577;
-  border-radius: 10px;
-  border: 1px solid #288577;
-  font-family: "Palm OS";
-  margin: 0px 20px;
+@media (max-width: 575.98px){
+  #pda-mail-reply{
+    .mail-reply-container{
+      height: 50vh;
+      .txt-area-bg{
+        font-size: 25px;
+      }
+    }
+  }
+}
+@media (max-width: 320px){
+  #pda-mail-reply{
+    .mail-reply-container{
+      height: 45vh;
+      .txt-area-bg{
+        font-size: 25px;
+      }
+    }
+  }
 }
