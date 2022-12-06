@@ -9,7 +9,7 @@ export default function Boot({ instruction, setpress }) {
     });
   }
   return (
-    <div id="pda-boot-screen">
+   <div id="pda-boot-screen">
       <div className="pda-boot-container">
         <div className="d-flex justify-content-center align-items-center info-popup-container">
           <div className="image-popup align-self-center">

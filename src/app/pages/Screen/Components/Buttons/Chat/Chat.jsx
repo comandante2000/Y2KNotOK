@@ -1,6 +1,6 @@
 import "./Chat.scss";
 import { useState, useEffect } from "react";
-export default function ChatButton({ showScreen, setActive,color}) {
+export default function ChatButton({ showScreen, setActive,color,press}) {
 
 
 
@@ -16,8 +16,7 @@ export default function ChatButton({ showScreen, setActive,color}) {
         className={`button-4 ${color=="message"? "red":"black"}`}
         type="button"
         name="chat"
-        onClick={handleClick4}
-      
+        onClick={press===6?handleClick4:null}
       ></div>
     </div>
   );
