@@ -1,7 +1,7 @@
 import "./Phone.scss";
 import { useState, useEffect } from "react";
 
-export default function PhoneButton({ showScreen, setActive, color }) {
+export default function PhoneButton({ showScreen, setActive, color,press }) {
  
 
   const handleClick3 = () => {
@@ -15,7 +15,7 @@ export default function PhoneButton({ showScreen, setActive, color }) {
         className={`button-3 ${color == "phone" ? "red" : "black"}`}
         type="button"
         name="phone"
-        onClick={handleClick3}
+        onClick={press===6?handleClick3:null}
       ></div>
     </div>
   );

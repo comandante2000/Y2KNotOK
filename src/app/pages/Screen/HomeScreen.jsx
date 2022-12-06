@@ -4,7 +4,7 @@ import Boot from "./Boot/Boot";
 import BootAccept from "./BootAccept/BootAccept";
 import Home from "./Home";
 import { useState } from "react";
-export default function HomeScreen() {
+export default function HomeScreen({press, setpress}) {
 
 
 let bootone ="1. Y2K NOT OK is an hour-long interactive story told in 10 episodes.";
@@ -13,10 +13,10 @@ let bootone ="1. Y2K NOT OK is an hour-long interactive story told in 10 episode
   let bootfour = "4.  If you’d like to EXIT and RETURN to Y2K NOT OK, please use the same browser and don’t clear your cache.";
   let bootfive = "5. This website uses cookies to personalize your experience and for measurement and analytics purposes. By using our website and services, you agree to our use of cookies as described in our Cookie and Privacy Policies.";
  
-  const [press, setpress] = useState(0);
+  
 
 
-console.log("the instruction press:", press);
+
 
   return (
     <div id="pda-home-screen">
