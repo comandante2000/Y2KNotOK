@@ -13,7 +13,7 @@ pipelines:
           - dist/**
     - step:
         name: Deploy Artifacts to Development Server
-        deployment: test
+        deployment: development
         script:
           - pipe: atlassian/scp-deploy:0.3.3
             variables:
