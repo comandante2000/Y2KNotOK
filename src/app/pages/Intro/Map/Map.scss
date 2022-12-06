@@ -1,15 +1,12 @@
 #pda-map-screen {
   .row-2 {
     padding: 0px;
-    height: 420px; ///new1
-    width: 330px;
+    height: 643px;
+    width: 504px;
   }
   .inner-row-left {
     width: 15%;
-  }  
-  
-  
-    }
+  }
   .inner-row-center {
     //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/pda-crack-screen.png");
     background-image: url("https://images.stinkyfruit.com/PDA_Crack_Screen.svg");
@@ -17,16 +14,34 @@
     background-blend-mode: multiply;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 76%;
-    border-radius: 4px;
+    background-position: center;
+    width: 94%;
+    border-radius: 10px !important;
+    -webkit-border-radius: 10px !important;
+    -moz-border-radius: 10px !important;
+    -ms-border-radius: 10px !important;
+    -o-border-radius: 10px !important;
     border: 2px solid #3c3838;
-
-.Locating-map {
-      margin-top: 91px !important;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    height: 99.5%;
+    .Locating-map {
+      height: 67.5vh;
+      width: 100%;
+      margin-top: -124px;
+      .warning{
+        font-family: "Palm OS";
+        font-size: 39px;
+        line-height: 35px;
+        background-image: url("https://images.stinkyfruit.com/locating_bg_border.svg");
+        background-repeat: no-repeat;
+        width: 260px;
+        height: 92px;
+      }
     }
-  
   }
-
   .inner-row-right {
     width: 15%;
   }
@@ -39,7 +54,7 @@
       margin: auto;
       width: 100vw;
       padding: 0px;
-      height: 77vh !important;
+      height: 70vh !important;
     }
 
     .inner-row-left {
@@ -54,7 +69,8 @@
       margin-bottom: 0%;
       background-size: cover;
       background-repeat: no-repeat;
-   
+      height: initial;
+
     }
 
     .inner-row-right {
@@ -62,4 +78,6 @@
       width: 1% !important;
     }
   }
+}
+
 

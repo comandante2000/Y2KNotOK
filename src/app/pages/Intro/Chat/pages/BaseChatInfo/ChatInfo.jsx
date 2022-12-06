@@ -4,20 +4,23 @@ export default function ChatInfo({ person, chat }) {
 
   return (
     <div id="pda-base-chat-info">
-      <div className=" d-flex justify-content-evenly mx-1 me-3 border border-dark py-0 g-5 position-relative">
-        <div className="chat-icon "></div>
-
-        <div>
-          <div className="d-flex">
-            <div className="person-name">{person}</div>
-            <div className="position-absolute top-0 end-0 me-1">12/30</div>
+      <div className=" d-flex py-0 g-5 position-relative Chat-Info-container">
+        <div className="icon-container d-flex justify-content-center align-items-center">
+          <div className="chat-icon "></div>
+        </div>
+        <div className="info-container me-3">
+          <div className="d-flex w-100">
+            <div className="person-name w-75">{person}</div>
+            <div className="w-25 chat-date text-end">12/30</div>
           </div>
-          <div className="chat-info">
-            <div className="person-chat ">{chat}</div>
+          <div className="chat-info d-flex">
+            <div className="person-chat w-75">{chat}</div>
+            <div className="chat-time-container w-25 text-end">
+              <p className="chat-time">2:11pm</p>
+            </div>
           </div>
         </div>
       </div>
-    
     </div>
   );
 }

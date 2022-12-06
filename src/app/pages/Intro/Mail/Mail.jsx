@@ -3,8 +3,9 @@ import Time from "../../Screen/Components/Time/Time";
 import Header from "../../Screen/Components/Headers/Header";
 import MailBase from "./pages/BaseMail/BaseMail";
 import MailBaseUnred from "./pages/BaseMailUnred/BaseMailUnred";
-import MailInfo from "./pages/BaseMailInfo/MailInfo";
+import MailReply from "./pages/BaseMailReply/MailReply";
 import { useState } from "react";
+
 export default function MailPage() {
   const [open, setOpen] = useState(false);
 
@@ -18,22 +19,23 @@ export default function MailPage() {
 
         <div className="inner-row-center">
           <div>
+           
             <Time />
             <Header name="Mail" />
+      
             <div>
-              
               {open ? (
-                <MailInfo />
+                <MailReply name="admin@redwest.com"/>
               ) : (
-                <div type="button" onClick={OpenMessage}>
+                <div type="button" onClick={OpenMessage} >
                   <MailBase name="admin@redwest.com" />
                   <MailBase name="admin@redwest.com" />
+                  <MailBaseUnred name="admin@redwest.com" />
                   <MailBaseUnred name="admin@redwest.com" />
                   <MailBaseUnred name="admin@redwest.com" />
                   <MailBaseUnred name="admin@redwest.com" />
                 </div>
               )}
-             
             </div>
           </div>
         </div>

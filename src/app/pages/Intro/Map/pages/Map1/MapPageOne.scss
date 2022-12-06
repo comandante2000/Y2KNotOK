@@ -1,31 +1,44 @@
-#map-pageone-screen {
+#map-pageone-screen { 
   .image {
-    margin-top: -71px;
+  
     .image-map {
-      background-image: url("./map3.png");
-      width: 240px;
-      height: 409px;
+      background-image: url("https://images.stinkyfruit.com/map1.svg");
+      // background-position: center;
+      // background-repeat: no-repeat;
+      // height: 553px;
+      // width: 100vw;
+      // background-size: contain;
+      // margin-top: -30px;
+      // background-blend-mode: darken;
+      // background-size: 394px;
+
+
+      background-position: center;
       background-repeat: no-repeat;
-      transform: scale(1.1);
-      -webkit-transform: scale(1.1);
-      -moz-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-      -o-transform: scale(1.1);
-}
+      height: 636.5px;
+      width: 100%;
+      margin-top: -124px;
+      background-blend-mode: darken;
+      background-size: 383px;
+      background-size: cover;
+    }
   }
+}
+.zoomin {
+  background-image: url("https://images.stinkyfruit.com/ZoomOut.svg");
+  background-repeat: no-repeat;
+  height: 65px;
+  width: 38px;
+  margin-left: 10px;
+}
 
-  @media (max-width: 575.98px) {
-
-    .image {
-        margin-top: -71px;
-        .image-map {
-          background-image: url("./rmap.png");
-          width: 100vw;
-          height: 80vh;
-          background-repeat: no-repeat;
-        }
-      }
-
-
+@media (max-width: 575.98px) {
+  .image {
+    .image-map {
+      width: 100vw !important;
+      background-size: cover !important;
+      height: 63vh !important;
+      margin-top: -72px !important;
+    }
   }
 }
