@@ -23,14 +23,11 @@ export default function ChatReply({ person, chat }) {
           chat="HR Timothee left a few messages at like 2 in the morning. Dude asked for my"
         />
       </div>
-
-      <div className="d-flex justify-content-center mt-3">
-          {open ?
+        {open ?
             (<div className="d-flex justify-content-center mt-3">
-                <textarea className="txt-area-bg" type="text" rows="5" cols="60"></textarea>
+               <textarea className="txt-area-bg" type="text" rows="5" cols="60"></textarea>
             </div>
-          ) : null}
-      </div>
+        ) : null}
       <div>
         <div className="d-flex justify-content-around mt-3">
           <div className="btn-back d-flex justify-content-center align-items-center px-3" type="button" onClick={OpenBack}>
