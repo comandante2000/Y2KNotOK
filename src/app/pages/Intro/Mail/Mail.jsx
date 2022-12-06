@@ -28,12 +28,14 @@ export default function MailPage() {
                 <MailReply name="admin@redwest.com"/>
               ) : (
                 <div type="button" onClick={OpenMessage} >
-                  <MailBase name="admin@redwest.com" />
-                  <MailBase name="admin@redwest.com" />
-                  <MailBaseUnred name="admin@redwest.com" />
-                  <MailBaseUnred name="admin@redwest.com" />
-                  <MailBaseUnred name="admin@redwest.com" />
-                  <MailBaseUnred name="admin@redwest.com" />
+                  <div className="mail-container">
+                    <MailBase name="admin@redwest.com" />
+                    <MailBase name="admin@redwest.com" />
+                    <MailBaseUnred name="admin@redwest.com" />
+                    <MailBaseUnred name="admin@redwest.com" />
+                    <MailBaseUnred name="admin@redwest.com" />
+                    <MailBaseUnred name="admin@redwest.com" />
+                  </div>
                 </div>
               )}
             </div>

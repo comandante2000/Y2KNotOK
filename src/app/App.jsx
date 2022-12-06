@@ -8,10 +8,7 @@ function App() {
   return (
     <div className="container-fluid app d-flex justify-content-center">
       <Routes>
-        <Route path="/" element={<Layout />} />
-        <Route path="/documentation" element={<Documentation />} />
-        <Route path="/Device" element={<Device />}/>
-   
+        <Route path="/" element={<Device />} />
       </Routes>
      
     </div>
