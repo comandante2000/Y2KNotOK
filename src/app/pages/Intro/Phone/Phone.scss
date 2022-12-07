@@ -62,4 +62,92 @@
       width: 1% !important;
     }
   }
+  .phone-container{
+    height: 54vh;
+    width: 100%;
+  }
+  .redwest-logo-container{
+  }
+  .redwest-logo{
+    background-position: center;
+    background-image: url("https://images.stinkyfruit.com/Red_west_logo.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 29px;
+    width: 307px;
+  }
+  .redwest-keypad-container{
+    margin-top: 23px;
+  }
+  .keypad-row-one{
+    margin-bottom: 5px;
+  }
+  .keypad-row-two{
+    margin-bottom: 5px;
+  }
+  .keypad-row-three{
+    margin-bottom: 5px;
+  }
+  .numbers{
+    color: #47b9b2;
+    font-family: "Palm OS";
+    font-size: 35px;
+  }
+  .letters{
+    color: #47b9b2;
+    font-family: "Palm OS";
+    font-size: 27px;
+    line-height: 23px;
+  }
+  .redwest-btn-one{
+    background-image: url("https://images.stinkyfruit.com/keypad_bg.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 112px;
+    height: 46px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 2.5px;
+  }
+  .redwest-btn-two{
+    background-image: url("https://images.stinkyfruit.com/keypad_bg.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 112px;
+    height: 46px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+  }
+  .redwest-btn-three{
+    background-image: url("https://images.stinkyfruit.com/keypad_bg.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 112px;
+    height: 46px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 2.5px;
+  }
+  .btn-call-container{
+    margin-top: 23px;
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 10px;
+    .btn-call{
+      background-image: url("https://images.stinkyfruit.com/box_img_bckground_gray.svg");
+      background-repeat: no-repeat;
+      font-family: "Palm OS";
+      color: #326462;
+      font-size: 24px;
+      line-height: 22px;
+      border-radius: 5px;
+      width: 86.6px;
+      height: 36.67px;
+    }
+  }
 }
