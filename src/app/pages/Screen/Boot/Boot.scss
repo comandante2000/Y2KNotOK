@@ -13,15 +13,16 @@
   .centered {
     width: 100%;
     height: 100%;
-    padding-left: 35px;
-    padding-right: 35px;
+    padding-left: 25px;
+    padding-right: 25px;
     .Popup-Title {
-      background-image: url("https://images.stinkyfruit.com/Text_pop.svg");
+      //background-image: url("https://images.stinkyfruit.com/Text_pop.svg");
+      background-image: url("https://images.stinkyfruit.com/welcome_to_y2knotok.svg");
       background-repeat: no-repeat;
-      height: 52px;
-      width: 247px;
-      background-size: 206px;
+      height: 53px;
+      width: 160px;
       background-position: center;
+      background-size: cover;
     }
     .popup-text {
       font-family: "Palm OS";
@@ -41,12 +42,14 @@
     }
   }
   .image-popup {
-    background-image: url("https://images.stinkyfruit.com/Popup_Container.svg");
+    //background-image: url("https://images.stinkyfruit.com/Popup_Container.svg");
+    background-image: url("https://images.stinkyfruit.com/popup_container_right.svg");
     background-position: center;
     background-repeat: no-repeat;
-    height: 317.95px;
-    width: 295.07px;
+    height: 343px;
+    width: 296px;
     background-size: contain;
+    mix-blend-mode: darken;
   }
   @media (max-width: 575.98px) {
     .pda-boot-container{
