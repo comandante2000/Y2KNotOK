@@ -7,7 +7,7 @@ export default function MailBaseUnred({name}) {
 
   return (
     <div id="pda-mail-base-unred">
-      <div className=" d-flex border border-dark py-0 g-5 position-relative base-mail-unread-container ">
+      <div className=" d-flex py-0 g-5 position-relative base-mail-unread-container ">
                 <div className="icon-container d-flex align-items-center">
                     <div className="unred-icon"></div>
                     <div className="mail-icon"></div>

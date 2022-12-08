@@ -8,9 +8,10 @@ import { useState } from "react";
 
 export default function MailPage() {
   const [open, setOpen] = useState(false);
-
+  const [hide, setHide] = useState(true);
   const OpenMessage = () => {
     setOpen(true);
+    setHide(false);
   };
   return (
     <div id="pda-mail-screen">
@@ -23,14 +24,14 @@ export default function MailPage() {
             <Time />
             <Header name="Mail" />
       
-            <div>
+            <div className="mail-box-container">
               {open ? (
                 <MailReply name="admin@redwest.com"/>
               ) : (
                 <div type="button" onClick={OpenMessage} >
                   <div className="mail-container">
-                    <MailBase name="admin@redwest.com" />
-                    <MailBase name="admin@redwest.com" />
+                    <MailBase name="hrtimothee@redwest.com" />
+                    <MailBaseUnred name="admin@redwest.com" />
                     <MailBaseUnred name="admin@redwest.com" />
                     <MailBaseUnred name="admin@redwest.com" />
                     <MailBaseUnred name="admin@redwest.com" />
@@ -38,6 +39,13 @@ export default function MailPage() {
                   </div>
                 </div>
               )}
+              {hide ?
+                <div className="btn-delete-container d-flex justify-content-end">
+                  <div className="btn-delete d-flex justify-content-center align-items-center">
+                    Delete
+                  </div>
+                </div> : null
+              }
             </div>
           </div>
         </div>

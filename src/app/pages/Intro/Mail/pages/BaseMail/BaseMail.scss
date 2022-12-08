@@ -1,51 +1,65 @@
 #pda-mail-base{
+  .base-mail-container {
+    height: 70px;
+    border: 3px solid black;
+    .icon-container{
+      width: 30%;
+      .red-icon {
+        background-image: url("https://images.stinkyfruit.com/Read.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 26px;
+        margin: 10px;
+        height: 13px;
+      }
 
-.base-mail-container {
-  .icon-container{
-    width: 40%;
-    .red-icon {
-      background-image: url("https://images.stinkyfruit.com/Read.svg");
+      .mail-icon {
+        background-image: url("https://images.stinkyfruit.com/Mail_Icon.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 51px;
+        margin-right:10px;
+        height: 29px;
+      }
+    }
+    .info-container{
+      width: 70%;
+      margin-top: 10px !important;
+      margin-bottom: 10px !important;
+      .person-name{
+        font-family: "Palm OS";
+        font-size: 24px;
+        line-height: 22px;
+      }
+      .subject{
+        font-family: "Palm OS";
+        font-size: 22px;
+        line-height: 14px;
+      }
+      .mail-date{
+        font-family: "Palm OS";
+        font-size: 20px;
+        line-height: 21px;
+      }
+    }
+    .unred-icon {
+      background-image: url("https://images.stinkyfruit.com/Un_read.svg");
       background-repeat: no-repeat;
       background-position: center;
-      width: 26px;
-      margin: 10px;
-      height: 13px;
+      width: 25px;
+      background-size: 100%;
     }
-
-    .mail-icon {
-      background-image: url("https://images.stinkyfruit.com/Mail_Icon.svg");
-      background-repeat: no-repeat;
-      background-position: center left;
-      width: 56px;
-      margin: 10px;
-      height: 36px;
-    }
-  }
-  .info-container{
-    width: 60%;
-    .person-name{
-      font-family: "Palm OS";
-      font-size: 24px;
-      line-height: 22px;
-    }
-    .subject{
-      font-family: "Palm OS";
-      font-size: 22px;
-      line-height: 14px;
-    }
-    .mail-date{
-      font-family: "Palm OS";
-      font-size: 23px;
-      line-height: 21px;
-    }
-  }
-  .unred-icon {
-    background-image: url("https://images.stinkyfruit.com/Un_read.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 25px;
-    background-size: 100%;
   }
 }
-
+@media (max-width: 320px){
+  #pda-mail-base{
+    .base-mail-container{
+      .icon-container{
+        width: 35%;
+      }
+      .info-container{
+        width: 65%;
+      }
+    }
+  }
 }

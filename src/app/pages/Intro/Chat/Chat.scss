@@ -27,7 +27,7 @@
       padding-right: 10px;
       height: 416px;
       width: 100%;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       overflow-y:auto;
       position: relative;
       &::-webkit-scrollbar{
@@ -46,6 +46,21 @@
         background-repeat: no-repeat;
         background-size: cover;
       }
+    }
+  }
+  .btn-delete-container{
+    padding-left: 10px;
+    padding-right: 30px;
+    .btn-delete{
+      background-image: url("https://images.stinkyfruit.com/box_img_bckground_gray.svg");
+      background-repeat: no-repeat;
+      font-family: "Palm OS";
+      color: #326462;
+      font-size: 24px;
+      line-height: 22px;
+      border-radius: 5px;
+      width: 86.6px;
+      height: 36.67px;
     }
   }
   .red-icon {
@@ -100,7 +115,7 @@
       background-repeat: no-repeat;
       height: initial;
       .container-message{
-        height: 45vh;
+        height: 40vh;
       }
 
       // height: 85vh marquee {
@@ -115,6 +130,21 @@
     .inner-row-right {
       background-color: none !important;
       width: 1% !important;
+    }
+  }
+  @media (max-width: 320px){
+    .inner-row-center {
+      width: 100vw;
+      border: 3px solid #1c1c1c;
+      margin: -2%;
+      margin-bottom: 0%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: initial;
+      overflow: hidden;
+      .container-message{
+        height: 34vh;
+      }
     }
   }
 }

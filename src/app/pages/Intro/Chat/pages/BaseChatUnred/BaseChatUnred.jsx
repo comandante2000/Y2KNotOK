@@ -7,7 +7,7 @@ export default function BaseChatUnred({person,chat}) {
 
     return (
         <div id="pda-base-chat-unred">
-            <div className=" d-flex justify-content-evenly border border-dark py-0 g-5 position-relative base-chat-unread-container">
+            <div className=" d-flex justify-content-evenly py-0 g-5 position-relative base-chat-unread-container">
                 <div className="icon-container d-flex align-items-center">
                     <div className="unred-icon "></div>
                     <div className="chat-icon "></div>

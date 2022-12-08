@@ -1,7 +1,11 @@
 #pda-mail-base-unred{
   .base-mail-unread-container {
+    height: 70px;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
     .icon-container{
-      width: 40%;
+      width: 30%;
       .red-icon {
         background-image: url("https://images.stinkyfruit.com/Read.svg");
         background-repeat: no-repeat;
@@ -14,17 +18,17 @@
       .mail-icon {
         background-image: url("https://images.stinkyfruit.com/Mail_Icon.svg");
         background-repeat: no-repeat;
-        background-position: center left;
-        width: 56px;
-        margin: 10px;
-        height: 36px;
+        background-position: center;
+        width: 51px;
+        margin-right: 10px;
+        height: 29px;
       }
       .unred-icon {
         //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/unredicon.png");
         background-image: url("https://images.stinkyfruit.com/Un_read.svg");
         background-repeat: no-repeat;
         background-position: center;
-        width: 26px;
+        width: 25px;
         background-size: 100%;
         margin: 10px;
         height: 14px;
@@ -32,7 +36,9 @@
       
     }
     .info-container{
-      width: 60%;
+      width: 70%;
+      margin-top: 10px !important;
+      margin-bottom: 10px !important;
       .person-name{
         font-family: "Palm OS";
         font-size: 24px;
@@ -45,7 +51,7 @@
       }
       .mail-date{
         font-family: "Palm OS";
-        font-size: 23px;
+        font-size: 20px;
         line-height: 21px;
       }
     }
@@ -57,5 +63,16 @@
       background-size: 100%;
     }
   }
-    
+}
+@media (max-width: 320px){
+  #pda-mail-base-unred{
+    .base-mail-unread-container{
+      .icon-container{
+        width: 35%;
+      }
+      .info-container{
+        width: 65%;
+      }
     }
+  }
+}
