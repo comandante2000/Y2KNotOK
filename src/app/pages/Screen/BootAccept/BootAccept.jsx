@@ -21,13 +21,7 @@ export default function BootAccept({instruction , setpress }) {
               {instruction}
               </p>
               <div className="the_policy_check"></div>
-
-             
-              <div
-                className="accept-button m-0 text-center mt-3 mb-3"
-                type="button"
-                onClick={Next}
-              ></div>
+              <div className="accept-button m-0 d-flex justify-content-center align-items-center mt-3 mb-3" type="button" onClick={Next}>Accept</div>
             </div>
           </div>
         </div>
