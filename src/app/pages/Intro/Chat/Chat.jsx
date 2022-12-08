@@ -33,6 +33,8 @@ export default function ChatPage() {
                     <BaseChatUnred person="Tony" chat="What day is tras.." />
                     <BaseChatUnred person="Tony" chat="What day is tras.." />
                     <BaseChatUnred person="Tony" chat="What day is tras.." />
+                    <BaseChatUnred person="Tony" chat="What day is tras.." />
+                    <BaseChatUnred person="Tony" chat="What day is tras.." />
                   </div>
                 </div>
               )}
