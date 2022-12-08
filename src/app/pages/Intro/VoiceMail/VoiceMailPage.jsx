@@ -119,6 +119,160 @@ export default function VoiceMailPage() {
                 </div>
               </div>
             </div>
+
+            <div className=" d-flex py-0 voice-mail-container">
+              <div className="icon-container d-flex align-items-center">
+                <div className="unred-icon "></div>
+                <div className="voice-icon "></div>
+              </div>
+              <div className="info-container me-3 m-auto">
+                <div className="d-flex w-100">
+                  <div className="email-name w-50">Krista</div>
+                  <div className="voice-date w-50 text-end">12/30</div>
+                </div>
+                <div className="d-flex w-100 align-items-center">
+                  <div className="play-icon" type="button"></div>
+                  <div className="sound-icon sound-six"></div>
+                </div>
+              </div>
+            </div>
+
+            <div className=" d-flex py-0 voice-mail-container">
+              <div className="icon-container d-flex align-items-center">
+                <div className="unred-icon "></div>
+                <div className="voice-icon "></div>
+              </div>
+              <div className="info-container me-3 m-auto">
+                <div className="d-flex w-100">
+                  <div className="email-name w-50">Krista</div>
+                  <div className="voice-date w-50 text-end">12/30</div>
+                </div>
+                <div className="d-flex w-100 align-items-center">
+                  <div className="play-icon" type="button"></div>
+                  <div className="sound-icon sound-six"></div>
+                </div>
+              </div>
+            </div>
+
+            <div className=" d-flex py-0 voice-mail-container">
+              <div className="icon-container d-flex align-items-center">
+                <div className="unred-icon "></div>
+                <div className="voice-icon "></div>
+              </div>
+              <div className="info-container me-3 m-auto">
+                <div className="d-flex w-100">
+                  <div className="email-name w-50">Krista</div>
+                  <div className="voice-date w-50 text-end">12/30</div>
+                </div>
+                <div className="d-flex w-100 align-items-center">
+                  <div className="play-icon" type="button"></div>
+                  <div className="sound-icon sound-six"></div>
+                </div>
+              </div>
+            </div>
+
+
+            <div className=" d-flex py-0 voice-mail-container">
+              <div className="icon-container d-flex align-items-center">
+                <div className="unred-icon "></div>
+                <div className="voice-icon "></div>
+              </div>
+              <div className="info-container me-3 m-auto">
+                <div className="d-flex w-100">
+                  <div className="email-name w-50">Krista</div>
+                  <div className="voice-date w-50 text-end">12/30</div>
+                </div>
+                <div className="d-flex w-100 align-items-center">
+                  <div className="play-icon" type="button"></div>
+                  <div className="sound-icon sound-six"></div>
+                </div>
+              </div>
+            </div>
+
+            <div className=" d-flex py-0 voice-mail-container">
+              <div className="icon-container d-flex align-items-center">
+                <div className="unred-icon "></div>
+                <div className="voice-icon "></div>
+              </div>
+              <div className="info-container me-3 m-auto">
+                <div className="d-flex w-100">
+                  <div className="email-name w-50">Krista</div>
+                  <div className="voice-date w-50 text-end">12/30</div>
+                </div>
+                <div className="d-flex w-100 align-items-center">
+                  <div className="play-icon" type="button"></div>
+                  <div className="sound-icon sound-six"></div>
+                </div>
+              </div>
+            </div>
+
+            <div className=" d-flex py-0 voice-mail-container">
+              <div className="icon-container d-flex align-items-center">
+                <div className="unred-icon "></div>
+                <div className="voice-icon "></div>
+              </div>
+              <div className="info-container me-3 m-auto">
+                <div className="d-flex w-100">
+                  <div className="email-name w-50">Krista</div>
+                  <div className="voice-date w-50 text-end">12/30</div>
+                </div>
+                <div className="d-flex w-100 align-items-center">
+                  <div className="play-icon" type="button"></div>
+                  <div className="sound-icon sound-six"></div>
+                </div>
+              </div>
+            </div>
+
+            <div className=" d-flex py-0 voice-mail-container">
+              <div className="icon-container d-flex align-items-center">
+                <div className="unred-icon "></div>
+                <div className="voice-icon "></div>
+              </div>
+              <div className="info-container me-3 m-auto">
+                <div className="d-flex w-100">
+                  <div className="email-name w-50">Krista</div>
+                  <div className="voice-date w-50 text-end">12/30</div>
+                </div>
+                <div className="d-flex w-100 align-items-center">
+                  <div className="play-icon" type="button"></div>
+                  <div className="sound-icon sound-six"></div>
+                </div>
+              </div>
+            </div>
+
+            <div className=" d-flex py-0 voice-mail-container">
+              <div className="icon-container d-flex align-items-center">
+                <div className="unred-icon "></div>
+                <div className="voice-icon "></div>
+              </div>
+              <div className="info-container me-3 m-auto">
+                <div className="d-flex w-100">
+                  <div className="email-name w-50">Krista</div>
+                  <div className="voice-date w-50 text-end">12/30</div>
+                </div>
+                <div className="d-flex w-100 align-items-center">
+                  <div className="play-icon" type="button"></div>
+                  <div className="sound-icon sound-six"></div>
+                </div>
+              </div>
+            </div>
+
+            <div className=" d-flex py-0 voice-mail-container">
+              <div className="icon-container d-flex align-items-center">
+                <div className="unred-icon "></div>
+                <div className="voice-icon "></div>
+              </div>
+              <div className="info-container me-3 m-auto">
+                <div className="d-flex w-100">
+                  <div className="email-name w-50">Krista</div>
+                  <div className="voice-date w-50 text-end">12/30</div>
+                </div>
+                <div className="d-flex w-100 align-items-center">
+                  <div className="play-icon" type="button"></div>
+                  <div className="sound-icon sound-six"></div>
+                </div>
+              </div>
+            </div>
           </div>
           {open ? (
               <div className="d-flex justify-content-center">
