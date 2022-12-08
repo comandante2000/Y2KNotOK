@@ -21,11 +21,9 @@ export default function Boot({ instruction, setpress }) {
               <p className="instruction-text m-0 text-center mt-2 mb-3">
                 {instruction}
               </p>
-              <div
-                className="next-button m-0 text-center mt-2 mb-3"
-                type="button"
-                onClick={Next}
-              ></div>
+              <div className="next-button m-0 d-flex justify-content-center align-items-center mt-2 mb-3" type="button" onClick={Next}>
+                Next
+              </div>
             </div>
           </div>
         </div>

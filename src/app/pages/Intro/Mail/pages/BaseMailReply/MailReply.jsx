@@ -39,11 +39,13 @@ export default function MailReply({ name }) {
           Ut dolor voluptua sapientem vis, vivendo inimicus concludaturque pro et.
           Cum convenire constituam ut. CumUt dolor voluptua sapientem vis,
         </div>
-        {open ? (
-            <div className="d-flex justify-content-center mt-3">
-          <textarea className="txt-area-bg" type="text"></textarea>
-            </div>
-        ) : null}
+        <div className="d-flex justify-content-center txt-area-container mt-3">
+          {open ? (
+              <div className="d-flex justify-content-center txt-area">
+                <textarea className="txt-area-bg" type="text"></textarea>
+              </div>
+          ) : null}
+        </div>
         <div className="d-flex justify-content-around mt-3">
           <div className="back_button d-flex justify-content-center align-items-center" type="button" onClick={OpenBack}>Back</div>
           <div className="reply_button d-flex justify-content-center align-items-center" type="button" onClick={OpenReplay}>Reply</div>
