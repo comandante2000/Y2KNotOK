@@ -1,9 +1,11 @@
 #pda-base-chat-unred{
   .base-chat-unread-container{
-    //margin-left: 10px;
-    //margin-right: 30px;
+    height: 70px;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
     .icon-container{
-      width: 40%;
+      width: 30%;
       .red-icon {
         //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/redicon.png");
         background-image: url("https://images.stinkyfruit.com/Read.svg");
@@ -16,23 +18,26 @@
         background-image: url("https://images.stinkyfruit.com/Text_Icon.svg");
         background-repeat: no-repeat;
         background-position: center;
-        width: 56px;
-        margin: 10px;
-        height: 36px;
+        background-size: contain;
+        width: 51px;
+        margin-right:10px;
+        height: 29px;
       }
       .unred-icon {
         //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/unredicon.png");
         background-image: url("https://images.stinkyfruit.com/Un_read.svg");
         background-repeat: no-repeat;
         background-position: center;
-        width: 27px;
+        width: 26px;
         background-size: 100%;
         margin: 10px;
-        height: 14px;
+        height: 13px;
       }
     }
     .info-container{
-      width: 60%;
+      width: 70%;
+      margin-top: 10px !important;
+      margin-bottom: 10px !important;
       .person-name{
         font-family: "Palm OS";
         font-size: 24px;
@@ -46,7 +51,7 @@
       }
       .chat-date{
         font-family: "Palm OS";
-        font-size: 23px;
+        font-size: 20px;
         line-height: 21px;
       }
     }

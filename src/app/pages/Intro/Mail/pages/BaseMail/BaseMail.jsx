@@ -8,7 +8,7 @@ export default function MailBase({name}) {
   return (
     <div id="pda-mail-base">
    
-        <div className=" d-flex border border-dark py-0 g-5 position-relative base-mail-container " type="button">
+        <div className=" d-flex py-0 g-5 position-relative base-mail-container " type="button">
                 <div className="icon-container d-flex align-items-center">
                     <div className="red-icon"></div>
                     <div className="mail-icon"></div>
@@ -23,7 +23,7 @@ export default function MailBase({name}) {
                         </div>
                     </div>
                     <div>
-                        <div className="subject">Subject Line</div>
+                        <div className="subject">Listen</div>
                     </div>
                 </div>
             </div>
