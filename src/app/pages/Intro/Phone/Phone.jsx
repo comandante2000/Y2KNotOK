@@ -10,7 +10,7 @@ export default function PhonePage() {
           <Time />
           <Header name="Phone" />
           <div className="phone-container d-flex justify-content-center align-items-center flex-column">
-            <div className="redwest-logo-container">
+            <div className="redwest-logo-container d-flex align-items-center justify-content-center">
               <div className="redwest-logo"></div>
             </div>
             <div className="redwest-keypad-container">
@@ -69,10 +69,10 @@ export default function PhonePage() {
                   <div className="letters"></div>
                 </div>
               </div>
-            </div>
-            <div className="btn-call-container d-flex justify-content-start">
-              <div className="btn-call d-flex justify-content-center align-items-center">
-                Call
+              <div className="btn-call-container d-flex justify-content-end">
+                <div className="btn-call d-flex justify-content-center align-items-center">
+                  Call
+                </div>
               </div>
             </div>
           </div>

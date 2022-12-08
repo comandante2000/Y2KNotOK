@@ -63,8 +63,10 @@
     }
   }
   .phone-container{
-    height: 54vh;
+    //height: 35vh;
+    height: 66vh;
     width: 100%;
+    //margin-top: 153px;
   }
   .redwest-logo-container{
   }
@@ -78,20 +80,22 @@
   }
   .redwest-keypad-container{
     margin-top: 23px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
   .keypad-row-one{
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
   .keypad-row-two{
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
   .keypad-row-three{
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
   .numbers{
     color: #47b9b2;
     font-family: "Palm OS";
-    font-size: 35px;
+    font-size: 44px;
   }
   .letters{
     color: #47b9b2;
@@ -108,7 +112,7 @@
     height: 46px;
     padding-left: 10px;
     padding-right: 10px;
-    margin-right: 2.5px;
+    margin-right: 5px;
   }
   .redwest-btn-two{
     background-image: url("https://images.stinkyfruit.com/keypad_bg.svg");
@@ -119,8 +123,8 @@
     height: 46px;
     padding-left: 10px;
     padding-right: 10px;
-    margin-left: 2.5px;
-    margin-right: 2.5px;
+    margin-left: 5px;
+    margin-right: 5px;
   }
   .redwest-btn-three{
     background-image: url("https://images.stinkyfruit.com/keypad_bg.svg");
@@ -131,13 +135,13 @@
     height: 46px;
     padding-left: 10px;
     padding-right: 10px;
-    margin-left: 2.5px;
+    margin-left: 5px;
   }
   .btn-call-container{
-    margin-top: 23px;
+    margin-top: 37px;
     width: 100%;
-    padding-left: 16px;
-    padding-right: 10px;
+    padding-left: 10px;
+    padding-right: 18px;
     .btn-call{
       background-image: url("https://images.stinkyfruit.com/box_img_bckground_gray.svg");
       background-repeat: no-repeat;
@@ -148,6 +152,37 @@
       border-radius: 5px;
       width: 86.6px;
       height: 36.67px;
+    }
+  }
+}
+@media (max-width: 575.98px){
+  #pda-phone-screen{
+    .phone-container{
+      margin-top: 19px;
+      height: 55vh;
+      .keypad-row-one{
+        margin-bottom: 5px;
+      }
+      .keypad-row-two{
+        margin-bottom: 5px;
+      }
+      .keypad-row-three{
+        margin-bottom: 5px;
+      }
+    }
+    .redwest-btn-one{
+      margin-right: 2.5px;
+    }
+    .redwest-btn-two{
+      margin-left: 2.5px;
+      margin-right: 2.5px;
+    }
+    .redwest-btn-three{
+      margin-left: 2.5px;
+    }
+    .btn-call-container{
+      margin-top: 30px;
+      padding-right: 19px;
     }
   }
 }
