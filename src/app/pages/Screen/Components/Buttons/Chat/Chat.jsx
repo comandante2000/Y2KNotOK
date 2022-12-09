@@ -16,7 +16,7 @@ export default function ChatButton({ showScreen, setActive,color,press}) {
         className={`button-4 ${color=="message"? "red":"black"}`}
         type="button"
         name="chat"
-        onClick={press===6?handleClick4:null}
+        onClick={press >= 5?handleClick4:null}
       ></div>
     </div>
   );

@@ -28,7 +28,7 @@ export default function Device() {
           {screen === "VoicemailScreen" && <VoiceMailPage />}
           {screen === "MessageScreen" && <ChatPage />}
           {screen === "PhoneScreen" && <PhonePage />}
-          <Buttons showScreen={showScreen} press={press} />
+          <Buttons showScreen={showScreen} press={press} setpress={setpress}/>
         </div>
       </div>
     </div>

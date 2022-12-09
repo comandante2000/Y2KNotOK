@@ -8,7 +8,7 @@ export default function BootAccept({instruction , setpress }) {
     console.log(event.target.checked);
     setCheck(event.target.checked);
   }
-  function Next() {
+  function Next() { 
     if (checked){
       setpress(function (prevCount) {
         return (prevCount += 2);
