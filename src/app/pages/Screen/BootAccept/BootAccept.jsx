@@ -36,9 +36,12 @@ export default function BootAccept({instruction , setpress }) {
                   </label>
                 </div>
               </div>
-              <button disable={checked ? "false" : "true"} onClick={Next} className="accept-button m-0 d-flex justify-content-center align-items-center mt-3 mb-3" style={{border: "none", borderRadius : "9px"}}>
+              <div disable={checked ? "false" : "true"} onClick={Next} className="accept-button m-0 d-flex justify-content-center align-items-center mt-3 mb-3">
                 Accept
-              </button>
+              </div>
+              {/*<button disable={checked ? "false" : "true"} onClick={Next} className="accept-button m-0 d-flex justify-content-center align-items-center mt-3 mb-3">*/}
+              {/*  Accept*/}
+              {/*</button>*/}
             </div>
           </div>
         </div>
