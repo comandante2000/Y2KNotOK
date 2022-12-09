@@ -1,6 +1,7 @@
 import "./VoiceMail.scss";
 import Time from "../../Screen/Components/Time/Time";
 import Header from "../../Screen/Components/Headers/Header";
+import PopUp from "./Popup/PopUp";
 import { useState } from "react";
 export default function VoiceMailPage() {
   const [open, setOpen] = useState(false);
@@ -14,7 +15,7 @@ export default function VoiceMailPage() {
     <div id="pda-voicemail-screen">
       <div className="row-2 d-flex justify-content-center">
         <div className="inner-row-left"></div>
-        <div className="inner-row-center">
+        <div className={`inner-row-center ${open?"voiceplay":"unvoiceplay"}`}>
           <Time />
           <Header name="VoiceMail" />
           <div className="voicemail-box-container">
@@ -274,18 +275,7 @@ export default function VoiceMailPage() {
               </div>
             </div>
           </div>
-          {open ? (
-              <div className="d-flex justify-content-center">
-                <div className="light">
-                  <div className="voice-pop-up"></div>
-                </div>
-              </div>
-          ) : null}
-          {/*{open ? (*/}
-          {/*    <div className="d-flex justify-content-center">*/}
-          {/*      <div className="voice-pop-up"></div>*/}
-          {/*    </div>*/}
-          {/*) : null}*/}
+          {open ? <PopUp setOpen={setOpen} /> : null}
         </div>
         <div className="inner-row-right"></div>
       </div>

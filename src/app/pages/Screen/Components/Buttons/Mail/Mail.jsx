@@ -13,7 +13,7 @@ export default function MailButton({ showScreen, setActive, color, press }) {
         className={`button-2 ${color == "mail" ? "red" : "black"}`}
         type="button"
         name="mail"
-        onClick={press === 6 ? handleClick : null}
+        onClick={press >= 5 ? handleClick : null}
       ></div>
     </div>
   );
