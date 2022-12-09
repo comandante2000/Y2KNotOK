@@ -29,8 +29,8 @@ let bootone ="1. Y2K NOT OK is an hour-long interactive story told in 10 episode
             { press===2 && <Boot instruction={bootthree}setpress={setpress} />}
             { press===3 && <Boot instruction={bootfour}setpress={setpress} />}
             { press===4 && <BootAccept instruction={bootfive}setpress={setpress} />}
-            { press===5 && <BootAccept instruction={bootfive}setpress={setpress} />} 
-            { press===6 &&   <Home/>} 
+            { press===5 && <BootAccept instruction={bootfive}setpress={setpress} />}
+            { press===6 &&   <Home/>}
         
         </div>
         <div className="inner-row-right"></div>
