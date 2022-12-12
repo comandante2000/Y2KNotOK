@@ -47,7 +47,7 @@ export default function VoiceMailPage() {
                   <div className="voice-date w-50 text-end">12/30</div>
                 </div>
                 <div className="d-flex w-100 align-items-center">
-                  <div className="play-icon" type="button" onClick={OpenMessage}></div>
+                  <div className="play-icon" type="button"></div>
                   <div className="sound-icon sound-two"></div>
                 </div>
               </div>
