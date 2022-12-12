@@ -11,9 +11,12 @@ $urls: srcs('https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/');
   
   font-family: "Palm OS";
   background: url("https://images.stinkyfruit.com/BG.png");
+  //background: url("https://images.stinkyfruit.com/PDA_BG_4k.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  //height: 2160px;
+  //width: 3840px;
   height: 100vh;
   width: 100vw;
   box-shadow: inset 0 0rem 8rem 6rem #060606d4;
