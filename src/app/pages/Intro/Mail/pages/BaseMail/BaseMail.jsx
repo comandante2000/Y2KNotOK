@@ -2,7 +2,7 @@ import "./BaseMail.scss";
 export default function MailBase({name}) {
  
    
-  // admin@redwest.com
+  
 
 
   return (

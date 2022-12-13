@@ -3,14 +3,21 @@ import Time from "../../Screen/Components/Time/Time";
 import Header from "../../Screen/Components/Headers/Header";
 import PopUp from "./Popup/PopUp";
 import { useState } from "react";
-export default function VoiceMailPage() {
+export default function VoiceMailPage({setAccesmail,accessmail}) {
   const [open, setOpen] = useState(false);
 
   const OpenMessage = () => {
     setOpen(true);
     console.log("you click play button");
   };
-  //voicemail
+
+let videolink ="https://images.stinkyfruit.com/HR_Timothee-V-0103.mp4"
+if (accessmail =="voicemail1.7"){
+
+videolink ="https://images.stinkyfruit.com/voice1_6.mp4"
+
+}
+  
   return (
     <div id="pda-voicemail-screen">
       <div className="row-2 d-flex justify-content-center">
@@ -275,7 +282,7 @@ export default function VoiceMailPage() {
               </div>
             </div>
           </div>
-          {open ? <PopUp setOpen={setOpen} /> : null}
+          {open? <PopUp setOpen={setOpen} setAccesmail={setAccesmail} accessmail={accessmail} video={videolink}/> : null}
         </div>
         <div className="inner-row-right"></div>
       </div>

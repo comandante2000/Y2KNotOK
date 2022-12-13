@@ -24,7 +24,8 @@
   }
   .button-glow {
     animation: glowing 1300ms infinite;
-  }
+    -webkit-animation: glowing 1300ms infinite;
+}
   @keyframes glowing {
     0% {
       border-radius: 50%;

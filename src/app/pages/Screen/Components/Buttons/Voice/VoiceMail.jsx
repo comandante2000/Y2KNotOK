@@ -6,6 +6,8 @@ export default function VoiceMailButton({
   color,
   press,
   setpress,
+  accessmail,
+  setAccesmail
 }) {
 
 
@@ -15,13 +17,16 @@ export default function VoiceMailButton({
     setpress(function (prevCount) {
       return (prevCount += 1);
     });
+    if (accessmail =="mailpop"){
+      setAccesmail("voicemail1.7")
+    }
   };
 
   return (
     <div id="voice-button">
       <div
         className={`button-1 ${color == "voice" ? "red" : "black"} ${
-          press === 6 ? "button-glow" : null
+          press === 6||accessmail =="mailpop" ? "button-glow" : null
         }`}
         type="button"
         name="voice"

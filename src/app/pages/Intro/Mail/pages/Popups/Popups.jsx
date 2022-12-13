@@ -1,8 +1,9 @@
-import "./PopUp.scss";
-import { useState, useEffect } from "react";
+import "./PopUps.scss";
+import { useState,useEffect } from "react";
 import { useRef } from "react";
-export default function PopUp({ setOpen, setAccesmail, video, accessmail }) {
+export default function PopUps({  setOpenvideo,video ,setAccesmail}) {
   const [videoTime, setVideoTime] = useState(0);
+  let audio = "https://images.stinkyfruit.com/HR_Timothee-V-0103.mp4";
   const [playing, setPlaying] = useState(false);
   const videoRef = useRef(null);
   const [currentTime, setCurrentTime] = useState(0);
@@ -31,21 +32,14 @@ export default function PopUp({ setOpen, setAccesmail, video, accessmail }) {
   };
 
   const DonePlaying = () => {
-    if (
-      accessmail == "allow" ||
-      accessmail == "allowed" ||
-      accessmail == "notallowed"
-    ) {
-      setOpen(false);
-      setAccesmail("allow");
-    }
-    if (accessmail == "voicemail1.7") {
-      setOpen(false);
-      setAccesmail("voicemail1.8");
-    }
+    setOpenvideo(false);
+    setAccesmail("mailpop")
   };
 
-  console.log("the accemail -n voice:", accessmail);
+
+
+
+
 
   window.setInterval(function () {
     setCurrentTime(videoRef.current?.currentTime);
@@ -53,7 +47,7 @@ export default function PopUp({ setOpen, setAccesmail, video, accessmail }) {
   }, 1000);
 
   return (
-    <div id="pda-pop-screen">
+    <div id="pda-pop-mail-screen">
       <div className="black-light "></div>
       <div className="pda-boot-container  d-flex justify-content-center ">
         <div className="voice-pop-ups position-absolute top-50 start-50 translate-middle">

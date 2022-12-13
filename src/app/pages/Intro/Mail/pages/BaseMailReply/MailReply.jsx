@@ -1,8 +1,9 @@
 import "./MailReply.scss";
 import { useState } from "react";
-export default function MailReply({ name }) {
-  const [open, setOpen] = useState(false);
 
+export default function MailReply({ name ,setOpenvideo}) {
+  const [open, setOpen] = useState(false);
+  
   const OpenReplay = () => {
     setOpen(true);
   };
@@ -10,10 +11,18 @@ export default function MailReply({ name }) {
     setOpen(false);
   };
 
+  const Openvideo = () => {
+    setOpenvideo(true);
+  };
   return (
     <div id="pda-mail-reply">
+     
+
       <div className="mail-reply-container">
-        <div className=" d-flex  py-0 g-5 position-relative base-mail-container " type="button">
+        <div
+          className=" d-flex  py-0 g-5 position-relative base-mail-container "
+          type="button"
+        >
           <div className="icon-container d-flex align-items-center">
             <div className="red-icon"></div>
             <div className="mail-icon"></div>
@@ -26,18 +35,12 @@ export default function MailReply({ name }) {
               <div className="w-50 mail-date text-end">12/30</div>
             </div>
             <div>
-              <div className="subject">Subject Line</div>
+              <div className="subject">Subject for Y2KNOTOK</div>
             </div>
           </div>
         </div>
-        <div className="d-flex justify-content-center px-4 reply-mail">
-          Lorem ipsum dolor sit amet, mutat partem theophrastus ex qui,
-          an falli detracto disputationi sed, appetere Ut dolor voluptua sapientem
-          vis,
-          <br />
-          <br />
-          Ut dolor voluptua sapientem vis, vivendo inimicus concludaturque pro et.
-          Cum convenire constituam ut. CumUt dolor voluptua sapientem vis,
+        <div className="d-flex justify-content-start px-4 reply-mail">
+          LISTEN
         </div>
         <div className="d-flex justify-content-center txt-area-container mt-3">
           {open ? (
@@ -46,10 +49,33 @@ export default function MailReply({ name }) {
               </div>
           ) : null}
         </div>
+        <div className="box-container mt-4  border-top-4" type="button" onClick={Openvideo}>
+          <div className="d-flex justify-content-center align-items-center ">
+            <div className="clip px-1"></div>
+            <div className="attachment px-2"> Attachment</div>
+          </div>
+        </div>
         <div className="d-flex justify-content-around mt-3">
-          <div className="back_button d-flex justify-content-center align-items-center" type="button" onClick={OpenBack}>Back</div>
-          <div className="reply_button d-flex justify-content-center align-items-center" type="button" onClick={OpenReplay}>Reply</div>
-          <div className="delete_button d-flex justify-content-center align-items-center" type="button">Delete</div>
+          <div
+            className="back_button d-flex justify-content-center align-items-center"
+            type="button"
+            onClick={OpenBack}
+          >
+            Back
+          </div>
+          <div
+            className="reply_button d-flex justify-content-center align-items-center"
+            type="button"
+            onClick={OpenReplay}
+          >
+            Reply
+          </div>
+          <div
+            className="delete_button d-flex justify-content-center align-items-center"
+            type="button"
+          >
+            Delete
+          </div>
         </div>
       </div>
     </div>
