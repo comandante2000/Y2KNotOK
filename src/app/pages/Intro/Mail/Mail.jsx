@@ -33,11 +33,11 @@ export default function MailPage({accessmail,setAccesmail}) {
             
             <div className="mail-box-container">
               {open ? (
-                <MailReply name="admin@redwest.com" setOpenvideo={setOpenvideo}/>
+                <MailReply name="admin@redwest.com" setOpenvideo={setOpenvideo} setOpen={setOpen}/>
               ) : (
-                <div type="button" onClick={accessmail=="allow"||accessmail=="allowed" ||accessmail==="mailpop"?OpenMessage:null} >
+                <div type="button" onClick={accessmail =="notallowed"?null:OpenMessage} >
                   <div className="mail-container">
-                    <MailBase name="hrtimothee@redwest.com" />
+                    <MailBase name="hrtimothee@redwest.com" accessmail={accessmail} />
                     <MailBaseUnred name="admin@redwest.com" />
                     <MailBaseUnred name="admin@redwest.com" />
                     <MailBaseUnred name="admin@redwest.com" />
@@ -79,7 +79,7 @@ export default function MailPage({accessmail,setAccesmail}) {
                 </div> : null
               }
             </div>
-            {openvideo?<PopUps video="https://images.stinkyfruit.com/Finn.mp4"  setOpenvideo={ setOpenvideo} setAccesmail={setAccesmail}/>:null}
+            {openvideo?<PopUps video="https://images.stinkyfruit.com/Finn.mp4"  setOpenvideo={ setOpenvideo} setAccesmail={setAccesmail} accessmail={accessmail}/>:null}
           </div>
         </div>
         <div className="inner-row-right"></div>

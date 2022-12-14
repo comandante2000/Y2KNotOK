@@ -31,6 +31,7 @@ export default function PopUp({ setOpen, setAccesmail, video, accessmail }) {
   };
 
   const DonePlaying = () => {
+    setOpen(false);
     if (
       accessmail == "allow" ||
       accessmail == "allowed" ||
@@ -42,6 +43,9 @@ export default function PopUp({ setOpen, setAccesmail, video, accessmail }) {
     if (accessmail == "voicemail1.7") {
       setOpen(false);
       setAccesmail("voicemail1.8");
+    }
+    if (accessmail == "voicemail1.8") {
+      setOpen(false);
     }
   };
 

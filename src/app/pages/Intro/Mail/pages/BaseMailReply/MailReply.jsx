@@ -1,8 +1,8 @@
 import "./MailReply.scss";
 import { useState } from "react";
 
-export default function MailReply({ name ,setOpenvideo}) {
-  const [open, setOpen] = useState(false);
+export default function MailReply({ name ,setOpenvideo,setOpen}) {
+  const [opentext, setOpentext] = useState(false);
   
   const OpenReplay = () => {
     setOpen(true);
@@ -43,7 +43,7 @@ export default function MailReply({ name ,setOpenvideo}) {
           LISTEN
         </div>
         <div className="d-flex justify-content-center txt-area-container mt-3">
-          {open ? (
+          {opentext ? (
               <div className="d-flex justify-content-center txt-area">
                 <textarea className="txt-area-bg" type="text"></textarea>
               </div>

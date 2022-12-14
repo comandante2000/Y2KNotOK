@@ -28,7 +28,7 @@ videolink ="https://images.stinkyfruit.com/voice1_6.mp4"
           <div className="voicemail-box-container">
             <div className=" d-flex py-0 new-voice-mail-container">
               <div className="icon-container d-flex align-items-center">
-                <div className="red-icon "></div>
+                <div className={accessmail==="notallowed"||accessmail==="voicemail1.7"?"red-icon":"unred-icon"}></div>
                 <div className="voice-icon "></div>
               </div>
               <div className="info-container me-3 m-auto">

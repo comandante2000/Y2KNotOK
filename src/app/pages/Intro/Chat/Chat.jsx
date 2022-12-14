@@ -28,7 +28,7 @@ export default function ChatPage({accessmail,setAccesmail}) {
               ) : (
                 <div type="button" onClick={accessmail=="voicemail1.8"||accessmail=="voicemail1.8.1"?OpenMessage:null} >
                   <div className="container-message">
-                    <BaseChat person="Krista" chat="Where are you n.."/>
+                    <BaseChat person="Krista" chat="Where are you n.." accessmail={accessmail}/>
                     <BaseChatUnred person="Marcia" chat="The meeting has..." />
                     <BaseChatUnred person="Tony" chat="What day is tras.." />
                     <BaseChatUnred person="Tony" chat="What day is tras.." />

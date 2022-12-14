@@ -1,7 +1,7 @@
-import "./PopUps.scss";
-import { useState,useEffect } from "react";
+import "./Popups.scss";
+import { useState, useEffect } from "react";
 import { useRef } from "react";
-export default function PopUps({  setOpenvideo,video ,setAccesmail}) {
+export default function PopUps({ setOpenvideo, video, setAccesmail,accessmail }) {
   const [videoTime, setVideoTime] = useState(0);
   let audio = "https://images.stinkyfruit.com/HR_Timothee-V-0103.mp4";
   const [playing, setPlaying] = useState(false);
@@ -33,14 +33,11 @@ export default function PopUps({  setOpenvideo,video ,setAccesmail}) {
 
   const DonePlaying = () => {
     setOpenvideo(false);
-    setAccesmail("mailpop")
+   if(accessmail == "allow"||accessmail == "allowed") {
+     setAccesmail("mailpop");
+   }
+   
   };
-
-
-
-
-
-
   window.setInterval(function () {
     setCurrentTime(videoRef.current?.currentTime);
     setProgress((videoRef.current?.currentTime / videoTime) * 100);
