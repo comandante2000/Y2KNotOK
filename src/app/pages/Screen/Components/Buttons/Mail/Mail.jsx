@@ -1,6 +1,5 @@
 import "./Mail.scss";
 import { useState, useEffect } from "react";
-
 export default function MailButton({
   showScreen,
   setActive,
@@ -31,6 +30,7 @@ export default function MailButton({
       return (prevCount += 1);
     });
   };
+
 console.log(accessmail,":accelemal");
 console.log(btnclick,":btn");
   return (
