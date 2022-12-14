@@ -12,8 +12,9 @@ import Boot from "../Screen/Boot/Boot";
 export default function Device() {
   const [screen, showScreen] = useState("HomeScreen");
   const [press, setpress] = useState(0); //to make the button unclikable must click next
+  const [accessmail, setAccesmail] = useState("notallowed");
+  
 
-  console.log("total press:", press);
 
   return (
     <div id="pda-device">
@@ -23,12 +24,12 @@ export default function Device() {
           {screen === "HomeScreen" && (
             <HomeScreen press={press} setpress={setpress} />
           )}
-          {screen === "MailScreen" && <MailPage />}
+          {screen === "MailScreen" && <MailPage accessmail={accessmail} setAccesmail={setAccesmail}/>}
           {screen === "MapScreen" && <MapPage />}
-          {screen === "VoicemailScreen" && <VoiceMailPage />}
-          {screen === "MessageScreen" && <ChatPage />}
+          {screen === "VoicemailScreen" && <VoiceMailPage setAccesmail={setAccesmail} accessmail={accessmail}/>}
+          {screen === "MessageScreen" && <ChatPage accessmail={accessmail} setAccesmail={setAccesmail}/>}
           {screen === "PhoneScreen" && <PhonePage />}
-          <Buttons showScreen={showScreen} press={press} />
+          <Buttons showScreen={showScreen} press={press} setpress={setpress} accessmail={accessmail} setAccesmail={setAccesmail}/>
         </div>
       </div>
     </div>

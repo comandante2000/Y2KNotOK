@@ -1,8 +1,8 @@
 import "./BaseMail.scss";
-export default function MailBase({name}) {
+export default function MailBase({name,accessmail}) {
  
    
-  // admin@redwest.com
+  
 
 
   return (
@@ -10,7 +10,7 @@ export default function MailBase({name}) {
    
         <div className=" d-flex py-0 g-5 position-relative base-mail-container " type="button">
                 <div className="icon-container d-flex align-items-center">
-                    <div className="red-icon"></div>
+                    <div className={accessmail =="allowed"?"red-icon":"unred-icon"}></div>
                     <div className="mail-icon"></div>
                 </div>
                 <div className="info-container me-3 m-auto">

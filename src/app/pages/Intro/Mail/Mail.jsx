@@ -5,32 +5,39 @@ import MailBase from "./pages/BaseMail/BaseMail";
 import MailBaseUnred from "./pages/BaseMailUnred/BaseMailUnred";
 import MailReply from "./pages/BaseMailReply/MailReply";
 import { useState } from "react";
-
-export default function MailPage() {
+import PopUps from "./pages/Popups/Popups";
+export default function MailPage({accessmail,setAccesmail}) {
   const [open, setOpen] = useState(false);
   const [hide, setHide] = useState(true);
+
+  const [openvideo, setOpenvideo] = useState(false);
+ 
+
+
   const OpenMessage = () => {
     setOpen(true);
     setHide(false);
   };
+  console.log(accessmail,"the value of accesmail mail page");
   return (
     <div id="pda-mail-screen">
       <div className=" row-2 d-flex justify-content-center">
         <div className="inner-row-left"></div>
 
-        <div className="inner-row-center">
+        <div className={`inner-row-center ${openvideo?"voiceplay":"unvoiceplay"}`}>
+
           <div>
            
             <Time />
             <Header name="Mail" />
-      
+            
             <div className="mail-box-container">
               {open ? (
-                <MailReply name="admin@redwest.com"/>
+                <MailReply name="admin@redwest.com" setOpenvideo={setOpenvideo} setOpen={setOpen}/>
               ) : (
-                <div type="button" onClick={OpenMessage} >
+                <div type="button" onClick={accessmail =="notallowed"?null:OpenMessage} >
                   <div className="mail-container">
-                    <MailBase name="hrtimothee@redwest.com" />
+                    <MailBase name="hrtimothee@redwest.com" accessmail={accessmail} />
                     <MailBaseUnred name="admin@redwest.com" />
                     <MailBaseUnred name="admin@redwest.com" />
                     <MailBaseUnred name="admin@redwest.com" />
@@ -72,6 +79,7 @@ export default function MailPage() {
                 </div> : null
               }
             </div>
+            {openvideo?<PopUps video="https://images.stinkyfruit.com/Finn.mp4"  setOpenvideo={ setOpenvideo} setAccesmail={setAccesmail} accessmail={accessmail}/>:null}
           </div>
         </div>
         <div className="inner-row-right"></div>

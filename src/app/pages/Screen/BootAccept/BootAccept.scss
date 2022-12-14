@@ -43,22 +43,43 @@
       font-size: 24px;
       line-height: 19px;
       color: #47B9B2;
+      border: 0px;
+      background-color: transparent;
     }
     .the_policy_check{
-      background-image: url("https://images.stinkyfruit.com/policy.svg");
-      height: 13px;
-      width: 220.7px;
-      background-repeat: no-repeat;
+      width: 100%;
+      //background-image: url("https://images.stinkyfruit.com/policy.svg");
+      //height: 13px;
+      //width: 220.7px;
+      //background-repeat: no-repeat;
+      .form-check{
+        padding: 0 !important;
+        margin: 0px !important;
+        .y2k-checkbox{
+        }
+        .txt-label{
+          font-family: "Palm OS";
+          font-size: 18px;
+          line-height: 16px;
+          padding-left: 5px;
+          .txt-privacy-policy{
+            font-family: "Palm OS";
+            font-size: 18px;
+            line-height: 16px;
+            color: #9E2221;
+          }
+        }
+      }
     }
   }
   .image-popup {
-    background-image: url("https://images.stinkyfruit.com/Accept_policy.svg");
+    //background-image: url("https://images.stinkyfruit.com/Accept_policy.svg");
+    background-image: url("https://images.stinkyfruit.com/accept_box.svg");
     background-position: center;
     background-repeat: no-repeat;
     height: 460.14px;
     width: 295.07px;
     background-size: contain;
-    mix-blend-mode: darken;
   }
   @media (max-width: 575.98px) {
     .pda-boot-container{

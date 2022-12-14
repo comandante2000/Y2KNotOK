@@ -1,5 +1,5 @@
 import "./BaseChat.scss";
-export default function BaseChat({person,chat}) {
+export default function BaseChat({person,chat,accessmail}) {
 
 
     // admin@redwest.com
@@ -9,7 +9,7 @@ export default function BaseChat({person,chat}) {
         <div id="pda-base-chat">
             <div className=" d-flex py-0 g-5 position-relative base-chat-container">
                 <div className="icon-container d-flex align-items-center">
-                    <div className="red-icon"></div>
+                    <div className={accessmail =="voicemail1.8"?"red-icon":"unred-icon"}></div>
                     <div className="chat-icon"></div>
                 </div>
                 <div className="info-container me-3 m-auto">
