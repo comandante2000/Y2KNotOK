@@ -10,6 +10,10 @@ export default function MailButton({
 }) {
   const [mail, setmail] = useState(false);
   const [btnclick, setbtnclick] = useState(0);
+  
+  const handleButtonGlowing = () => {
+
+  };
 
   const handleClick = () => {
     showScreen("MailScreen");
@@ -38,7 +42,7 @@ console.log(btnclick,":btn");
       {accessmail == "allow" ? (
         <div
           className={`button-2 ${color == "mail" ? "red" : "black"} ${
-            accessmail == "allowed" ?  null :"button-glow"
+            accessmail == "allowed" ?  null : "button-glow"
           }`}
           type="button"
           name="mail"
