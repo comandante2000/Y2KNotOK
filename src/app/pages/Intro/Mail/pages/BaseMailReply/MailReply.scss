@@ -7,21 +7,31 @@
     margin-bottom: 20px;
     overflow-y: auto;
     position: relative;
-    &::-webkit-scrollbar {
-      width: 10px;
+    &::-webkit-scrollbar{
+      //width: 10px;
       height: auto;
       background-image: url("https://images.stinkyfruit.com/scroll-bar-bg.png");
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      width: 20px;
     }
-    &::-webkit-scrollbar-track {
+    &::-webkit-scrollbar-track{
       -webkit-box-shadow: #47b9b2;
+      //background-color: transparent;
+
     }
-    &::-webkit-scrollbar-thumb {
-      background-image: url("https://images.stinkyfruit.com/scroll-bar-thumbnail.png");
-      background-repeat: no-repeat;
-      background-size: cover;
+    &::-webkit-scrollbar-thumb{
+      //background-image: url("https://images.stinkyfruit.com/scroll-bar-thumbnail.png");
+      //background-repeat: no-repeat;
+      //background-size: cover;
+      //border-radius: 20px;
+      background-color: black;
+      border: 6px solid transparent;
+      background-clip: content-box;
+      //&:hover{
+      //  background-color: black;
+      //}
     }
     .reply-mail {
       line-height: 20px;
@@ -124,13 +134,13 @@
     }
     .txt-area-container {
       width: 100%;
-      height: 150px;
+      height: 50%;
 
       .txt-area {
         width: 100%;
         height: 100%;
         .txt-area-bg {
-          background-color: #288577;
+          background-color: #288577bf;
           border-radius: 10px;
           border: 1px solid #288577;
           font-family: "Palm OS";
