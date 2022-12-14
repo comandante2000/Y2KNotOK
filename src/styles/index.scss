@@ -21,7 +21,7 @@ $urls: srcs('https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/');
   //box-shadow: inset 0 0rem 8rem 6rem #060606d4;
 
 }
-@media (min-width: 1921px){
+@media (min-width: 3842px){
   body{
     .app{
       background-image: url("//images.stinkyfruit.com/3890x2160-2.webp");
@@ -32,11 +32,23 @@ $urls: srcs('https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/');
     }
   }
 }
-@media (min-height: 1180px) and (orientation: landscape){
+
+@media (min-width: 1921px) and (max-width: 3841px){
   body{
     .app{
+      background-image: url("//images.stinkyfruit.com/3890x2160-2.webp");
+      background-repeat: no-repeat;
+      background-size: initial;
       height: 100vh;
       width: 100vw;
+    }
+  }
+}
+@media (min-height: 1050px) and (orientation: landscape){
+  body{
+    .app{
+      height: 100vh !important;
+      width: 100vw !important;
     }
   }
 }
@@ -136,16 +148,25 @@ $urls: srcs('https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/');
   }
 }
 
-@media (max-width: 991.98px) and (orientation: portrait) {
-  body {
-    .app {
-      height: 100vh;
-      width: 100vw;
+//@media (max-width: 991.98px) and (orientation: portrait) {
+//  body {
+//    .app {
+//      height: 100vh;
+//      width: 100vw;
+//    }
+//  }
+//}
+
+@media (max-width: 991.98px){
+  body{
+    .app{
+      height: 100%;
+      width: 100%;
     }
   }
 }
 
-@media (max-width: 991.98px) and (orientation: landscape){
+@media (max-width: 991.98px){
   body{
     .app{
       height: 100%;
