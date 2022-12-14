@@ -56,49 +56,49 @@ export default function ChatReply({ person, chat, setOpen }) {
            {sendreply?<ChatInfo person="Me" chat={textmessage} />:null}
           {rigthreply?<ChatInfo person="Krista" chat={replies} />:null}
         </div>
-        <div className="d-flex justify-content-center txt-area-container mt-3">
-          {openm ? (
+      </div>
+      <div className="d-flex justify-content-center txt-area-container mt-3">
+        {openm ? (
             <form
-              className="d-flex justify-content-center txt-area"
-              onSubmit={handleSubmit}
+                className="d-flex justify-content-center txt-area"
+                onSubmit={handleSubmit}
             >
               <textarea
-                className="txt-area-bg"
-                type="text"
-                rows="5"
-                value={message}
-                onChange={(e) => setmessage(e.target.value)}
-                placeholder="text message"
+                  className="txt-area-bg"
+                  type="text"
+                  rows="5"
+                  value={message}
+                  onChange={(e) => setmessage(e.target.value)}
+                  placeholder="text message"
               />
               {/* <div>
                  <button type="submit"  className="btn-send d-flex justify-content-center align-items-center px-3">Send</button>
               </div> */}
             </form>
-          ) : null}
-          
-        </div>
-        <div>
-          <div className="d-flex justify-content-around mt-3">
-            <div
+        ) : null}
+
+      </div>
+      <div>
+        <div className="d-flex justify-content-around mt-3">
+          <div
               className="btn-back d-flex justify-content-center align-items-center px-3"
               type={openm ? "submit" : "button"}
               onClick={openm ? handleSubmit : OpenBack}
-            >
-              {openm ? "Send" : "Back"}
-            </div>
-            <div
+          >
+            {openm ? "Send" : "Back"}
+          </div>
+          <div
               className="btn-reply d-flex justify-content-center align-items-center px-3"
               type="button"
               onClick={OpenReplay}
-            >
-              Reply
-            </div>
-            <div
+          >
+            Reply
+          </div>
+          <div
               className="btn-delete d-flex justify-content-center align-items-center px-3"
               type="button"
-            >
-              Delete
-            </div>
+          >
+            Delete
           </div>
         </div>
       </div>

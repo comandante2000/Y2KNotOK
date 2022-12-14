@@ -26,7 +26,7 @@
     .button-glow {
       animation: glowing 1300ms infinite;
       -webkit-animation: glowing 1300ms infinite;
-  }
+    }
   @keyframes glowing {
     0% {
       border-radius: 50%;
@@ -43,7 +43,7 @@
       -moz-border-radius: 50%;
       -ms-border-radius: 50%;
       -o-border-radius: 50%;
-}
+    }
   }
 }
 @media (max-width: 320px) and (orientation: portrait) {
