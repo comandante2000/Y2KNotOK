@@ -1,5 +1,5 @@
 import "./BaseMailUnred.scss";
-export default function MailBaseUnred({name}) {
+export default function MailBaseUnred({name,subject}) {
  
    
   // admin@redwest.com
@@ -22,7 +22,7 @@ export default function MailBaseUnred({name}) {
                         </div>
                     </div>
                     <div>
-                        <div className="subject">Subject Line</div>
+                        <div className="subject">{subject}</div>
                     </div>
                 </div>
             </div>
