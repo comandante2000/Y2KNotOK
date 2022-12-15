@@ -144,8 +144,8 @@ if (accessmail === "Flow1.10.1") {
             </form>
           ) : null}
         </div>
-        <div>
-          <div className="d-flex justify-content-around mt-3">
+        <div className="btn-container">
+          <div className="d-flex justify-content-around">
             <div
               className="btn-back d-flex justify-content-center align-items-center px-3"
               type={openm ? "submit" : "button"}
