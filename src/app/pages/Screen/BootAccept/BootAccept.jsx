@@ -1,11 +1,19 @@
 import "./BootAccept.scss";
-import { useState } from "react";
+import {useEffect, useState} from "react";
 export default function BootAccept({instruction , setpress }) {
 
-  function Next() {
-    setpress(function (prevCount) {
-      return (prevCount += 1);
-    });
+  const [checked , setCheck] = useState(false);
+
+  const handleCheckboxChanged = (event) => {
+    console.log(event.target.checked);
+    setCheck(event.target.checked);
+  }
+  function Next() { 
+    if (checked){
+      setpress(function (prevCount) {
+        return (prevCount += 2);
+      });
+    }
   }
   return (
     <div id="pda-boot-screen-accept">
@@ -20,8 +28,20 @@ export default function BootAccept({instruction , setpress }) {
               <p className="instruction-text m-0 text-center mt-2 mb-3">
               {instruction}
               </p>
-              <div className="the_policy_check"></div>
-              <div className="accept-button m-0 d-flex justify-content-center align-items-center mt-3 mb-3" type="button" onClick={Next}>Accept</div>
+              <div className="the_policy_check d-flex justify-content-center">
+                <div className="form-check">
+                  <input type="checkbox" value={checked} onChange={handleCheckboxChanged} id="flexCheckDefault" className="form-check-input y2k-checkbox"/>
+                  <label htmlFor="flexCheckDefault" className="form-check-label txt-label">
+                    I understand and accept the <a href="#" className="txt-privacy-policy">Privacy Policy</a>
+                  </label>
+                </div>
+              </div>
+              {/*<div disable={checked ? "false" : "true"} onClick={Next} className="accept-button m-0 d-flex justify-content-center align-items-center mt-3 mb-3">*/}
+              {/*  Accept*/}
+              {/*</div>*/}
+              <button disable={checked ? "false" : "true"} onClick={Next} className="accept-button m-0 d-flex justify-content-center align-items-center mt-3 mb-3">
+                Accept
+              </button>
             </div>
           </div>
         </div>

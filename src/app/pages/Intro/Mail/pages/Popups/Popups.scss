@@ -1,0 +1,118 @@
+#pda-pop-mail-screen {
+    // margin-block: 50%;
+  
+    .pda-boot-container {
+      z-index: 2;
+  
+      .voice-pop-ups {
+        background-image: url("https://images.stinkyfruit.com/Vpop.svg");
+        background-repeat: no-repeat;
+        height: 208px;
+        width: 258px;
+        background-position: center;
+      }
+      .video-pop {
+        background-position: center;
+        margin-top: 40px;
+        object-fit: contain;
+      }
+      .video-container {
+        // height: 147px;
+        // width: 249px;
+        .video {
+          height: 141px;
+          width: 249px;
+        }
+      }
+  
+      .x-button {
+        background-image: url("https://images.stinkyfruit.com/Xbutton.svg");
+        background-repeat: no-repeat;
+        height: 28px;
+        width: 28px;
+      }
+      .close-button {
+        background-image: url("https://images.stinkyfruit.com/Close.svg");
+        background-repeat: no-repeat;
+        height: 28px;
+        width: 28px;
+      }
+  
+      .controls {
+        display: flex;
+      }
+  
+      .controlsIconb {
+        background-image: url("https://images.stinkyfruit.com//backwardicon.svg");
+        width: 14px;
+        height: 14px;
+        cursor: pointer;
+  
+        background-repeat: no-repeat;
+      }
+  
+      .controlsIconf {
+        background-image: url("https://images.stinkyfruit.com//forwardicon.svg");
+        width: 14px;
+        height: 14px;
+        cursor: pointer;
+  
+        background-repeat: no-repeat;
+      }
+  
+      .controlsIcon--small-play {
+        background-image: url("https://images.stinkyfruit.com//play.svg");
+        background-repeat: no-repeat;
+        width: 9px;
+        height: 14px;
+        cursor: pointer;
+      }
+      .controlsIcon--small-pause {
+        background-image: url("https://images.stinkyfruit.com//icon_pause.svg");
+        background-repeat: no-repeat;
+        width: 9px;
+        height: 14px;
+        cursor: pointer;
+      }
+  
+      /* The time controls section */
+  
+      .timecontrols {
+        margin-top: auto;
+        height: 5px;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+      }
+  
+      .time_progressbarContainer {
+        background-color: rgb(47, 47, 47);
+        width: 103px;
+        height: 9px;
+        z-index: 30;
+        position: relative;
+        margin: 0 10px;
+      }
+  
+      .time_progressBar {
+        background-color: rgb(254, 254, 254);
+        height: 100%;
+      }
+  
+      .controlsTime {
+        color: rgb(250, 247, 247);
+        background-position: center;
+        height: 5px;
+        width: 14;
+      }
+      @media (max-width: 575.98px) {
+        .pda-boot-container {
+          height: 70vh;
+          .voice-pop-ups {
+            position: relative;
+          }
+        }
+      }
+    }
+  }
+  

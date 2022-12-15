@@ -1,95 +1,136 @@
-#pda-base-chat-reply{
-  .base-chat-reply-container{
+#pda-base-chat-reply {
+  .base-chat-reply-container {
     padding-left: 10px;
     padding-right: 10px;
-    height: 491px;
+    //height: 26vh;
+    height: 291px;
     width: 100%;
     margin-bottom: 20px;
-    overflow-y:auto;
+    overflow-y: auto;
     position: relative;
-    &::-webkit-scrollbar{
-      width: 10px;
+    &::-webkit-scrollbar {
+      //width: 10px;
       height: auto;
       background-image: url("https://images.stinkyfruit.com/scroll-bar-bg.png");
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      width: 20px;
     }
-    &::-webkit-scrollbar-track{
+    &::-webkit-scrollbar-track {
       -webkit-box-shadow: #47b9b2;
+      //background-color: transparent;
     }
-    &::-webkit-scrollbar-thumb{
-      background-image: url("https://images.stinkyfruit.com/scroll-bar-thumbnail.png");
-      background-repeat: no-repeat;
-      background-size: cover;
+    &::-webkit-scrollbar-thumb {
+      //background-image: url("https://images.stinkyfruit.com/scroll-bar-thumbnail.png");
+      //background-repeat: no-repeat;
+      //background-size: cover;
+      //border-radius: 20px;
+      background-color: black;
+      border: 6px solid transparent;
+      background-clip: content-box;
+      //&:hover{
+      //  background-color: black;
+      //}
     }
-    .txt-area-container{
+  }
+  .txt-area-container {
+    width: 100%;
+    height: 115px;
+    padding-left: 10px;
+    padding-right: 10px;
+    .txt-area {
       width: 100%;
-      height: 150px;
-      .txt-area{
+      height: 100%;
+      .txt-area-bg {
+        background-color: #288577bf;
+        border-radius: 10px;
+        border: 1px solid #288577;
+        font-family: "Palm OS";
         width: 100%;
-        height: 100%;
-        .txt-area-bg{
-          background-color: #288577;
-          border-radius: 10px;
-          border: 1px solid #288577;
-          font-family: "Palm OS";
-          width: 100%;
-          height: 150px;
-          font-size: 20px;
-        }
-      }
-    }
-    .btn-back{
-      background-image: url("https://images.stinkyfruit.com/box_img_bckground.svg");
-      background-repeat: no-repeat;
-      font-family: "Palm OS";
-      font-size: 24px;
-      line-height: 22px;
-      border-radius: 5px;
-      width: 86.6px;
-      height: 36.67px;
-    }
-    .btn-reply{
-      background-image: url("https://images.stinkyfruit.com/box_img_bckground.svg");
-      background-repeat: no-repeat;
-      font-family: "Palm OS";
-      font-size: 24px;
-      line-height: 22px;
-      border-radius: 5px;
-      width: 86.6px;
-      height: 36.67px;
-    }
-    .btn-delete{
-      background-image: url("https://images.stinkyfruit.com/box_img_bckground_gray.svg");
-      background-repeat: no-repeat;
-      font-family: "Palm OS";
-      color: #326462;
-      font-size: 24px;
-      line-height: 22px;
-      border-radius: 5px;
-      width: 86.6px;
-      height: 36.67px;
-    }
-  }
-}
-@media (max-width: 575.98px){
-  #pda-base-chat-reply{
-    .base-chat-reply-container{
-      height: 50vh;
-      .txt-area-bg{
-        font-size: 25px;
+        height: 115px;
+        font-size: 20px;
       }
     }
   }
+  .btn-back {
+    background-image: url("https://images.stinkyfruit.com/box_img_bckground.svg");
+    background-repeat: no-repeat;
+    font-family: "Palm OS";
+    font-size: 24px;
+    line-height: 22px;
+    border-radius: 5px;
+    width: 86.6px;
+    height: 36.67px;
+  }
+  .btn-reply {
+    background-image: url("https://images.stinkyfruit.com/box_img_bckground.svg");
+    background-repeat: no-repeat;
+    font-family: "Palm OS";
+    font-size: 24px;
+    line-height: 22px;
+    border-radius: 5px;
+    width: 86.6px;
+    height: 36.67px;
+  }
+  .btn-delete {
+    background-image: url("https://images.stinkyfruit.com/box_img_bckground_gray.svg");
+    background-repeat: no-repeat;
+    font-family: "Palm OS";
+    color: #326462;
+    font-size: 24px;
+    line-height: 22px;
+    border-radius: 5px;
+    width: 86.6px;
+    height: 36.67px;
+  }
+  .image-reply {
+    height: 175.78px;
+    width: 100%;
+    
+  }
+  .imageyes {
+    background-image: url("https://images.stinkyfruit.com/Yes.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+    height: 175.78px;
+    width: 234.11px;
+    mix-blend-mode: multiply;
+  }
 }
-@media (max-width: 320px){
-  #pda-base-chat-reply{
-    .base-chat-reply-container{
-      height: 45vh;
-      .txt-area-bg{
-        font-size: 25px;
-      }
+@media (max-width: 575.98px) {
+  #pda-base-chat-reply {
+    .base-chat-reply-container {
+      height: 26vh;
+    }
+    .txt-area-container {
+      height: 14vh;
+    }
+    .txt-area-bg {
+      font-size: 25px;
+      height: 14vh;
+    }
+  }
+}
+@media (max-width: 375px) {
+  #pda-base-chat-reply {
+    .base-chat-reply-container {
+      height: 22vh;
+    }
+  }
+}
+@media (max-width: 320px) {
+  #pda-base-chat-reply {
+    .base-chat-reply-container {
+      height: 114px;
+    }
+    .txt-area-container {
+      height: 70px;
+    }
+    .txt-area-bg {
+      font-size: 25px;
+      height: 70px !important;
     }
   }
 }
