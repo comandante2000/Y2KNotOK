@@ -30,7 +30,7 @@ const [active, setActive] = useState("");
             <VoiceMailButton showScreen={showScreen} setActive={setActive} color = {active} press={press} setpress={setpress} accessmail={accessmail} setAccesmail={setAccesmail}/>
             <PhoneButton showScreen={showScreen} setActive={setActive} color = {active} press={press}/>
             <ChatButton showScreen={showScreen} setActive={setActive} color = {active} press={press} accessmail={accessmail} setAccesmail={setAccesmail} />
-            <MapButton showScreen={showScreen} setActive={setActive} color = {active} press={press}/>
+            <MapButton showScreen={showScreen} setActive={setActive} color = {active} press={press} accessmail={accessmail} setAccesmail={setAccesmail}/>
           </li>
         </div>
       </div>

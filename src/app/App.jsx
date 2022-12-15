@@ -8,11 +8,13 @@ import { useState, useEffect } from "react";
 
 
 function App() {
+  
   const [newuser,setNewuser]= useState (true);
+
   return (
     <div className="container-fluid app d-flex justify-content-center">
       <Routes>
-        <Route path="/" element={newuser?<IntroVideo setNewuser={setNewuser}/>:<Device />} />
+        <Route path="/" element={<Device />} />
       </Routes>
      
     </div>

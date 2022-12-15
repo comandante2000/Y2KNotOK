@@ -1,5 +1,5 @@
 import "./BaseChatUnred.scss";
-export default function BaseChatUnred({person,chat}) {
+export default function BaseChatUnred({person,chat,accessmail}) {
 
 
     // admin@redwest.com
@@ -9,7 +9,7 @@ export default function BaseChatUnred({person,chat}) {
         <div id="pda-base-chat-unred">
             <div className=" d-flex justify-content-evenly py-0 g-5 position-relative base-chat-unread-container">
                 <div className="icon-container d-flex align-items-center">
-                    <div className="unred-icon "></div>
+                    <div className="unred-icon"></div>
                     <div className="chat-icon "></div>
                 </div>
                 <div className="info-container me-3 m-auto">

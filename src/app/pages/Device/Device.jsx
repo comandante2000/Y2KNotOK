@@ -25,7 +25,7 @@ export default function Device() {
             <HomeScreen press={press} setpress={setpress} />
           )}
           {screen === "MailScreen" && <MailPage accessmail={accessmail} setAccesmail={setAccesmail}/>}
-          {screen === "MapScreen" && <MapPage />}
+          {screen === "MapScreen" && <MapPage accessmail={accessmail} setAccesmail={setAccesmail}/>}
           {screen === "VoicemailScreen" && <VoiceMailPage setAccesmail={setAccesmail} accessmail={accessmail}/>}
           {screen === "MessageScreen" && <ChatPage accessmail={accessmail} setAccesmail={setAccesmail}/>}
           {screen === "PhoneScreen" && <PhonePage />}
