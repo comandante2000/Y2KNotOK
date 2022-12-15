@@ -31,6 +31,12 @@ export default function PopUp({ setOpen, setAccesmail, video, accessmail }) {
   };
 
   const DonePlaying = () => {
+    // if (mailtrigger){
+    //   setpress(function (prevCount) {
+    //     return (prevCount += 2);
+    //   });
+    // }
+
     setOpen(false);
     if (
       accessmail == "allow" ||
@@ -44,8 +50,11 @@ export default function PopUp({ setOpen, setAccesmail, video, accessmail }) {
       setOpen(false);
       setAccesmail("voicemail1.8");
     }
-    if (accessmail == "voicemail1.8") {
-      setOpen(false);
+    // if (accessmail == "voicemail1.8") {
+    //   setOpen(false);
+    // }
+    if (accessmail == "replyflow1.8.1") {
+      setAccesmail("Flow1.9");
     }
   };
 

@@ -4,7 +4,7 @@ export default function MapPageTwo({setZoom}) {
 console.log("fttt",typeof setZoom);
 
   const Zoom = () => {
-setZoom(true);
+// setZoom(true);
   
   };
   return (

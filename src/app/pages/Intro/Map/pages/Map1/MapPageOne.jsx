@@ -1,8 +1,9 @@
 import "./MapPageOne.scss";
 import { useState, useEffect } from "react";
-export default function MapPageOne({ setZoom }) {
+export default function MapPageOne({ setZoom ,setAccesmail, accessmail}) {
   const Zoom = () => {
     setZoom(false);
+    setAccesmail("Flow1.10");
   };
 
   return (

@@ -8,12 +8,16 @@ import ChatReply from "./pages/BaseChatInfo/BaseReply";
 import { useState } from "react";
 export default function ChatPage({accessmail,setAccesmail}) {
 
+
+
   const [open, setOpen] = useState(false);
   const [hide, setHide] = useState(true);
   const OpenMessage = () => {
     setOpen(true);
     setHide(false);
-    setAccesmail("voicemail1.8.1")
+    if (accessmail == "voicemail1.8") {
+      setAccesmail("voicemail1.8.1");
+    }
   };
   return (
     <div id="pda-chat-screen">
@@ -24,12 +28,12 @@ export default function ChatPage({accessmail,setAccesmail}) {
           <Header name="Text" />
       
          {open ? (
-                <ChatReply  setOpen={setOpen}/>
+                <ChatReply  setOpen={setOpen} setAccesmail={setAccesmail} accessmail={accessmail}/>
               ) : (
-                <div type="button" onClick={accessmail=="voicemail1.8"||accessmail=="voicemail1.8.1"?OpenMessage:null} >
+                <div type="button" onClick={accessmail =="notallowed "||accessmail =="allow" ||accessmail =="allowed"||accessmail =="mailpop"||accessmail =="voicemail1.7 "?null:OpenMessage} >
                   <div className="container-message">
-                    <BaseChat person="Krista" chat="Where are you n.." accessmail={accessmail}/>
-                    <BaseChatUnred person="Marcia" chat="The meeting has..." />
+                    <BaseChat person={accessmail=="Flow1.10.1"?"Timothee":"Krista"} chat={accessmail=="Flow1.10.1"?"Waiting on your":"Where are you n.."} accessmail={accessmail}/>
+                    <BaseChatUnred person={accessmail=="Flow1.10.1"?"Krista":"Timothee"} chat="What day is tras" />
                     <BaseChatUnred person="Tony" chat="What day is tras.." />
                     <BaseChatUnred person="Tony" chat="What day is tras.." />
                     <BaseChatUnred person="Tony" chat="What day is tras.." />

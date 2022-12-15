@@ -17,6 +17,10 @@ if (accessmail =="voicemail1.7"){
 videolink ="https://images.stinkyfruit.com/voice1_6.mp4"
 
 }
+if (accessmail =="replyflow1.8.1"){
+  videolink ="https://images.stinkyfruit.com/Mom1_8.mp4"
+  }
+
   
   return (
     <div id="pda-voicemail-screen">
@@ -45,16 +49,16 @@ videolink ="https://images.stinkyfruit.com/voice1_6.mp4"
 
             <div className=" d-flex py-0 voice-mail-container">
               <div className="icon-container d-flex align-items-center">
-                <div className="unred-icon "></div>
+                <div className={accessmail==="replyflow1.8.1"?"red-icon":"unred-icon "}></div>
                 <div className="voice-icon "></div>
               </div>
               <div className="info-container me-3 m-auto">
                 <div className="d-flex w-100">
-                  <div className="email-name w-50">Krista</div>
+                  <div className="email-name w-50">Mom</div>
                   <div className="voice-date w-50 text-end">12/30</div>
                 </div>
                 <div className="d-flex w-100 align-items-center">
-                  <div className="play-icon" type="button"></div>
+                  <div className="play-icon" type="button"  onClick={OpenMessage}></div>
                   <div className="sound-icon sound-two"></div>
                 </div>
               </div>
@@ -67,7 +71,7 @@ videolink ="https://images.stinkyfruit.com/voice1_6.mp4"
               </div>
               <div className="info-container me-3 m-auto">
                 <div className="d-flex w-100">
-                  <div className="email-name w-50">Mom</div>
+                  <div className="email-name w-50">Krista</div>
                   <div className="voice-date w-50 text-end">12/30</div>
                 </div>
                 <div className="d-flex w-100 align-items-center">
