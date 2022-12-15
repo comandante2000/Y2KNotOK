@@ -5,7 +5,7 @@ export default function MailReply({ name ,setOpenvideo,setOpen}) {
   const [opentext, setOpentext] = useState(false);
   
   const OpenReplay = () => {
-    setOpen(true);
+    setOpentext(!opentext);
   };
   const OpenBack = () => {
     setOpen(false);
