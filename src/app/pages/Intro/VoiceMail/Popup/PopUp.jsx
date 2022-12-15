@@ -70,12 +70,12 @@ export default function PopUp({ setOpen, setAccesmail, video, accessmail }) {
       <div className="black-light "></div>
       <div className="pda-boot-container  d-flex justify-content-center ">
         <div className="voice-pop-ups position-absolute top-50 start-50 translate-middle">
-          <div className="buttons mt-2 d-flex justify-content-end">
+          <div className="buttons mt-2 d-flex justify-content-end align-items-center">
             <div
               className="close-button mx-2"
               type="button"
               onClick={DonePlaying}
-            ></div>
+            >Close</div>
             <div className="x-button" type="button" onClick={DonePlaying}></div>
           </div>
           <div class=" text-center align-items-center d-flex justify-content-center">
