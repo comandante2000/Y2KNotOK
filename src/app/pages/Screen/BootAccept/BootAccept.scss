@@ -55,6 +55,17 @@
       .form-check{
         padding: 0 !important;
         margin: 0px !important;
+        .form-check-input{
+          float: none;
+          margin: 0px;
+          &:checked{
+            background-color: black !important;
+            border-color: black !important;
+          }
+          &:checked:before{
+            background-color: #47B9B2;
+          }
+        }
         .y2k-checkbox{
         }
         .txt-label{
@@ -70,6 +81,10 @@
           }
         }
       }
+    }
+    input[type=checkbox]:checked{
+      background-color: black;
+      border-color: black;
     }
   }
   .image-popup {
