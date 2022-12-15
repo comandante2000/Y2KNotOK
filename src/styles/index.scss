@@ -36,6 +36,7 @@ $urls: srcs('https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/');
 @media (min-width: 1921px) and (max-width: 3841px){
   body{
     .app{
+
       background-image: url("//images.stinkyfruit.com/3890x2160-2.webp");
       background-repeat: no-repeat;
       background-size: initial;
@@ -47,6 +48,7 @@ $urls: srcs('https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/');
 @media (min-height: 1050px) and (orientation: landscape){
   body{
     .app{
+
       height: 100vh !important;
       width: 100vw !important;
     }
@@ -55,6 +57,7 @@ $urls: srcs('https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/');
 @media (min-width: 1441px) and (max-width: 1745.45px) and (min-height: 1070px) and (orientation: portrait){
   body{
     .app{
+
       background: url("//images.stinkyfruit.com/1440x900–4.webp");
       background-repeat: no-repeat;
       background-size: cover;
@@ -67,6 +70,7 @@ $urls: srcs('https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/');
 @media (min-width: 1441px) and (max-width: 1745.45px) and (orientation: landscape){
   body{
     .app{
+
       background: url("//images.stinkyfruit.com/1440x900–4.webp");
       background-repeat: no-repeat;
       background-size: cover;
