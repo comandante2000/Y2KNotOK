@@ -4,23 +4,33 @@ import Header from "../../Screen/Components/Headers/Header";
 import PopUp from "./Popup/PopUp";
 import { useState, useEffect } from "react";
 
-export default function VoiceMailPage({setAccesmail,accessmail}) {
-  const [open, setOpen]         = useState(false);
+export default function VoiceMailPage({ setEpisodeOne, episodeone }) {
+  const [open, setOpen] = useState(false);
 
   const [messages, setMessages] = useState([
-    {name: 'Timothee HR', date: '12/30', accessMail: 'voicemail1.7', clickable: true},
-    {name: 'Krista', date:'12/30', accessMail: '', clickable: false},
-    {name: 'Mom', date: '12/30', accessMail: 'replyflow1.8.1', clickable: false},
-    {name: 'Mateo', date:'12/30', accessMail: '', clickable: false},
-    {name: 'Mom', date: '12/28', accessMail: '', clickable: false},
-    {name: 'Krista', date:'12/27', accessMail: '', clickable: false},
-    {name: 'Finn', date: '12/28', accessMail: '', clickable: false},
-    {name: 'Mom', date:'12/25', accessMail: '', clickable: false},
-    {name: 'Steve', date:'12/24', accessMail: '', clickable: false},
-    {name: 'Finn', date: '12/22', accessMail: '', clickable: false},
-    {name: 'Syvlie', date:'12/20', accessMail: '', clickable: false},
-    {name: 'Krista', date: '12/18', accessMail: '', clickable: false},
-    {name: 'Mom', date:'12/17', accessMail: '', clickable: false},
+    {
+      name: "Timothee HR",
+      date: "12/30",
+      episodeone: "voicemail1.7",
+      clickable: true,
+    },
+    { name: "Krista", date: "12/30", episodeone: "", clickable: false },
+    {
+      name: "Mom",
+      date: "12/30",
+      episodeone: "replyflow1.8.1",
+      clickable: false,
+    },
+    { name: "Mateo", date: "12/30", episodeone: "", clickable: false },
+    { name: "Mom", date: "12/28", episodeone: "", clickable: false },
+    { name: "Krista", date: "12/27", episodeone: "", clickable: false },
+    { name: "Finn", date: "12/28", episodeone: "", clickable: false },
+    { name: "Mom", date: "12/25", episodeone: "", clickable: false },
+    { name: "Steve", date: "12/24", episodeone: "", clickable: false },
+    { name: "Finn", date: "12/22", episodeone: "", clickable: false },
+    { name: "Syvlie", date: "12/20", episodeone: "", clickable: false },
+    { name: "Krista", date: "12/18", episodeone: "", clickable: false },
+    { name: "Mom", date: "12/17", episodeone: "", clickable: false },
   ]);
 
   const OpenMessage = () => {
@@ -29,72 +39,88 @@ export default function VoiceMailPage({setAccesmail,accessmail}) {
     console.log("you click play button");
   };
 
-let videolink ="https://images.stinkyfruit.com/HR_Timothee-V-0103.mp4"
+  let videolink = "https://images.stinkyfruit.com/HR_Timothee-V-0103.mp4";
 
-if (accessmail =="voicemail1.7"){
-
-videolink ="https://images.stinkyfruit.com/voice1_6.mp4"
-
-}
-if (accessmail =="replyflow1.8.1"){
-  videolink ="https://images.stinkyfruit.com/Mom1_8.mp4"
+  if (episodeone == "voicemail1.7") {
+    videolink = "https://images.stinkyfruit.com/voice1_6.mp4";
+  }
+  if (episodeone == "replyflow1.8.1") {
+    videolink = "https://images.stinkyfruit.com/Mom1_8.mp4";
   }
 
+  useEffect(() => {
+    if (episodeone === "replyflow1.8.1") {
+      setMessages([
+        {
+          name: "Mom",
+          date: "12/30",
+          episodeone: "replyflow1.8.1",
+          clickable: true,
+        },
+        {
+          name: "Timothee HR",
+          date: "12/30",
+          episodeone: "voicemail1.7",
+          clickable: false,
+        },
+        { name: "Krista", date: "12/30", episodeone: "", clickable: false },
+        { name: "Mateo", date: "12/30", episodeone: "", clickable: false },
+        { name: "Mom", date: "12/28", episodeone: "", clickable: false },
+        { name: "Krista", date: "12/27", episodeone: "", clickable: false },
+        { name: "Finn", date: "12/28", episodeone: "", clickable: false },
+        { name: "Mom", date: "12/25", episodeone: "", clickable: false },
+        { name: "Steve", date: "12/24", episodeone: "", clickable: false },
+        { name: "Finn", date: "12/22", episodeone: "", clickable: false },
+        { name: "Syvlie", date: "12/20", episodeone: "", clickable: false },
+        { name: "Krista", date: "12/18", episodeone: "", clickable: false },
+        { name: "Mom", date: "12/17", episodeone: "", clickable: false },
+      ]);
+    }
+  }, []);
 
-useEffect(()=>{
-  if(accessmail === "replyflow1.8.1"){
-    setMessages([
-      {name: 'Mom', date: '12/30', accessMail: 'replyflow1.8.1', clickable: true},
-      {name: 'Timothee HR', date: '12/30', accessMail: 'voicemail1.7', clickable: false},
-      {name: 'Krista', date:'12/30', accessMail: '', clickable: false},
-      {name: 'Mateo', date:'12/30', accessMail: '', clickable: false},
-      {name: 'Mom', date: '12/28', accessMail: '', clickable: false},
-      {name: 'Krista', date:'12/27', accessMail: '', clickable: false},
-      {name: 'Finn', date: '12/28', accessMail: '', clickable: false},
-      {name: 'Mom', date:'12/25', accessMail: '', clickable: false},
-      {name: 'Steve', date:'12/24', accessMail: '', clickable: false},
-      {name: 'Finn', date: '12/22', accessMail: '', clickable: false},
-      {name: 'Syvlie', date:'12/20', accessMail: '', clickable: false},
-      {name: 'Krista', date: '12/18', accessMail: '', clickable: false},
-      {name: 'Mom', date:'12/17', accessMail: '', clickable: false},
-    ]);
-  }
-},[])
-  
   return (
     <div id="pda-voicemail-screen">
       <div className="row-2 d-flex justify-content-center">
         <div className="inner-row-left"></div>
-        <div className={`inner-row-center ${open?"voiceplay":"unvoiceplay"}`}>
+        <div
+          className={`inner-row-center ${open ? "voiceplay" : "unvoiceplay"}`}
+        >
           <Time />
           <Header name="VoiceMail" />
           <div className="voicemail-box-container">
-            
             {messages.map((message, index) => (
-                <div className=" d-flex py-0 new-voice-mail-container">
-                  <div className="icon-container d-flex align-items-center">
-                    <div className={message.name === 'Timothee HR' && accessmail==='notallowed' ? 
-                                    "red-icon"
-                                  : message.accessMail === accessmail ?
-                                    "red-icon"
-                                  :
-                                    "unred-icon"}></div>
-                    <div className="voice-icon "></div>
+              <div className=" d-flex py-0 new-voice-mail-container">
+                <div className="icon-container d-flex align-items-center">
+                  <div
+                    className={
+                      message.name === "Timothee HR" &&
+                      episodeone === "notallowed"
+                        ? "red-icon"
+                        : message.episodeone === episodeone
+                        ? "red-icon"
+                        : "unred-icon"
+                    }
+                  ></div>
+                  <div className="voice-icon "></div>
+                </div>
+                <div className="info-container me-3 m-auto">
+                  <div className="d-flex w-100">
+                    <div className="email-name w-50">{message.name}</div>
+                    <div className="voice-date w-50 text-end">
+                      {message.date}
+                    </div>
                   </div>
-                  <div className="info-container me-3 m-auto">
-                    <div className="d-flex w-100">
-                      <div className="email-name w-50">{message.name}</div>
-                      <div className="voice-date w-50 text-end">{message.date}</div>
-                    </div>
-                    <div className="d-flex w-100 align-items-center">
-                      <div className="play-icon" type="button" onClick={message.clickable ? OpenMessage : ''}></div>
-                      <div className="sound-icon sound-one"></div>
-                    </div>
+                  <div className="d-flex w-100 align-items-center">
+                    <div
+                      className="play-icon"
+                      type="button"
+                      onClick={message.clickable ? OpenMessage : ""}
+                    ></div>
+                    <div className="sound-icon sound-one"></div>
                   </div>
                 </div>
+              </div>
             ))}
-
-            
 
             {/* <div className=" d-flex py-0 voice-mail-container">
               <div className="icon-container d-flex align-items-center">
@@ -115,7 +141,7 @@ useEffect(()=>{
 
             <div className=" d-flex py-0 voice-mail-container">
               <div className="icon-container d-flex align-items-center">
-                <div className={accessmail==="replyflow1.8.1"?"red-icon":"unred-icon "}></div>
+                <div className={episodeone==="replyflow1.8.1"?"red-icon":"unred-icon "}></div>
                 <div className="voice-icon "></div>
               </div>
               <div className="info-container me-3 m-auto">
@@ -300,9 +326,15 @@ useEffect(()=>{
                 </div>
               </div>
             </div> */}
-
           </div>
-          {open? <PopUp setOpen={setOpen} setAccesmail={setAccesmail} accessmail={accessmail} video={videolink}/> : null}
+          {open ? (
+            <PopUp
+              setOpen={setOpen}
+              setEpisodeOne={setEpisodeOne}
+              episodeone={episodeone}
+              video={videolink}
+            />
+          ) : null}
         </div>
         <div className="inner-row-right"></div>
       </div>
