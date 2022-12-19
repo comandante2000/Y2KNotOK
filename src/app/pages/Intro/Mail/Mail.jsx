@@ -7,6 +7,7 @@ import MailReply from "./pages/BaseMailReply/MailReply";
 import { useState } from "react";
 import PopUps from "./pages/Popups/Popups";
 export default function MailPage({ episodeone, setEpisodeOne }) {
+  const [openMail, setOpenMail] = useState(false);
   const [open, setOpen] = useState(false);
   const [hide, setHide] = useState(true);
 
@@ -32,12 +33,12 @@ export default function MailPage({ episodeone, setEpisodeOne }) {
           }`}
         >
           <div>
-            <Time />
-            <Header name="Mail" />
+            <Time  openMail={openMail}/>
+            <Header name="Mail"  openMail={openMail}/>
 
             <div className="mail-box-container">
               {open ? (
-                <MailReply
+                <MailReply setOpenMail = {setOpenMail}
                   name="hrtimothee@redwest.com"
                   setOpenvideo={setOpenvideo}
                   setOpen={setOpen}
@@ -161,6 +162,7 @@ export default function MailPage({ episodeone, setEpisodeOne }) {
                 setOpenvideo={setOpenvideo}
                 setEpisodeOne={setEpisodeOne}
                 episodeone={episodeone}
+                setOpenMail={setOpenMail}
               />
             ) : null}
           </div>
