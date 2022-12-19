@@ -9,7 +9,7 @@ export default function Time() {
           <div className="time">
             <div className="d-flex justify-content-center clock">
                 <p className="date-time">
-                    Monday 10:AM
+                    Monday 10:00AM
                 </p>
             </div>
           </div>
