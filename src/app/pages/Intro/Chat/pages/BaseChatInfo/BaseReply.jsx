@@ -69,6 +69,7 @@ export default function ChatReply({
         ]);
         console.log("wrong message");
       }
+      setmessage("");
     }
 
     // { for Themothee message Flow 1.10" },
@@ -96,6 +97,7 @@ export default function ChatReply({
         console.log("wrong message");
       }
     }
+    setmessage("");
   };
 
   return (
@@ -117,11 +119,11 @@ export default function ChatReply({
           ))}
         </div>
 
-        {/* { rigthreply?
+        { rigthreply?
         <div classname="image-reply d-flex justify-content-between align-items-center">
             <div className="imageyes d-flex justify-content-center align-items-center "></div>
           </div>
-          :null} */}
+          :null}
       </div>
 
       <div className="d-flex justify-content-center txt-area-container mt-3">
