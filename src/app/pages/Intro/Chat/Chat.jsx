@@ -6,17 +6,14 @@ import BaseChatUnred from "./pages/BaseChatUnred/BaseChatUnred";
 import ChatInfo from "./pages/BaseChatInfo/ChatInfo";
 import ChatReply from "./pages/BaseChatInfo/BaseReply";
 import { useState } from "react";
-export default function ChatPage({accessmail,setAccesmail}) {
-
-
-
+export default function ChatPage({ episodeone, setEpisodeOne }) {
   const [open, setOpen] = useState(false);
   const [hide, setHide] = useState(true);
   const OpenMessage = () => {
     setOpen(true);
     setHide(false);
-    if (accessmail == "voicemail1.8") {
-      setAccesmail("voicemail1.8.1");
+    if (episodeone == "voicemail1.8") {
+      setEpisodeOne("voicemail1.8.1");
     }
   };
   return (
@@ -26,30 +23,61 @@ export default function ChatPage({accessmail,setAccesmail}) {
         <div className="inner-row-center">
           <Time />
           <Header name="Text" />
-      
-         {open ? (
-                <ChatReply  setOpen={setOpen} setAccesmail={setAccesmail} accessmail={accessmail}/>
-              ) : (
-                <div type="button" onClick={accessmail =="notallowed "||accessmail =="allow" ||accessmail =="allowed"||accessmail =="mailpop"||accessmail =="voicemail1.7 "?null:OpenMessage} >
-                  <div className="container-message">
-                    <BaseChat person={accessmail=="Flow1.10.1"?"Timothee":"Krista"} chat={accessmail=="Flow1.10.1"?"Waiting on your":"Where are you n.."} accessmail={accessmail}/>
-                    <BaseChatUnred person={accessmail=="Flow1.10.1"?"Krista":"Timothee"} chat="What day is tras" />
-                    <BaseChatUnred person="Tony" chat="What day is tras.." />
-                    <BaseChatUnred person="Tony" chat="What day is tras.." />
-                    <BaseChatUnred person="Tony" chat="What day is tras.." />
-                    <BaseChatUnred person="Tony" chat="What day is tras.." />
-                    <BaseChatUnred person="Tony" chat="What day is tras.." />
-                    <BaseChatUnred person="Tony" chat="What day is tras.." />
-                  </div>
-                </div>
-              )}
-          {hide ?
-              <div className="btn-delete-container d-flex justify-content-end">
-                <div className="btn-delete d-flex justify-content-center align-items-center">
-                  Delete
-                </div>
-              </div> : null
-          }
+
+          {open ? (
+            <ChatReply
+              setOpen={setOpen}
+              setEpisodeOne={setEpisodeOne}
+              episodeone={episodeone}
+            />
+          ) : (
+            <div
+              type="button"
+              onClick={
+                episodeone == "notallowed " ||
+                episodeone == "allow" ||
+                episodeone == "allowed" ||
+                episodeone == "mailpop" ||
+                episodeone == "voicemail1.7 "
+                  ? null
+                  : OpenMessage
+              }
+            >
+              <div className="container-message">
+                <BaseChat
+                  person={episodeone == "Flow1.10.1" ? "Timothee" : "Krista"}
+                  chat={
+                    episodeone == "Flow1.10.1"
+                      ? "Waiting on your.."
+                      : "Where are you?"
+                  }
+                  episodeone={episodeone}
+                />
+                <BaseChatUnred
+                  person={episodeone == "Flow1.10.1" ? "Krista" : "Timothee"}
+                  chat="Where are you?"
+                />
+                <BaseChatUnred person=" Finn " chat=" Where are you?" />
+                <BaseChatUnred person="Krista " chat="The meeting has..." />
+                <BaseChatUnred person="Mateo" chat="Karoake tonight?" />
+                <BaseChatUnred
+                  person="Timothee HR"
+                  chat="Prepare for open..."
+                />
+                <BaseChatUnred person="Mom" chat="did i do it right?" />
+                <BaseChatUnred person="Akari" chat="Crescent Lake " />
+                <BaseChatUnred person="Lakin" chat="NYE!" />
+                <BaseChatUnred person="Sylvie" chat="resend code" />
+              </div>
+            </div>
+          )}
+          {hide ? (
+            <div className="btn-delete-container d-flex justify-content-end">
+              <div className="btn-delete d-flex justify-content-center align-items-center">
+                Delete
+              </div>
+            </div>
+          ) : null}
         </div>
         <div className="inner-row-right"></div>
       </div>

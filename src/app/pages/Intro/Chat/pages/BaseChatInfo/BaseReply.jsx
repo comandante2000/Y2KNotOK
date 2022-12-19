@@ -5,8 +5,8 @@ export default function ChatReply({
   person,
   chat,
   setOpen,
-  setAccesmail,
-  accessmail,
+  setEpisodeOne,
+  episodeone,
 }) {
   // admin@redwest.com
 
@@ -19,7 +19,6 @@ export default function ChatReply({
 
   var replies =
     messagereplies[Math.floor(Math.random() * messagereplies.length)];
-    
 
   const [message, setmessage] = useState();
   const [textmessage, setextmessage] = useState();
@@ -30,9 +29,9 @@ export default function ChatReply({
   ]);
 
   const [openm, setOpenm] = useState(false);
-
-  const truereplies = "Red West Control Center";
-
+  // ||"Pilot Butte Substation"|| "Malin Captain Jack Substation"|| "John Day Substation"|| "Brownlee Dam Power House"|| "Grants Pass Substation"|| "Pge Elma Substation"|| "Midpoint Substation"|| "Hells Canyon Power Station"|| "Fox Hollow Substation"|| "Chief Joseph Dam"|| "Mcnary Substation"|| "Red West Command Center"|| "Oxbow Dam Power Station"
+ let truereplies ="Red West Control Center";
+  
   const [rigthreply, setrigthreply] = useState(false);
 
   const [sendreply, setsendreply] = useState(false);
@@ -44,60 +43,61 @@ export default function ChatReply({
     setOpen(!setOpen);
   };
 
+
+
+
   const handleSubmit = (e) => {
-       // { for krista message Flow 1.7" },
-    if (accessmail === "voicemail1.8.1") {
-    if (message.toLowerCase() === truereplies.toLowerCase()) {
-      setReplyMessages([
-        ...replyMessages,
-        { person: "Me", chat: message },
-        { person: "Krista", chat: replies },
-      ]);
-      // setrigthreply(true);
-      console.log("yeahhmessage");
-      if (accessmail === "voicemail1.8.1") {
-        setAccesmail("replyflow1.8");
+    // { for krista message Flow 1.7" },
+    if (episodeone === "voicemail1.8.1") {
+      if (message.toLowerCase() === truereplies.toLowerCase()) {
+        setReplyMessages([
+          ...replyMessages,
+          { person: "Me", chat: message },
+          { person: "Krista", chat: replies },
+        ]);
+        // setrigthreply(true);
+        console.log("yeahhmessage");
+        if (episodeone === "voicemail1.8.1") {
+          setEpisodeOne("replyflow1.8");
+        }
+        console.log("message:", episodeone);
+      } else {
+        setReplyMessages([
+          ...replyMessages,
+          { person: "Me", chat: message },
+          { person: "Krista", chat: replies },
+        ]);
+        console.log("wrong message");
       }
-      console.log("message:",accessmail);
-    } else {
-      setReplyMessages([
-        ...replyMessages,
-        { person: "Me", chat: message },
-        { person: "Krista", chat: replies },
-      ]);
-      console.log("wrong message");
+      setmessage("");
     }
-  }
 
-// { for Themothee message Flow 1.10" },
+    // { for Themothee message Flow 1.10" },
 
-if (accessmail === "Flow1.10.1") {
-  if (message.toLowerCase() === "yes".toLowerCase()) {
+    if (episodeone === "Flow1.10.1") {
+      if (message.toLowerCase() === "yes".toLowerCase()) {
+        setReplyMessages([
+          ...replyMessages,
+          { person: "Me", chat: message },
+          { person: "Timothee", chat: "You're safe in your own private IDAHO" },
+        ]);
+        setrigthreply(true);
+        console.log("yeahhmessage");
 
-    setReplyMessages([
-      ...replyMessages,
-      { person: "Me", chat: message },
-      { person: "Timothee", chat: "You're safe in your own private IDAHO" },
-    ]);
-    setrigthreply(true);
-    console.log("yeahhmessage");
-
-    if (accessmail === "Flow1.10.1") {
-      setAccesmail("Flow1.11");
+        if (episodeone === "Flow1.10.1") {
+          setEpisodeOne("Flow1.11");
+        }
+        console.log("message:", episodeone);
+      } else {
+        setReplyMessages([
+          ...replyMessages,
+          { person: "Me", chat: message },
+          { person: "Timothee", chat: "Jusy say YES, J" },
+        ]);
+        console.log("wrong message");
+      }
     }
-    console.log("message:",accessmail);
-  } else {
-    setReplyMessages([
-      ...replyMessages,
-      { person: "Me", chat: message },
-      { person: "Timothee", chat: "Jusy say YES, J" },
-    ]);
-    console.log("wrong message");
-  }
-}
-
-
-
+    setmessage("");
   };
 
   return (
@@ -105,9 +105,13 @@ if (accessmail === "Flow1.10.1") {
       <div className="base-chat-reply-container">
         <div className="chat-info-container">
           <ChatInfo
-            person={accessmail=="Flow1.10.1"?"Timothee":"Krista"}
-            chat={accessmail=="Flow1.10.1"?"Waiting on your":"Where are you n.."}
-            accessmail={accessmail}
+            person={episodeone == "Flow1.10.1"||episodeone == "Flow1.11"? "Timothee" : "Krista"}
+            chat={
+              episodeone == "Flow1.10.1"||episodeone == "Flow1.11"
+                ? "Waiting on your"
+                : "Where are you n.."
+            }
+            episodeone={episodeone}
             rigthreply={rigthreply}
           />
           {replyMessages.map((reply, index) => (
@@ -115,61 +119,57 @@ if (accessmail === "Flow1.10.1") {
           ))}
         </div>
 
-        {/* { rigthreply?
+        { rigthreply?
         <div classname="image-reply d-flex justify-content-between align-items-center">
             <div className="imageyes d-flex justify-content-center align-items-center "></div>
           </div>
-          :null} */}
-
-        
+          :null}
       </div>
 
       <div className="d-flex justify-content-center txt-area-container mt-3">
-          {openm ? (
-            <form
-              className="d-flex justify-content-center txt-area"
-              onSubmit={handleSubmit}
-            >
-              <textarea
-                className="txt-area-bg"
-                type="text"
-                rows="5"
-                value={message}
-                onChange={(e) => setmessage(e.target.value)}
-                placeholder="text message"
-              />
-              {/* <div>
+        {openm ? (
+          <form
+            className="d-flex justify-content-center txt-area"
+            onSubmit={handleSubmit}
+          >
+            <textarea
+              className="txt-area-bg"
+              type="text"
+              rows="5"
+              value={message}
+              onChange={(e) => setmessage(e.target.value)}
+              placeholder="text message"
+            />
+            {/* <div>
                  <button type="submit"  className="btn-send d-flex justify-content-center align-items-center px-3">Send</button>
               </div> */}
-            </form>
-          ) : null}
-        </div>
-        <div>
-          <div className="d-flex justify-content-around mt-3">
-            <div
-              className="btn-back d-flex justify-content-center align-items-center px-3"
-              type={openm ? "submit" : "button"}
-              onClick={openm ? handleSubmit : OpenBack}
-            >
-              {openm ? "Send" : "Back"}
-            </div>
-            <div
-              className="btn-reply d-flex justify-content-center align-items-center px-3"
-              type="button"
-              onClick={OpenReplay}
-            >
-              Reply
-            </div>
-            <div
-              className="btn-delete d-flex justify-content-center align-items-center px-3"
-              type="button"
-            >
-              Delete
-            </div>
+          </form>
+        ) : null}
+      </div>
+      <div className="btn-container">
+        <div className="d-flex justify-content-around">
+          <div
+            className="btn-back d-flex justify-content-center align-items-center px-3"
+            type={openm ? "submit" : "button"}
+            onClick={openm ? handleSubmit : OpenBack}
+          >
+            {openm ? "Send" : "Back"}
+          </div>
+          <div
+            className="btn-reply d-flex justify-content-center align-items-center px-3"
+            type="button"
+            onClick={OpenReplay}
+          >
+            Reply
+          </div>
+          <div
+            className="btn-delete d-flex justify-content-center align-items-center px-3"
+            type="button"
+          >
+            Delete
           </div>
         </div>
-
-
+      </div>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import "./ChatInfo.scss";
-export default function ChatInfo({ person, chat ,accessmail,rigthreply}) {
+export default function ChatInfo({ person, chat, episodeone, rigthreply }) {
   // admin@redwest.com
 
   return (
@@ -14,8 +14,7 @@ export default function ChatInfo({ person, chat ,accessmail,rigthreply}) {
             <div className="w-25 chat-date text-end">12/30</div>
           </div>
           <div className="chat-info d-flex">
-            <div className="person-chat w-75">{chat}
-            </div>
+            <div className="person-chat w-75">{chat}</div>
             <div className="chat-time-container w-25 text-end">
               <p className="chat-time">2:11pm</p>
             </div>

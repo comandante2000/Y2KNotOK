@@ -1,7 +1,7 @@
 import "./PopUp.scss";
 import { useState, useEffect } from "react";
 import { useRef } from "react";
-export default function PopUp({ setOpen, setAccesmail, video, accessmail }) {
+export default function PopUp({ setOpen, setEpisodeOne, video, episodeone }) {
   const [videoTime, setVideoTime] = useState(0);
   const [playing, setPlaying] = useState(false);
   const videoRef = useRef(null);
@@ -39,26 +39,26 @@ export default function PopUp({ setOpen, setAccesmail, video, accessmail }) {
 
     setOpen(false);
     if (
-      accessmail == "allow" ||
-      accessmail == "allowed" ||
-      accessmail == "notallowed"
+      episodeone == "allow" ||
+      episodeone == "allowed" ||
+      episodeone == "notallowed"
     ) {
       setOpen(false);
-      setAccesmail("allow");
+      setEpisodeOne("allow");
     }
-    if (accessmail == "voicemail1.7") {
+    if (episodeone == "voicemail1.7") {
       setOpen(false);
-      setAccesmail("voicemail1.8");
+      setEpisodeOne("voicemail1.8");
     }
-    // if (accessmail == "voicemail1.8") {
+    // if (episodeone == "voicemail1.8") {
     //   setOpen(false);
     // }
-    if (accessmail == "replyflow1.8.1") {
-      setAccesmail("Flow1.9");
+    if (episodeone == "replyflow1.8.1") {
+      setEpisodeOne("Flow1.9");
     }
   };
 
-  console.log("the accemail -n voice:", accessmail);
+  console.log("the accemail -n voice:", episodeone);
 
   window.setInterval(function () {
     setCurrentTime(videoRef.current?.currentTime);
@@ -70,13 +70,13 @@ export default function PopUp({ setOpen, setAccesmail, video, accessmail }) {
       <div className="black-light "></div>
       <div className="pda-boot-container  d-flex justify-content-center ">
         <div className="voice-pop-ups position-absolute top-50 start-50 translate-middle">
-          <div className="buttons mt-2 d-flex justify-content-end">
+          <div className="buttons mt-2 d-flex justify-content-end align-items-center">
             <div
               className="close-button mx-2"
               type="button"
               onClick={DonePlaying}
-            ></div>
-            <div className="x-button" type="button" onClick={DonePlaying}></div>
+            >Close</div>
+            <div className="x-button" type="button" onClick={DonePlaying}>X</div>
           </div>
           <div class=" text-center align-items-center d-flex justify-content-center">
             <div className="video-container d-flex flex-column">

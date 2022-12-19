@@ -6,8 +6,8 @@ export default function VoiceMailButton({
   color,
   press,
   setpress,
-  accessmail,
-  setAccesmail
+  episodeone,
+  setEpisodeOne,
 }) {
 
 
@@ -17,20 +17,21 @@ export default function VoiceMailButton({
     setpress(function (prevCount) {
       return (prevCount += 1);
     });
-    if (accessmail =="mailpop"){
-      setAccesmail("voicemail1.7")
+    if (episodeone == "mailpop") {
+      setEpisodeOne("voicemail1.7");
     }
-    if (accessmail =="replyflow1.8"){
-      setAccesmail("replyflow1.8.1")
+    if (episodeone == "replyflow1.8") {
+      setEpisodeOne("replyflow1.8.1");
     }
-    
   };
- 
+
   return (
     <div id="voice-button">
       <div
         className={`button-1 ${color == "voice" ? "red" : "black"} ${
-          press === 6||accessmail =="mailpop" ||accessmail =="replyflow1.8"? "button-glow" : null
+          press === 6 || episodeone == "mailpop" || episodeone == "replyflow1.8"
+            ? "button-glow"
+            : null
         }`}
         type="button"
         name="voice"

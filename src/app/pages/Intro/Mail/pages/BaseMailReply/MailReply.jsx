@@ -5,7 +5,7 @@ export default function MailReply({ name ,setOpenvideo,setOpen}) {
   const [opentext, setOpentext] = useState(false);
   
   const OpenReplay = () => {
-    setOpen(true);
+    setOpentext(!opentext);
   };
   const OpenBack = () => {
     setOpen(false);
@@ -44,7 +44,7 @@ export default function MailReply({ name ,setOpenvideo,setOpen}) {
         </div>
         <div className="d-flex justify-content-center txt-area-container mt-3">
           {opentext ? (
-              <div className="d-flex justify-content-center txt-area">
+              <div className="d-flex justify-content-center align-items-end txt-area">
                 <textarea className="txt-area-bg" type="text"></textarea>
               </div>
           ) : null}
@@ -55,7 +55,7 @@ export default function MailReply({ name ,setOpenvideo,setOpen}) {
             <div className="attachment px-2"> Attachment</div>
           </div>
         </div>
-        <div className="d-flex justify-content-around mt-3">
+        <div className="d-flex justify-content-around btn-container">
           <div
             className="back_button d-flex justify-content-center align-items-center"
             type="button"
