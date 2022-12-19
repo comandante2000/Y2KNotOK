@@ -68,7 +68,7 @@
     }
   }
 }
-@media (min-width: 1441px) and (max-width: 1745.45px){
+@media (min-width: 1441px) and (max-width: 1890.75px){
   body {
     #pda-device {
       .container {
@@ -113,7 +113,17 @@
     }
   }
 }
-
+@media (max-width: 991.98px) and (orientation: portrait){
+  body {
+    #pda-device {
+      .container {
+        height: 100vh;
+        width: 100vw;
+        padding: 0px;
+      }
+    }
+  }
+}
 
 @media (max-width: 991.98px) and (orientation: landscape) {
   body {
