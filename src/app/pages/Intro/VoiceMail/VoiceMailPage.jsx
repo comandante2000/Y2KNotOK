@@ -94,8 +94,8 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone }) {
         <div
           className={`inner-row-center ${open ? "voiceplay" : "unvoiceplay"}`}
         >
-          <Time />
-          <Header name="VoiceMail" />
+          <Time open={open} />
+          <Header name="VoiceMail" open={open} />
           <div className="voicemail-box-container">
             {messages.map((message, index) => (
                 <div className=" d-flex py-0 new-voice-mail-container">

@@ -1,6 +1,6 @@
 import "./Time.scss";
 
-export default function Time() {
+export default function Time({open}) {
   return (
       <div  id="time-component">
         <div className=" screen-head d-flex bd-highlight justify-content-sm-center">
@@ -8,7 +8,7 @@ export default function Time() {
           <div className="battery"></div>
           <div className="time">
             <div className="d-flex justify-content-center clock">
-                <p className="date-time">
+                <p className={open? "overlay-date-time" : "date-time"}>
                     Monday 10:00AM
                 </p>
             </div>
