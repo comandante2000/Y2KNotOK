@@ -76,7 +76,7 @@ export default function PopUp({ setOpen, setEpisodeOne, video, episodeone }) {
               type="button"
               onClick={DonePlaying}
             >Close</div>
-            <div className="x-button" type="button" onClick={DonePlaying}></div>
+            <div className="x-button" type="button" onClick={DonePlaying}>X</div>
           </div>
           <div class=" text-center align-items-center d-flex justify-content-center">
             <div className="video-container d-flex flex-column">

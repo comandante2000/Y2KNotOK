@@ -61,8 +61,8 @@ export default function PopUps({
               className="close-button mx-2"
               type="button"
               onClick={DonePlaying}
-            ></div>
-            <div className="x-button" type="button" onClick={DonePlaying}></div>
+            >Close</div>
+            <div className="x-button" type="button" onClick={DonePlaying}>X</div>
           </div>
           <div class=" text-center align-items-center d-flex justify-content-center">
             <div className="video-container d-flex flex-column">

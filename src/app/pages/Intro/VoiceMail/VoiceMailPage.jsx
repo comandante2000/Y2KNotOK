@@ -13,6 +13,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone }) {
       date: "12/30",
       episodeone: "voicemail1.7",
       clickable: true,
+      wavelenghtClass:"sound-two",
     },
     { name: "Krista", date: "12/30", episodeone: "", clickable: false },
     {
@@ -20,17 +21,18 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone }) {
       date: "12/30",
       episodeone: "replyflow1.8.1",
       clickable: false,
+      wavelenghtClass:"sound-one",
     },
-    { name: "Mateo", date: "12/30", episodeone: "", clickable: false },
-    { name: "Mom", date: "12/28", episodeone: "", clickable: false },
-    { name: "Krista", date: "12/27", episodeone: "", clickable: false },
-    { name: "Finn", date: "12/28", episodeone: "", clickable: false },
-    { name: "Mom", date: "12/25", episodeone: "", clickable: false },
-    { name: "Steve", date: "12/24", episodeone: "", clickable: false },
-    { name: "Finn", date: "12/22", episodeone: "", clickable: false },
-    { name: "Syvlie", date: "12/20", episodeone: "", clickable: false },
-    { name: "Krista", date: "12/18", episodeone: "", clickable: false },
-    { name: "Mom", date: "12/17", episodeone: "", clickable: false },
+    { name: "Mateo", date: "12/30", episodeone: "", clickable: false , wavelenghtClass:"sound-one"},
+    { name: "Mom", date: "12/28", episodeone: "", clickable: false , wavelenghtClass:"sound-one"},
+    { name: "Krista", date: "12/27", episodeone: "", clickable: false ,  wavelenghtClass:"sound-one"},
+    { name: "Finn", date: "12/28", episodeone: "", clickable: false ,  wavelenghtClass:"sound-one"},
+    { name: "Mom", date: "12/25", episodeone: "", clickable: false ,  wavelenghtClass:"sound-one"},
+    { name: "Steve", date: "12/24", episodeone: "", clickable: false ,  wavelenghtClass:"sound-one"},
+    { name: "Finn", date: "12/22", episodeone: "", clickable: false ,  wavelenghtClass:"sound-one"},
+    { name: "Syvlie", date: "12/20", episodeone: "", clickable: false ,  wavelenghtClass:"sound-one"},
+    { name: "Krista", date: "12/18", episodeone: "", clickable: false ,  wavelenghtClass:"sound-one"},
+    { name: "Mom", date: "12/17", episodeone: "", clickable: false ,  wavelenghtClass:"sound-one"},
   ]);
 
   const OpenMessage = () => {
@@ -56,24 +58,26 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone }) {
           date: "12/30",
           episodeone: "replyflow1.8.1",
           clickable: true,
+          wavelenghtClass:"sound-one",
         },
         {
           name: "Timothee HR",
           date: "12/30",
           episodeone: "voicemail1.7",
           clickable: false,
+          wavelenghtClass:"sound-one",
         },
-        { name: "Krista", date: "12/30", episodeone: "", clickable: false },
-        { name: "Mateo", date: "12/30", episodeone: "", clickable: false },
-        { name: "Mom", date: "12/28", episodeone: "", clickable: false },
-        { name: "Krista", date: "12/27", episodeone: "", clickable: false },
-        { name: "Finn", date: "12/28", episodeone: "", clickable: false },
-        { name: "Mom", date: "12/25", episodeone: "", clickable: false },
-        { name: "Steve", date: "12/24", episodeone: "", clickable: false },
-        { name: "Finn", date: "12/22", episodeone: "", clickable: false },
-        { name: "Syvlie", date: "12/20", episodeone: "", clickable: false },
-        { name: "Krista", date: "12/18", episodeone: "", clickable: false },
-        { name: "Mom", date: "12/17", episodeone: "", clickable: false },
+        { name: "Krista", date: "12/30", episodeone: "", clickable: false , wavelenghtClass:"sound-one"},
+        { name: "Mateo", date: "12/30", episodeone: "", clickable: false , wavelenghtClass:"sound-one" },
+        { name: "Mom", date: "12/28", episodeone: "", clickable: false , wavelenghtClass:"sound-one"},
+        { name: "Krista", date: "12/27", episodeone: "", clickable: false , wavelenghtClass:"sound-one"},
+        { name: "Finn", date: "12/28", episodeone: "", clickable: false , wavelenghtClass:"sound-one"},
+        { name: "Mom", date: "12/25", episodeone: "", clickable: false , wavelenghtClass:"sound-one"},
+        { name: "Steve", date: "12/24", episodeone: "", clickable: false , wavelenghtClass:"sound-one"},
+        { name: "Finn", date: "12/22", episodeone: "", clickable: false , wavelenghtClass:"sound-one"},
+        { name: "Syvlie", date: "12/20", episodeone: "", clickable: false , wavelenghtClass:"sound-one"},
+        { name: "Krista", date: "12/18", episodeone: "", clickable: false , wavelenghtClass:"sound-one"},
+        { name: "Mom", date: "12/17", episodeone: "", clickable: false , wavelenghtClass:"sound-one"},
       ]);
     }
   }, []);
@@ -89,37 +93,38 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone }) {
           <Header name="VoiceMail" />
           <div className="voicemail-box-container">
             {messages.map((message, index) => (
-              <div className=" d-flex py-0 new-voice-mail-container">
-                <div className="icon-container d-flex align-items-center">
-                  <div
-                    className={
-                      message.name === "Timothee HR" &&
-                      episodeone === "notallowed"
-                        ? "red-icon"
-                        : message.episodeone === episodeone
-                        ? "red-icon"
-                        : "unred-icon"
-                    }
-                  ></div>
-                  <div className="voice-icon "></div>
-                </div>
-                <div className="info-container me-3 m-auto">
-                  <div className="d-flex w-100">
-                    <div className="email-name w-50">{message.name}</div>
-                    <div className="voice-date w-50 text-end">
-                      {message.date}
+                <div className=" d-flex py-0 new-voice-mail-container">
+                  <div className="icon-container d-flex align-items-center">
+                    <div
+                        className={
+                          message.name === "Timothee HR" &&
+                          episodeone === "notallowed"
+                              ? "red-icon"
+                              : message.episodeone === episodeone
+                                  ? "red-icon"
+                                  : "unred-icon"
+                        }
+                    ></div>
+                    <div className="voice-icon "></div>
+                  </div>
+                  <div className="info-container me-3 m-auto">
+                    <div className="d-flex w-100">
+                      <div className="email-name w-50">{message.name}</div>
+                      <div className="voice-date w-50 text-end">
+                        {message.date}
+                      </div>
+                    </div>
+                    <div className="d-flex w-100 align-items-center">
+                      <div
+                          className="play-icon"
+                          type="button"
+                          onClick={message.clickable ? OpenMessage : ""}
+                      ></div>
+                      <div className={`sound-icon ${message.wavelenghtClass}`}>
+                      </div>
                     </div>
                   </div>
-                  <div className="d-flex w-100 align-items-center">
-                    <div
-                      className="play-icon"
-                      type="button"
-                      onClick={message.clickable ? OpenMessage : ""}
-                    ></div>
-                    <div className="sound-icon sound-one"></div>
-                  </div>
                 </div>
-              </div>
             ))}
 
             {/* <div className=" d-flex py-0 voice-mail-container">

@@ -65,15 +65,17 @@
   .voiceplay{
     background-color:rgb(48, 132, 132);
   }
+  .voicemail-box-container div:nth-child(13){
+    border-bottom: 3px solid black;
+  }
   .new-voice-mail-container{
     height: 70px;
-    border: 3px solid black;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
   }
   .voice-mail-container {
     height: 70px;
-    border-left: 3px solid black;
-    border-right: 3px solid black;
-    border-bottom: 3px solid black;
   }
   .icon-container {
     width: 30%;
@@ -209,7 +211,7 @@
       background-repeat: no-repeat;
       height: initial;
       .voicemail-box-container{
-        height: 47vh;
+        height: 47.7vh;
       }
       .the-image-radio {
         height: 427px; ///new1

@@ -26,12 +26,16 @@
     }
 
     .x-button {
-      background-image: url("https://images.stinkyfruit.com/Xbutton.svg");
-      background-repeat: no-repeat;
+      //background-image: url("https://images.stinkyfruit.com/Xbutton.svg");
+      //background-repeat: no-repeat;
       height: 28px;
       width: 28px;
-      background-position: 14% -78%;
-      background-size: 50%;
+      font-size: 22px;
+      font-family: "Palm OS";
+      line-height: 19px;
+      color: #47B9B2;
+      //background-position: 14% -78%;
+      //background-size: 50%;
     }
     .close-button {
       //background-image: url("https://images.stinkyfruit.com/Close.svg");
