@@ -53,7 +53,7 @@
       }
     }
   }
-  .btn-container{
+  .btn-container {
     padding-left: 10px;
     padding-right: 10px;
     margin-top: 14px;
@@ -92,7 +92,6 @@
   .image-reply {
     height: 175.78px;
     width: 100%;
-    
   }
   .imageyes {
     background-image: url("https://images.stinkyfruit.com/Yes.png");
@@ -102,6 +101,7 @@
     height: 175.78px;
     width: 234.11px;
     mix-blend-mode: multiply;
+    margin-left: 102px ;
   }
 }
 @media (max-width: 575.98px) {
@@ -115,6 +115,13 @@
     .txt-area-bg {
       font-size: 25px;
       height: 14vh;
+    }
+    .imageyes {
+      background-size: cover;
+      height: 175.78px;
+      width: 234.11px;
+      mix-blend-mode: multiply;
+     
     }
   }
 }

@@ -5,22 +5,26 @@ export default function ChatButton({
   setActive,
   color,
   press,
-  accessmail,
-  setAccesmail,
+  episodeone,
+  setEpisodeOne,
 }) {
   const handleClick4 = () => {
     showScreen("MessageScreen");
     setActive("message");
-    if(accessmail === "Flow1.10"){
-      setAccesmail("Flow1.10.1")
+    if (episodeone === "Flow1.10") {
+      setEpisodeOne("Flow1.10.1");
     }
   };
-console.log(accessmail,"the value of accesmail in chat");
+  console.log(episodeone, "the value of accesmail in chat");
   return (
     <div id="chat-button">
       <div
         className={`button-4 ${color == "message" ? "red" : "black"} ${
-          accessmail === "voicemail1.8" ||   accessmail === "voicemail1.8" ||accessmail === "Flow1.10" ? "button-glow" : null
+          episodeone === "voicemail1.8" ||
+          episodeone === "voicemail1.8" ||
+          episodeone === "Flow1.10"
+            ? "button-glow"
+            : null
         }`}
         type="button"
         name="chat"

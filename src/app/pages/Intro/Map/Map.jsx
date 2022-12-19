@@ -5,15 +5,13 @@ import MapPageOne from "./pages/Map1/MapPageOne";
 import MapPageTwo from "./pages/MapPageTwo/MapPageTwo";
 import MapLocatingPage from "./pages/Locating/Locating";
 import { useState, useEffect } from "react";
-export default function MapPage({setAccesmail,accessmail}) {
+export default function MapPage({ setEpisodeOne, episodeone }) {
   const [zoom, setZoom] = useState(true);
 
   console.log("the zoom", zoom);
 
   console.log("ttt", typeof setZoom);
-  
 
-  
   return (
     <div id="pda-map-screen">
       <div className=" row-2 d-flex justify-content-center">
@@ -22,15 +20,21 @@ export default function MapPage({setAccesmail,accessmail}) {
           <Time />
           <Header name="Map" />
 
-           {accessmail=="Flow1.12"?<MapLocatingPage/>:
-            zoom ? (
-            <MapPageOne setZoom={setZoom} setAccesmail={setAccesmail} accessmail={accessmail}/>
+          {episodeone == "Flow1.12" ? (
+            <MapLocatingPage />
+          ) : zoom ? (
+            <MapPageOne
+              setZoom={setZoom}
+              setEpisodeOne={setEpisodeOne}
+              episodeone={episodeone}
+            />
           ) : (
-            <MapPageTwo setZoom={setZoom} setAccesmail={setAccesmail} accessmail={accessmail}/>
-          )
-           }
-
-         
+            <MapPageTwo
+              setZoom={setZoom}
+              setEpisodeOne={setEpisodeOne}
+              episodeone={episodeone}
+            />
+          )}
         </div>
         <div className="inner-row-right"></div>
       </div>

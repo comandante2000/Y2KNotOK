@@ -5,15 +5,13 @@ export default function MailButton({
   setActive,
   color,
   press,
-  accessmail,
-  setAccesmail,
+  episodeone,
+  setEpisodeOne,
 }) {
   const [mail, setmail] = useState(false);
   const [btnclick, setbtnclick] = useState(0);
-  
-  const handleButtonGlowing = () => {
 
-  };
+  const handleButtonGlowing = () => {};
 
   const handleClick = () => {
     showScreen("MailScreen");
@@ -23,35 +21,35 @@ export default function MailButton({
   const handleClick3 = () => {
     showScreen("MailScreen");
     setActive("mail");
-    setAccesmail("allowed");
+    setEpisodeOne("allowed");
   };
 
   const handleClick1 = () => {
     showScreen("VoicemailScreen");
     setActive("voice");
-    setAccesmail("allow");
+    setEpisodeOne("allow");
     setbtnclick(function (prevCount) {
       return (prevCount += 1);
     });
   };
 
-console.log(accessmail,":accelemal");
-console.log(btnclick,":btn");
+  console.log(episodeone, ":accelemal");
+  console.log(btnclick, ":btn");
   return (
     <div id="mail-button">
-      {accessmail == "allow" ? (
+      {episodeone == "allow" ? (
         <div
           className={`button-2 ${color == "mail" ? "red" : "black"} ${
-            accessmail == "allowed" ?  null : "button-glow"
+            episodeone == "allowed" ? null : "button-glow"
           }`}
           type="button"
           name="mail"
-          onClick={btnclick >=2?handleClick3:handleClick1}
+          onClick={btnclick >= 2 ? handleClick3 : handleClick1}
         ></div>
       ) : (
         <div
           className={`button-2 ${color == "mail" ? "red" : "black"} ${
-            accessmail == "allow" ? "button-glow" : null
+            episodeone == "allow" ? "button-glow" : null
           }`}
           type="button"
           name="mail"
