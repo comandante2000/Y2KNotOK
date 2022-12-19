@@ -6,14 +6,14 @@ import BaseChatUnred from "./pages/BaseChatUnred/BaseChatUnred";
 import ChatInfo from "./pages/BaseChatInfo/ChatInfo";
 import ChatReply from "./pages/BaseChatInfo/BaseReply";
 import { useState } from "react";
-export default function ChatPage({ accessmail, setAccesmail }) {
+export default function ChatPage({ episodeone, setEpisodeOne }) {
   const [open, setOpen] = useState(false);
   const [hide, setHide] = useState(true);
   const OpenMessage = () => {
     setOpen(true);
     setHide(false);
-    if (accessmail == "voicemail1.8") {
-      setAccesmail("voicemail1.8.1");
+    if (episodeone == "voicemail1.8") {
+      setEpisodeOne("voicemail1.8.1");
     }
   };
   return (
@@ -27,34 +27,34 @@ export default function ChatPage({ accessmail, setAccesmail }) {
           {open ? (
             <ChatReply
               setOpen={setOpen}
-              setAccesmail={setAccesmail}
-              accessmail={accessmail}
+              setEpisodeOne={setEpisodeOne}
+              episodeone={episodeone}
             />
           ) : (
             <div
               type="button"
               onClick={
-                accessmail == "notallowed " ||
-                accessmail == "allow" ||
-                accessmail == "allowed" ||
-                accessmail == "mailpop" ||
-                accessmail == "voicemail1.7 "
+                episodeone == "notallowed " ||
+                episodeone == "allow" ||
+                episodeone == "allowed" ||
+                episodeone == "mailpop" ||
+                episodeone == "voicemail1.7 "
                   ? null
                   : OpenMessage
               }
             >
               <div className="container-message">
                 <BaseChat
-                  person={accessmail == "Flow1.10.1" ? "Timothee" : "Krista"}
+                  person={episodeone == "Flow1.10.1" ? "Timothee" : "Krista"}
                   chat={
-                    accessmail == "Flow1.10.1"
+                    episodeone == "Flow1.10.1"
                       ? "Waiting on your.."
                       : "Where are you?"
                   }
-                  accessmail={accessmail}
+                  episodeone={episodeone}
                 />
                 <BaseChatUnred
-                  person={accessmail == "Flow1.10.1" ? "Krista" : "Timothee"}
+                  person={episodeone == "Flow1.10.1" ? "Krista" : "Timothee"}
                   chat="Where are you?"
                 />
                 <BaseChatUnred person=" Finn " chat=" Where are you?" />

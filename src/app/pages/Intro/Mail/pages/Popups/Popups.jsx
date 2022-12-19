@@ -1,7 +1,12 @@
 import "./Popups.scss";
 import { useState, useEffect } from "react";
 import { useRef } from "react";
-export default function PopUps({ setOpenvideo, video, setAccesmail,accessmail }) {
+export default function PopUps({
+  setOpenvideo,
+  video,
+  setEpisodeOne,
+  episodeone,
+}) {
   const [videoTime, setVideoTime] = useState(0);
   let audio = "https://images.stinkyfruit.com/HR_Timothee-V-0103.mp4";
   const [playing, setPlaying] = useState(false);
@@ -33,10 +38,13 @@ export default function PopUps({ setOpenvideo, video, setAccesmail,accessmail })
 
   const DonePlaying = () => {
     setOpenvideo(false);
-   if(accessmail == "allow"||accessmail == "allowed") {
-     setAccesmail("mailpop");
-   }
-   
+    if (
+      episodeone == "allow" ||
+      episodeone == "allowed" ||
+      episodeone == "Flow1.3"
+    ) {
+      setEpisodeOne("mailpop");
+    }
   };
   window.setInterval(function () {
     setCurrentTime(videoRef.current?.currentTime);
