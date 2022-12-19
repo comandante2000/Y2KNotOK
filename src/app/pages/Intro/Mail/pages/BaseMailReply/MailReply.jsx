@@ -1,7 +1,7 @@
 import "./MailReply.scss";
 import { useState } from "react";
 
-export default function MailReply({ name ,setOpenvideo,setOpen}) {
+export default function MailReply({ name , setOpenvideo, setOpen, setOpenMail}) {
   const [opentext, setOpentext] = useState(false);
   
   const OpenReplay = () => {
@@ -13,10 +13,11 @@ export default function MailReply({ name ,setOpenvideo,setOpen}) {
 
   const Openvideo = () => {
     setOpenvideo(true);
+    setOpenMail(true);
   };
   return (
     <div id="pda-mail-reply">
-     
+
 
       <div className="mail-reply-container">
         <div
@@ -52,7 +53,7 @@ export default function MailReply({ name ,setOpenvideo,setOpen}) {
         <div className="box-container mt-4  border-top-4" type="button" onClick={Openvideo}>
           <div className="d-flex justify-content-center align-items-center ">
             <div className="clip px-1"></div>
-            <div className="attachment px-2"> Attachment</div>
+            <div className="attachment px-2">Attachment</div>
           </div>
         </div>
         <div className="d-flex justify-content-around btn-container">
