@@ -1,9 +1,7 @@
 import "./Glitch.scss";
 import { useState } from "react";
 export default function Glitch({setNewuser}) {
-    console.log("asdasdaddsxcsdlcjhsdfsd");
     const DonePlaying = () => {
-        console.log("Video has ended");
         setNewuser(false);
     };
     // let audio1 = "https://images.stinkyfruit.com/introbootvideo.mp4";
