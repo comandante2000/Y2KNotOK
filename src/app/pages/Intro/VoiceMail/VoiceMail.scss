@@ -131,6 +131,26 @@
     margin: 10px;
     height: 14px;
   }
+  .blink-red-icon{
+    background-image: url("https://images.stinkyfruit.com/Read.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 25px;
+    background-size: 100%;
+    margin: 10px;
+    height: 14px;
+    -webkit-animation-name: move !important;
+    animation-name: blinking !important;
+    animation-duration:1s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes blinking{
+    0% {
+      opacity: .2;
+    }
+  }
+    
+  
   .voice-icon {
     //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/voice.png");
     background-image: url("https://images.stinkyfruit.com/Voicemail_icon.svg");

@@ -9,8 +9,6 @@ export default function VoiceMailButton({
   episodeone,
   setEpisodeOne,
 }) {
-
-
   const handleClick = () => {
     showScreen("VoicemailScreen");
     setActive("voice");
@@ -20,8 +18,8 @@ export default function VoiceMailButton({
     if (episodeone == "mailpop") {
       setEpisodeOne("voicemail1.7");
     }
-    if (episodeone == "replyflow1.8") {
-      setEpisodeOne("replyflow1.8.1");
+    if (episodeone == "Flow1.8") {
+      setEpisodeOne("Flow1.8.1");
     }
   };
 
@@ -29,7 +27,7 @@ export default function VoiceMailButton({
     <div id="voice-button">
       <div
         className={`button-1 ${color == "voice" ? "red" : "black"} ${
-          press === 6 || episodeone == "mailpop" || episodeone == "replyflow1.8"
+          press === 6 || episodeone == "mailpop" || episodeone == "Flow1.8"
             ? "button-glow"
             : null
         }`}

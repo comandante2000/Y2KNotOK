@@ -1,3 +1,4 @@
+
 #pda-base-chat-reply {
   .base-chat-reply-container {
     padding-left: 10px;
@@ -42,8 +43,6 @@
     .txt-area {
       width: 100%;
       height: 100%;
-      margin-left: 15px;
-      margin-right: 15px;
       .txt-area-bg {
         background-color: #288577bf;
         border-radius: 10px;
@@ -84,7 +83,7 @@
     width: 86.6px;
     height: 36.67px;
   }
-  .btn-delete {
+  .unactive {
     background-image: url("https://images.stinkyfruit.com/box_img_bckground_gray.svg");
     background-repeat: no-repeat;
     font-family: "Palm OS";
@@ -108,6 +107,29 @@
     width: 234.11px;
     mix-blend-mode: multiply;
     margin-left: 102px ;
+    image-rendering: pixelated;
+    clip-path: polygon(
+      0px 4px,
+      2px 4px,
+      2px 2px,
+      4px 2px,
+      4px 0px,
+      calc(100% - 4px) 0px,
+      calc(100% - 4px) 2px,
+      calc(100% - 2px) 2px,
+      calc(100% - 2px) 4px,
+      100% 4px,
+      100% calc(100% - 4px),
+      calc(100% - 2px) calc(100% - 4px),
+      calc(100% - 2px) calc(100% - 2px),
+      calc(100% - 4px) calc(100% - 2px),
+      calc(100% - 4px) 100%,
+      4px 100%,
+      4px calc(100% - 2px),
+      2px calc(100% - 2px),
+      2px calc(100% - 4px),
+      0px calc(100% - 4px)
+    );
   }
 }
 @media (max-width: 575.98px) {
@@ -152,3 +174,7 @@
     }
   }
 }
+
+
+
+

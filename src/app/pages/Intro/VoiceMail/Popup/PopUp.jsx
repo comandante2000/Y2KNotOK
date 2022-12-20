@@ -31,12 +31,6 @@ export default function PopUp({ setOpen, setEpisodeOne, video, episodeone }) {
   };
 
   const DonePlaying = () => {
-    // if (mailtrigger){
-    //   setpress(function (prevCount) {
-    //     return (prevCount += 2);
-    //   });
-    // }
-
     setOpen(false);
     if (
       episodeone == "allow" ||
@@ -53,7 +47,7 @@ export default function PopUp({ setOpen, setEpisodeOne, video, episodeone }) {
     // if (episodeone == "voicemail1.8") {
     //   setOpen(false);
     // }
-    if (episodeone == "replyflow1.8.1") {
+    if (episodeone == "Flow1.8.1") {
       setEpisodeOne("Flow1.9");
     }
   };
@@ -75,8 +69,12 @@ export default function PopUp({ setOpen, setEpisodeOne, video, episodeone }) {
               className="close-button mx-2"
               type="button"
               onClick={DonePlaying}
-            >Close</div>
-            <div className="x-button" type="button" onClick={DonePlaying}>X</div>
+            >
+              Close
+            </div>
+            <div className="x-button" type="button" onClick={DonePlaying}>
+              X
+            </div>
           </div>
           <div class=" text-center align-items-center d-flex justify-content-center">
             <div className="video-container d-flex flex-column">

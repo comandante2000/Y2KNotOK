@@ -1,11 +1,11 @@
 import "./MailReply.scss";
 import { useState } from "react";
 
-export default function MailReply({ name , setOpenvideo, setOpen, setOpenMail}) {
+export default function MailReply({ name ,setOpenvideo,setOpen, setOpenMail}) {
   const [opentext, setOpentext] = useState(false);
   
   const OpenReplay = () => {
-    setOpentext(!opentext);
+    setOpentext(true);
   };
   const OpenBack = () => {
     setOpen(false);
@@ -15,9 +15,15 @@ export default function MailReply({ name , setOpenvideo, setOpen, setOpenMail}) 
     setOpenvideo(true);
     setOpenMail(true);
   };
+  const OpenCancel = () => {
+    setOpentext(false);
+    
+  };
+  const handleSubmit = (e) => {
+  }
   return (
     <div id="pda-mail-reply">
-
+     
 
       <div className="mail-reply-container">
         <div
@@ -53,29 +59,30 @@ export default function MailReply({ name , setOpenvideo, setOpen, setOpenMail}) 
         <div className="box-container mt-4  border-top-4" type="button" onClick={Openvideo}>
           <div className="d-flex justify-content-center align-items-center ">
             <div className="clip px-1"></div>
-            <div className="attachment px-2">Attachment</div>
+            <div className="attachment px-2"> Attachment</div>
           </div>
         </div>
         <div className="d-flex justify-content-between btn-container">
           <div
             className="back_button d-flex justify-content-center align-items-center"
             type="button"
-            onClick={OpenBack}
+            onClick={opentext ?handleSubmit  :OpenBack}
           >
-            Back
+           {opentext ? "Send" :"Back" }
           </div>
           <div
-            className="reply_button d-flex justify-content-center align-items-center"
+            className={`${opentext?"delete_button":"reply_button"} d-flex justify-content-center align-items-center`}
             type="button"
             onClick={OpenReplay}
           >
             Reply
           </div>
           <div
-            className="delete_button d-flex justify-content-center align-items-center"
+            className={`${opentext?"reply_button":"delete_button"} d-flex justify-content-center align-items-center`}
             type="button"
+            onClick={OpenCancel}
           >
-            Delete
+           {opentext ? "Cancel" : "Delete"}
           </div>
         </div>
       </div>
