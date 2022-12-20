@@ -56,7 +56,7 @@ export default function MailReply({ name , setOpenvideo, setOpen, setOpenMail}) 
             <div className="attachment px-2">Attachment</div>
           </div>
         </div>
-        <div className="d-flex justify-content-around btn-container">
+        <div className="d-flex justify-content-between btn-container">
           <div
             className="back_button d-flex justify-content-center align-items-center"
             type="button"
