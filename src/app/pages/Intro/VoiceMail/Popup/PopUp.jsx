@@ -69,7 +69,7 @@ export default function PopUp({ setOpen, setEpisodeOne, video, episodeone }) {
     <div id="pda-pop-screen">
       <div className="black-light "></div>
       <div className="pda-boot-container  d-flex justify-content-center ">
-        <div className="voice-pop-ups position-absolute top-50 start-50 translate-middle">
+        <div className="voice-pop-ups">
           <div className="buttons mt-2 d-flex justify-content-end align-items-center">
             <div
               className="close-button mx-2"
