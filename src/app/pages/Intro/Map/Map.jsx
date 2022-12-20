@@ -27,7 +27,7 @@ export default function MapPage({ setEpisodeOne, episodeone }) {
           <Time />
           <Header name="Map" />
 
-          {episodeone == "Flow1.9.1"||episodeone == "Flow1.10" ? time == 4000 ? (
+          {episodeone == "Flow1.9.1"||episodeone == "Flow1.10"||episodeone == "Flow1.12"  ? time == 4000 ? (
             
             zoom?<MapPageOne
               setZoom={setZoom}

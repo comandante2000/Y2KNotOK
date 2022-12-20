@@ -204,6 +204,7 @@ export default function MailPage({ episodeone, setEpisodeOne }) {
           subject: "Subject for Y2KNOTOK",
           episodeone: "allowed",
           clickable: true,
+          date: "12/30",
         },
         {
           name: "shirleyb5678@AOL.com",
