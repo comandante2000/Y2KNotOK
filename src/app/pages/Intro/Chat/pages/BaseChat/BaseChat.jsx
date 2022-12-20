@@ -9,7 +9,7 @@ export default function BaseChat({ person, chat, episodeone }) {
           <div
             className={
               episodeone == "voicemail1.8" || episodeone == "Flow1.10.1"
-                ? "red-icon"
+                ? "blink-red-icon"
                 : "unred-icon"
             }
           ></div>

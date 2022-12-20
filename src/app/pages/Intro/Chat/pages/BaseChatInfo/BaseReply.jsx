@@ -30,21 +30,22 @@ export default function ChatReply({
 
   const [openm, setOpenm] = useState(false);
   // ||"Pilot Butte Substation"|| "Malin Captain Jack Substation"|| "John Day Substation"|| "Brownlee Dam Power House"|| "Grants Pass Substation"|| "Pge Elma Substation"|| "Midpoint Substation"|| "Hells Canyon Power Station"|| "Fox Hollow Substation"|| "Chief Joseph Dam"|| "Mcnary Substation"|| "Red West Command Center"|| "Oxbow Dam Power Station"
- let truereplies ="Red West Control Center";
-  
+  let truereplies = "Red West Control Center";
+
   const [rigthreply, setrigthreply] = useState(false);
 
   const [sendreply, setsendreply] = useState(false);
 
   const OpenReplay = () => {
-    setOpenm(!openm);
+    setOpenm(true);
   };
   const OpenBack = () => {
     setOpen(!setOpen);
   };
-
-
-
+  const OpenCancel = () => {
+    setOpenm(false);
+    setmessage("");
+  };
 
   const handleSubmit = (e) => {
     // { for krista message Flow 1.7" },
@@ -58,7 +59,7 @@ export default function ChatReply({
         // setrigthreply(true);
         console.log("yeahhmessage");
         if (episodeone === "voicemail1.8.1") {
-          setEpisodeOne("replyflow1.8");
+          setEpisodeOne("Flow1.8");
         }
         console.log("message:", episodeone);
       } else {
@@ -105,11 +106,15 @@ export default function ChatReply({
       <div className="base-chat-reply-container">
         <div className="chat-info-container">
           <ChatInfo
-            person={episodeone == "Flow1.10.1"||episodeone == "Flow1.11"? "Timothee" : "Krista"}
+            person={
+              episodeone == "Flow1.10.1" || episodeone == "Flow1.11"
+                ? "Timothee"
+                : "Krista"
+            }
             chat={
-              episodeone == "Flow1.10.1"||episodeone == "Flow1.11"
-                ? "Waiting on your"
-                : "Where are you n.."
+              episodeone == "Flow1.10.1" || episodeone == "Flow1.11"
+                ? "Waiting on your reply, J. WILL YOU HELP ME?"
+                : "Where are you? Everyone is looking for you"
             }
             episodeone={episodeone}
             rigthreply={rigthreply}
@@ -119,11 +124,11 @@ export default function ChatReply({
           ))}
         </div>
 
-        { rigthreply?
-        <div classname="image-reply d-flex justify-content-between align-items-center">
+        {rigthreply ? (
+          <div classname="image-reply d-flex justify-content-between align-items-center">
             <div className="imageyes d-flex justify-content-center align-items-center "></div>
           </div>
-          :null}
+        ) : null}
       </div>
 
       <div className="d-flex justify-content-center txt-area-container mt-3">
@@ -156,20 +161,28 @@ export default function ChatReply({
             {openm ? "Send" : "Back"}
           </div>
           <div
-            className="btn-reply d-flex justify-content-center align-items-center px-3"
+            className={`${
+              openm ? "unactive" : "btn-reply"
+            } d-flex justify-content-center align-items-center px-3`}
             type="button"
             onClick={OpenReplay}
           >
             Reply
           </div>
           <div
-            className="btn-delete d-flex justify-content-center align-items-center px-3"
+            className={`${
+              openm ? "btn-reply " : "unactive"
+            } d-flex justify-content-center align-items-center px-3`}
             type="button"
+            onClick={OpenCancel}
           >
-            Delete
+            {openm ? "Cancel" : "Delete"}
           </div>
         </div>
       </div>
     </div>
   );
 }
+
+
+

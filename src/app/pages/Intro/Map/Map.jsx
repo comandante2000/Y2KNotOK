@@ -7,10 +7,17 @@ import MapLocatingPage from "./pages/Locating/Locating";
 import { useState, useEffect } from "react";
 export default function MapPage({ setEpisodeOne, episodeone }) {
   const [zoom, setZoom] = useState(true);
-
+  const [time, settimer] = useState(0)
   console.log("the zoom", zoom);
 
-  console.log("ttt", typeof setZoom);
+  console.log("ttteopis", episodeone);
+
+  useEffect(function () {
+    console.log(time);
+    if(time !==4000){
+      settimer(time+1)
+    }
+  },[time])
 
   return (
     <div id="pda-map-screen">
@@ -20,21 +27,21 @@ export default function MapPage({ setEpisodeOne, episodeone }) {
           <Time />
           <Header name="Map" />
 
-          {episodeone == "Flow1.12" ? (
-            <MapLocatingPage />
-          ) : zoom ? (
-            <MapPageOne
+          {episodeone == "Flow1.9.1"||episodeone == "Flow1.10"||episodeone == "Flow1.12"  ? time == 4000 ? (
+            
+            zoom?<MapPageOne
               setZoom={setZoom}
               setEpisodeOne={setEpisodeOne}
               episodeone={episodeone}
-            />
-          ) : (
-            <MapPageTwo
-              setZoom={setZoom}
-              setEpisodeOne={setEpisodeOne}
-              episodeone={episodeone}
-            />
-          )}
+            />:<MapPageTwo
+            setZoom={setZoom}
+            setEpisodeOne={setEpisodeOne}
+            episodeone={episodeone}
+          />
+          ): <MapLocatingPage />:<MapLocatingPage />
+            
+          }
+         
         </div>
         <div className="inner-row-right"></div>
       </div>

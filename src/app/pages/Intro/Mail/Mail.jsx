@@ -4,7 +4,7 @@ import Header from "../../Screen/Components/Headers/Header";
 import MailBase from "./pages/BaseMail/BaseMail";
 import MailBaseUnred from "./pages/BaseMailUnred/BaseMailUnred";
 import MailReply from "./pages/BaseMailReply/MailReply";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PopUps from "./pages/Popups/Popups";
 export default function MailPage({ episodeone, setEpisodeOne }) {
   const [openMail, setOpenMail] = useState(false);
@@ -12,16 +12,367 @@ export default function MailPage({ episodeone, setEpisodeOne }) {
   const [hide, setHide] = useState(true);
 
   const [openvideo, setOpenvideo] = useState(false);
+  const [listmail, setListMail] = useState([
+    {
+      name: "hrtimothee@redwest.com",
+      subject: "Subject for Y2KNOTOK",
+      episodeone: "allowed",
+      clickable: false,
+      date: "12/30",
+    },
+    {
+      name: "shirleyb5678@AOL.com",
+      subject: "call me",
+      episodeone: "",
+      clickable: false,
+      date: "12/16",
+    },
+    {
+      name: "krista.trip@redwestco.com",
+      subject: "12/17/1999",
+      episodeone: "",
+      clickable: false,
+      date: "12/26",
+    },
+    {
+      name: "shirleyb5678@AOL.com",
+      subject: "VLA",
+      episodeone: "",
+      clickable: false,
+      date: "12/26",
+    },
+    {
+      name: "mateo.torres@redwestco.com",
+      subject: "Finn",
+      episodeone: "",
+      clickable: false,
+      date: "12/25",
+    },
+    {
+      name: "shirleyb5678@AOL.com",
+      subject: "hello?",
+      episodeone: "",
+      clickable: false,
+      date: "12/24",
+    },
+    {
+      name: "shirleyb5678@AOL.com",
+      subject: "I need gift ideas",
+      episodeone: "",
+      clickable: false,
+      date: "12/23",
+    },
+    {
+      name: "krista.trip@redwestco.com",
+      subject: "End of Days tonight?",
+      episodeone: "",
+      clickable: false,
+      date: "12/23",
+    },
+    {
+      name: "finn.walsh@redwestco.com",
+      subject: "end of days tonight",
+      episodeone: "",
+      clickable: false,
+      date: "12/23",
+    },
+    {
+      name: "finn.walsh@redwestco.com",
+      subject: "<no subject>",
+      episodeone: "",
+      clickable: false,
+      date: "12/22",
+    },
+    {
+      name: "krista.trip@redwestco.com",
+      subject: "Y2K jokes",
+      episodeone: "",
+      clickable: false,
+      date: "12/21",
+    },
+    {
+      name: "finn.walsh@redwestco.com",
+      subject: "rw control center closed 12/24 to 1/3",
+      episodeone: "",
+      clickable: false,
+      date: "12/21",
+    },
+    {
+      name: "krista.trip@redwestco.com",
+      subject: "bars in Portland",
+      episodeone: "",
+      clickable: false,
+      date: "12/21",
+    },
+    {
+      name: "shirleyb5678@AOL.com",
+      subject: "Brian",
+      episodeone: "",
+      clickable: false,
+      date: "12/20",
+    },
+
+    {
+      name: "shirleyb5678@AOL.com",
+      subject: "Very Large Array trip",
+      episodeone: "",
+      clickable: false,
+      date: "12/19",
+    },
+    {
+      name: "krista.trip@redwestco.com",
+      subject: "LiveJournal",
+      episodeone: "",
+      clickable: false,
+      date: "12/19",
+    },
+    {
+      name: "mateo.torres@redwestco.com",
+      subject: "Vacation dates",
+      episodeone: "",
+      clickable: false,
+      date: "12/19",
+    },
+    {
+      name: "shirleyb5678@AOL.com",
+      subject: "Christmas dinner",
+      episodeone: "",
+      clickable: false,
+      date: "12/18",
+    },
+    {
+      name: "finn.walsh@redwestco.com",
+      subject: "malin fix",
+      episodeone: "",
+      clickable: false,
+      date: "12/18",
+    },
+    {
+      name: "mateo.torres@redwestco.com",
+      subject: "1999 party idea",
+      episodeone: "",
+      clickable: false,
+      date: "12/18",
+    },
+
+    {
+      name: "krista.trip@redwestco.com",
+      subject: "<no subject>",
+      episodeone: "",
+      clickable: false,
+      date: "12/17",
+    },
+    {
+      name: "finn.walsh@redwestco.com",
+      subject: "nye?",
+      episodeone: "",
+      clickable: false,
+      date: "12/17",
+    },
+    {
+      name: "krista.trip@redwestco.com",
+      subject: "<no subject>",
+      episodeone: "",
+      clickable: false,
+      date: "12/16",
+    },
+    {
+      name: "hr100@redwest.com",
+      subject: "Happy Holidays",
+      episodeone: "",
+      clickable: false,
+      date: "12/16",
+    },
+  ]);
 
   const OpenMessage = () => {
     setOpen(true);
     setHide(false);
+    console.log("it is presss");
+    console.log("click value:", listmail.clickable);
     if (episodeone == "allowed") {
       console.log("sa allowedvalues pislit sa mail:", episodeone);
       setEpisodeOne("Flow1.3");
     }
   };
-  console.log(episodeone, "the value of accesmail mail page");
+
+  useEffect(() => {
+    if (episodeone !== "notallowed" || episodeone !== "allow") {
+      setListMail([
+        {
+          name: "hrtimothee@redwest.com",
+          subject: "Subject for Y2KNOTOK",
+          episodeone: "allowed",
+          clickable: true,
+          date: "12/30",
+        },
+        {
+          name: "shirleyb5678@AOL.com",
+          subject: "call me",
+          episodeone: "",
+          clickable: false,
+          date: "12/16",
+        },
+        {
+          name: "krista.trip@redwestco.com",
+          subject: "12/17/1999",
+          episodeone: "",
+          clickable: false,
+          date: "12/26",
+        },
+        {
+          name: "shirleyb5678@AOL.com",
+          subject: "VLA",
+          episodeone: "",
+          clickable: false,
+          date: "12/26",
+        },
+        {
+          name: "mateo.torres@redwestco.com",
+          subject: "Finn",
+          episodeone: "",
+          clickable: false,
+          date: "12/25",
+        },
+        {
+          name: "shirleyb5678@AOL.com",
+          subject: "hello?",
+          episodeone: "",
+          clickable: false,
+          date: "12/24",
+        },
+        {
+          name: "shirleyb5678@AOL.com",
+          subject: "I need gift ideas",
+          episodeone: "",
+          clickable: false,
+          date: "12/23",
+        },
+        {
+          name: "krista.trip@redwestco.com",
+          subject: "End of Days tonight?",
+          episodeone: "",
+          clickable: false,
+          date: "12/23",
+        },
+        {
+          name: "finn.walsh@redwestco.com",
+          subject: "end of days tonight",
+          episodeone: "",
+          clickable: false,
+          date: "12/23",
+        },
+        {
+          name: "finn.walsh@redwestco.com",
+          subject: "<no subject>",
+          episodeone: "",
+          clickable: false,
+          date: "12/22",
+        },
+        {
+          name: "krista.trip@redwestco.com",
+          subject: "Y2K jokes",
+          episodeone: "",
+          clickable: false,
+          date: "12/21",
+        },
+        {
+          name: "finn.walsh@redwestco.com",
+          subject: "rw control center closed 12/24 to 1/3",
+          episodeone: "",
+          clickable: false,
+          date: "12/21",
+        },
+        {
+          name: "krista.trip@redwestco.com",
+          subject: "bars in Portland",
+          episodeone: "",
+          clickable: false,
+          date: "12/21",
+        },
+        {
+          name: "shirleyb5678@AOL.com",
+          subject: "Brian",
+          episodeone: "",
+          clickable: false,
+          date: "12/20",
+        },
+
+        {
+          name: "shirleyb5678@AOL.com",
+          subject: "Very Large Array trip",
+          episodeone: "",
+          clickable: false,
+          date: "12/19",
+        },
+        {
+          name: "krista.trip@redwestco.com",
+          subject: "LiveJournal",
+          episodeone: "",
+          clickable: false,
+          date: "12/19",
+        },
+        {
+          name: "mateo.torres@redwestco.com",
+          subject: "Vacation dates",
+          episodeone: "",
+          clickable: false,
+          date: "12/19",
+        },
+        {
+          name: "shirleyb5678@AOL.com",
+          subject: "Christmas dinner",
+          episodeone: "",
+          clickable: false,
+          date: "12/18",
+        },
+        {
+          name: "finn.walsh@redwestco.com",
+          subject: "malin fix",
+          episodeone: "",
+          clickable: false,
+          date: "12/18",
+        },
+        {
+          name: "mateo.torres@redwestco.com",
+          subject: "1999 party idea",
+          episodeone: "",
+          clickable: false,
+          date: "12/18",
+        },
+
+        {
+          name: "krista.trip@redwestco.com",
+          subject: "<no subject>",
+          episodeone: "",
+          clickable: false,
+          date: "12/17",
+        },
+        {
+          name: "finn.walsh@redwestco.com",
+          subject: "nye?",
+          episodeone: "",
+          clickable: false,
+          date: "12/17",
+        },
+        {
+          name: "krista.trip@redwestco.com",
+          subject: "<no subject>",
+          episodeone: "",
+          clickable: false,
+          date: "12/16",
+        },
+        {
+          name: "hr100@redwest.com",
+          subject: "Happy Holidays",
+          episodeone: "",
+          clickable: false,
+          date: "12/16",
+        },
+      ]);
+    }
+  }, [episodeone]);
+
   return (
     <div id="pda-mail-screen">
       <div className=" row-2 d-flex justify-content-center">
@@ -33,119 +384,34 @@ export default function MailPage({ episodeone, setEpisodeOne }) {
           }`}
         >
           <div>
-            <Time  openMail={openMail}/>
-            <Header name="Mail"  openMail={openMail}/>
-
+            <Time openMail={openMail} />
+            <Header name="Mail" openMail={openMail} />
             <div className="mail-box-container">
               {open ? (
-                <MailReply setOpenMail = {setOpenMail}
-                  name="hrtimothee@redwest.com"
+                <MailReply
+                  setOpenMail={setOpenMail}
+                  name={listmail.name}
                   setOpenvideo={setOpenvideo}
                   setOpen={setOpen}
                 />
               ) : (
-                <div
-                  type="button"
-                  onClick={episodeone == "notallowed" ? null : OpenMessage}
-                >
-                  <div className="mail-container">
-                    <MailBase
-                      name="hrtimothee@redwest.com"
-                      episodeone={episodeone}
-                    />
-                    <MailBaseUnred
-                      name=" shirleyb5678@AOL.com"
-                      subject={"call me"}
-                    />
-                    <MailBaseUnred
-                      name="krista.trip@redwestco.com"
-                      subject={"12/17/99"}
-                    />
-                    <MailBaseUnred
-                      name="shirleyb5678@AOL.com"
-                      subject={"VLA"}
-                    />
-                    <MailBaseUnred
-                      name="mateo.torres@redwestco.com"
-                      subject={"Finn"}
-                    />
-                    <MailBaseUnred
-                      name="shirleyb5678@AOL.com"
-                      subject={"hello?"}
-                    />
-                    <MailBaseUnred
-                      name="shirleyb5678@AOL.com"
-                      subject={"I need gift ideas"}
-                    />
-                    <MailBaseUnred
-                      name="krista.trip@redwestco.com"
-                      subject={"End of Days tonight?"}
-                    />
-                    <MailBaseUnred
-                      name="finn.walsh@redwestco.com"
-                      subject={"end of days tonight"}
-                    />
-                    <MailBaseUnred
-                      name="finn.walsh@redwestco.com"
-                      subject={"<no subject>"}
-                    />
-                    <MailBaseUnred
-                      name="krista.trip@redwestco.com"
-                      subject={"Y2K jokes"}
-                    />
-                    <MailBaseUnred
-                      name="finn.walsh@redwestco.com"
-                      subject={"rw control center closed 12/24 to 1/3"}
-                    />
-                    <MailBaseUnred
-                      name="krista.trip@redwestco.com"
-                      subject={"bars in Portland"}
-                    />
-                    <MailBaseUnred
-                      name="shirleyb5678@AOL.com"
-                      subject={"Brian"}
-                    />
-                    <MailBaseUnred
-                      name="shirleyb5678@AOL.com"
-                      subject={"Very Large Array trip"}
-                    />
-                    <MailBaseUnred
-                      name="krista.trip@redwestco.com.com"
-                      subject={"LiveJournal"}
-                    />
-                    <MailBaseUnred
-                      name="mateo.torres@redwestco.com"
-                      subject={"Vacation dates"}
-                    />
-                    <MailBaseUnred
-                      name="shirleyb5678@AOL.com"
-                      subject={"Christmas dinner"}
-                    />
-                    <MailBaseUnred
-                      name="finn.walsh@redwestco.com"
-                      subject={"malin fix"}
-                    />
-                    <MailBaseUnred
-                      name="mateo.torres@redwestco.com"
-                      subject={"1999 party idea"}
-                    />
-                    <MailBaseUnred
-                      name="krista.trip@redwestco.com"
-                      subject={"<no subject>"}
-                    />
-                    <MailBaseUnred
-                      name="finn.walsh@redwestco.com"
-                      subject={"nye?"}
-                    />
-                    <MailBaseUnred
-                      name="krista.trip@redwestco.com"
-                      subject={"<no subject>"}
-                    />
-                    <MailBaseUnred
-                      name="hr100@redwest.com"
-                      subject={"Happy Holidays"}
-                    />
-                  </div>
+                <div className="mail-container">
+                  {listmail.map((listmail, index) => (
+                    <div className="">
+                      <div
+                        type="button"
+                        onClick={listmail.clickable ? OpenMessage : ""}
+                      >
+                        <MailBase
+                          name={listmail.name}
+                          episodeone={episodeone}
+                          subjects={listmail.subject}
+                          listmail={listmail}
+                          date={listmail.date}
+                        />
+                      </div>
+                    </div>
+                  ))}
                 </div>
               )}
               {hide ? (
@@ -156,6 +422,7 @@ export default function MailPage({ episodeone, setEpisodeOne }) {
                 </div>
               ) : null}
             </div>
+
             {openvideo ? (
               <PopUps
                 video="https://images.stinkyfruit.com/Finn.mp4"

@@ -22,7 +22,7 @@ console.log("fttt",typeof setZoom);
             {/*</div>*/}
           </div>
           {/* Popup Modal End */}
-          <div className="zoomout" type="button" onClick={Zoom}></div>
+          <div className="zoomout" type="button" onClick={""}></div>
         </div>
       </div>
     </div>
