@@ -20,7 +20,7 @@ export default function Buttons({
     <div id="pda-buttons">
       <div className=" row-1 d-flex justify-content-center">
         <div className="buttns d-inline-flex justify-content-center align-items-center">
-          <li className="button-list d-flex justify-content-center align-items-center mt-1 w-100">
+          <li className="button-list d-flex justify-content-center align-items-center w-100">
             <MailButton
               showScreen={showScreen}
               setActive={setActive}
