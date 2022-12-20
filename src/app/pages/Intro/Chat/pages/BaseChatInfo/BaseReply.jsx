@@ -147,7 +147,7 @@ export default function ChatReply({
         ) : null}
       </div>
       <div className="btn-container">
-        <div className="d-flex justify-content-around">
+        <div className="button-container d-flex justify-content-between">
           <div
             className="btn-back d-flex justify-content-center align-items-center px-3"
             type={openm ? "submit" : "button"}
