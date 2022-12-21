@@ -11,7 +11,7 @@ export default function MapPageOne({ setZoom, setEpisodeOne, episodeone }) {
       <div className=" image d-flex justify-content-center flex-column">
         <div className="image-map "></div>
         <div className="zoomin" type="button" onClick={Zoom}></div>  
-        {/* <div className="zoomout" ></div> */}
+        <div className="zoomout" ></div>
       </div>
     </div>
   );

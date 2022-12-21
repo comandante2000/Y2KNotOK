@@ -4,7 +4,7 @@ export default function MapPageTwo({setZoom}) {
 
 
   const Zoom = () => {
-// setZoom(true);
+setZoom(true);
   
   };
   return (
@@ -22,9 +22,9 @@ export default function MapPageTwo({setZoom}) {
             {/*</div>*/}
           </div>
           {/* Popup Modal End */}
-          <div className="zoomout" type="button" onClick={""}></div>
-          {/* <div className="unzoomout" ></div>
-          <div className="zoomout" type="button" onClick={Zoom}></div> */}
+          {/* <div className="zoomout" type="button" onClick={""}></div> */}
+          <div className="unzoomout" ></div>
+          <div className="zoomout" type="button" onClick={Zoom}></div>
         </div>
       </div>
     </div>
