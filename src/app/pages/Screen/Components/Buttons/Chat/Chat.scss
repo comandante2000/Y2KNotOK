@@ -46,6 +46,15 @@
     }
   }
 }
+@media (max-width: 575.98px) {
+  #chat-button{
+    .button-4{
+      height: 55px;
+      width: 55px;
+    }
+  }
+}
+
 @media (max-width: 320px) and (orientation: portrait) {
   #chat-button{
     .button-4{
