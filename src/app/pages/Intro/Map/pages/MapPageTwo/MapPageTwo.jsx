@@ -23,6 +23,8 @@ export default function MapPageTwo({setZoom}) {
           </div>
           {/* Popup Modal End */}
           <div className="zoomout" type="button" onClick={""}></div>
+          {/* <div className="unzoomout" ></div>
+          <div className="zoomout" type="button" onClick={Zoom}></div> */}
         </div>
       </div>
     </div>

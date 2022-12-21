@@ -104,42 +104,43 @@ export default function ChatPage({ episodeone, setEpisodeOne }) {
       subject: "The meeting has...",
       episodeone: "",
       clickable: false,
+      date:"12/30"
     },
     {
       name: "Mateo",
       subject: "Karoake tonight?",
       episodeone: "",
-      clickable: false,
+      clickable: false,  date:"12/27"
     },
     {
       name: "Timothee HR",
       subject: "Prepare for open...",
       episodeone: "",
-      clickable: false,
+      clickable: false,  date:"12/22"
     },
     {
       name: "Mom",
       subject: "did i do it right?",
       episodeone: "",
-      clickable: false,
+      clickable: false,  date:"12/20"
     },
     {
       name: "Akari",
       subject: "Crescent Lake ",
       episodeone: "",
-      clickable: false,
+      clickable: false,  date:"12/19"
     },
     {
       name: "Lakin",
       subject: "NYE!",
       clickable: false,
-      episodeone: "",
+      episodeone: "",  date:"12/17"
     },
     {
       name: "Sylvie",
       subject: "resend code",
       clickable: false,
-      episodeone: "",
+      episodeone: "",  date:"12/15"
     },
   ]);
 
@@ -157,43 +158,43 @@ export default function ChatPage({ episodeone, setEpisodeOne }) {
           name: "Krista ",
           subject: "The meeting has...",
           clickable: true,
-          episodeone: "voicemail1.8",
+          episodeone: "voicemail1.8",  date:"12/30"
         },
         {
           name: "Mateo",
           subject: "Karoake tonight?",
           clickable: false,
-          episodeone: "",
+          episodeone: "",  date:"12/27"
         },
         {
           name: "Timothee HR",
           subject: "Prepare for open...",
           episodeone: "",
-          clickable: false,
+          clickable: false,  date:"12/22"
         },
         {
           name: "Mom",
           subject: "did i do it right?",
           clickable: false,
-          episodeone: "",
+          episodeone: "",  date:"12/20"
         },
         {
           name: "Akari",
           subject: "Crescent Lake ",
           clickable: false,
-          episodeone: "",
+          episodeone: "",  date:"12/19"
         },
         {
           name: "Lakin",
           subject: "NYE!",
           clickable: false,
-          episodeone: "",
+          episodeone: "",  date:"12/17"
         },
         {
           name: "Sylvie",
           subject: "resend code",
           episodeone: "",
-          clickable: false,
+          clickable: false,  date:"12/15"
         },
       ]);
     }
@@ -207,51 +208,51 @@ export default function ChatPage({ episodeone, setEpisodeOne }) {
       setlistchat([
         {
           name: "Timothee HR",
-          subject: "Where are you?",
+          subject: "Waiting on your",
           clickable: true,
-          episodeone: "Flow1.10.1",
+          episodeone: "Flow1.10.1",  date:"12/30"
         },
         {
           name: "Krista ",
           subject: "The meeting has...",
-          clickable: true,
-          episodeone: "",
+          clickable: false,
+          episodeone: "",  date:"12/30"
         },
         {
           name: "Mateo",
           subject: "Karoake tonight?",
           clickable: false,
-          episodeone: "",
+          episodeone: "",  date:"12/27"
         },
         {
           name: "Timothee HR",
           subject: "Prepare for open...",
           episodeone: "",
-          clickable: false,
+          clickable: false,  date:"12/22"
         },
         {
           name: "Mom",
           subject: "did i do it right?",
           clickable: false,
-          episodeone: "",
+          episodeone: "",  date:"12/20"
         },
         {
           name: "Akari",
           subject: "Crescent Lake ",
           clickable: false,
-          episodeone: "",
+          episodeone: "",  date:"12/19"
         },
         {
           name: "Lakin",
           subject: "NYE!",
           clickable: false,
-          episodeone: "",
+          episodeone: "",  date:"12/17"
         },
         {
           name: "Sylvie",
           subject: "resend code",
           episodeone: "",
-          clickable: false,
+          clickable: false,  date:"12/15"
         },
       ]);
     }
@@ -288,6 +289,7 @@ export default function ChatPage({ episodeone, setEpisodeOne }) {
                       chat={listchat.subject}
                       episodeone={episodeone}
                       listchat={listchat}
+                      date={listchat.date}
                     />
                   </div>
                 </div>

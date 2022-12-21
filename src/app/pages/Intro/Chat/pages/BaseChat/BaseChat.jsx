@@ -1,5 +1,5 @@
 import "./BaseChat.scss";
-export default function BaseChat({ person, chat, episodeone, listchat }) {
+export default function BaseChat({ person, chat, episodeone, listchat,date }) {
   // admin@redwest.com
 
   return (
@@ -18,7 +18,7 @@ export default function BaseChat({ person, chat, episodeone, listchat }) {
         <div className="info-container me-3 m-auto">
           <div className="d-flex w-100">
             <div className="person-name w-50">{person}</div>
-            <div className="w-50 chat-date text-end">12/30</div>
+            <div className="w-50 chat-date text-end">{date}</div>
           </div>
           <div>
             <div className="person-chat">{chat}</div>
