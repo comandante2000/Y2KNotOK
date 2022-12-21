@@ -1,5 +1,5 @@
 import "./BaseChat.scss";
-export default function BaseChat({ person, chat, episodeone }) {
+export default function BaseChat({ person, chat, episodeone, listchat }) {
   // admin@redwest.com
 
   return (
@@ -8,7 +8,7 @@ export default function BaseChat({ person, chat, episodeone }) {
         <div className="icon-container d-flex align-items-center">
           <div
             className={
-              episodeone == "voicemail1.8" || episodeone == "Flow1.10.1"
+              listchat.episodeone == episodeone 
                 ? "blink-red-icon"
                 : "unred-icon"
             }

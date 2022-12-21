@@ -2,9 +2,9 @@ import "./Intro.scss";
 import { useState } from "react";
 import { useRef } from "react";
 export default function IntroVideo({ setNewuser }) {
-  console.log("asdasdaddsxcsdlcjhsdfsd");
+
   const DonePlaying = () => {
-    console.log("Video has ended");
+  
     setNewuser(false);
   };
   // let audio1 = "https://images.stinkyfruit.com/introbootvideo.mp4";

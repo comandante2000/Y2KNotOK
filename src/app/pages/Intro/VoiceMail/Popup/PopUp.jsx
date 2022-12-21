@@ -1,6 +1,7 @@
 import "./PopUp.scss";
 import { useState, useEffect } from "react";
 import { useRef } from "react";
+
 export default function PopUp({ setOpen, setEpisodeOne, video, episodeone }) {
   const [videoTime, setVideoTime] = useState(0);
   const [playing, setPlaying] = useState(false);
@@ -52,7 +53,7 @@ export default function PopUp({ setOpen, setEpisodeOne, video, episodeone }) {
     }
   };
 
-  console.log("the accemail -n voice:", episodeone);
+
 
   window.setInterval(function () {
     setCurrentTime(videoRef.current?.currentTime);
@@ -79,6 +80,7 @@ export default function PopUp({ setOpen, setEpisodeOne, video, episodeone }) {
           <div class=" text-center align-items-center d-flex justify-content-center">
             <div className="video-container d-flex flex-column">
               <div>
+                {video !== '' ? 
                 <video
                   className="video"
                   // autoplay="true"
@@ -88,6 +90,12 @@ export default function PopUp({ setOpen, setEpisodeOne, video, episodeone }) {
                   onEnded={DonePlaying}
                   ref={videoRef}
                 ></video>
+                :
+                <video
+                  className="video"
+                  id="video1"
+                ></video>
+                }
               </div>
 
               <div className="timecontrols d-flex justify-content-bottom">

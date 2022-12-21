@@ -8,12 +8,12 @@ import { useState, useEffect } from "react";
 export default function MapPage({ setEpisodeOne, episodeone }) {
   const [zoom, setZoom] = useState(true);
   const [time, settimer] = useState(0)
-  console.log("the zoom", zoom);
 
-  console.log("ttteopis", episodeone);
+
+
 
   useEffect(function () {
-    console.log(time);
+ 
     if(time !==4000){
       settimer(time+1)
     }
@@ -27,7 +27,7 @@ export default function MapPage({ setEpisodeOne, episodeone }) {
           <Time />
           <Header name="Map" />
 
-          {episodeone == "Flow1.9.1"||episodeone == "Flow1.10"||episodeone == "Flow1.12"  ? time == 4000 ? (
+          {episodeone == "Flow1.9.1"||episodeone == "Flow1.10"? time == 4000 ? (
             
             zoom?<MapPageOne
               setZoom={setZoom}

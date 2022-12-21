@@ -1,7 +1,7 @@
 import "./MapPageTwo.scss";
 import { useState } from "react";
 export default function MapPageTwo({setZoom}) {
-console.log("fttt",typeof setZoom);
+
 
   const Zoom = () => {
 // setZoom(true);
