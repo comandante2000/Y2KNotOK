@@ -37,7 +37,7 @@ export default function MailReply({ name ,setOpenvideo,setOpen, setOpenMail}) {
           <div className="info-container me-3 m-auto">
             <div className="d-flex w-100">
               <div className="person-name w-50 text-decoration-underline">
-                {name}
+                hrtimothee@redwest.com
               </div>
               <div className="w-50 mail-date text-end">12/30</div>
             </div>

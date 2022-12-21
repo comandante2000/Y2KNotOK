@@ -396,22 +396,24 @@ export default function MailPage({ episodeone, setEpisodeOne }) {
                 />
               ) : (
                 <div className="mail-container">
-                  {listmail.map((listmail, index) => (
-                    <div className="">
-                      <div
-                        type="button"
-                        onClick={listmail.clickable ? OpenMessage : ""}
-                      >
-                        <MailBase
-                          name={listmail.name}
-                          episodeone={episodeone}
-                          subjects={listmail.subject}
-                          listmail={listmail}
-                          date={listmail.date}
-                        />
-                      </div>
-                    </div>
-                  ))}
+                  <div className="mail-child-container">
+                    {listmail.map((listmail, index) => (
+                        <div className="">
+                          <div className="mail-border"
+                              type="button"
+                              onClick={listmail.clickable ? OpenMessage : ""}
+                          >
+                            <MailBase
+                                name={listmail.name}
+                                episodeone={episodeone}
+                                subjects={listmail.subject}
+                                listmail={listmail}
+                                date={listmail.date}
+                            />
+                          </div>
+                        </div>
+                    ))}
+                  </div>
                 </div>
               )}
               {hide ? (

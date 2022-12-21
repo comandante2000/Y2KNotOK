@@ -274,26 +274,28 @@ export default function ChatPage({ episodeone, setEpisodeOne }) {
             />
           ) : (
             <div className="container-message">
-              {listchat.map((listchat, index) => (
-                <div
-                  type="button"
-                  onClick={
-                    listchat.clickable
-                      ? OpenMessage
-                      : null
-                  }
-                >
-                  <div className="container-message-list">
-                    <BaseChat
-                      person={listchat.name}
-                      chat={listchat.subject}
-                      episodeone={episodeone}
-                      listchat={listchat}
-                      date={listchat.date}
-                    />
-                  </div>
-                </div>
-              ))}
+              <div className="chat-child-container">
+                {listchat.map((listchat, index) => (
+                    <div className="child-border"
+                        type="button"
+                        onClick={
+                          listchat.clickable
+                              ? OpenMessage
+                              : null
+                        }
+                    >
+                      <div className="container-message-list">
+                        <BaseChat
+                            person={listchat.name}
+                            chat={listchat.subject}
+                            episodeone={episodeone}
+                            listchat={listchat}
+                            date={listchat.date}
+                        />
+                      </div>
+                    </div>
+                ))}
+              </div>
             </div>
           )}
 
