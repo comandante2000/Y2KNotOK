@@ -1,7 +1,4 @@
-import { useLiveQuery } from "dexie-react-hooks";
 import "./Map.scss";
-import { useState, useEffect } from "react";
-import { db } from "../../../../../modules/db";
 
 export default function MapButton({
   showScreen,
@@ -21,10 +18,6 @@ export default function MapButton({
       setEpisodeOne("Flow1.12");
     }
   };
-
-  const mapButtonStaticAsset = useLiveQuery(
-    () => db.assets.where('title').equalsIgnoreCase('pda-device-button-map').toArray(),
-  );
   
   return (
     <div id="map-button">
@@ -34,7 +27,6 @@ export default function MapButton({
             ? "button-glow"
             : null
         }`}
-        // style={mapButtonStaticAsset && mapButtonStaticAsset.length !== 0 ? {backgroundImage: `url(${URL.createObjectURL(mapButtonStaticAsset[0].blob)})`} : null}
         type="button"
         name="map"
         onClick={press >= 5 ? handleClick5 : null}
