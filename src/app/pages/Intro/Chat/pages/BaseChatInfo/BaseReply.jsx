@@ -1,6 +1,6 @@
 import "./BaseReply.scss";
 import ChatInfo from "./ChatInfo";
-import { useState } from "react";
+import { useState,useRef,useEffect } from "react";
 export default function ChatReply({
   person,
   chat,
@@ -51,7 +51,10 @@ export default function ChatReply({
     // { for krista message Flow 1.7" },
     if (episodeone === "voicemail1.8.1") {
       if (message.toLowerCase() === truereplies.toLowerCase()) {
-
+        setReplyMessages([
+          ...replyMessages,
+          { person: "Me", chat: message },
+        ]);
         setTimeout(function() {
            setReplyMessages([
           ...replyMessages,
@@ -69,7 +72,15 @@ export default function ChatReply({
 
 
       } else {
+
+          setReplyMessages([
+            ...replyMessages,
+            { person: "Me", chat: message },
+          
+          ]);
+        
         setTimeout(function() {
+
           setReplyMessages([
             ...replyMessages,
             { person: "Me", chat: message },
@@ -91,7 +102,11 @@ export default function ChatReply({
       episodeone == "Flow1.11"
     ) {
       if (message.toLowerCase() === "yes".toLowerCase()) {
-
+        setReplyMessages([
+          ...replyMessages,
+          { person: "Me", chat: message },
+        
+        ]);
         setTimeout(function () {
           setrigthreply(true);
           setReplyMessages([
@@ -102,16 +117,19 @@ export default function ChatReply({
               chat: "You're safe in your own private IDAHO",
             },
           ]);
-
-         
-        
-        }, 2000);
+        }, 1000);
 
         if (episodeone === "Flow1.10.1") {
           setEpisodeOne("Flow1.11");
         }
       
       } else {
+
+        setReplyMessages([
+          ...replyMessages,
+          { person: "Me", chat: message },
+        ]);
+
         setTimeout(function() {
           setReplyMessages([
           ...replyMessages,
@@ -119,19 +137,27 @@ export default function ChatReply({
           { person: "Timothee", chat: "Jusy say YES, J" },
         ]);
      
-        }, 2000);
+        }, 1000);
        
-
-
       }
     }
     setmessage("");
   };
 
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+ 
+    containerRef.current.scrollTop = containerRef.current.scrollHeight;
+  
+  }, [handleSubmit]);
+  
+
+  
   return (
     <div id="pda-base-chat-reply">
-      <div className="base-chat-reply-container">
-        <div className="chat-info-container">
+      <div ref={containerRef} className="base-chat-reply-container">
+        <div   className="chat-info-container">
           <ChatInfo
             person={
               episodeone == "Flow1.10.1" ||
