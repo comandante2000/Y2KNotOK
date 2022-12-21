@@ -34,7 +34,7 @@ export default function MapButton({
             ? "button-glow"
             : null
         }`}
-        style={mapButtonStaticAsset && mapButtonStaticAsset.length !== 0 ? {backgroundImage: `url(${URL.createObjectURL(mapButtonStaticAsset[0].blob)})`} : null}
+        // style={mapButtonStaticAsset && mapButtonStaticAsset.length !== 0 ? {backgroundImage: `url(${URL.createObjectURL(mapButtonStaticAsset[0].blob)})`} : null}
         type="button"
         name="map"
         onClick={press >= 5 ? handleClick5 : null}

@@ -24,7 +24,8 @@ export default function Device() {
   return (
     <div id="pda-device">
       <div className="container v2 d-flex justify-content-center gx-0 gy-0">
-        <div className="box" style={fetchPDAStatic && fetchPDAStatic.length !== 0 ? {backgroundImage: `url(${fetchPDAStatic ? URL.createObjectURL(fetchPDAStatic[0].blob) : null})`} : null}>
+        {/* <div className="box" style={fetchPDAStatic && fetchPDAStatic.length !== 0 ? {backgroundImage: `url(${fetchPDAStatic ? URL.createObjectURL(fetchPDAStatic[0].blob) : null})`} : null}> */}
+        <div className="box">
           <Header />
           {screen === "HomeScreen" && (
             <HomeScreen press={press} setpress={setpress} />
