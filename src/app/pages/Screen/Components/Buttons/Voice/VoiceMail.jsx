@@ -1,5 +1,8 @@
+import { db } from "../../../../../modules/db";
 import "./VoiceMail.scss";
 import { useState, useEffect } from "react";
+import { useLiveQuery } from "dexie-react-hooks";
+
 export default function VoiceMailButton({
   showScreen,
   setActive,
@@ -23,6 +26,10 @@ export default function VoiceMailButton({
     }
   };
 
+  const voicemailStaticAsset = useLiveQuery(
+    () => db.assets.where('title').equalsIgnoreCase('pda-device-button-voicemail').toArray(),
+  );
+  
   return (
     <div id="voice-button">
       <div
@@ -31,6 +38,7 @@ export default function VoiceMailButton({
             ? "button-glow"
             : null
         }`}
+        style={voicemailStaticAsset && voicemailStaticAsset.length !== 0 ? {backgroundImage: `url(${URL.createObjectURL(voicemailStaticAsset[0].blob)})`} : null}
         type="button"
         name="voice"
         onClick={press >= 5 ? handleClick : null}

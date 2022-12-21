@@ -6,13 +6,14 @@
   src: url("../font/palm-os.ttf");
   font-weight: normal;
 }
+
 #pda-device {
   .container {
     height: 100%;
     width: 100%;
 
     .box {
-      background-image: url("https://images.stinkyfruit.com/device_without_button.png");
+      // background-image: $background-image;
       //background-image: url("https://images.stinkyfruit.com/black_icon_device.png");
       //background-image: url("https://images.stinkyfruit.com/Option-2B-black-icon-device.png");
       background-repeat: no-repeat;
