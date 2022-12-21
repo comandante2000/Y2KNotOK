@@ -9,15 +9,22 @@ import MailPage from "../Intro/Mail/Mail";
 import VoiceMailPage from "../Intro/VoiceMail/VoiceMailPage";
 import MapPage from "../Intro/Map/Map";
 import Boot from "../Screen/Boot/Boot";
+import { useLiveQuery } from "dexie-react-hooks";
+import { db } from "../../modules/db";
+
 export default function Device() {
   const [screen, showScreen] = useState("HomeScreen");
   const [press, setpress] = useState(0); //to make the button unclikable must click next
   const [episodeone, setEpisodeOne] = useState("notallowed");
-
+  
+  const fetchPDAStatic = useLiveQuery(
+    () => db.assets.where('title').equalsIgnoreCase('pda-device').toArray(),
+  );
+  
   return (
     <div id="pda-device">
       <div className="container v2 d-flex justify-content-center gx-0 gy-0">
-        <div className="box">
+        <div className="box" style={fetchPDAStatic && fetchPDAStatic.length !== 0 ? {backgroundImage: `url(${fetchPDAStatic ? URL.createObjectURL(fetchPDAStatic[0].blob) : null})`} : null}>
           <Header />
           {screen === "HomeScreen" && (
             <HomeScreen press={press} setpress={setpress} />
@@ -47,6 +54,9 @@ export default function Device() {
           />
         </div>
       </div>
+      <audio autoPlay loop>
+        <source src="https://images.stinkyfruit.com/audio_bed_ambience_mp3.mp3" type="audio/wav" />
+      </audio>
     </div>
   );
 }
