@@ -51,51 +51,78 @@ export default function ChatReply({
     // { for krista message Flow 1.7" },
     if (episodeone === "voicemail1.8.1") {
       if (message.toLowerCase() === truereplies.toLowerCase()) {
-        setReplyMessages([
+
+        setTimeout(function() {
+           setReplyMessages([
           ...replyMessages,
           { person: "Me", chat: message },
           { person: "Krista", chat: replies },
         ]);
         // setrigthreply(true);
-        console.log("yeahhmessage");
+      
         if (episodeone === "voicemail1.8.1") {
           setEpisodeOne("Flow1.8");
         }
-        console.log("message:", episodeone);
+      
+        }, 2000);
+      
+
+
       } else {
-        setReplyMessages([
-          ...replyMessages,
-          { person: "Me", chat: message },
-          { person: "Krista", chat: replies },
-        ]);
-        console.log("wrong message");
+        setTimeout(function() {
+          setReplyMessages([
+            ...replyMessages,
+            { person: "Me", chat: message },
+            { person: "Krista", chat: replies },
+          ]);
+        
+        }, 2000);
+      
+
       }
       setmessage("");
     }
 
     // { for Themothee message Flow 1.10" },
 
-    if (episodeone === "Flow1.10.1") {
+    if (
+      episodeone === "Flow1.10.1" ||
+      episodeone === "Flow1.12" ||
+      episodeone == "Flow1.11"
+    ) {
       if (message.toLowerCase() === "yes".toLowerCase()) {
-        setReplyMessages([
-          ...replyMessages,
-          { person: "Me", chat: message },
-          { person: "Timothee", chat: "You're safe in your own private IDAHO" },
-        ]);
-        setrigthreply(true);
-        console.log("yeahhmessage");
+
+        setTimeout(function () {
+          setrigthreply(true);
+          setReplyMessages([
+            ...replyMessages,
+            { person: "Me", chat: message },
+            {
+              person: "Timothee",
+              chat: "You're safe in your own private IDAHO",
+            },
+          ]);
+
+         
+        
+        }, 2000);
 
         if (episodeone === "Flow1.10.1") {
           setEpisodeOne("Flow1.11");
         }
-        console.log("message:", episodeone);
+      
       } else {
-        setReplyMessages([
+        setTimeout(function() {
+          setReplyMessages([
           ...replyMessages,
           { person: "Me", chat: message },
           { person: "Timothee", chat: "Jusy say YES, J" },
         ]);
-        console.log("wrong message");
+     
+        }, 2000);
+       
+
+
       }
     }
     setmessage("");
@@ -107,12 +134,16 @@ export default function ChatReply({
         <div className="chat-info-container">
           <ChatInfo
             person={
-              episodeone == "Flow1.10.1" || episodeone == "Flow1.11"
+              episodeone == "Flow1.10.1" ||
+              episodeone == "Flow1.11" ||
+              episodeone === "Flow1.12"
                 ? "Timothee"
                 : "Krista"
             }
             chat={
-              episodeone == "Flow1.10.1" || episodeone == "Flow1.11"
+              episodeone == "Flow1.10.1" ||
+              episodeone == "Flow1.11" ||
+              episodeone === "Flow1.12"
                 ? "Waiting on your reply, J. WILL YOU HELP ME?"
                 : "Where are you? Everyone is looking for you"
             }
@@ -183,6 +214,3 @@ export default function ChatReply({
     </div>
   );
 }
-
-
-

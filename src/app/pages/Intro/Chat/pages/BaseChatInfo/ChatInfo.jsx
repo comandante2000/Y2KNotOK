@@ -8,7 +8,7 @@ export default function ChatInfo({ person, chat, episodeone, rigthreply }) {
         <div className="icon-container d-flex justify-content-center align-items-center">
           <div className="chat-icon "></div>
         </div>
-        <div className="info-container me-3">
+        <div className="info-container me-3 dsfdfsdf">
           <div className="d-flex w-100">
             <div className="person-name w-75">{person}</div>
             <div className="w-25 chat-date text-end">12/30</div>

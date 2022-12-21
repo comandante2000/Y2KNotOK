@@ -188,10 +188,10 @@ export default function MailPage({ episodeone, setEpisodeOne }) {
   const OpenMessage = () => {
     setOpen(true);
     setHide(false);
-    console.log("it is presss");
-    console.log("click value:", listmail.clickable);
+   
+  
     if (episodeone == "allowed") {
-      console.log("sa allowedvalues pislit sa mail:", episodeone);
+
       setEpisodeOne("Flow1.3");
     }
   };

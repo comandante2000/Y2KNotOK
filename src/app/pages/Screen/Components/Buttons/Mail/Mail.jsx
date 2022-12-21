@@ -33,8 +33,7 @@ export default function MailButton({
     });
   };
 
-  console.log(episodeone, ":accelemal");
-  console.log(btnclick, ":btn");
+
   return (
     <div id="mail-button">
       {episodeone == "allow" ? (
