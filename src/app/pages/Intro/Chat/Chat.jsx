@@ -156,7 +156,7 @@ export default function ChatPage({ episodeone, setEpisodeOne }) {
       setlistchat([
         {
           name: "Krista ",
-          subject: "The meeting has...",
+          subject: "Where are you?",
           clickable: true,
           episodeone: "voicemail1.8",  date:"12/30"
         },
@@ -214,7 +214,7 @@ export default function ChatPage({ episodeone, setEpisodeOne }) {
         },
         {
           name: "Krista ",
-          subject: "The meeting has...",
+          subject: "Where are you?",
           clickable: false,
           episodeone: "",  date:"12/30"
         },

@@ -45,6 +45,16 @@
   }
     }
 }
+@media (max-width: 575.98px) {
+  #map-button{
+    .button-5{
+      height: 55px;
+      width: 55px;
+    }
+  }
+}
+
+
 @media (max-width: 320px) and (orientation: portrait) {
   #map-button{
     .button-5{
