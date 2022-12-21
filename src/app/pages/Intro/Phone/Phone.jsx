@@ -15,7 +15,7 @@ const [newuser, setNewuser] = useState(true);
                 <div>
                     <Time />
                     <Header name="Phone" />
-                    <div className="phone-container d-flex justify-content-center align-items-center flex-column">
+                    <div className="phone-container d-flex flex-column justify-content-end align-items-center">
                         <div className="redwest-logo-container d-flex align-items-center justify-content-center">
                             <div className="redwest-logo"></div>
                         </div>
