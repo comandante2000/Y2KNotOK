@@ -69,9 +69,12 @@
   //.voicemail-box-container.box-container div:last-child{
   //  border-bottom: 3px solid black;
   //}
+  .voicemail-box-container .box-container:nth-child(1){
+    border-top: 3px solid black;
+  }
   .new-voice-mail-container{
     height: 70px;
-    border-top: 3px solid black;
+    border-bottom: 3px solid black;
     border-left: 3px solid black;
     border-right: 3px solid black;
   }
