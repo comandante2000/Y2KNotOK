@@ -48,7 +48,7 @@ export default function MailButton({
           className={`button-2 ${color == "mail" ? "red" : "black"} ${
             episodeone == "allowed" ? null : "button-glow"
           }`}
-          style={mailButtonStaticAsset && mailButtonStaticAsset.length !== 0 ? {backgroundImage: `url(${URL.createObjectURL(mailButtonStaticAsset[0].blob)})`} : null}
+          // style={mailButtonStaticAsset && mailButtonStaticAsset.length !== 0 ? {backgroundImage: `url(${URL.createObjectURL(mailButtonStaticAsset[0].blob)})`} : null}
           type="button"
           name="mail"
           onClick={btnclick >= 2 ? handleClick3 : handleClick1}
@@ -58,7 +58,7 @@ export default function MailButton({
           className={`button-2 ${color == "mail" ? "red" : "black"} ${
             episodeone == "allow" ? "button-glow" : null
           }`}
-          style={mailButtonStaticAsset && mailButtonStaticAsset.length !== 0 ? {backgroundImage: `url(${URL.createObjectURL(mailButtonStaticAsset[0].blob)})`} : null}
+          // style={mailButtonStaticAsset && mailButtonStaticAsset.length !== 0 ? {backgroundImage: `url(${URL.createObjectURL(mailButtonStaticAsset[0].blob)})`} : null}
           type="button"
           name="mail"
           onClick={press >= 5 ? handleClick : null}

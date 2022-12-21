@@ -17,7 +17,7 @@ export default function PhoneButton({ showScreen, setActive, color, press }) {
     <div id="phone-button">
       <div
         className={`button-3 ${color == "phone" ? "red" : "black"}`}
-        style={phoneButtonStaticAsset && phoneButtonStaticAsset.length !== 0 ? {backgroundImage:  `url(${URL.createObjectURL(phoneButtonStaticAsset[0].blob)})`} : null }
+        // style={phoneButtonStaticAsset && phoneButtonStaticAsset.length !== 0 ? {backgroundImage:  `url(${URL.createObjectURL(phoneButtonStaticAsset[0].blob)})`} : null }
         type="button"
         name="phone"
         onClick={press >= 5 ? handleClick3 : null}

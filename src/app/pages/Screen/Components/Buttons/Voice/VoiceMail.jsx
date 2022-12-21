@@ -38,7 +38,7 @@ export default function VoiceMailButton({
             ? "button-glow"
             : null
         }`}
-        style={voicemailStaticAsset && voicemailStaticAsset.length !== 0 ? {backgroundImage: `url(${URL.createObjectURL(voicemailStaticAsset[0].blob)})`} : null}
+        // style={voicemailStaticAsset && voicemailStaticAsset.length !== 0 ? {backgroundImage: `url(${URL.createObjectURL(voicemailStaticAsset[0].blob)})`} : null}
         type="button"
         name="voice"
         onClick={press >= 5 ? handleClick : null}

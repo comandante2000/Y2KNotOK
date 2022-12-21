@@ -33,7 +33,7 @@ export default function ChatButton({
             ? "button-glow"
             : null
         }`}
-        style={chatButtonStaticAsset && chatButtonStaticAsset.length !== 0 ? {backgroundImage: `url(${URL.createObjectURL(chatButtonStaticAsset[0].blob)})`} : null}
+        // style={chatButtonStaticAsset && chatButtonStaticAsset.length !== 0 ? {backgroundImage: `url(${URL.createObjectURL(chatButtonStaticAsset[0].blob)})`} : null}
         type="button"
         name="chat"
         onClick={press >= 5 ? handleClick4 : null}
