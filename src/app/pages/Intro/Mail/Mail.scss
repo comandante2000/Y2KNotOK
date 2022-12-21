@@ -130,7 +130,7 @@
       height: initial;
       overflow: hidden;
       .mail-container{
-        height: 40vh;
+        height: calc(93vh - 420px);
       }
     }
     .inner-row-right {
