@@ -397,10 +397,10 @@ export default function MailPage({ episodeone, setEpisodeOne }) {
               ) : (
                 <div className="mail-container">
                   {listmail.map((listmail, index) => (
-                    <div className="">
+                    <div key={index} className="">
                       <div
                         type="button"
-                        onClick={listmail.clickable ? OpenMessage : ""}
+                        onClick={listmail.clickable ? OpenMessage : null}
                       >
                         <MailBase
                           name={listmail.name}

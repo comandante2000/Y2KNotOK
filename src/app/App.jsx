@@ -2,11 +2,12 @@ import { Route, Routes } from "react-router-dom";
 import Device from "./pages/Device/Device";
 import IntroVideo from "./pages/Screen/IntroVideo/IntroVideo";
 import { useState, useEffect } from "react";
+import { EncryptStorage } from "encrypt-storage";
 
 function App() {
   const [newuser, setNewuser]           = useState(true);
   const [currentAsset, setCurrentAsset] = useState('');
-  
+  const encryptStorage                  = new EncryptStorage('y2knotokEncrypted');
   const cacheImages = async (assets) => {
      assets.map(asset => {
         const img = new Image();
@@ -29,11 +30,17 @@ function App() {
       'https://images.stinkyfruit.com/3890x2160-2.webp',
       'https://images.stinkyfruit.com/popup_container_right.svg',
       'https://images.stinkyfruit.com/welcome_to_y2knotok.svg',
+      'https://images.stinkyfruit.com/3840x2160v5–2.png',
     ];
     cacheImages(assets);
+    
+    //**Remove Existing LocalStorage */
+    encryptStorage.removeItem(`chat-storage-krista`);
+    encryptStorage.removeItem(`chat-storage-timothee`);
   },[]);
+  
   return (
-    <div className="container-fluid app d-flex justify-content-center">
+    <div className={`container-fluid app d-flex justify-content-center ${!newuser ? 'fadeInOutApp' : ""}`}>
       <Routes>
         <Route
           path="/"

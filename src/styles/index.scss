@@ -7,6 +7,23 @@ $urls: srcs("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/");
   src: url("../assets/fonts/palm-os.ttf");
 }
 
+.fadeInOutApp{
+  // box-shadow: inset 0 0 0 2000px rgb(24 24 24);
+  box-shadow: inset 0 0 0 2000px rgb(24 24 24 / 100%);
+  transition: box-shadow 8s ease-in;
+  animation: fadeInOutBg 8s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInOutBg {
+  0%{
+    box-shadow: inset 0 0 0 2000px rgb(24 24 24 / 100%);
+  };
+  100%{
+    box-shadow: inset 0 0 0 2000px rgb(24 24 24 / 10%);
+  }
+}
+
 .app {
   //overflow: hidden;
   //touch-action: none;

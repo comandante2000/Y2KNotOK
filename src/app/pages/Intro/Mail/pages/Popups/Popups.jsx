@@ -66,7 +66,7 @@ export default function PopUps({
             >Close</div>
             <div className="x-button" type="button" onClick={DonePlaying}>X</div>
           </div>
-          <div class=" text-center align-items-center d-flex justify-content-center">
+          <div className=" text-center align-items-center d-flex justify-content-center">
             <div className="video-container d-flex flex-column">
               <div>
                 <video

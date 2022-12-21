@@ -77,7 +77,7 @@ export default function PopUp({ setOpen, setEpisodeOne, video, episodeone }) {
               X
             </div>
           </div>
-          <div class=" text-center align-items-center d-flex justify-content-center">
+          <div className=" text-center align-items-center d-flex justify-content-center">
             <div className="video-container d-flex flex-column">
               <div>
                 {video !== '' ? 
