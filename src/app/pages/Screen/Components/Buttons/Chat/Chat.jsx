@@ -1,7 +1,4 @@
 import "./Chat.scss";
-import { useState, useEffect } from "react";
-import { useLiveQuery } from "dexie-react-hooks";
-import { db } from "../../../../../modules/db";
 
 export default function ChatButton({
   showScreen,
@@ -18,10 +15,6 @@ export default function ChatButton({
       setEpisodeOne("Flow1.10.1");
     }
   };
-
-  const chatButtonStaticAsset = useLiveQuery(
-    () => db.assets.where('title').equalsIgnoreCase('pda-device-button-chat').toArray(),
-  );
   
   return (
     <div id="chat-button">
@@ -33,7 +26,6 @@ export default function ChatButton({
             ? "button-glow"
             : null
         }`}
-        // style={chatButtonStaticAsset && chatButtonStaticAsset.length !== 0 ? {backgroundImage: `url(${URL.createObjectURL(chatButtonStaticAsset[0].blob)})`} : null}
         type="button"
         name="chat"
         onClick={press >= 5 ? handleClick4 : null}
