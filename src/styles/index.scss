@@ -10,8 +10,9 @@ $urls: srcs("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/");
 .fadeInOutApp{
   // box-shadow: inset 0 0 0 2000px rgb(24 24 24);
   box-shadow: inset 0 0 0 2000px rgb(24 24 24 / 100%);
-  transition: box-shadow 8s ease-in;
-  animation: fadeInOutBg 8s;
+  //transition: box-shadow 8s ease-in-out;
+  transition: ease-in-out;
+  animation: fadeInOutBg 5000ms ease-in-out 2s;
   animation-fill-mode: forwards;
 }
 
