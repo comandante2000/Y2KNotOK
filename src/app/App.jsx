@@ -4,10 +4,13 @@ import IntroVideo from "./pages/Screen/IntroVideo/IntroVideo";
 import { useState, useEffect } from "react";
 import { EncryptStorage } from "encrypt-storage";
 import Cookies from 'js-cookie';
+import BaseBoot from "./pages/Screen/Base/BaseBoot";
 function App() {
   const [newuser, setNewuser]           = useState(true);
   const [currentAsset, setCurrentAsset] = useState('');
   const encryptStorage                  = new EncryptStorage('y2knotokEncrypted');
+  const [press, setpress] = useState(0);
+
   const cacheImages = async (assets) => {
      assets.map(asset => {
         const img = new Image();
@@ -23,13 +26,21 @@ function App() {
 // }
 // cookie area
 
-useEffect(() => {
+// useEffect(() => {
  
-  const Intro = Cookies.get('Flow1.3'); 
-  if (Intro == "Flow1.3done"){
-    setNewuser(false)
-  }
+//   const Intro = Cookies.get('Flow1.3'); 
+//   if (Intro == "Flow1.3done"){
+//     setNewuser(false)
+//   }
+
   
+//   });
+
+
+useEffect(() => {
+ if(press == 6){
+setNewuser(false);
+ } 
   });
   
   useEffect(()=>{
@@ -55,14 +66,15 @@ useEffect(() => {
     encryptStorage.removeItem(`chat-storage-krista`);
     encryptStorage.removeItem(`chat-storage-timothee`);
   },[]);
-  
+  console.log(newuser,"sdfsdfsfd");
   return (
     <div className={`container-fluid app d-flex justify-content-center ${!newuser ? 'fadeInOutApp' : ""}`}>
       <Routes>
+        
         <Route
           path="/"
           element={
-            newuser ? <IntroVideo setNewuser={setNewuser} /> : <Device />
+         newuser?<BaseBoot newuser={newuser} setNewuser={setNewuser}  setpress={setpress} press={press}/>:<Device/>
           }
         />
       </Routes>

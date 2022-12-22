@@ -8,6 +8,7 @@ export default function Boot({ instruction, setpress }) {
       return (prevCount += 1);
     });
   }
+ 
   return (
    <div id="pda-boot-screen">
       <div className="pda-boot-container">
