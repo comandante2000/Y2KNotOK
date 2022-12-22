@@ -3,7 +3,7 @@ import Device from "./pages/Device/Device";
 import IntroVideo from "./pages/Screen/IntroVideo/IntroVideo";
 import { useState, useEffect } from "react";
 import { EncryptStorage } from "encrypt-storage";
-
+import Cookies from 'js-cookie';
 function App() {
   const [newuser, setNewuser]           = useState(true);
   const [currentAsset, setCurrentAsset] = useState('');
@@ -14,6 +14,23 @@ function App() {
         img.src = asset;
      }); 
   };
+
+  //cookie area
+
+// const Intro = Cookies.get('Flow');
+// if (Intro == "Flow1.2done"){
+//   setNewuser(false)
+// }
+// cookie area
+
+useEffect(() => {
+ 
+  const Intro = Cookies.get('Flow1.3'); 
+  if (Intro == "Flow1.3done"){
+    setNewuser(false)
+  }
+  
+  });
   
   useEffect(()=>{
     let assets = [

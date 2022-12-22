@@ -71,7 +71,7 @@ export default function ChatReply({person, chat, setOpen, setEpisodeOne, episode
           setEpisodeOne("Flow1.8");
         }
       
-        }, 2000);
+        }, 3000);
       
 
 
@@ -92,7 +92,7 @@ export default function ChatReply({person, chat, setOpen, setEpisodeOne, episode
           ]);
           encryptStorage.removeItem(`chat-storage-krista`);
           encryptStorage.setItem(`chat-storage-krista`, [...replyMessages, { person: "Me", chat: message }, { person: "Krista", chat: replies }]);
-        }, 2000);
+        }, 3000);
       
 
       }
@@ -121,7 +121,7 @@ export default function ChatReply({person, chat, setOpen, setEpisodeOne, episode
               chat: "You're safe in your own private IDAHO",
             },
           ]);
-        }, 1000);
+        }, 3000);
         encryptStorage.removeItem(`chat-storage-timothee`);
         encryptStorage.setItem(`chat-storage-timothee`, [...replyMessages, { person: "Me", chat: message }, { person: "Timothee HR", chat: "You're safe in your own private IDAHO" }]);
         if (episodeone === "Flow1.10.1") {
@@ -141,8 +141,8 @@ export default function ChatReply({person, chat, setOpen, setEpisodeOne, episode
           { person: "Me", chat: message },
           { person: "Timothee HR", chat: "Jusy say YES, J" },
         ]);
-     
-        }, 1000);
+    
+        }, 3000);
         encryptStorage.removeItem(`chat-storage-timothee`);
         encryptStorage.setItem(`chat-storage-timothee`, [...replyMessages, { person: "Me", chat: message }, { person: "Timothee HR", chat: 'Jusy say YES, J' }]);
       }

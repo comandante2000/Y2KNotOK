@@ -4,6 +4,7 @@ import Boot from "./Boot/Boot";
 import BootAccept from "./BootAccept/BootAccept";
 import Home from "./Home";
 import { useState } from "react";
+import Cookies from 'js-cookie';
 export default function HomeScreen({ press, setpress }) {
   let bootone =
     "1. Y2K NOT OK is an hour-long interactive story told in 10 episodes.";
@@ -15,6 +16,12 @@ export default function HomeScreen({ press, setpress }) {
   let bootfive =
     "5. This website uses cookies to personalize your experience and for measurement and analytics purposes. By using our website and services, you agree to our use of cookies as described in our Cookie and Privacy Policies.";
 
+    //Cookies for Flow 1.3
+const Flow1 = Cookies.get('Flow1.3');
+if (Flow1 == "Flow1.3done"){
+  setpress(6)
+}
+//Cookies for Flow 1.3
   return (
     <div id="pda-home-screen">
       <div className=" row-2 d-flex justify-content-center">

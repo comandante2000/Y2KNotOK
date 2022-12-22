@@ -8,7 +8,7 @@ import PhonePage from "../Intro/Phone/Phone";
 import MailPage from "../Intro/Mail/Mail";
 import VoiceMailPage from "../Intro/VoiceMail/VoiceMailPage";
 import MapPage from "../Intro/Map/Map";
-
+import Cookies from 'js-cookie';
 export default function Device() {
   const [screen, showScreen] = useState("HomeScreen");
   const [press, setpress] = useState(0); //to make the button unclikable must click next

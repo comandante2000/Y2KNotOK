@@ -1,5 +1,6 @@
 import "./BootAccept.scss";
 import {useEffect, useState} from "react";
+import Cookies from 'js-cookie';
 export default function BootAccept({instruction , setpress }) {
 
   const [checked , setCheck] = useState(false);
@@ -15,6 +16,14 @@ export default function BootAccept({instruction , setpress }) {
       });
     }
   }
+
+  // Cookie
+
+  if (checked == true){
+    Cookies.set('Flow1.3', 'Flow1.3done', { expires: 7 })
+  }
+
+ // Cookie
   return (
     <div id="pda-boot-screen-accept">
       <div className="pda-boot-container">
