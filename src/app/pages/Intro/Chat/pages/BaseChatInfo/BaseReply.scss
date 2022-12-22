@@ -107,7 +107,7 @@
     background-image: url("https://images.stinkyfruit.com/Yes.png");
     background-repeat: no-repeat;
     background-position: right;
-    background-size: cover;
+    background-size: 100%;
     height: 175.78px;
     width: 234.11px;
     mix-blend-mode: darken;
@@ -150,10 +150,10 @@
       height: 14vh;
     }
     .imageyes {
-      background-size: cover;
+      background-size: 100%;
       height: 175.78px;
       width: 234.11px;
-      mix-blend-mode: multiply;
+      mix-blend-mode: darken;
      
     }
   }

@@ -2,12 +2,17 @@
   // margin-block: 50%;
 
   .pda-boot-container {
-    height: 636.5px;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
   }
   .info-popup-container {
     width: 100%;
     height: 100%;
+    .image-popup{
+      width: 797.48px;
+      height: 100%;
+    }
   }
   .centered {
     width: 100%;
@@ -18,31 +23,31 @@
       //background-image: url("https://images.stinkyfruit.com/Text_pop.svg");
       background-image: url("https://images.stinkyfruit.com/welcome.png");
       background-repeat: no-repeat;
-      height: 53px;
-      width: 160px;
+      height: 143px;
+      width: 434px;
       background-position: center;
       background-size: cover;
     }
     .popup-text {
-    
       font-family: "EuroStyle";
       font-size: 51px;
       line-height: 55px;
+      letter-spacing: 15px;
       color: #10df0c;
       
     }
     .instruction-text {
       font-family: "EuroStyle";
-      font-size: 26px;
-      line-height: 23px;
+      font-size: 32px;
+      line-height: 34px;
       color: #10df0c;
     }
     .next-button {
       background-image: url("https://images.stinkyfruit.com/desktop-green-box.png");
       height: 60.86px;
       width: 143.65px;
-      font-size: 24px;
-      line-height: 19px;
+      font-size: 35px;
+      line-height: 38px;
       font-family: "EuroStyle";
       color: #10df0c;
     }
@@ -50,7 +55,16 @@
 
   @media (max-width: 575.98px) {
     .pda-boot-container {
-      height: 70vh;
+      height: 100vh;
+      width: 100vw;
+      background-color: black;
+    }
+  }
+  @media (max-width: 575.98px) and (orientation: landscape) {
+    .pda-boot-container {
+      height: 100%;
+      width: 100%;
+      background-color: black;
     }
   }
 }
