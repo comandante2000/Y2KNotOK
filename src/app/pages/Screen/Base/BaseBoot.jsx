@@ -14,7 +14,9 @@ export default function BaseBoot({ press, setpress, dtime, setNewuser }) {
   let bootfour =
     "4.  If you’d like to EXIT and RETURN to Y2K NOT OK, please use the same browser and don’t clear your cache.";
   let bootfive =
-    "5. This website uses cookies to personalize your experience and for measurement and analytics purposes. By using our website and services, you agree to our use of cookies as described in our Cookie and Privacy Policies.";
+    "5. This website uses cookies to personalize your experience and for measurement and " +
+      "analytics purposes. By using our website and services, you agree to our use of cookies " +
+      "as described in our Cookie and Privacy Policies.";
 
   //Cookies for Flow 1.3
   // const Flow1 = Cookies.get('Flow1.3');
