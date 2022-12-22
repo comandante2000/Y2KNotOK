@@ -4,7 +4,10 @@
   .pda-boot-container {
     height: 100vh;
     width: 100vw;
-    background-color: black;
+    background-image: url("https://images.stinkyfruit.com/eula-background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   .info-popup-container {
     width: 100%;
