@@ -5,7 +5,7 @@ import BootAccept from "./BootAccept/BootAccept";
 import Home from "./Home";
 import { useState } from "react";
 import Cookies from 'js-cookie';
-export default function HomeScreen({ press, setpress }) {
+export default function HomeScreen({ press, setpress,dtime }) {
   let bootone =
     "1. Y2K NOT OK is an hour-long interactive story told in 10 episodes.";
   let boottwo = "2. Y2K NOT OK is available on desktop or mobile devices.";
@@ -37,7 +37,7 @@ if (Flow1 == "Flow1.3done"){
           {press === 5 && (
             <BootAccept instruction={bootfive} setpress={setpress} />
           )}
-          {press === 6 && <Home />}
+          {press === 6 && <Home dtime={dtime}/>}
         </div>
         <div className="inner-row-right"></div>
         <div className="logo"></div>

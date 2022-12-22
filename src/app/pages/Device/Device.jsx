@@ -13,37 +13,53 @@ export default function Device() {
   const [screen, showScreen] = useState("HomeScreen");
   const [press, setpress] = useState(0); //to make the button unclikable must click next
   const [episodeone, setEpisodeOne] = useState("notallowed");
-  
+  const [dtime,setTime] = useState("Monday 5:55 AM");
+
+
+  useEffect(() => {
+
+    if(episodeone === "voicemail1.8"){
+      setTime("Monday 6:15 AM")
+    }
+    if(episodeone === "Flow1.9.1"){
+      setTime("Monday 6:25 AM")
+    }
+    if(episodeone === "Flow1.12"){
+      setTime("Monday 6:35 AM")
+    }
+    
+    });
   return (
     <div id="pda-device">
       <div className="container v2 d-flex justify-content-center gx-0 gy-0">
         <div className="box">
           <Header />
           {screen === "HomeScreen" && (
-            <HomeScreen press={press} setpress={setpress} />
+            <HomeScreen press={press} setpress={setpress} dtime={dtime} />
           )}
           {screen === "MailScreen" && (
-            <MailPage episodeone={episodeone} setEpisodeOne={setEpisodeOne} />
+            <MailPage episodeone={episodeone} setEpisodeOne={setEpisodeOne} dtime={dtime}/>
           )}
           {screen === "MapScreen" && (
-            <MapPage episodeone={episodeone} setEpisodeOne={setEpisodeOne} />
+            <MapPage episodeone={episodeone} setEpisodeOne={setEpisodeOne} dtime={dtime} />
           )}
           {screen === "VoicemailScreen" && (
             <VoiceMailPage
               setEpisodeOne={setEpisodeOne}
-              episodeone={episodeone}
+              episodeone={episodeone} dtime={dtime}
             />
           )}
           {screen === "MessageScreen" && (
-            <ChatPage episodeone={episodeone} setEpisodeOne={setEpisodeOne} />
+            <ChatPage episodeone={episodeone} setEpisodeOne={setEpisodeOne} dtime={dtime}/>
           )}
-          {screen === "PhoneScreen" && <PhonePage />}
+          {screen === "PhoneScreen" && <PhonePage dtime={dtime}/>}
           <Buttons
             showScreen={showScreen}
             press={press}
             setpress={setpress}
             episodeone={episodeone}
             setEpisodeOne={setEpisodeOne}
+            setTime={setTime}
           />
         </div>
       </div>

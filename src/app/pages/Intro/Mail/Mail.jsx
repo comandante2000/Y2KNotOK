@@ -6,7 +6,7 @@ import MailBaseUnred from "./pages/BaseMailUnred/BaseMailUnred";
 import MailReply from "./pages/BaseMailReply/MailReply";
 import { useState, useEffect } from "react";
 import PopUps from "./pages/Popups/Popups";
-export default function MailPage({ episodeone, setEpisodeOne }) {
+export default function MailPage({ episodeone, setEpisodeOne,dtime }) {
   const [openMail, setOpenMail] = useState(false);
   const [open, setOpen] = useState(false);
   const [hide, setHide] = useState(true);
@@ -384,7 +384,7 @@ export default function MailPage({ episodeone, setEpisodeOne }) {
           }`}
         >
           <div>
-            <Time openMail={openMail} />
+            <Time openMail={openMail} time={dtime}/>
             <Header name="Mail" openMail={openMail} />
             <div className="mail-box-container">
               {open ? (

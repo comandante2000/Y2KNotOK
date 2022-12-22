@@ -48,7 +48,7 @@ const chatListsChange2 = [
   createChat(7, 'Sylvie', 'Resend Code', "", "", false, '12/15'),
 ];
 
-export default function ChatPage({ episodeone, setEpisodeOne }) {
+export default function ChatPage({ episodeone, setEpisodeOne,dtime }) {
   const [open, setOpen]         = useState(false);
   const [hide, setHide]         = useState(true);
   const [person, setPerson]     = useState('');
@@ -84,7 +84,7 @@ export default function ChatPage({ episodeone, setEpisodeOne }) {
       <div className=" row-2 d-flex justify-content-center">
         <div className="inner-row-left"></div>
         <div className="inner-row-center">
-          <Time />
+          <Time time={dtime}/>
           <Header name="Text" />
 
           {open ? (
