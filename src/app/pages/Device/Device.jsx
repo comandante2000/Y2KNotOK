@@ -14,19 +14,27 @@ export default function Device({ newuser ,SetVideo ,setNewuser}) {
   const [screen, showScreen] = useState("HomeScreen");
   const [press, setpress] = useState(0); //to make the button unclikable must click next
   const [episodeone, setEpisodeOne] = useState("notallowed");
-  const [dtime, setTime] = useState("Monday 5:55 AM");
+  const [dtime, setTime] = useState("5:55 AM");
 
   useEffect(() => {
+  
     if (episodeone === "voicemail1.8") {
-      setTime("Monday 6:15 AM");
+      setTime("6:15 AM");
     }
     if (episodeone === "Flow1.9.1") {
-      setTime("Monday 6:25 AM");
+      setTime("6:20 AM");
+    }
+    if (episodeone === "Flow1.10") {
+      setTime("6:25 AM");
+    }
+    if (episodeone === "Flow1.11") {
+      setTime("6:25 AM");
     }
     if (episodeone === "Flow1.12") {
-      setTime("Monday 6:35 AM");
+      setTime("6:35 AM");
+      setTimeout(function() {
       SetVideo("Episode2");
-    
+      }, 3000);
     }
   });
   

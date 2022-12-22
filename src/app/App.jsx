@@ -65,7 +65,7 @@ useEffect(() => {
     encryptStorage.removeItem(`chat-storage-krista`);
     encryptStorage.removeItem(`chat-storage-timothee`);
   },[]);
-  console.log(newuser,"sdfsdfsfd");
+ 
   return (
     <div className={`container-fluid app d-flex justify-content-center ${!newuser ? 'fadeInOutApp' : ""}`}>
       <Routes>
