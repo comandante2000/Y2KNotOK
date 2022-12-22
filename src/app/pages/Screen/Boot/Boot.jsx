@@ -15,14 +15,14 @@ export default function Boot({ instruction, setpress }) {
         <div className="d-flex justify-content-center align-items-center info-popup-container">
           <div className="image-popup align-self-center">
             <div className="centered d-flex flex-column align-items-center  justify-content-center">
-              <p className="Popup-Title mt-5 mb-3 d-flex justify-content-center px-1"></p>
-              <p className="popup-text text-center m-0 fw-bold my-1">
+              <p className="Popup-Title d-flex justify-content-center px-1"></p>
+              <p className="popup-text text-center fw-bold">
                 Before you BEGIN:
               </p>
-              <p className="instruction-text m-0 text-center mt-2 mb-3">
+              <p className="instruction-text text-center">
                 {instruction}
               </p>
-              <div className="next-button m-0 d-flex justify-content-center align-items-center mt-2 mb-3" type="button" onClick={Next}>
+              <div className="next-button d-flex justify-content-center align-items-center mt-2 mb-3" type="button" onClick={Next}>
                 Next
               </div>
             </div>
