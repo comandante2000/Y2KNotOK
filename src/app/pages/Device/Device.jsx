@@ -8,51 +8,80 @@ import PhonePage from "../Intro/Phone/Phone";
 import MailPage from "../Intro/Mail/Mail";
 import VoiceMailPage from "../Intro/VoiceMail/VoiceMailPage";
 import MapPage from "../Intro/Map/Map";
-import Cookies from 'js-cookie';
-export default function Device({newuser}) {
+import Cookies from "js-cookie";
+export default function Device({ newuser }) {
   const [screen, showScreen] = useState("HomeScreen");
   const [press, setpress] = useState(0); //to make the button unclikable must click next
   const [episodeone, setEpisodeOne] = useState("notallowed");
-  const [dtime,setTime] = useState("Monday 5:55 AM");
-
+  const [dtime, setTime] = useState("Monday 5:55 AM");
 
   useEffect(() => {
-
-    if(episodeone === "voicemail1.8"){
-      setTime("Monday 6:15 AM")
+    if (episodeone === "voicemail1.8") {
+      setTime("Monday 6:15 AM");
     }
-    if(episodeone === "Flow1.9.1"){
-      setTime("Monday 6:25 AM")
+    if (episodeone === "Flow1.9.1") {
+      setTime("Monday 6:25 AM");
     }
-    if(episodeone === "Flow1.12"){
-      setTime("Monday 6:35 AM")
+    if (episodeone === "Flow1.12") {
+      setTime("Monday 6:35 AM");
     }
+  });
+  
+//cookies
+  useEffect(() => {
+    if (episodeone === "notallowed") {
+      Cookies.set("Flow1.3", "Flow1.3done", { expires: 7 });
+    }
+  
+    const Intro = Cookies.get('Flow1.3'); 
+      if (Intro == "Flow1.3done"){
+        setpress(8);
+      }
     
-    });
+  });
+//cookies
+
   return (
     <div id="pda-device">
-      <div className={`container v2 d-flex justify-content-center gx-0 gy-0 ${!newuser ? 'deviceopacity' : ""}`}>
+      <div
+        className={`container v2 d-flex justify-content-center gx-0 gy-0 ${
+          !newuser ? "deviceopacity" : ""
+        }`}
+      >
         <div className="box">
           <Header />
           {screen === "HomeScreen" && (
             <HomeScreen press={press} setpress={setpress} dtime={dtime} />
           )}
           {screen === "MailScreen" && (
-            <MailPage episodeone={episodeone} setEpisodeOne={setEpisodeOne} dtime={dtime}/>
+            <MailPage
+              episodeone={episodeone}
+              setEpisodeOne={setEpisodeOne}
+              dtime={dtime}
+            />
           )}
           {screen === "MapScreen" && (
-            <MapPage episodeone={episodeone} setEpisodeOne={setEpisodeOne} dtime={dtime} />
+            <MapPage
+              episodeone={episodeone}
+              setEpisodeOne={setEpisodeOne}
+              dtime={dtime}
+            />
           )}
           {screen === "VoicemailScreen" && (
             <VoiceMailPage
               setEpisodeOne={setEpisodeOne}
-              episodeone={episodeone} dtime={dtime}
+              episodeone={episodeone}
+              dtime={dtime}
             />
           )}
           {screen === "MessageScreen" && (
-            <ChatPage episodeone={episodeone} setEpisodeOne={setEpisodeOne} dtime={dtime}/>
+            <ChatPage
+              episodeone={episodeone}
+              setEpisodeOne={setEpisodeOne}
+              dtime={dtime}
+            />
           )}
-          {screen === "PhoneScreen" && <PhonePage dtime={dtime}/>}
+          {screen === "PhoneScreen" && <PhonePage dtime={dtime} />}
           <Buttons
             showScreen={showScreen}
             press={press}
@@ -64,7 +93,10 @@ export default function Device({newuser}) {
         </div>
       </div>
       <audio autoPlay loop>
-        <source src="https://images.stinkyfruit.com/audio_bed_ambience_mp3.mp3" type="audio/wav" />
+        <source
+          src="https://images.stinkyfruit.com/audio_bed_ambience_mp3.mp3"
+          type="audio/wav"
+        />
       </audio>
     </div>
   );

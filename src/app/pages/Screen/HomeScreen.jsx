@@ -8,10 +8,10 @@ import Cookies from 'js-cookie';
 export default function HomeScreen({ press, setpress,dtime }) {
   
     //Cookies for Flow 1.3
-const Flow1 = Cookies.get('Flow1.3');
-if (Flow1 == "Flow1.3done"){
-  setpress(6)
-}
+// const Flow1 = Cookies.get('Flow1.3');
+// if (Flow1 == "Flow1.3done"){
+//   setpress(6)
+// }
 //Cookies for Flow 1.3
   return (
     <div id="pda-home-screen">

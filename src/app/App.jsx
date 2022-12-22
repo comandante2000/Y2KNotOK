@@ -26,22 +26,20 @@ function App() {
 // }
 // cookie area
 
-// useEffect(() => {
+useEffect(() => {
  
-//   const Intro = Cookies.get('Flow1.3'); 
-//   if (Intro == "Flow1.3done"){
-//     setNewuser(false)
-//   }
+  const Intro = Cookies.get('Flow1.3'); 
+  if (Intro == "Flow1.3done"){
+    setNewuser(false)
+  }
 
   
-//   });
-
-
-useEffect(() => {
- if(press == 6){
-setNewuser(false);
- } 
   });
+
+
+
+
+
   
   useEffect(()=>{
     let assets = [
