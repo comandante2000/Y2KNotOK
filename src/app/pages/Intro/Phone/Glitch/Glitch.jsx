@@ -6,7 +6,8 @@ export default function Glitch({setNewuser}) {
     };
     // let audio1 = "https://images.stinkyfruit.com/introbootvideo.mp4";
     // let audio1 = "https://images.stinkyfruit.com/BootScreenV9.mp4";
-    let audio1 = "https://images.stinkyfruit.com/Glitch.webm";
+    let glitch = "https://images.stinkyfruit.com/Glitch_with_keypad_VP10.webm";
+    // let audio1 = "https://images.stinkyfruit.com/Glitch.webm";
     return (
         <div id="pda-Glitch-screen">
             <div className="introvideo ">
@@ -14,7 +15,7 @@ export default function Glitch({setNewuser}) {
                     className="video-size"
                     // autoplay="true"
                     id="intro"
-                    src={audio1}
+                    src={glitch}
                     type="video/mp4"
                     onEnded={DonePlaying}
                     autoPlay

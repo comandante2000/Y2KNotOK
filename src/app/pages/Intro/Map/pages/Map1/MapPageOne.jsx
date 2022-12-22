@@ -2,8 +2,12 @@ import "./MapPageOne.scss";
 import { useState, useEffect } from "react";
 export default function MapPageOne({ setZoom, setEpisodeOne, episodeone }) {
   const Zoom = () => {
+    // setZoom(false);
+    // setEpisodeOne("Flow1.10");
     setZoom(false);
-    setEpisodeOne("Flow1.10");
+    setTimeout(function() {
+      setEpisodeOne("Flow1.10");
+    }, 10000);
   };
 
   return (
