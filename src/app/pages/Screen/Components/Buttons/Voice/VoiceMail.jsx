@@ -27,7 +27,7 @@ export default function VoiceMailButton({
     <div id="voice-button">
       <div
         className={`button-1 ${color == "voice" ? "red" : "black"} ${
-          press === 6 || episodeone == "mailpop" || episodeone == "Flow1.8"
+          episodeone == "notallowed"  || episodeone == "mailpop" || episodeone == "Flow1.8"
             ? "button-glow"
             : null
         }`}

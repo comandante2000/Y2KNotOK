@@ -19,9 +19,7 @@ export default function BootAccept({instruction , setpress }) {
 
   // Cookie
 
-  // if (checked == true){
-  //   Cookies.set('Flow1.3', 'Flow1.3done', { expires: 7 })
-  // }
+
 
  // Cookie
   return (
