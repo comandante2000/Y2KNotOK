@@ -3,7 +3,7 @@ import Glitch from "./Glitch/Glitch.jsx";
 import Time from "../../Screen/Components/Time/Time";
 import Header from "../../Screen/Components/Headers/Header";
 import {useState} from "react";
-export default function PhonePage() {
+export default function PhonePage({dtime}) {
 const [newuser, setNewuser] = useState(true);
   return (
     <div id="pda-phone-screen">
@@ -13,7 +13,7 @@ const [newuser, setNewuser] = useState(true);
             {/*<Glitch/>*/}
             {newuser ? <Glitch setNewuser={setNewuser}/> :
                 <div>
-                    <Time />
+                    <Time time={dtime}/>
                     <Header name="Phone" />
                     <div className="phone-container d-flex flex-column justify-content-end align-items-center">
                         <div className="redwest-logo-container d-flex align-items-center justify-content-center">

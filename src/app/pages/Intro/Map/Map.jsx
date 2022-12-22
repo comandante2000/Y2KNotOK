@@ -5,7 +5,7 @@ import MapPageOne from "./pages/Map1/MapPageOne";
 import MapPageTwo from "./pages/MapPageTwo/MapPageTwo";
 import MapLocatingPage from "./pages/Locating/Locating";
 import { useState, useEffect } from "react";
-export default function MapPage({ setEpisodeOne, episodeone }) {
+export default function MapPage({ setEpisodeOne, episodeone,dtime }) {
   const [zoom, setZoom] = useState(true);
   const [time, settimer] = useState(0)
 
@@ -21,7 +21,7 @@ export default function MapPage({ setEpisodeOne, episodeone }) {
       <div className=" row-2 d-flex justify-content-center">
         <div className="inner-row-left"></div>
         <div className="inner-row-center">
-          <Time />
+          <Time time={dtime}/>
           <Header name="Map" />
 
           {episodeone == "Flow1.9.1"||episodeone == "Flow1.10"? time == 4000 ? (

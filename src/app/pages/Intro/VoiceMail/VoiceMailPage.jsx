@@ -4,7 +4,7 @@ import Header from "../../Screen/Components/Headers/Header";
 import PopUp from "./Popup/PopUp";
 import { useState, useEffect } from "react";
 
-export default function VoiceMailPage({ setEpisodeOne, episodeone }) {
+export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
   const [open, setOpen] = useState(false);
   const [videoURI, setVideoURI] = useState("");
 
@@ -121,12 +121,8 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone }) {
   };
 
   useEffect(() => {
-    if (
-      episodeone === "voicemail1.7" 
-    
-    ) {
+    if (episodeone === "voicemail1.7") {
       setMessages([
-      
         {
           name: "Timothee HR",
           date: "12/30",
@@ -235,11 +231,11 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone }) {
     }
   }, []);
 
-
   useEffect(() => {
     if (
       episodeone === "Flow1.8.1" ||
       episodeone === "Flow1.9.1" ||
+      episodeone === "Flow1.9" ||
       episodeone === "Flow1.12" ||
       episodeone === "Flow1.10.1" ||
       episodeone === "Flow1.11" ||
@@ -369,7 +365,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone }) {
         <div
           className={`inner-row-center ${open ? "voiceplay" : "unvoiceplay"}`}
         >
-          <Time open={open} />
+          <Time open={open} time={dtime} />
           <Header name="VoiceMail" open={open} />
           <div className="voicemail-box-container">
             {" "}
@@ -400,7 +396,11 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone }) {
                       <div
                         className="play-icon"
                         type="button"
-                        onClick={message.clickable ? () => OpenMessage(message.videolink) : null}
+                        onClick={
+                          message.clickable
+                            ? () => OpenMessage(message.videolink)
+                            : null
+                        }
                       ></div>
                       <div
                         className={`sound-icon ${message.wavelenghtClass}`}
