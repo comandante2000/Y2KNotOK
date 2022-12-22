@@ -190,10 +190,10 @@ export default function MailPage({ episodeone, setEpisodeOne,dtime }) {
     setHide(false);
    
   
-    if (episodeone == "allowed") {
+    // if (episodeone == "allowed") {
 
-      setEpisodeOne("Flow1.3");
-    }
+    //   setEpisodeOne("Flow1.3");
+    // }
   };
 
   useEffect(() => {
