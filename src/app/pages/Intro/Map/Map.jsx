@@ -9,9 +9,6 @@ export default function MapPage({ setEpisodeOne, episodeone }) {
   const [zoom, setZoom] = useState(true);
   const [time, settimer] = useState(0)
 
-
-
-
   useEffect(function () {
  
     if(time !==4000){

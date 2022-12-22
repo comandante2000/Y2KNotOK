@@ -118,31 +118,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone }) {
   const OpenMessage = (videolink) => {
     setVideoURI(videolink);
     setOpen(true);
-    // alert('HELLO MFS');
-
   };
-
-  // let videolink = "https://images.stinkyfruit.com/HR_Timothee-V-0103.mp4";
-
-  // if (
-  //   episodeone == "voicemail1.7" ||
-  //   episodeone === "Flow1.8.1" ||
-  //   episodeone === "Flow1.8" ||
-  //   episodeone == "voicemail1.8" ||
-  //   episodeone == "voicemail1.8.1"
-  // ) {
-  //   videolink = "https://images.stinkyfruit.com/voice1_6.mp4";
-  // }
-  // if (
-  //   episodeone === "Flow1.8.1" ||
-  //   episodeone === "Flow1.9.1" ||
-  //   episodeone === "Flow1.12" ||
-  //   episodeone === "Flow1.10.1" ||
-  //   episodeone === "Flow1.11" ||
-  //   episodeone === "Flow1.10"
-  // ) {
-  //   videolink = "https://images.stinkyfruit.com/Mom1_8.mp4";
-  // }
 
   useEffect(() => {
     if (
@@ -398,7 +374,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone }) {
           <div className="voicemail-box-container">
             {" "}
             {messages.map((message, index) => (
-              <div className="box-container">
+              <div key={index} className="box-container">
                 <div className=" d-flex py-0 new-voice-mail-container">
                   <div className="icon-container d-flex align-items-center">
                     <div
@@ -424,11 +400,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone }) {
                       <div
                         className="play-icon"
                         type="button"
-                        onClick={
-                          message.clickable
-                            ? () => OpenMessage(message.videolink)
-                            : ""
-                        }
+                        onClick={message.clickable ? () => OpenMessage(message.videolink) : null}
                       ></div>
                       <div
                         className={`sound-icon ${message.wavelenghtClass}`}

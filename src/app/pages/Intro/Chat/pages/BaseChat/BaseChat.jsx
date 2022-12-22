@@ -1,6 +1,5 @@
 import "./BaseChat.scss";
 export default function BaseChat({ person, chat, episodeone, listchat,date }) {
-  // admin@redwest.com
 
   return (
     <div id="pda-base-chat">
