@@ -137,7 +137,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
           episodeone: "allow",
           clickable: true,
           wavelenghtClass: "sound-one",
-          videolink: "",
+          videolink: "https://images.stinkyfruit.com/HR_Timothee-V-0103.mp4",
         },
         {
           name: "Krista",
