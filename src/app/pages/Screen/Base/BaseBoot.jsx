@@ -30,8 +30,7 @@ export default function BaseBoot({ press, setpress, dtime, setNewuser }) {
       {press === 1 && <Boot instruction={boottwo} setpress={setpress} />}
       {press === 2 && <Boot instruction={bootthree} setpress={setpress} />}
       {press === 3 && <Boot instruction={bootfour} setpress={setpress} />}
-      {press === 4 && <Boot instruction={bootfive} setpress={setpress} />}
-      {press === 5 && <BootAccept instruction={bootfive} setpress={setpress} />}
+      {press === 4 && <BootAccept instruction={bootfive} setpress={setpress} />}
         </div>
       {press >= 6 &&<IntroVideo  setNewuser ={ setNewuser }/>}
     </div>
