@@ -16,7 +16,7 @@ export default function ChatInfo({ person, chat, episodeone, rigthreply }) {
           <div className="chat-info d-flex">
             <div className="person-chat w-75">{chat}</div>
             <div className="chat-time-container w-25 text-end">
-              <p className="chat-time">2:11pm</p>
+              <p className="chat-time">6:25 am</p>
             </div>
           </div>
         </div>

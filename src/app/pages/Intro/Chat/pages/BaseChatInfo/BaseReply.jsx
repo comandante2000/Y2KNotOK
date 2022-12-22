@@ -14,6 +14,7 @@ export default function ChatReply({person, chat, setOpen, setEpisodeOne, episode
   
   const [replyMessages, setReplyMessages] = useState([]);
   const [rigthreply, setrigthreply]       = useState(false);
+  const [rigthreply2, setrigthreply2]       = useState(false);
   const [openm, setOpenm]                 = useState(false);
   const [message, setmessage]             = useState('');
   const containerRef                      = useRef(null);
@@ -122,6 +123,10 @@ export default function ChatReply({person, chat, setOpen, setEpisodeOne, episode
             },
           ]);
         }, 3000);
+        setTimeout(function () {
+        setrigthreply2(true);
+      }, 5000);
+       
         encryptStorage.removeItem(`chat-storage-timothee`);
         encryptStorage.setItem(`chat-storage-timothee`, [...replyMessages, { person: "Me", chat: message }, { person: "Timothee HR", chat: "You're safe in your own private IDAHO" }]);
         if (episodeone === "Flow1.10.1") {
@@ -143,6 +148,10 @@ export default function ChatReply({person, chat, setOpen, setEpisodeOne, episode
         ]);
     
         }, 3000);
+
+      
+
+
         encryptStorage.removeItem(`chat-storage-timothee`);
         encryptStorage.setItem(`chat-storage-timothee`, [...replyMessages, { person: "Me", chat: message }, { person: "Timothee HR", chat: 'Jusy say YES, J' }]);
       }
@@ -190,6 +199,10 @@ export default function ChatReply({person, chat, setOpen, setEpisodeOne, episode
             <div className="imageyes d-flex justify-content-center align-items-center "></div>
           </div>
         ) : null}
+
+        {rigthreply2?
+          <ChatInfo person={"Timothee HR"} chat={" ALSO, TRUST ME, YOU CAN’T TRUST KRISTA"} />:null
+        }
       </div>
 
       <div className="d-flex justify-content-center txt-area-container mt-3">

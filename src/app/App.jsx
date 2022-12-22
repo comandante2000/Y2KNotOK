@@ -5,12 +5,13 @@ import { useState, useEffect } from "react";
 import { EncryptStorage } from "encrypt-storage";
 import Cookies from 'js-cookie';
 import BaseBoot from "./pages/Screen/Base/BaseBoot";
+import OutroVideo from "./pages/Screen/Outrovideo/Outrovideo";
 function App() {
   const [newuser, setNewuser]           = useState(true);
   const [currentAsset, setCurrentAsset] = useState('');
   const encryptStorage                  = new EncryptStorage('y2knotokEncrypted');
   const [press, setpress] = useState(0);
-
+  const [video, SetVideo] = useState("Episode1");
   const cacheImages = async (assets) => {
      assets.map(asset => {
         const img = new Image();
@@ -69,12 +70,13 @@ useEffect(() => {
     <div className={`container-fluid app d-flex justify-content-center ${!newuser ? 'fadeInOutApp' : ""}`}>
       <Routes>
         
-        <Route
+       <Route
           path="/"
-          element={
-         newuser?<BaseBoot newuser={newuser} setNewuser={setNewuser}  setpress={setpress} press={press}/>:<Device/>
+          element={video ==="Episode2"?<OutroVideo/>:
+         newuser?<BaseBoot newuser={newuser} setNewuser={setNewuser}  setpress={setpress} press={press} video={video}/>:<Device SetVideo={SetVideo} setNewuser={setNewuser}/>
           }
         />
+       
       </Routes>
     </div>
   );

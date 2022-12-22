@@ -44,6 +44,7 @@ export default function Buttons({
               setActive={setActive}
               color={active}
               press={press}
+              episodeone={episodeone}
             />
             <ChatButton
               showScreen={showScreen}

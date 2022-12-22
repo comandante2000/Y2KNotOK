@@ -1,10 +1,18 @@
 import "./Phone.scss";
-
-export default function PhoneButton({ showScreen, setActive, color, press }) {
+import {useEffect} from "react";
+export default function PhoneButton({ showScreen, setActive, color, press , episodeone}) {
   const handleClick3 = () => {
     showScreen("PhoneScreen");
     setActive("phone");
   };
+
+  useEffect(() =>{
+
+    if(episodeone="Flow1.12"){
+      console.log("PhoneButton");
+    }
+    console.log(episodeone);
+  })
   
   return (
     <div id="phone-button">
