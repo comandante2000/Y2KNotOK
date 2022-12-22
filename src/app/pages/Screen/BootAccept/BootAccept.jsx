@@ -5,7 +5,7 @@ export default function BootAccept({instruction , setpress }) {
   const [checked , setCheck] = useState(false);
 
   const handleCheckboxChanged = (event) => {
-    console.log(event.target.checked);
+   
     setCheck(event.target.checked);
   }
   function Next() { 

@@ -1,5 +1,5 @@
 import "./BaseMail.scss";
-export default function MailBase({ name, episodeone }) {
+export default function MailBase({ name, episodeone ,subjects,listmail,date}) {
   return (
     <div id="pda-mail-base">
       <div
@@ -8,17 +8,17 @@ export default function MailBase({ name, episodeone }) {
       >
         <div className="icon-container d-flex align-items-center">
           <div
-            className={episodeone == "allowed" ? "red-icon" : "unred-icon"}
+            className={listmail.episodeone ===episodeone? "blink-red-icon" : "unred-icon"}
           ></div>
           <div className="mail-icon"></div>
         </div>
         <div className="info-container me-3 m-auto">
           <div className="d-flex w-100">
             <div className="person-name w-50">{name}</div>
-            <div className="w-50 mail-date text-end">12/30</div>
+            <div className="w-50 mail-date text-end">{date}</div>
           </div>
           <div>
-            <div className="subject">Listen</div>
+            <div className="subject">{subjects}</div>
           </div>
         </div>
       </div>

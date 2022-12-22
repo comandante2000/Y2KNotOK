@@ -1,6 +1,7 @@
 import "./PopUp.scss";
 import { useState, useEffect } from "react";
 import { useRef } from "react";
+
 export default function PopUp({ setOpen, setEpisodeOne, video, episodeone }) {
   const [videoTime, setVideoTime] = useState(0);
   const [playing, setPlaying] = useState(false);
@@ -31,12 +32,6 @@ export default function PopUp({ setOpen, setEpisodeOne, video, episodeone }) {
   };
 
   const DonePlaying = () => {
-    // if (mailtrigger){
-    //   setpress(function (prevCount) {
-    //     return (prevCount += 2);
-    //   });
-    // }
-
     setOpen(false);
     if (
       episodeone == "allow" ||
@@ -53,12 +48,12 @@ export default function PopUp({ setOpen, setEpisodeOne, video, episodeone }) {
     // if (episodeone == "voicemail1.8") {
     //   setOpen(false);
     // }
-    if (episodeone == "replyflow1.8.1") {
+    if (episodeone == "Flow1.8.1") {
       setEpisodeOne("Flow1.9");
     }
   };
 
-  console.log("the accemail -n voice:", episodeone);
+
 
   window.setInterval(function () {
     setCurrentTime(videoRef.current?.currentTime);
@@ -69,18 +64,23 @@ export default function PopUp({ setOpen, setEpisodeOne, video, episodeone }) {
     <div id="pda-pop-screen">
       <div className="black-light "></div>
       <div className="pda-boot-container  d-flex justify-content-center ">
-        <div className="voice-pop-ups position-absolute top-50 start-50 translate-middle">
+        <div className="voice-pop-ups">
           <div className="buttons mt-2 d-flex justify-content-end align-items-center">
             <div
               className="close-button mx-2"
               type="button"
               onClick={DonePlaying}
-            >Close</div>
-            <div className="x-button" type="button" onClick={DonePlaying}>X</div>
+            >
+              Close
+            </div>
+            <div className="x-button" type="button" onClick={DonePlaying}>
+              X
+            </div>
           </div>
-          <div class=" text-center align-items-center d-flex justify-content-center">
+          <div className=" text-center align-items-center d-flex justify-content-center">
             <div className="video-container d-flex flex-column">
               <div>
+                {video !== '' ? 
                 <video
                   className="video"
                   // autoplay="true"
@@ -90,6 +90,12 @@ export default function PopUp({ setOpen, setEpisodeOne, video, episodeone }) {
                   onEnded={DonePlaying}
                   ref={videoRef}
                 ></video>
+                :
+                <video
+                  className="video"
+                  id="video1"
+                ></video>
+                }
               </div>
 
               <div className="timecontrols d-flex justify-content-bottom">

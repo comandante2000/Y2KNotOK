@@ -45,6 +45,15 @@
 }
   }
 }
+@media (max-width: 575.98px) {
+  #voice-button{
+    .button-1{
+      height: 55px;
+      width: 55px;
+    }
+  }
+}
+
 @media (max-width: 320px) and (orientation: portrait) {
   #voice-button{
     .button-1{

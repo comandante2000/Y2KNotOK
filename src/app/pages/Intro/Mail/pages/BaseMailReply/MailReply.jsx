@@ -1,11 +1,11 @@
 import "./MailReply.scss";
 import { useState } from "react";
 
-export default function MailReply({ name ,setOpenvideo,setOpen}) {
+export default function MailReply({ name ,setOpenvideo,setOpen, setOpenMail}) {
   const [opentext, setOpentext] = useState(false);
   
   const OpenReplay = () => {
-    setOpentext(!opentext);
+    setOpentext(true);
   };
   const OpenBack = () => {
     setOpen(false);
@@ -13,7 +13,14 @@ export default function MailReply({ name ,setOpenvideo,setOpen}) {
 
   const Openvideo = () => {
     setOpenvideo(true);
+    setOpenMail(true);
   };
+  const OpenCancel = () => {
+    setOpentext(false);
+    
+  };
+  const handleSubmit = (e) => {
+  }
   return (
     <div id="pda-mail-reply">
      
@@ -30,7 +37,7 @@ export default function MailReply({ name ,setOpenvideo,setOpen}) {
           <div className="info-container me-3 m-auto">
             <div className="d-flex w-100">
               <div className="person-name w-50 text-decoration-underline">
-                {name}
+                hrtimothee@redwest.com
               </div>
               <div className="w-50 mail-date text-end">12/30</div>
             </div>
@@ -55,26 +62,27 @@ export default function MailReply({ name ,setOpenvideo,setOpen}) {
             <div className="attachment px-2"> Attachment</div>
           </div>
         </div>
-        <div className="d-flex justify-content-around btn-container">
+        <div className="d-flex justify-content-between btn-container">
           <div
             className="back_button d-flex justify-content-center align-items-center"
             type="button"
-            onClick={OpenBack}
+            onClick={opentext ?handleSubmit  :OpenBack}
           >
-            Back
+           {opentext ? "Send" :"Back" }
           </div>
           <div
-            className="reply_button d-flex justify-content-center align-items-center"
+            className={`${opentext?"delete_button":"reply_button"} d-flex justify-content-center align-items-center`}
             type="button"
             onClick={OpenReplay}
           >
             Reply
           </div>
           <div
-            className="delete_button d-flex justify-content-center align-items-center"
+            className={`${opentext?"reply_button":"delete_button"} d-flex justify-content-center align-items-center`}
             type="button"
+            onClick={OpenCancel}
           >
-            Delete
+           {opentext ? "Cancel" : "Delete"}
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import "./Chat.scss";
-import { useState, useEffect } from "react";
+
 export default function ChatButton({
   showScreen,
   setActive,
@@ -15,7 +15,7 @@ export default function ChatButton({
       setEpisodeOne("Flow1.10.1");
     }
   };
-  console.log(episodeone, "the value of accesmail in chat");
+  
   return (
     <div id="chat-button">
       <div

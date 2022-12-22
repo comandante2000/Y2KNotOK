@@ -1,3 +1,4 @@
+
 #pda-base-chat-reply {
   .base-chat-reply-container {
     padding-left: 10px;
@@ -37,8 +38,8 @@
   .txt-area-container {
     width: 100%;
     height: 115px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 26px;
+    padding-right: 26px;
     .txt-area {
       width: 100%;
       height: 100%;
@@ -50,13 +51,22 @@
         width: 100%;
         height: 115px;
         font-size: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
       }
+    }
+    ::placeholder{
+      color: #5A5A5A;
     }
   }
   .btn-container {
     padding-left: 10px;
     padding-right: 10px;
     margin-top: 14px;
+  }
+  .button-container{
+    margin-left: 17px;
+    margin-right: 17px;
   }
   .btn-back {
     background-image: url("https://images.stinkyfruit.com/box_img_bckground.svg");
@@ -78,7 +88,7 @@
     width: 86.6px;
     height: 36.67px;
   }
-  .btn-delete {
+  .unactive {
     background-image: url("https://images.stinkyfruit.com/box_img_bckground_gray.svg");
     background-repeat: no-repeat;
     font-family: "Palm OS";
@@ -102,6 +112,29 @@
     width: 234.11px;
     mix-blend-mode: multiply;
     margin-left: 102px ;
+    image-rendering: pixelated;
+    clip-path: polygon(
+      0px 4px,
+      2px 4px,
+      2px 2px,
+      4px 2px,
+      4px 0px,
+      calc(100% - 4px) 0px,
+      calc(100% - 4px) 2px,
+      calc(100% - 2px) 2px,
+      calc(100% - 2px) 4px,
+      100% 4px,
+      100% calc(100% - 4px),
+      calc(100% - 2px) calc(100% - 4px),
+      calc(100% - 2px) calc(100% - 2px),
+      calc(100% - 4px) calc(100% - 2px),
+      calc(100% - 4px) 100%,
+      4px 100%,
+      4px calc(100% - 2px),
+      2px calc(100% - 2px),
+      2px calc(100% - 4px),
+      0px calc(100% - 4px)
+    );
   }
 }
 @media (max-width: 575.98px) {
@@ -146,3 +179,7 @@
     }
   }
 }
+
+
+
+

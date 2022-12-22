@@ -1,51 +1,54 @@
 import "./BaseReply.scss";
 import ChatInfo from "./ChatInfo";
-import { useState } from "react";
-export default function ChatReply({
-  person,
-  chat,
-  setOpen,
-  setEpisodeOne,
-  episodeone,
-}) {
-  // admin@redwest.com
+import { useState,useRef,useEffect } from "react";
+import { EncryptStorage } from "encrypt-storage";
 
-  const messagereplies = [
-    "You need to chill",
-    "Not what I expected to hear",
-    "I need you to calm down and    concentrate on our mission",
-    "Calm down and concentrate on our mission",
-  ];
+const messagereplies = [
+  "You need to chill",
+  "Not what I expected to hear",
+  "I need you to calm down and concentrate on our mission",
+  "Calm down and concentrate on our mission",
+];
 
-  var replies =
-    messagereplies[Math.floor(Math.random() * messagereplies.length)];
-
-  const [message, setmessage] = useState();
-  const [textmessage, setextmessage] = useState();
-
-  const [replyMessages, setReplyMessages] = useState([
-    // { person: "Krista", chat: "" },
-    // { person: "Me", chat: "" },
-  ]);
-
-  const [openm, setOpenm] = useState(false);
-  // ||"Pilot Butte Substation"|| "Malin Captain Jack Substation"|| "John Day Substation"|| "Brownlee Dam Power House"|| "Grants Pass Substation"|| "Pge Elma Substation"|| "Midpoint Substation"|| "Hells Canyon Power Station"|| "Fox Hollow Substation"|| "Chief Joseph Dam"|| "Mcnary Substation"|| "Red West Command Center"|| "Oxbow Dam Power Station"
- let truereplies ="Red West Control Center";
+export default function ChatReply({person, chat, setOpen, setEpisodeOne, episodeone}) {
   
-  const [rigthreply, setrigthreply] = useState(false);
-
-  const [sendreply, setsendreply] = useState(false);
-
+  const [replyMessages, setReplyMessages] = useState([]);
+  const [rigthreply, setrigthreply]       = useState(false);
+  const [openm, setOpenm]                 = useState(false);
+  const [message, setmessage]             = useState('');
+  const containerRef                      = useRef(null);
+  const encryptStorage                    = new EncryptStorage('y2knotokEncrypted');
+  let replies                             = messagereplies[Math.floor(Math.random() * messagereplies.length)];
+  let correctReplies                      = [
+                                             {chatPerson: 'Krista', flow: ['voicemail1.8.1'], reply: 'Red West Control Center'},
+                                             {chatPerson: 'Timothee HR', flow: ['Flow1.10.1', 'Flow1.12', 'Flow1.11'], reply: 'yes'},
+                                             {flow: '', reply: 'Pilot Butte Substation'},
+                                             {flow: '', reply: 'John Day Substation'},
+                                             {flow: '', reply: 'Malin Captain Jack Substation'},
+                                             {flow: '', reply: 'Brownlee Dam Power House'},
+                                             {flow: '', reply: 'Grants Pass Substation'},
+                                             {flow: '', reply: 'Pge Elma Substation'},
+                                             {flow: '', reply: 'Midpoint Substation'},
+                                             {flow: '', reply: 'Hells Canyon Power Station'},
+                                             {flow: '', reply: 'Fox Hollow Substation'},
+                                             {flow: '', reply: 'Chief Joseph Dam'},
+                                             {flow: '', reply: 'Mcnary Substation'},
+                                             {flow: '', reply: 'Red West Command Center'},
+                                             {flow: '', reply: 'Oxbow Dam Power Station'},
+                                            ]
+  let truereplies                         = "Red West Control Center";
+  
   const OpenReplay = () => {
-    setOpenm(!openm);
+    setOpenm(true);
   };
   const OpenBack = () => {
     setOpen(!setOpen);
   };
-
-
-
-
+  const OpenCancel = () => {
+    setOpenm(false);
+    setmessage("");
+  };
+  
   const handleSubmit = (e) => {
     // { for krista message Flow 1.7" },
     if (episodeone === "voicemail1.8.1") {
@@ -53,64 +56,127 @@ export default function ChatReply({
         setReplyMessages([
           ...replyMessages,
           { person: "Me", chat: message },
-          { person: "Krista", chat: replies },
         ]);
-        // setrigthreply(true);
-        console.log("yeahhmessage");
-        if (episodeone === "voicemail1.8.1") {
-          setEpisodeOne("replyflow1.8");
-        }
-        console.log("message:", episodeone);
-      } else {
-        setReplyMessages([
+        setTimeout(function() {
+           setReplyMessages([
           ...replyMessages,
           { person: "Me", chat: message },
           { person: "Krista", chat: replies },
         ]);
-        console.log("wrong message");
+        
+        encryptStorage.removeItem(`chat-storage-${person.toLowerCase()}`);
+        encryptStorage.setItem(`chat-storage-${person.toLowerCase()}`, [...replyMessages, { person: "Me", chat: message }, { person: "Krista", chat: replies }]);
+          
+        if (episodeone === "voicemail1.8.1") {
+          setEpisodeOne("Flow1.8");
+        }
+      
+        }, 2000);
+      
+
+
+      } else {
+
+          setReplyMessages([
+            ...replyMessages,
+            { person: "Me", chat: message },
+          
+          ]);
+        
+        setTimeout(function() {
+
+          setReplyMessages([
+            ...replyMessages,
+            { person: "Me", chat: message },
+            { person: "Krista", chat: replies },
+          ]);
+          encryptStorage.removeItem(`chat-storage-krista`);
+          encryptStorage.setItem(`chat-storage-krista`, [...replyMessages, { person: "Me", chat: message }, { person: "Krista", chat: replies }]);
+        }, 2000);
+      
+
       }
       setmessage("");
     }
-
+    
     // { for Themothee message Flow 1.10" },
 
-    if (episodeone === "Flow1.10.1") {
+    if (
+      episodeone === "Flow1.10.1" ||
+      episodeone === "Flow1.12" ||
+      episodeone == "Flow1.11"
+    ) {
       if (message.toLowerCase() === "yes".toLowerCase()) {
         setReplyMessages([
           ...replyMessages,
           { person: "Me", chat: message },
-          { person: "Timothee", chat: "You're safe in your own private IDAHO" },
         ]);
-        setrigthreply(true);
-        console.log("yeahhmessage");
-
+        setTimeout(function () {
+          setrigthreply(true);
+          setReplyMessages([
+            ...replyMessages,
+            { person: "Me", chat: message },
+            {
+              person: "Timothee HR",
+              chat: "You're safe in your own private IDAHO",
+            },
+          ]);
+        }, 1000);
+        encryptStorage.removeItem(`chat-storage-timothee`);
+        encryptStorage.setItem(`chat-storage-timothee`, [...replyMessages, { person: "Me", chat: message }, { person: "Timothee HR", chat: "You're safe in your own private IDAHO" }]);
         if (episodeone === "Flow1.10.1") {
           setEpisodeOne("Flow1.11");
         }
-        console.log("message:", episodeone);
+      
       } else {
+
         setReplyMessages([
           ...replyMessages,
           { person: "Me", chat: message },
-          { person: "Timothee", chat: "Jusy say YES, J" },
         ]);
-        console.log("wrong message");
+
+        setTimeout(function() {
+          setReplyMessages([
+          ...replyMessages,
+          { person: "Me", chat: message },
+          { person: "Timothee HR", chat: "Jusy say YES, J" },
+        ]);
+     
+        }, 1000);
+        encryptStorage.removeItem(`chat-storage-timothee`);
+        encryptStorage.setItem(`chat-storage-timothee`, [...replyMessages, { person: "Me", chat: message }, { person: "Timothee HR", chat: 'Jusy say YES, J' }]);
       }
     }
     setmessage("");
   };
 
+  useEffect(() => {
+    containerRef.current.scrollTop = containerRef.current.scrollHeight;
+  }, [handleSubmit]);
+  
+  useEffect(()=>{
+    if(person === 'Krista'){
+      let autoSaveChat = encryptStorage.getItem("chat-storage-krista");
+      if(autoSaveChat !== undefined) {
+        setReplyMessages(autoSaveChat);
+      }
+    }
+    if(person === 'Timothee HR'){
+      let autoSaveChat = encryptStorage.getItem("chat-storage-timothee");
+      if(autoSaveChat !== undefined) {
+        setReplyMessages(autoSaveChat);
+      }
+    }
+
+  },[]);
+  
   return (
     <div id="pda-base-chat-reply">
-      <div className="base-chat-reply-container">
+      <div ref={containerRef} className="base-chat-reply-container">
         <div className="chat-info-container">
           <ChatInfo
-            person={episodeone == "Flow1.10.1"||episodeone == "Flow1.11"? "Timothee" : "Krista"}
-            chat={
-              episodeone == "Flow1.10.1"||episodeone == "Flow1.11"
-                ? "Waiting on your"
-                : "Where are you n.."
-            }
+            person={person}
+            chat={chat}
             episodeone={episodeone}
             rigthreply={rigthreply}
           />
@@ -119,11 +185,11 @@ export default function ChatReply({
           ))}
         </div>
 
-        { rigthreply?
-        <div classname="image-reply d-flex justify-content-between align-items-center">
+        {rigthreply ? (
+          <div classname="image-reply d-flex justify-content-between align-items-center">
             <div className="imageyes d-flex justify-content-center align-items-center "></div>
           </div>
-          :null}
+        ) : null}
       </div>
 
       <div className="d-flex justify-content-center txt-area-container mt-3">
@@ -140,14 +206,11 @@ export default function ChatReply({
               onChange={(e) => setmessage(e.target.value)}
               placeholder="text message"
             />
-            {/* <div>
-                 <button type="submit"  className="btn-send d-flex justify-content-center align-items-center px-3">Send</button>
-              </div> */}
           </form>
         ) : null}
       </div>
       <div className="btn-container">
-        <div className="d-flex justify-content-around">
+        <div className="button-container d-flex justify-content-between">
           <div
             className="btn-back d-flex justify-content-center align-items-center px-3"
             type={openm ? "submit" : "button"}
@@ -156,17 +219,22 @@ export default function ChatReply({
             {openm ? "Send" : "Back"}
           </div>
           <div
-            className="btn-reply d-flex justify-content-center align-items-center px-3"
+            className={`${
+              openm ? "unactive" : "btn-reply"
+            } d-flex justify-content-center align-items-center px-3`}
             type="button"
             onClick={OpenReplay}
           >
             Reply
           </div>
           <div
-            className="btn-delete d-flex justify-content-center align-items-center px-3"
+            className={`${
+              openm ? "btn-reply " : "unactive"
+            } d-flex justify-content-center align-items-center px-3`}
             type="button"
+            onClick={OpenCancel}
           >
-            Delete
+            {openm ? "Cancel" : "Delete"}
           </div>
         </div>
       </div>

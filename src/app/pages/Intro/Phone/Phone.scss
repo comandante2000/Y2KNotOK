@@ -67,17 +67,17 @@
   }
   .phone-container{
     //height: 35vh;
-    height: 625px;
+    height: 477px;
     width: 100%;
     //margin-top: 153px;
   }
   .redwest-logo-container{
   }
   .redwest-logo{
-    background-position: center;
-    background-image: url("https://images.stinkyfruit.com/Red_west_logo.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    //background-position: center;
+    //background-image: url("https://images.stinkyfruit.com/Red_west_logo.svg");
+    //background-size: cover;
+    //background-repeat: no-repeat;
     height: 29px;
     width: 307px;
   }
@@ -162,7 +162,7 @@
   #pda-phone-screen{
     .phone-container{
       margin-top: 19px;
-      height: 55vh;
+      height: 48vh;
       .keypad-row-one{
         margin-bottom: 5px;
       }
@@ -175,17 +175,24 @@
     }
     .redwest-btn-one{
       margin-right: 2.5px;
+      width: 100%;
     }
     .redwest-btn-two{
       margin-left: 2.5px;
       margin-right: 2.5px;
+      width: 100%;
     }
     .redwest-btn-three{
       margin-left: 2.5px;
+      width: 100%;
     }
     .btn-call-container{
       margin-top: 30px;
       padding-right: 19px;
+    }
+    .redwest-keypad-container{
+      width: 100%;
+      padding: 0px 10px
     }
   }
 }

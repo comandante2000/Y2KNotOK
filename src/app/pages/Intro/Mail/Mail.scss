@@ -29,6 +29,7 @@
     -o-border-radius: 4px;
     height: 99.5%;
     overflow: hidden;
+    position: relative;
     .mail-container{
       padding-left: 10px;
       padding-right: 10px;
@@ -65,6 +66,17 @@
       }
     }
   }
+  .mail-child-container{
+    border-top: 3px solid black;
+  }
+  .mail-border{
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+  }
+  //.mail-container div:nth-child(26){
+  //  border-bottom: 3px solid black;
+  //}
   .unvoiceplay{
     background-color: #47b9b2;
   }
@@ -119,7 +131,7 @@
       height: initial;
       overflow: hidden;
       .mail-container{
-        height: 40vh;
+        height: calc(93vh - 420px);
       }
     }
     .inner-row-right {

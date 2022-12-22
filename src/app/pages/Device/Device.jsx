@@ -8,12 +8,12 @@ import PhonePage from "../Intro/Phone/Phone";
 import MailPage from "../Intro/Mail/Mail";
 import VoiceMailPage from "../Intro/VoiceMail/VoiceMailPage";
 import MapPage from "../Intro/Map/Map";
-import Boot from "../Screen/Boot/Boot";
+
 export default function Device() {
   const [screen, showScreen] = useState("HomeScreen");
   const [press, setpress] = useState(0); //to make the button unclikable must click next
   const [episodeone, setEpisodeOne] = useState("notallowed");
-
+  
   return (
     <div id="pda-device">
       <div className="container v2 d-flex justify-content-center gx-0 gy-0">
@@ -47,6 +47,9 @@ export default function Device() {
           />
         </div>
       </div>
+      <audio autoPlay loop>
+        <source src="https://images.stinkyfruit.com/audio_bed_ambience_mp3.mp3" type="audio/wav" />
+      </audio>
     </div>
   );
 }

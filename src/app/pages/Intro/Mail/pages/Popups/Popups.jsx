@@ -6,6 +6,7 @@ export default function PopUps({
   video,
   setEpisodeOne,
   episodeone,
+  setOpenMail,
 }) {
   const [videoTime, setVideoTime] = useState(0);
   let audio = "https://images.stinkyfruit.com/HR_Timothee-V-0103.mp4";
@@ -38,6 +39,7 @@ export default function PopUps({
 
   const DonePlaying = () => {
     setOpenvideo(false);
+    setOpenMail(false);
     if (
       episodeone == "allow" ||
       episodeone == "allowed" ||
@@ -64,7 +66,7 @@ export default function PopUps({
             >Close</div>
             <div className="x-button" type="button" onClick={DonePlaying}>X</div>
           </div>
-          <div class=" text-center align-items-center d-flex justify-content-center">
+          <div className=" text-center align-items-center d-flex justify-content-center">
             <div className="video-container d-flex flex-column">
               <div>
                 <video

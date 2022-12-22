@@ -1,5 +1,6 @@
 import "./Mail.scss";
 import { useState, useEffect } from "react";
+
 export default function MailButton({
   showScreen,
   setActive,
@@ -8,10 +9,7 @@ export default function MailButton({
   episodeone,
   setEpisodeOne,
 }) {
-  const [mail, setmail] = useState(false);
   const [btnclick, setbtnclick] = useState(0);
-
-  const handleButtonGlowing = () => {};
 
   const handleClick = () => {
     showScreen("MailScreen");
@@ -33,8 +31,7 @@ export default function MailButton({
     });
   };
 
-  console.log(episodeone, ":accelemal");
-  console.log(btnclick, ":btn");
+
   return (
     <div id="mail-button">
       {episodeone == "allow" ? (

@@ -1,5 +1,5 @@
 import "./Map.scss";
-import { useState, useEffect } from "react";
+
 export default function MapButton({
   showScreen,
   setActive,
@@ -18,7 +18,7 @@ export default function MapButton({
       setEpisodeOne("Flow1.12");
     }
   };
-
+  
   return (
     <div id="map-button">
       <div

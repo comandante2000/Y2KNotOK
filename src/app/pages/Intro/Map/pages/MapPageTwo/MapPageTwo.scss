@@ -1,12 +1,13 @@
 #map-pagetwo-screen {
   .image {
     .Mappagetwo {
-      background-image: url("https://images.stinkyfruit.com/maptwo.svg");
+      background-image: url("https://images.stinkyfruit.com/Map_2_zoom_in.svg");
+      //background-image: url("https://images.stinkyfruit.com/maptwo.svg");
       background-position: center;
       background-repeat: no-repeat;
-      height: 632.5px;
+      height: 578.5px;
       width: 100%;
-      margin-top: -118px;
+      margin-top: -64px;
       background-blend-mode: darken;
       background-size: 383px;
       background-size: cover;
@@ -51,8 +52,24 @@
       background-size: contain;
     }
   }
+  // .zoomout {
+  //   background-image: url("https://images.stinkyfruit.com/ZoomIn.svg");
+  //   background-repeat: no-repeat;
+  //   height: 65px;
+  //   width: 38px;
+  //   margin-top: -90px;
+  //   margin-left: 30px;
+  // }
   .zoomout {
-    background-image: url("https://images.stinkyfruit.com/ZoomIn.svg");
+    background-image: url("https://images.stinkyfruit.com/active_minus_icon.svg");
+    background-repeat: no-repeat;
+    height: 34px;
+    width: 38px;
+    margin-top: -36px;
+    margin-left: 30px;
+  }
+  .unzoomout {
+    background-image: url("https://images.stinkyfruit.com/inactive_plus_icon.svg");
     background-repeat: no-repeat;
     height: 65px;
     width: 38px;

@@ -10,6 +10,10 @@
       height: 208px;
       width: 258px;
       background-position: center;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
     }
     .video-pop {
       background-position: center;
@@ -115,12 +119,14 @@
       height: 5px;
       width: 14;
     }
-    @media (max-width: 575.98px) {
-      .pda-boot-container {
-        height: 70vh;
-        .voice-pop-ups {
-          position: relative;
-        }
+  }
+  @media (max-width: 575.98px) {
+    .pda-boot-container {
+      position: static;
+      left: 50%;
+      top: 50%;
+      height: 100vh;
+      .voice-pop-ups {
       }
     }
   }

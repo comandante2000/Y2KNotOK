@@ -1,6 +1,5 @@
 import "./BaseChat.scss";
-export default function BaseChat({ person, chat, episodeone }) {
-  // admin@redwest.com
+export default function BaseChat({ person, chat, episodeone, listchat,date }) {
 
   return (
     <div id="pda-base-chat">
@@ -8,8 +7,8 @@ export default function BaseChat({ person, chat, episodeone }) {
         <div className="icon-container d-flex align-items-center">
           <div
             className={
-              episodeone == "voicemail1.8" || episodeone == "Flow1.10.1"
-                ? "red-icon"
+              listchat.episodeone == episodeone 
+                ? "blink-red-icon"
                 : "unred-icon"
             }
           ></div>
@@ -18,7 +17,7 @@ export default function BaseChat({ person, chat, episodeone }) {
         <div className="info-container me-3 m-auto">
           <div className="d-flex w-100">
             <div className="person-name w-50">{person}</div>
-            <div className="w-50 chat-date text-end">12/30</div>
+            <div className="w-50 chat-date text-end">{date}</div>
           </div>
           <div>
             <div className="person-chat">{chat}</div>

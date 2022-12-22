@@ -1,4 +1,5 @@
 #mail-screen-one {
+  position: relative;
   .screen-dash {
     height: 38px;
     margin-top: 13px;
@@ -17,6 +18,13 @@
       background-position: center;
       .text-email {
         color: #47b9b2;
+        text-align: center;
+        font-size: 21px;
+        text-transform: uppercase;
+        font-family: "Palm OS";
+      }
+      .overlay-text-email{
+        color: rgb(48, 132, 132);
         text-align: center;
         font-size: 21px;
         text-transform: uppercase;
@@ -58,6 +66,10 @@
         .text-email {
           font-size: 24px;
           text-align: center;
+        }
+        .overlay-text-email {
+          color: rgb(48, 132, 132);
+          font-size: 24px;
         }
       }
       .logo{
