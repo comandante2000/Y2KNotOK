@@ -38,7 +38,7 @@ export default function ChatReply({person, chat, setOpen, setEpisodeOne, episode
                                              {flow: '', reply: 'Oxbow Dam Power Station'},
                                             ]
   let truereplies                         = "Red West Control Center";
-  
+ 
   const OpenReplay = () => {
     setOpenm(true);
   };
@@ -62,7 +62,7 @@ export default function ChatReply({person, chat, setOpen, setEpisodeOne, episode
            setReplyMessages([
           ...replyMessages,
           { person: "Me", chat: message },
-          { person: "Krista", chat: replies },
+          { person: "Krista", chat: "Don't tell anyone else.We need to keep you safe"},
         ]);
         
         encryptStorage.removeItem(`chat-storage-${person.toLowerCase()}`);
@@ -110,16 +110,19 @@ export default function ChatReply({person, chat, setOpen, setEpisodeOne, episode
       if (message.toLowerCase() === "yes".toLowerCase()) {
         setReplyMessages([
           ...replyMessages,
-          { person: "Me", chat: message },
+          { person: "Me", chat: message ,time:1 },
         ]);
         setTimeout(function () {
+          if (episodeone === "Flow1.10.1") {
+            setEpisodeOne("Flow1.11");
+          }
           setrigthreply(true);
           setReplyMessages([
             ...replyMessages,
-            { person: "Me", chat: message },
+            { person: "Me", chat: message ,time:1},
             {
               person: "Timothee HR",
-              chat: "You're safe in your own private IDAHO",
+              chat: "You're safe in your own private IDAHO",time:1
             },
           ]);
         }, 3000);
@@ -129,22 +132,20 @@ export default function ChatReply({person, chat, setOpen, setEpisodeOne, episode
        
         encryptStorage.removeItem(`chat-storage-timothee`);
         encryptStorage.setItem(`chat-storage-timothee`, [...replyMessages, { person: "Me", chat: message }, { person: "Timothee HR", chat: "You're safe in your own private IDAHO" }]);
-        if (episodeone === "Flow1.10.1") {
-          setEpisodeOne("Flow1.11");
-        }
+       
       
       } else {
 
         setReplyMessages([
           ...replyMessages,
-          { person: "Me", chat: message },
+          { person: "Me", chat: message ,time:1},
         ]);
 
         setTimeout(function() {
           setReplyMessages([
           ...replyMessages,
-          { person: "Me", chat: message },
-          { person: "Timothee HR", chat: "Jusy say YES, J" },
+          { person: "Me", chat: message,time:1 },
+          { person: "Timothee HR", chat: "Jusy say YES, J" ,time:1},
         ]);
     
         }, 3000);
@@ -190,7 +191,7 @@ export default function ChatReply({person, chat, setOpen, setEpisodeOne, episode
             rigthreply={rigthreply}
           />
           {replyMessages.map((reply, index) => (
-            <ChatInfo person={reply.person} chat={reply.chat} />
+            <ChatInfo person={reply.person} chat={reply.chat} time={reply.time}/>
           ))}
         </div>
 

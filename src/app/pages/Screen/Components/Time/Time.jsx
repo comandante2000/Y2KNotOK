@@ -12,7 +12,7 @@ export default function Time({open, openMail,time}) {
           <div className="time">
             <div className="d-flex justify-content-center clock">
                 <p className={open || openMail ? "overlay-date-time" : "date-time"}>
-                 {time}
+                 Tuesday {time}
                 </p>
             </div>
           </div>

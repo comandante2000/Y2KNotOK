@@ -16,7 +16,7 @@ export default function Buttons({
 }) {
   const [active, setActive] = useState("");
 
-  console.log("epssss:",episodeone);
+ 
   return (
     <div id="pda-buttons">
       <div className=" row-1 d-flex justify-content-center">

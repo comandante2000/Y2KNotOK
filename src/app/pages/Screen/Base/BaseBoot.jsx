@@ -24,7 +24,7 @@ export default function BaseBoot({ press, setpress, dtime, setNewuser }) {
   //   setpress(6)
   // }
   //Cookies for Flow 1.3
-  console.log(press, "fhghfh");
+ 
   return (
     <div id="pda-boot-intro-screen">
       <div className="boot-background">
