@@ -9,7 +9,8 @@ import MailPage from "../Intro/Mail/Mail";
 import VoiceMailPage from "../Intro/VoiceMail/VoiceMailPage";
 import MapPage from "../Intro/Map/Map";
 import Cookies from "js-cookie";
-export default function Device({ newuser }) {
+import OutroVideo from "../Screen/Outrovideo/Outrovideo";
+export default function Device({ newuser ,SetVideo ,setNewuser}) {
   const [screen, showScreen] = useState("HomeScreen");
   const [press, setpress] = useState(0); //to make the button unclikable must click next
   const [episodeone, setEpisodeOne] = useState("notallowed");
@@ -24,6 +25,8 @@ export default function Device({ newuser }) {
     }
     if (episodeone === "Flow1.12") {
       setTime("Monday 6:35 AM");
+      SetVideo("Episode2");
+    
     }
   });
   
@@ -37,7 +40,7 @@ export default function Device({ newuser }) {
       if (Intro == "Flow1.3done"){
         setpress(8);
       }
-    
+
   });
 //cookies
 
@@ -82,6 +85,7 @@ export default function Device({ newuser }) {
             />
           )}
           {screen === "PhoneScreen" && <PhonePage dtime={dtime} />}
+          {screen === "Episode2" && <OutroVideo />}
           <Buttons
             showScreen={showScreen}
             press={press}

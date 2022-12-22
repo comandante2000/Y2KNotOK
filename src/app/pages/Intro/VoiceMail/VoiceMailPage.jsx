@@ -371,7 +371,12 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
             {" "}
             {messages.map((message, index) => (
               <div key={index} className="box-container">
-                <div className=" d-flex py-0 new-voice-mail-container">
+                <div className=" d-flex py-0 new-voice-mail-container" type="button"
+                        onClick={
+                          message.clickable
+                            ? () => OpenMessage(message.videolink)
+                            : null
+                        }>
                   <div className="icon-container d-flex align-items-center">
                     <div
                       className={
@@ -385,8 +390,8 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
                     ></div>
                     <div className="voice-icon "></div>
                   </div>
-                  <div className="info-container me-3 m-auto">
-                    <div className="d-flex w-100">
+                  <div className="info-container me-3 m-auto" >
+                    <div className="d-flex w-100" >
                       <div className="email-name w-50">{message.name}</div>
                       <div className="voice-date w-50 text-end">
                         {message.date}
@@ -395,12 +400,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
                     <div className="d-flex w-100 align-items-center">
                       <div
                         className="play-icon"
-                        type="button"
-                        onClick={
-                          message.clickable
-                            ? () => OpenMessage(message.videolink)
-                            : null
-                        }
+                        
                       ></div>
                       <div
                         className={`sound-icon ${message.wavelenghtClass}`}
