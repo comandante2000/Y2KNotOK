@@ -29,7 +29,7 @@ export default function BootAccept({instruction , setpress }) {
           <div className="image-popup align-self-center">
             <div className="centered d-flex flex-column align-items-center  justify-content-center">
               <p className="Popup-Title d-flex justify-content-center px-1"></p>
-              <p className="popup-text text-center fw-bold">
+              <p className="popup-text text-center">
                 Before you BEGIN:
               </p>
               <p className="instruction-text text-center">
