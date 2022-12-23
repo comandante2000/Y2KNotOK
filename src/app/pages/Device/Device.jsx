@@ -30,11 +30,11 @@ export default function Device({ newuser ,SetVideo ,setNewuser}) {
     if (episodeone === "Flow1.11") {
       setTime("6:25 AM");
     }
-    if (episodeone === "Flow1.12") {
+    if (episodeone === "Flow1.11") {
       setTime("6:35 AM");
       setTimeout(function() {
       SetVideo("Episode2");
-      }, 3000);
+      }, 5000);
     }
   });
   

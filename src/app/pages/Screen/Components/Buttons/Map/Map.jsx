@@ -23,7 +23,7 @@ export default function MapButton({
     <div id="map-button">
       <div
         className={`button-5 ${color == "map" ? "red" : "black"} ${
-          episodeone == "Flow1.9" || episodeone == "Flow1.11"
+          episodeone == "Flow1.9" 
             ? "button-glow"
             : null
         }`}
