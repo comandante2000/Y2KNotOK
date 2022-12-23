@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
   const [open, setOpen] = useState(false);
   const [videoURI, setVideoURI] = useState("");
-  console.log(episodeone)
+
   const [messages, setMessages] = useState([
     {
       name: "Timothee HR",
@@ -16,6 +16,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
       clickable: true,
       wavelenghtClass: "sound-one",
       videolink: "https://images.stinkyfruit.com/HR_Timothee-V-0103.mp4",
+      blinking: true,
     },
     {
       name: "Krista",
@@ -24,6 +25,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
       clickable: false,
       wavelenghtClass: "sound-two",
       videolink: "",
+      blinking: false,
     },
     {
       name: "Mom",
@@ -32,6 +34,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
       clickable: false,
       wavelenghtClass: "sound-three",
       videolink: "",
+      blinking: false,
     },
     {
       name: "Mateo",
@@ -40,6 +43,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
       clickable: false,
       wavelenghtClass: "sound-four",
       videolink: "",
+      blinking: false,
     },
     {
       name: "Mom",
@@ -48,6 +52,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
       clickable: false,
       wavelenghtClass: "sound-five",
       videolink: "",
+      blinking: false,
     },
     {
       name: "Krista",
@@ -56,6 +61,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
       clickable: false,
       wavelenghtClass: "sound-six",
       videolink: "",
+      blinking: false,
     },
     {
       name: "Finn",
@@ -64,6 +70,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
       clickable: false,
       wavelenghtClass: "sound-one",
       videolink: "",
+      blinking: false,
     },
     {
       name: "Mom",
@@ -72,6 +79,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
       clickable: false,
       wavelenghtClass: "sound-five",
       videolink: "",
+      blinking: false,
     },
     {
       name: "Steve",
@@ -80,6 +88,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
       clickable: false,
       wavelenghtClass: "sound-one",
       videolink: "",
+      blinking: false,
     },
     {
       name: "Finn",
@@ -88,6 +97,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
       clickable: false,
       wavelenghtClass: "sound-one",
       videolink: "",
+      blinking: false,
     },
     {
       name: "Syvlie",
@@ -96,6 +106,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
       clickable: false,
       wavelenghtClass: "sound-one",
       videolink: "",
+      blinking: false,
     },
     {
       name: "Krista",
@@ -104,6 +115,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
       clickable: false,
       wavelenghtClass: "sound-six",
       videolink: "",
+      blinking: false,
     },
     {
       name: "Mom",
@@ -112,12 +124,14 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
       clickable: false,
       wavelenghtClass: "sound-five",
       videolink: "",
+      blinking: false,
     },
   ]);
 
-  const OpenMessage = (videolink) => {
+  const OpenMessage = (videolink, index) => {
     setVideoURI(videolink);
     setOpen(true);
+    messages[index].blinking = false;
   };
 
   useEffect(() => {
@@ -130,6 +144,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
           clickable: true,
           wavelenghtClass: "sound-one",
           videolink: "https://images.stinkyfruit.com/voice1_6.mp4",
+          blinking: true,
         },
         {
           name: "Timothee HR",
@@ -138,6 +153,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
           clickable: true,
           wavelenghtClass: "sound-one",
           videolink: "https://images.stinkyfruit.com/HR_Timothee-V-0103.mp4",
+          blinking: false,
         },
         {
           name: "Krista",
@@ -146,6 +162,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
           clickable: false,
           wavelenghtClass: "sound-six",
           videolink: "",
+          blinking: false,
         },
         {
           name: "Mateo",
@@ -154,6 +171,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
           clickable: false,
           wavelenghtClass: "sound-one",
           videolink: "",
+          blinking: false,
         },
         {
           name: "Mom",
@@ -162,6 +180,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
           clickable: false,
           wavelenghtClass: "sound-five",
           videolink: "",
+          blinking: false,
         },
         {
           name: "Krista",
@@ -170,6 +189,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
           clickable: false,
           wavelenghtClass: "sound-six",
           videolink: "",
+          blinking: false,
         },
         {
           name: "Finn",
@@ -178,6 +198,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
           clickable: false,
           wavelenghtClass: "sound-one",
           videolink: "",
+          blinking: false,
         },
         {
           name: "Mom",
@@ -186,6 +207,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
           clickable: false,
           wavelenghtClass: "sound-one",
           videolink: "",
+          blinking: false,
         },
         {
           name: "Steve",
@@ -194,6 +216,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
           clickable: false,
           wavelenghtClass: "sound-one",
           videolink: "",
+          blinking: false,
         },
         {
           name: "Finn",
@@ -202,6 +225,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
           clickable: false,
           wavelenghtClass: "sound-one",
           videolink: "",
+          blinking: false,
         },
         {
           name: "Syvlie",
@@ -210,6 +234,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
           clickable: false,
           wavelenghtClass: "sound-one",
           videolink: "",
+          blinking: false,
         },
         {
           name: "Krista",
@@ -218,6 +243,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
           clickable: false,
           wavelenghtClass: "sound-six",
           videolink: "",
+          blinking: false,
         },
         {
           name: "Mom",
@@ -226,6 +252,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
           clickable: false,
           wavelenghtClass: "sound-five",
           videolink: "",
+          blinking: false,
         },
       ]);
     }
@@ -249,6 +276,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
           clickable: true,
           wavelenghtClass: "sound-five",
           videolink: "https://images.stinkyfruit.com/Mom1_8.mp4",
+          blinking: true,
         },
         {
           name: "Timothee HR",
@@ -257,6 +285,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
           clickable: true,
           wavelenghtClass: "sound-one",
           videolink: "https://images.stinkyfruit.com/voice1_6.mp4",
+          blinking: false,
         },
         {
           name: "Timothee HR",
@@ -265,6 +294,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
           clickable: true,
           wavelenghtClass: "sound-one",
           videolink: "https://images.stinkyfruit.com/HR_Timothee-V-0103.mp4",
+          blinking: false,
         },
         {
           name: "Krista",
@@ -273,6 +303,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
           clickable: false,
           wavelenghtClass: "sound-six",
           videolink: "",
+          blinking: false,
         },
         {
           name: "Mateo",
@@ -281,6 +312,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
           clickable: false,
           wavelenghtClass: "sound-one",
           videolink: "",
+          blinking: false,
         },
         {
           name: "Mom",
@@ -289,6 +321,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
           clickable: false,
           wavelenghtClass: "sound-five",
           videolink: "",
+          blinking: false,
         },
         {
           name: "Krista",
@@ -297,6 +330,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
           clickable: false,
           wavelenghtClass: "sound-six",
           videolink: "",
+          blinking: false,
         },
         {
           name: "Finn",
@@ -305,6 +339,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
           clickable: false,
           wavelenghtClass: "sound-one",
           videolink: "",
+          blinking: false,
         },
         {
           name: "Mom",
@@ -313,6 +348,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
           clickable: false,
           wavelenghtClass: "sound-one",
           videolink: "",
+          blinking: false,
         },
         {
           name: "Steve",
@@ -321,6 +357,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
           clickable: false,
           wavelenghtClass: "sound-one",
           videolink: "",
+          blinking: false,
         },
         {
           name: "Finn",
@@ -329,6 +366,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
           clickable: false,
           wavelenghtClass: "sound-one",
           videolink: "",
+          blinking: false,
         },
         {
           name: "Syvlie",
@@ -337,6 +375,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
           clickable: false,
           wavelenghtClass: "sound-one",
           videolink: "",
+          blinking: false,
         },
         {
           name: "Krista",
@@ -345,6 +384,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
           clickable: false,
           wavelenghtClass: "sound-six",
           videolink: "",
+          blinking: false,
         },
         {
           name: "Mom",
@@ -353,6 +393,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
           clickable: false,
           wavelenghtClass: "sound-five",
           videolink: "",
+          blinking: false,
         },
       ]);
     }
@@ -374,19 +415,20 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
                 <div className=" d-flex py-0 new-voice-mail-container" type={message.clickable?"button":"text"}
                         onClick={
                           message.clickable
-                            ? () => OpenMessage(message.videolink)
+                            ? () => OpenMessage(message.videolink, index)
                             : null
                         }>
                   <div className="icon-container d-flex align-items-center">
                     <div
-                      className={
-                        message.name === "Timothee HR" &&
-                        episodeone === "notallowed"
-                          ? "blink-red-icon"
-                          : message.episodeone === episodeone
-                          ? "blink-red-icon"
-                          : "unred-icon"
-                      }
+                      // className={
+                      //   message.name === "Timothee HR" &&
+                      //   episodeone === "notallowed"
+                      //     ? "blink-red-icon"
+                      //     : message.episodeone === episodeone
+                      //     ? "blink-red-icon"
+                      //     : "unred-icon"
+                      // }
+                      className={message.blinking ? "blink-red-icon" : "unred-icon"}
                     ></div>
                     <div className="voice-icon "></div>
                   </div>
