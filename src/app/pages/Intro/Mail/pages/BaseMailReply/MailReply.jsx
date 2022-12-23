@@ -68,7 +68,7 @@ SetVideo("Episode2");
           </div>
         </div>
         <div className="d-flex justify-content-start px-4 reply-mail">
-          LISTEN
+         {yes?"":"LISTEN"}
         </div>
 
        {yes? <div className="question d-flex flex-column justify-content-center align-items-center border border-dark ">
@@ -86,7 +86,7 @@ SetVideo("Episode2");
       <div className="box-container mt-4  border-top-4" type="button" onClick={yes?null:Openvideo}>
           <div className="d-flex justify-content-center align-items-center ">
             <div className="clip px-1"></div>
-            <div className="attachment px-2"> Attachment</div>
+            <div className={`${yes?"noattachment":"attachment"} px-2`}>{ yes?"No Attachment":"Attachment"}</div>
           </div>
         </div>
         <div className="d-flex justify-content-between btn-container">

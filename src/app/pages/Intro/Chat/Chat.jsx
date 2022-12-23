@@ -101,7 +101,7 @@ export default function ChatPage({ episodeone, setEpisodeOne,dtime }) {
                 {listchat.map((listchat, index) => (
                     <div className="child-border"
                         key={listchat.id}
-                  type="button"
+                  type={listchat.clickable ?"button": "text"}
                         onClick={
                           listchat.clickable
                               ? () => OpenMessage(listchat.name, listchat.fulltext)

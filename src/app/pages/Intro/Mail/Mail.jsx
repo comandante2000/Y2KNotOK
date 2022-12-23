@@ -580,7 +580,7 @@ export default function MailPage({ episodeone, setEpisodeOne,dtime ,SetVideo}) {
                     {listmail.map((listmail, index) => (
                         <div key={index} className="">
                           <div className="mail-border"
-                              type="button"
+                              type={listmail.clickable ?"button": "text"}
                               onClick={listmail.clickable ? OpenMessage : null}
                           >
                             <MailBase
@@ -590,6 +590,7 @@ export default function MailPage({ episodeone, setEpisodeOne,dtime ,SetVideo}) {
                                 subjects={listmail.subject}
                                 listmail={listmail}
                                 date={listmail.date}
+                              
                             />
                           </div>
                         </div>
