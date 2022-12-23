@@ -159,10 +159,12 @@ export default function ChatReply({
       episodeone == "Flow1.11"
     ) {
       if (message.toLowerCase() === "yes".toLowerCase()) {
+        
         setReplyMessages([
           ...replyMessages,
           { person: "Me", chat: message, time: 1 },
         ]);
+        
         setTimeout(function () {
           if (episodeone === "Flow1.10.1") {
             setEpisodeOne("Flow1.11");
@@ -178,6 +180,7 @@ export default function ChatReply({
             },
           ]);
         }, 3000);
+        
         setTimeout(function () {
           setrigthreply2(true);
         }, 4000);
@@ -191,6 +194,11 @@ export default function ChatReply({
             chat: "You're safe in your own private IDAHO",
           },
         ]);
+        encryptStorage.removeItem(`chat-storage-timothee-right-reply`);
+        encryptStorage.setItem(`chat-storage-timothee-right-reply`, true);
+        encryptStorage.removeItem(`chat-storage-timothee-right-reply-2`);
+        encryptStorage.setItem(`chat-storage-timothee-right-reply-2`, true);
+        
       } else {
         setReplyMessages([
           ...replyMessages,
@@ -229,7 +237,15 @@ export default function ChatReply({
     }
     if (person === "Timothee HR") {
       let autoSaveChat = encryptStorage.getItem("chat-storage-timothee");
+      let rigthreply1  = encryptStorage.getItem("chat-storage-timothee-right-reply");
+      let rigthreply2  = encryptStorage.getItem("chat-storage-timothee-right-reply-2");
       if (autoSaveChat !== undefined) {
+        if(rigthreply1){
+          setrigthreply(true)
+        }
+        if(rigthreply2){
+          setrigthreply2(true)
+        }
         setReplyMessages(autoSaveChat);
       }
     }
@@ -266,6 +282,7 @@ export default function ChatReply({
             chat={" ALSO, TRUST ME, YOU CAN’T TRUST KRISTA"}
           />
         ) : null}
+        
       </div>
 
       <div className="d-flex justify-content-center txt-area-container mt-3">
