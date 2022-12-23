@@ -8,9 +8,14 @@ $urls: srcs("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/");
 }
 
 @font-face {
-  font-family: "EuroStyle";
-  src: url("../assets/fonts/EuroStyle.ttf");
+  font-family: 'EuroStyle';
+  src: url('../assets/fonts/EUROS3.ttf');
 }
+
+//@font-face {
+//  font-family: "EuroStyle";
+//  src: url('../assets/fonts/EuroStyle-Normal.ttf');
+//}
 
 .fadeInOutApp {
   // box-shadow: inset 0 0 0 2000px rgb(24 24 24);
