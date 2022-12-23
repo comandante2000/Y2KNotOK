@@ -19,7 +19,7 @@ function createChat(id, name, subject, fulltext, episodeone, clickable, date){
   };
 }
 const chatListsInitial = [
-  createChat(1, 'Krista', 'The meeting has...', "", "", false, '12/30'),
+  createChat(1, 'Finn', 'Where are you?', "", "", false, '12/30'),
   createChat(2, 'Mateo', 'Karoake tonight?', "", "", false, '12/27'),
   createChat(3, 'Timothee HR', 'Prepare for open...', "", "", false, '12/22'),
   createChat(4, 'Mom', 'Did i do it right?', "", "", false, '12/20'),

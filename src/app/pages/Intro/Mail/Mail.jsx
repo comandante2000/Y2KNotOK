@@ -13,13 +13,7 @@ export default function MailPage({ episodeone, setEpisodeOne,dtime }) {
 
   const [openvideo, setOpenvideo] = useState(false);
   const [listmail, setListMail] = useState([
-    {
-      name: "hrtimothee@redwest.com",
-      subject: "Subject for Y2KNOTOK",
-      episodeone: "allowed",
-      clickable: false,
-      date: "12/30",
-    },
+   
     {
       name: "shirleyb5678@AOL.com",
       subject: "call me",
@@ -190,14 +184,14 @@ export default function MailPage({ episodeone, setEpisodeOne,dtime }) {
     setHide(false);
    
   
-    // if (episodeone == "allowed") {
+    if (episodeone == "allowed") {
+      setEpisodeOne("Flow1.3");
+    }
 
-    //   setEpisodeOne("Flow1.3");
-    // }
   };
-
+console.log(episodeone)
   useEffect(() => {
-    if (episodeone !== "notallowed" || episodeone !== "allow") {
+    if (episodeone !== "notallowed") {
       setListMail([
         {
           name: "hrtimothee@redwest.com",
@@ -371,7 +365,7 @@ export default function MailPage({ episodeone, setEpisodeOne,dtime }) {
         },
       ]);
     }
-  }, [episodeone]);
+  }, []);
 
   return (
     <div id="pda-mail-screen">

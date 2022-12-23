@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
   const [open, setOpen] = useState(false);
   const [videoURI, setVideoURI] = useState("");
-
+  console.log(episodeone)
   const [messages, setMessages] = useState([
     {
       name: "Timothee HR",
@@ -121,7 +121,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
   };
 
   useEffect(() => {
-    if (episodeone === "voicemail1.7") {
+    if (episodeone === "voicemail1.7"||episodeone === "voicemail1.8") {
       setMessages([
         {
           name: "Timothee HR",
@@ -371,7 +371,7 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
             {" "}
             {messages.map((message, index) => (
               <div key={index} className="box-container">
-                <div className=" d-flex py-0 new-voice-mail-container" type="button"
+                <div className=" d-flex py-0 new-voice-mail-container" type={message.clickable?"button":"text"}
                         onClick={
                           message.clickable
                             ? () => OpenMessage(message.videolink)
