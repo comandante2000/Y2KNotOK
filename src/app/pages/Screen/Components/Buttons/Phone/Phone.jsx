@@ -9,9 +9,9 @@ export default function PhoneButton({ showScreen, setActive, color, press , epis
   useEffect(() =>{
 
     if(episodeone="Flow1.12"){
-      console.log("PhoneButton");
+   
     }
-    console.log(episodeone);
+   
   })
   
   return (

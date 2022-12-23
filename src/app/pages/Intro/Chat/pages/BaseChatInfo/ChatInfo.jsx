@@ -1,7 +1,7 @@
 import "./ChatInfo.scss";
 export default function ChatInfo({ person, chat, episodeone, rigthreply ,time}) {
   // admin@redwest.com
-console.log(episodeone,"eeeeee")
+
 
   return (
     <div id="pda-base-chat-info">

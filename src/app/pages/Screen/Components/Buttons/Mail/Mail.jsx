@@ -10,19 +10,23 @@ export default function MailButton({
   setEpisodeOne,
 }) {
   const [btnclick, setbtnclick] = useState(0);
-
   const handleClick = () => {
     showScreen("MailScreen");
     setActive("mail");
+    if(episodeone == "Flow1.13"){
+      setEpisodeOne("Flow1.13.1")
+    }
   };
 
   const handleClick3 = () => {
+   
     showScreen("MailScreen");
     setActive("mail");
     setEpisodeOne("allowed");
   };
 
   const handleClick1 = () => {
+   
     showScreen("VoicemailScreen");
     setActive("voice");
     setEpisodeOne("allow");
@@ -37,7 +41,7 @@ export default function MailButton({
       {episodeone == "allow" ? (
         <div
           className={`button-2 ${color == "mail" ? "red" : "black"} ${
-            episodeone == "allowed" ? null : "button-glow"
+            episodeone == "allowed"? null : "button-glow"
           }`}
           type="button"
           name="mail"
@@ -46,7 +50,7 @@ export default function MailButton({
       ) : (
         <div
           className={`button-2 ${color == "mail" ? "red" : "black"} ${
-            episodeone == "allow" ? "button-glow" : null
+            episodeone == "allow"||episodeone == "Flow1.13"? "button-glow" : null
           }`}
           type="button"
           name="mail"

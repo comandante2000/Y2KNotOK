@@ -66,8 +66,8 @@ export default function ChatPage({ episodeone, setEpisodeOne,dtime }) {
   };
   
   useEffect(() => {
-    let change1 = ['voicemail1.8', 'voicemail1.8.1', 'Flow1.9.1', 'Flow1.9' , 'Flow1.10'];
-    let change2 = ['Flow1.10.1', 'Flow1.12'];
+    let change1 = ['voicemail1.8', 'voicemail1.8.1', 'Flow1.9.1', 'Flow1.9' , 'Flow1.10',];
+    let change2 = ['Flow1.10.1', 'Flow1.11', 'Flow1.11.1', 'Flow1.12', 'Flow1.12', 'Flow1.12.1', 'Flow1.13','Flow1.13.1'];
     
     if(change1.includes(episodeone)){
       setlistchat(chatListsChange1);

@@ -399,6 +399,148 @@ export default function VoiceMailPage({ setEpisodeOne, episodeone, dtime }) {
     }
   }, []);
 
+  useEffect(() => {
+    if (
+      
+      episodeone === "Flow1.11" ||
+      episodeone === "Flow1.12"
+      ||
+      episodeone === "Flow1.12.1"
+      ||
+      episodeone === "Flow1.13"
+      ||
+      episodeone === "Flow1.13.1"
+    ) {
+      setMessages([
+        {
+          name: "Mom",
+          date: "12/30",
+          episodeone: "Flow1.8.1",
+          clickable: true,
+          wavelenghtClass: "sound-five",
+          videolink: "https://images.stinkyfruit.com/Mom1_8.mp4",
+          blinking: false,
+        },
+        {
+          name: "Timothee HR",
+          date: "12/30",
+          episodeone: "voicemail1.7",
+          clickable: true,
+          wavelenghtClass: "sound-one",
+          videolink: "https://images.stinkyfruit.com/voice1_6.mp4",
+          blinking: false,
+        },
+        {
+          name: "Timothee HR",
+          date: "12/30",
+          episodeone: "allow",
+          clickable: true,
+          wavelenghtClass: "sound-one",
+          videolink: "https://images.stinkyfruit.com/HR_Timothee-V-0103.mp4",
+          blinking: false,
+        },
+        {
+          name: "Krista",
+          date: "12/30",
+          episodeone: "",
+          clickable: false,
+          wavelenghtClass: "sound-six",
+          videolink: "",
+          blinking: false,
+        },
+        {
+          name: "Mateo",
+          date: "12/30",
+          episodeone: "",
+          clickable: false,
+          wavelenghtClass: "sound-one",
+          videolink: "",
+          blinking: false,
+        },
+        {
+          name: "Mom",
+          date: "12/28",
+          episodeone: "",
+          clickable: false,
+          wavelenghtClass: "sound-five",
+          videolink: "",
+          blinking: false,
+        },
+        {
+          name: "Krista",
+          date: "12/27",
+          episodeone: "",
+          clickable: false,
+          wavelenghtClass: "sound-six",
+          videolink: "",
+          blinking: false,
+        },
+        {
+          name: "Finn",
+          date: "12/28",
+          episodeone: "",
+          clickable: false,
+          wavelenghtClass: "sound-one",
+          videolink: "",
+          blinking: false,
+        },
+        {
+          name: "Mom",
+          date: "12/25",
+          episodeone: "",
+          clickable: false,
+          wavelenghtClass: "sound-one",
+          videolink: "",
+          blinking: false,
+        },
+        {
+          name: "Steve",
+          date: "12/24",
+          episodeone: "",
+          clickable: false,
+          wavelenghtClass: "sound-one",
+          videolink: "",
+          blinking: false,
+        },
+        {
+          name: "Finn",
+          date: "12/22",
+          episodeone: "",
+          clickable: false,
+          wavelenghtClass: "sound-one",
+          videolink: "",
+          blinking: false,
+        },
+        {
+          name: "Syvlie",
+          date: "12/20",
+          episodeone: "",
+          clickable: false,
+          wavelenghtClass: "sound-one",
+          videolink: "",
+          blinking: false,
+        },
+        {
+          name: "Krista",
+          date: "12/18",
+          episodeone: "",
+          clickable: false,
+          wavelenghtClass: "sound-six",
+          videolink: "",
+          blinking: false,
+        },
+        {
+          name: "Mom",
+          date: "12/17",
+          episodeone: "",
+          clickable: false,
+          wavelenghtClass: "sound-five",
+          videolink: "",
+          blinking: false,
+        },
+      ]);
+    }
+  }, []);
   return (
     <div id="pda-voicemail-screen">
       <div className="row-2 d-flex justify-content-center">
