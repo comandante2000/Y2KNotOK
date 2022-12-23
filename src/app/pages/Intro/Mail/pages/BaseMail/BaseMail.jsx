@@ -4,7 +4,7 @@ export default function MailBase({ name, episodeone ,subjects,listmail,date}) {
     <div id="pda-mail-base">
       <div
         className=" d-flex py-0 g-5 position-relative base-mail-container "
-        type="button"
+        
       >
         <div className="icon-container d-flex align-items-center">
           <div
