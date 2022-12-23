@@ -11,9 +11,11 @@ export default function MapPage({ setEpisodeOne, episodeone,dtime }) {
 
   useEffect(function () {
  
-    if(time !==4000){
-      settimer(time+1)
-    }
+    setTimeout(function () {
+     
+            settimer(4)
+          
+       },2000)
   },[time])
 
   return (
@@ -24,7 +26,7 @@ export default function MapPage({ setEpisodeOne, episodeone,dtime }) {
           <Time time={dtime}/>
           <Header name="Map" />
 
-          {episodeone == "Flow1.9.1"||episodeone == "Flow1.10"? time == 4000 ? (
+          {episodeone == "Flow1.9.1"||episodeone == "Flow1.10"? time == 4? (
             
             zoom?<MapPageOne
               setZoom={setZoom}

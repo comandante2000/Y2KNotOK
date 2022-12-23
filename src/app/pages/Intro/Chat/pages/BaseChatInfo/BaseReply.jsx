@@ -23,6 +23,7 @@ export default function ChatReply({
   const [openm, setOpenm] = useState(false);
   const [message, setmessage] = useState("");
   const containerRef = useRef(null);
+  const [counter ,setCounter] =useState(1);
   const encryptStorage = new EncryptStorage("y2knotokEncrypted");
   let replies =
     messagereplies[Math.floor(Math.random() * messagereplies.length)];
@@ -65,12 +66,18 @@ export default function ChatReply({
   };
 
   const handleSubmit = (e) => {
+
+      // Counter state is incremented
+      setCounter(counter + 1)
+    
+
     // { for krista message Flow 1.7" },
     if (episodeone === "voicemail1.8.1") {
   let truereplies = "Red West Control Center";
   let truerepliesone = "Red West";
   let truerepliestwo = "Control Center";
   let truerepliesthree = "Bunker";
+
       if (message.toLowerCase() === truereplies.toLowerCase() ||message.toLowerCase() === truerepliesone.toLowerCase()||message.toLowerCase() === truerepliestwo.toLowerCase() ||message.toLowerCase() === truerepliesthree.toLowerCase()) {
         setReplyMessages([...replyMessages, { person: "Me", chat: message }]);
         setTimeout(function () {
@@ -104,7 +111,6 @@ export default function ChatReply({
         setTimeout(function () {
           setReplyMessages([
             ...replyMessages,
-
             {
               person: "Krista",
               chat: "Cool. I get it. Might be better if I don't know",
@@ -119,11 +125,16 @@ export default function ChatReply({
               chat: "Cool. I get it. Might be better if I don't know.",
             },
           ]);
-          if (episodeone === "voicemail1.8.1") {
+          if (episodeone === "voicemail1.8.1"&& counter >= 2) {
             setEpisodeOne("Flow1.8");
           }
         }, 3000);
+
       }
+
+
+
+
       if (
         message.toLowerCase() !== truereplies.toLowerCase() &&
         message !== ""&& message.toLowerCase() !== truerepliesone.toLowerCase()&& message.toLowerCase() !== truerepliestwo.toLowerCase()&& message.toLowerCase() !== truerepliesthree.toLowerCase()
@@ -137,18 +148,22 @@ export default function ChatReply({
             { person: "Me", chat: message },
             { person: "Krista", chat: replies },
           ]);
-          if (episodeone === "voicemail1.8.1") {
-            setEpisodeOne("Flow1.8");
-          }
+          // if (episodeone === "voicemail1.8.1") {
+          //   setEpisodeOne("Flow1.8");
+          // }
           encryptStorage.removeItem(`chat-storage-krista`);
           encryptStorage.setItem(`chat-storage-krista`, [
             ...replyMessages,
             { person: "Me", chat: message },
             { person: "Krista", chat: replies },
           ]);
+          if (episodeone === "voicemail1.8.1"&& counter >= 2) {
+            setEpisodeOne("Flow1.8");
+          }
         }, 3000);
       }
       setmessage("");
+     
     }
 
     // { for Themothee message Flow 1.10" },

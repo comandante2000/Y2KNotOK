@@ -7,7 +7,7 @@
     margin-bottom: 20px;
     overflow-y: auto;
     position: relative;
-    &::-webkit-scrollbar{
+    &::-webkit-scrollbar {
       //width: 10px;
       height: auto;
       background-image: url("https://images.stinkyfruit.com/scroll-bar-bg.png");
@@ -16,12 +16,11 @@
       background-repeat: no-repeat;
       width: 20px;
     }
-    &::-webkit-scrollbar-track{
+    &::-webkit-scrollbar-track {
       -webkit-box-shadow: #47b9b2;
       //background-color: transparent;
-
     }
-    &::-webkit-scrollbar-thumb{
+    &::-webkit-scrollbar-thumb {
       //background-image: url("https://images.stinkyfruit.com/scroll-bar-thumbnail.png");
       //background-repeat: no-repeat;
       //background-size: cover;
@@ -84,7 +83,7 @@
         background-size: 100%;
       }
     }
-    .btn-container{
+    .btn-container {
       margin-top: 18px;
       margin-right: 17px;
       margin-left: 15px;
@@ -119,6 +118,16 @@
       border-radius: 5px;
       width: 86.6px;
       height: 36.67px;
+    }
+    .question {
+      position: absolute;
+      top: 31%;
+      width: 94%;
+      font-family: "Palm OS";
+      color: #070707;
+      font-size: 24px;
+      line-height: 22px;
+      padding: 20px 0;
     }
 
     .box-container {

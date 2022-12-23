@@ -30,11 +30,15 @@ export default function Device({ newuser ,SetVideo ,setNewuser}) {
     if (episodeone === "Flow1.11") {
       setTime("6:25 AM");
     }
-    if (episodeone === "Flow1.11") {
+    if (episodeone === "Flow1.11"||episodeone === "Flow1.12") {
       setTime("6:35 AM");
+      // setTimeout(function() {
+      // SetVideo("Episode2");
+      // }, 5000);
       setTimeout(function() {
-      SetVideo("Episode2");
-      }, 5000);
+        setEpisodeOne("Flow1.13");
+      }, 1000);
+    
     }
   });
   
@@ -69,6 +73,7 @@ export default function Device({ newuser ,SetVideo ,setNewuser}) {
               episodeone={episodeone}
               setEpisodeOne={setEpisodeOne}
               dtime={dtime}
+              SetVideo={SetVideo}
             />
           )}
           {screen === "MapScreen" && (

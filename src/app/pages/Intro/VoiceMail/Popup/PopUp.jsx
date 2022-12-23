@@ -53,7 +53,7 @@ export default function PopUp({ setOpen, setEpisodeOne, video, episodeone }) {
     }
   };
 
-console.log("epppppp",episodeone);
+
 
   window.setInterval(function () {
     setCurrentTime(videoRef.current?.currentTime);
