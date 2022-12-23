@@ -36,7 +36,7 @@ export default function BootAccept({instruction , setpress }) {
               {instruction}
               </p>
               <div className="the_policy_check d-flex justify-content-center">
-                <div className="form-check">
+                <div className="form-check d-flex align-items-center justify-content-center">
                   <input type="checkbox" value={checked} onChange={handleCheckboxChanged} id="flexCheckDefault" className="form-check-input y2k-checkbox"/>
                   <label htmlFor="flexCheckDefault" className="form-check-label txt-label">
                     I understand and accept the <a href="#" className="txt-privacy-policy">Privacy Policy</a>

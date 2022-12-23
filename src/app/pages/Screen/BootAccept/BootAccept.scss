@@ -35,10 +35,10 @@
       font-family: "EuroStyle";
       font-size: 51px;
       line-height: 55px;
-      letter-spacing: 15px;
+      letter-spacing: 5px;
       color: #10df0c;
-      margin-top: 20px;
-      margin-bottom: 20px;
+      margin-top: 25px;
+      margin-bottom: 25px;
     }
     .instruction-text {
       font-family: "EuroStyle";
@@ -46,7 +46,7 @@
       line-height: 34px;
       color: #10df0c;
       width: 80%;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
     .accept-button {
       background-image: url("https://images.stinkyfruit.com/desktop-green-box.png");
@@ -122,7 +122,7 @@
         .popup-text{
           font-size: 30px;
           line-height: 30px;
-          letter-spacing: 8px;
+          letter-spacing: 5px;
         }
         .instruction-text{
           font-size: 24px;
@@ -158,12 +158,14 @@
         .popup-text{
           font-size: 30px;
           line-height: 30px;
-          letter-spacing: 8px;
+          letter-spacing: 5px;
           margin-top: 0px;
+          margin-bottom: 10px;
         }
         .instruction-text{
           font-size: 24px;
           line-height: 26px;
+          margin-bottom: 15px;
           width: 100%;
         }
         .accept-button{
@@ -173,6 +175,7 @@
         }
       }
       .the_policy_check{
+        margin-bottom: 15px;
         .form-check{
           .txt-label{
             font-size: 20px;
