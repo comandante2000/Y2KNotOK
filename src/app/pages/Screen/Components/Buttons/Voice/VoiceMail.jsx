@@ -16,18 +16,20 @@ export default function VoiceMailButton({
       return (prevCount += 1);
     });
     if (episodeone == "mailpop") {
-      setEpisodeOne("voicemail1.7");
+      setEpisodeOne("Flow1.7");
     }
     if (episodeone == "Flow1.8") {
       setEpisodeOne("Flow1.8.1");
     }
   };
-  
+
   return (
     <div id="voice-button">
       <div
         className={`button-1 ${color == "voice" ? "red" : "black"} ${
-          episodeone == "notallowed"  || episodeone == "mailpop" || episodeone == "Flow1.8"
+          episodeone == "notallowed" ||
+          episodeone == "mailpop" ||
+          episodeone == "Flow1.8"
             ? "button-glow"
             : null
         }`}
