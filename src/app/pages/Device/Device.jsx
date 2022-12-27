@@ -108,7 +108,7 @@ export default function Device({ newuser, SetVideo, setNewuser }) {
       </div>
       <audio autoPlay loop>
         <source
-          src="https://images.stinkyfruit.com/audio_bed_ambience_mp3.mp3"
+          src="https://images.stinkyfruit.com/audio_bed_ambience_mp3_v2.wav"
           type="audio/wav"
         />
       </audio>
