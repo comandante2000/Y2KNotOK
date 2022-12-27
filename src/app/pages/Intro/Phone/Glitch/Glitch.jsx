@@ -20,7 +20,7 @@ export default function Glitch({setNewuser}) {
                     onEnded={DonePlaying}
                     autoPlay
                     muted
-                    playsinline
+                    playsInline
                     // controls
                     // width="1920"
                     // height="auto"
