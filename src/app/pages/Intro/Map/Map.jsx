@@ -12,9 +12,7 @@ export default function MapPage({ setEpisodeOne, episodeone,dtime }) {
   useEffect(function () {
  
     setTimeout(function () {
-     
             settimer(4)
-          
        },2000)
   },[time])
 

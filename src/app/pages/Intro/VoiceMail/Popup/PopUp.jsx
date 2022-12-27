@@ -36,25 +36,23 @@ export default function PopUp({ setOpen, setEpisodeOne, video, episodeone }) {
     if (
       episodeone == "allow" ||
       episodeone == "allowed" ||
-      episodeone == "notallowed"
+      episodeone == "notallowed" && video ==="https://images.stinkyfruit.com/HR_Timothee-V-0103.mp4"
     ) {
       setOpen(false);
       setEpisodeOne("allow");
     }
-    if (episodeone == "voicemail1.7") {
+    if (episodeone == "Flow1.7"&&  video ==="https://images.stinkyfruit.com/voice1_6.mp4") {
       setOpen(false);
-      setEpisodeOne("voicemail1.8");
+      setEpisodeOne("Flow1.7.1");
     }
-    // if (episodeone == "voicemail1.8") {
+    // if (episodeone == "Flow1.7.1") {
     //   setOpen(false);
     // }
-    if (episodeone == "Flow1.8.1") {
+    if (episodeone == "Flow1.8.1"&&  video ==="https://images.stinkyfruit.com/Mom1_8.mp4") {
       setEpisodeOne("Flow1.9");
     }
   };
-
-
-
+console.log(video,"video");
   window.setInterval(function () {
     setCurrentTime(videoRef.current?.currentTime);
     setProgress((videoRef.current?.currentTime / videoTime) * 100);
@@ -80,22 +78,19 @@ export default function PopUp({ setOpen, setEpisodeOne, video, episodeone }) {
           <div className=" text-center align-items-center d-flex justify-content-center">
             <div className="video-container d-flex flex-column">
               <div>
-                {video !== '' ? 
-                <video
-                  className="video"
-                  // autoplay="true"
-                  id="video1"
-                  src={video}
-                  type="video/mp4"
-                  onEnded={DonePlaying}
-                  ref={videoRef}
-                ></video>
-                :
-                <video
-                  className="video"
-                  id="video1"
-                ></video>
-                }
+                {video !== "" ? (
+                  <video
+                    className="video"
+                    // autoplay="true"
+                    id="video1"
+                    src={video}
+                    type="video/mp4"
+                    onEnded={DonePlaying}
+                    ref={videoRef}
+                  ></video>
+                ) : (
+                  <video className="video" id="video1"></video>
+                )}
               </div>
 
               <div className="timecontrols d-flex justify-content-bottom">

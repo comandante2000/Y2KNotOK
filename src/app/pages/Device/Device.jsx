@@ -10,15 +10,14 @@ import VoiceMailPage from "../Intro/VoiceMail/VoiceMailPage";
 import MapPage from "../Intro/Map/Map";
 import Cookies from "js-cookie";
 import OutroVideo from "../Screen/Outrovideo/Outrovideo";
-export default function Device({ newuser ,SetVideo ,setNewuser}) {
+export default function Device({ newuser, SetVideo, setNewuser }) {
   const [screen, showScreen] = useState("HomeScreen");
   const [press, setpress] = useState(0); //to make the button unclikable must click next
   const [episodeone, setEpisodeOne] = useState("notallowed");
   const [dtime, setTime] = useState("5:55 AM");
-
+ 
   useEffect(() => {
-  
-    if (episodeone === "voicemail1.8") {
+    if (episodeone === "Flow1.7.1") {
       setTime("6:15 AM");
     }
     if (episodeone === "Flow1.9.1") {
@@ -30,31 +29,29 @@ export default function Device({ newuser ,SetVideo ,setNewuser}) {
     if (episodeone === "Flow1.11") {
       setTime("6:25 AM");
     }
-    if (episodeone === "Flow1.11"||episodeone === "Flow1.12") {
+    if (episodeone === "Flow1.11" || episodeone === "Flow1.12") {
       setTime("6:35 AM");
       // setTimeout(function() {
       // SetVideo("Episode2");
       // }, 5000);
-      setTimeout(function() {
+      setTimeout(function () {
         setEpisodeOne("Flow1.13");
       }, 1000);
-    
     }
   });
-  
-//cookies
+
+  //cookies
   useEffect(() => {
     if (episodeone === "notallowed") {
       Cookies.set("Flow1.3", "Flow1.3done", { expires: 7 });
     }
-  
-    const Intro = Cookies.get('Flow1.3'); 
-      if (Intro == "Flow1.3done"){
-        setpress(8);
-      }
 
+    const Intro = Cookies.get("Flow1.3");
+    if (Intro == "Flow1.3done") {
+      setpress(8);
+    }
   });
-//cookies
+  //cookies
 
   return (
     <div id="pda-device">
