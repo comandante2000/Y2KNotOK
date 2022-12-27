@@ -15,6 +15,10 @@ $urls: srcs("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/");
   font-family: Eurostile;
   src:url('../assets/fonts/eurostile.ttf');
 }
+@font-face {
+  font-family: "EuroStyleNormal";
+  src:url('../assets/fonts/EuroStyleNormal.woff');
+}
 
 //@font-face {
 //  font-family: "EuroStyle";

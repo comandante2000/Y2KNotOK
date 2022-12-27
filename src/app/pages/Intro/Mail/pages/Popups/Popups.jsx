@@ -74,6 +74,7 @@ export default function PopUps({
                   // autoplay="true"
                   id="video1"
                   src={video}
+                  playsInline
                   type="video/mp4"
                   onEnded={DonePlaying}
                   ref={videoRef}
