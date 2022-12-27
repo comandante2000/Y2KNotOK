@@ -65,6 +65,7 @@ export default function ChatReply({
 
   const handleSubmit = (e) => {
     // Counter state is incremented
+ 
     setCounter(counter + 1);
 
     // { for krista message Flow 1.7" },
@@ -209,6 +210,7 @@ export default function ChatReply({
       }
     }
     setmessage("");
+    setOpenm(false);
   
   };
 
