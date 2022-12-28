@@ -6,7 +6,8 @@ export default function OutroVideo({ setNewuser }) {
   const DonePlaying = () => {
     setNewuser(false);
   };
-  let audio1 = "https://images.stinkyfruit.com/Episode-1-Outro-v1.mp4";
+  // let audio1 = "https://images.stinkyfruit.com/Episode-1-Outro-v1.mp4";
+  let audio1 = "https://images.stinkyfruit.com/Episode1-Outro-v2.mp4";
   return (
     <div id="pda-outro-screen">
       <div className="introvideo ">
