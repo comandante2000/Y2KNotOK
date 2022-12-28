@@ -58,6 +58,8 @@ useEffect(() => {
       'https://images.stinkyfruit.com/popup_container_right.svg',
       'https://images.stinkyfruit.com/welcome_to_y2knotok.svg',
       'https://images.stinkyfruit.com/3840x2160v5–2.png',
+      'https://images.stinkyfruit.com/audio_bed_ambience_mp3_v2_mom_flow.mp3',
+      'https://images.stinkyfruit.com/audio_bed_ambience_mp3_v2.mp3'
     ];
     cacheImages(assets);
     

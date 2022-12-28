@@ -52,7 +52,7 @@ export default function PopUp({ setOpen, setEpisodeOne, video, episodeone }) {
       setEpisodeOne("Flow1.9");
     }
   };
-console.log(video,"video");
+// console.log(video,"video");
   window.setInterval(function () {
     setCurrentTime(videoRef.current?.currentTime);
     setProgress((videoRef.current?.currentTime / videoTime) * 100);
