@@ -1,5 +1,5 @@
 import "./Mail.scss";
-import { useState, useEffect } from "react";
+import { useState, useEffect,useRef } from "react";
 
 export default function MailButton({
   showScreen,
@@ -9,8 +9,12 @@ export default function MailButton({
   episodeone,
   setEpisodeOne,
 }) {
+  const audioRef = useRef();
   const [btnclick, setbtnclick] = useState(0);
   const handleClick = () => {
+    const audioElement = audioRef.current;
+    // Play the audio
+    audioElement.play();
     showScreen("MailScreen");
     setActive("mail");
     if(episodeone == "Flow1.13"){
@@ -19,14 +23,18 @@ export default function MailButton({
   };
 
   const handleClick3 = () => {
-   
+    const audioElement = audioRef.current;
+    // Play the audio
+    audioElement.play();
     showScreen("MailScreen");
     setActive("mail");
     setEpisodeOne("allowed");
   };
 
   const handleClick1 = () => {
-   
+    const audioElement = audioRef.current;
+    // Play the audio
+    audioElement.play();
     showScreen("VoicemailScreen");
     setActive("voice");
     setEpisodeOne("allow");
@@ -56,7 +64,8 @@ export default function MailButton({
           name="mail"
           onClick={press >= 5 ? handleClick : null}
         ></div>
-      )}
+        
+      )}  <audio ref={audioRef} src="https://images.stinkyfruit.com/Button_Press.wav" />
     </div>
   );
 }

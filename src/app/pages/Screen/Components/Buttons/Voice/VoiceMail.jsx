@@ -1,5 +1,5 @@
 import "./VoiceMail.scss";
-
+import { useRef } from 'react';
 export default function VoiceMailButton({
   showScreen,
   setActive,
@@ -9,7 +9,13 @@ export default function VoiceMailButton({
   episodeone,
   setEpisodeOne,
 }) {
+
+  const audioRef = useRef();
+
   const handleClick = () => {
+    const audioElement = audioRef.current;
+    // Play the audio
+    audioElement.play();
     showScreen("VoicemailScreen");
     setActive("voice");
     setpress(function (prevCount) {
@@ -37,6 +43,7 @@ export default function VoiceMailButton({
         name="voice"
         onClick={press >= 5 ? handleClick : null}
       ></div>
+      <audio ref={audioRef} src="https://images.stinkyfruit.com/Button_Press.wav" />
     </div>
   );
 }

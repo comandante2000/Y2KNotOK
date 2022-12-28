@@ -1,5 +1,5 @@
 import "./Map.scss";
-
+import {useEffect,useRef} from "react";
 export default function MapButton({
   showScreen,
   setActive,
@@ -8,7 +8,11 @@ export default function MapButton({
   episodeone,
   setEpisodeOne,
 }) {
+  const audioRef = useRef();
   const handleClick5 = () => {
+    const audioElement = audioRef.current;
+    // Play the audio
+    audioElement.play();
     showScreen("MapScreen");
     setActive("map");
     if (episodeone == "Flow1.9") {
@@ -31,6 +35,7 @@ export default function MapButton({
         name="map"
         onClick={press >= 5 ? handleClick5 : null}
       ></div>
+        <audio ref={audioRef} src="https://images.stinkyfruit.com/Button_Press.wav" />
     </div>
   );
 }
