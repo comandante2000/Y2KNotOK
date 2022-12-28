@@ -1,5 +1,5 @@
 import "./Chat.scss";
-
+import {useEffect,useRef} from "react";
 export default function ChatButton({
   showScreen,
   setActive,
@@ -9,8 +9,13 @@ export default function ChatButton({
   setEpisodeOne,
 }) {
 
+  const audioRef = useRef();
+
   
   const handleClick4 = () => {
+    const audioElement = audioRef.current;
+    // Play the audio
+    audioElement.play();
  
     showScreen("MessageScreen");
     setActive("message");
@@ -33,6 +38,7 @@ export default function ChatButton({
         name="chat"
         onClick={press >= 5 ? handleClick4 : null}
       ></div>
+         <audio ref={audioRef} src="https://images.stinkyfruit.com/Button_Press.wav" />
     </div>
   );
 }

@@ -110,7 +110,7 @@ export default function Device({ newuser, SetVideo, setNewuser }) {
             />
           )}
           {screen === "PhoneScreen" && <PhonePage dtime={dtime} />}
-          {screen === "Episode2" && <OutroVideo />}
+          {/* {screen === "Episode2" && <OutroVideo />} */}
           <Buttons
             showScreen={showScreen}
             press={press}
