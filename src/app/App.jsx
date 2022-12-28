@@ -59,7 +59,16 @@ useEffect(() => {
       'https://images.stinkyfruit.com/welcome_to_y2knotok.svg',
       'https://images.stinkyfruit.com/3840x2160v5–2.png',
       'https://images.stinkyfruit.com/audio_bed_ambience_mp3_v2_mom_flow.mp3',
-      'https://images.stinkyfruit.com/audio_bed_ambience_mp3_v2.mp3'
+      'https://images.stinkyfruit.com/audio_bed_ambience_mp3_v2.mp3',
+      'https://images.stinkyfruit.com/HR_Timothee-V-0103.mp4',
+      'https://images.stinkyfruit.com/voice1_6.mp4',
+      'https://images.stinkyfruit.com/Mom1_8.mp4',
+      'https://images.stinkyfruit.com/Glitch_with_keypad_v13.mp4',
+      'https://images.stinkyfruit.com/1920x1080v7.png',
+      'https://images.stinkyfruit.com/3840x2160v7.png',
+      'https://images.stinkyfruit.com/1440x900v7.png',
+      'https://images.stinkyfruit.com/1366x768v7.png',
+      'https://images.stinkyfruit.com/1280x720v7.png'
     ];
     cacheImages(assets);
     
