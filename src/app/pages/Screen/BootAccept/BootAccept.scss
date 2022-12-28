@@ -24,7 +24,8 @@
     padding-right: 35px;
     .Popup-Title {
       //background-image: url("https://images.stinkyfruit.com/Text_pop.svg");
-      background-image: url("https://images.stinkyfruit.com/welcome.png");
+      background-image: url("https://images.stinkyfruit.com/welcome-v2.png");
+      //background-image: url("https://images.stinkyfruit.com/welcome.png");
       background-repeat: no-repeat;
       height: 143px;
       width: 434px;
@@ -52,6 +53,7 @@
       color: #10df0c;
       width: 80%;
       margin-bottom: 30px;
+      letter-spacing: 1px;
     }
     .accept-button {
       background-image: url("https://images.stinkyfruit.com/desktop-green-box.png");
