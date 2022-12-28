@@ -15,7 +15,15 @@ export default function Device({ newuser, SetVideo, setNewuser }) {
   const [press, setpress] = useState(0); //to make the button unclikable must click next
   const [episodeone, setEpisodeOne] = useState("notallowed");
   const [dtime, setTime] = useState("5:55 AM");
- 
+  const [audio, setAudio] = useState(
+    false
+  );
+
+
+
+
+
+
   useEffect(() => {
     if (episodeone === "Flow1.7.1") {
       setTime("6:15 AM");
@@ -38,6 +46,11 @@ export default function Device({ newuser, SetVideo, setNewuser }) {
         setEpisodeOne("Flow1.13");
       }, 1000);
     }
+    if (episodeone === "Flow1.8.1"||episodeone === "Flow1.8") {
+      setAudio(true
+        // "https://images.stinkyfruit.com/audio_bed_ambience_mp3_v2_mom_flow.wav"
+      );
+    }
   });
 
   //cookies
@@ -53,6 +66,8 @@ export default function Device({ newuser, SetVideo, setNewuser }) {
   });
   //cookies
 
+  console.log("flow",episodeone);
+  console.log("background",audio);
   return (
     <div id="pda-device">
       <div
@@ -91,7 +106,7 @@ export default function Device({ newuser, SetVideo, setNewuser }) {
             <ChatPage
               episodeone={episodeone}
               setEpisodeOne={setEpisodeOne}
-              dtime={dtime}
+              dtime={dtime}    
             />
           )}
           {screen === "PhoneScreen" && <PhonePage dtime={dtime} />}
@@ -102,16 +117,22 @@ export default function Device({ newuser, SetVideo, setNewuser }) {
             setpress={setpress}
             episodeone={episodeone}
             setEpisodeOne={setEpisodeOne}
-            setTime={setTime}
+            setTime={setTime} 
           />
         </div>
       </div>
-      <audio autoPlay loop>
-        <source
-          src="https://images.stinkyfruit.com/audio_bed_ambience_mp3_v2.wav"
-          type="audio/wav"
-        />
+      <audio autoPlay loop muted={audio ? false : true}>
+        <source src="https://images.stinkyfruit.com/audio_bed_ambience_mp3_v2_mom_flow.mp3" type="audio/mp3"/>
       </audio>
+      <audio autoPlay loop muted={audio ? true : false}>
+        <source src="https://images.stinkyfruit.com/audio_bed_ambience_mp3_v2.mp3" type="audio/mp3"/>
+      </audio>
+     {/* {audio?<audio autoPlay loop>
+        <source src="https://images.stinkyfruit.com/audio_bed_ambience_mp3_v2_mom_flow.mp3" type="audio/mp3"/>
+      </audio>:
+      <audio autoPlay loop>
+        <source src="https://images.stinkyfruit.com/audio_bed_ambience_mp3_v2.mp3" type="audio/mp3"/>
+      </audio>} */}
     </div>
   );
 }
