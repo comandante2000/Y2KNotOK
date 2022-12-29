@@ -142,13 +142,13 @@ export default function ChatReply({
     }
 
     // { for Themothee message Flow 1.10" },
-
+    // Yes: Yes, Yep, Yup, Sure, You Bet, OK, K, Okay, affirmative
     if (
       episodeone === "Flow1.10.1" ||
       episodeone === "Flow1.12" ||
       episodeone == "Flow1.11"
     ) {
-      if (message.toLowerCase() === "yes".toLowerCase()) {
+      if (message.toLowerCase().includes("yes")||message.toLowerCase().includes("yep")||message.toLowerCase().includes("yup")||message.toLowerCase().includes("sure")||message.toLowerCase().includes("you bet")||message.toLowerCase().includes("ok")||message.toLowerCase().includes(" okay")||message.toLowerCase().includes("affirmative")) {
         setReplyMessages([
           ...replyMessages,
           { person: "Me", chat: message, time: 1 },
@@ -197,7 +197,7 @@ export default function ChatReply({
           setReplyMessages([
             ...replyMessages,
             { person: "Me", chat: message, time: 1 },
-            { person: "Timothee HR", chat: "Jusy say YES, J", time: 1 },
+            { person: "Timothee HR", chat: "Just say YES, J", time: 1 },
           ]);
         }, 3000);
 
