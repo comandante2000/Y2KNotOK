@@ -48,7 +48,7 @@ export default function ChatButton({
          <audio ref={audioRef} src="https://images.stinkyfruit.com/Button_Press.wav" />
 
          <audio
-        loop={chatpermission.includes(episodeone)?true:false}
+        // loop={chatpermission.includes(episodeone)?true:false}
         ref={audioRefchat}
         src="https://images.stinkyfruit.com/sound_all_btn.wav"
       />
