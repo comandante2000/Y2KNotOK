@@ -17,9 +17,6 @@ export default function MailButton({
     audioElement.play();
     showScreen("MailScreen");
     setActive("mail");
-    if(episodeone == "Flow1.13"){
-      setEpisodeOne("Flow1.13.1")
-    }
   };
 
   const handleClick3 = () => {
@@ -58,7 +55,7 @@ export default function MailButton({
       ) : (
         <div
           className={`button-2 ${color == "mail" ? "red" : "black"} ${
-            episodeone == "allow"||episodeone == "Flow1.13"? "button-glow" : null
+            episodeone == "allow"? "button-glow" : null
           }`}
           type="button"
           name="mail"

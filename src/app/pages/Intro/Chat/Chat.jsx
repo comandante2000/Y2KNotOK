@@ -56,7 +56,7 @@ const chatListsChange2 = [
     true,
     "12/30"
   ),
-  createChat(2, "Krista", "Where are you?", "", "Flow1.7.1", false, "12/30"),
+  createChat(2, "Krista", "Where are you?", "Where are you? Everyone is looking for you", "Flow1.7.1", true, "12/30"),
   createChat(3, "Mateo", "Karoake tonight?", "", "", false, "12/27"),
   createChat(4, "Mom", "Did i do it right?", "", "", false, "12/20"),
   createChat(5, "Akari", "Crescent Lake", "", "", false, "12/19"),
