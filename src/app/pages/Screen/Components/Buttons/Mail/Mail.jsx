@@ -11,10 +11,11 @@ export default function MailButton({
   screen,
 }) {
   const audioRef = useRef();
+  const audioRefmail = useRef();
   const [btnclick, setbtnclick] = useState(0);
   const handleClick = () => {
     setbtnclick(btnclick + 1);
-  
+
     const audioElement = audioRef.current;
     // Play the audio
     audioRef.current.currentTime = 0;
@@ -30,10 +31,18 @@ export default function MailButton({
     }
   }, [screen]);
 
-  const handleClick3 = () => {
+  // Play the audio 3 times mail
 
+  useEffect(() => {
+    const audioElementmail = audioRefmail.current;
+    if (episodeone == "allow") {
+      audioElementmail.play();
+    }
+  }, );
+
+  const handleClick3 = () => {
     const audioElement = audioRef.current;
-    // Play the audio 
+    // Play the audio
     audioRef.current.currentTime = 0;
     audioElement.play();
     showScreen("MailScreen");
@@ -42,7 +51,6 @@ export default function MailButton({
   };
 
   const handleClick1 = () => {
- 
     const audioElement = audioRef.current;
     // Play the audio
     audioRef.current.currentTime = 0;
@@ -79,6 +87,11 @@ export default function MailButton({
       <audio
         ref={audioRef}
         src="https://images.stinkyfruit.com/Button_Press.wav"
+      />
+      <audio
+        loop
+        ref={audioRefmail}
+        src="https://images.stinkyfruit.com/New_Button_Blink_mail3.wav"
       />
     </div>
   );
