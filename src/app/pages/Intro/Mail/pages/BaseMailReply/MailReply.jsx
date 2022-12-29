@@ -92,15 +92,15 @@ SetVideo("Episode2");
            {opentext ? "Send" :"Back" }
           </div>
           <div
-            className={`${opentext?"delete_button":"reply_button"} d-flex justify-content-center align-items-center`}
-            type="button"
-            onClick={""}
+            className={`${opentext?"delete_button":"delete_button"} d-flex justify-content-center align-items-center`}
+            // type="button"
+            // onClick={""}
           >
             Reply
           </div>
           <div
             className={`${opentext?"reply_button":"delete_button"} d-flex justify-content-center align-items-center`}
-            type="button"
+            // type="button"
             onClick={OpenCancel}
           >
            {opentext ? "Cancel" : "Delete"}
