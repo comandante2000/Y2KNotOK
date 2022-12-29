@@ -52,7 +52,7 @@
   .button-glow {
     -webkit-animation-name: move !important;
     animation-name: move !important;
-    animation-duration:6s;
+    animation-duration:4700ms;
     animation-iteration-count: infinite;
   
   }
@@ -62,15 +62,7 @@
       border-radius: 50%; 
       box-shadow: 0px 1px 8px 3px rgb(16, 14, 14) inset;
     }
-    5% {
-      border-radius: 50%; 
-      box-shadow: 0px 1px 8px 3px rgb(211, 12, 12) inset;
-    }
-    10% { 
-      border-radius: 50%; 
-      box-shadow: 0px 1px 8px 3px rgb(16, 14, 14) inset;
-    }
-    15% {
+    10% {
       border-radius: 50%; 
       box-shadow: 0px 1px 8px 3px rgb(211, 12, 12) inset;
     }
@@ -78,7 +70,15 @@
       border-radius: 50%; 
       box-shadow: 0px 1px 8px 3px rgb(16, 14, 14) inset;
     }
-    25% {
+    30% {
+      border-radius: 50%; 
+      box-shadow: 0px 1px 8px 3px rgb(211, 12, 12) inset;
+    }
+    40% { 
+      border-radius: 50%; 
+      box-shadow: 0px 1px 8px 3px rgb(16, 14, 14) inset;
+    }
+    50% {
       border-radius: 50%; 
       box-shadow: 0px 1px 8px 3px rgb(211, 12, 12) inset;
     }
