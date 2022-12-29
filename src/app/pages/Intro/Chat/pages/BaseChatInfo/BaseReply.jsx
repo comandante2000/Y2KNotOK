@@ -3,11 +3,6 @@ import ChatInfo from "./ChatInfo";
 import { useState, useRef, useEffect } from "react";
 import { EncryptStorage } from "encrypt-storage";
 
-
-
-
-
-
 export default function ChatReply({
   person,
   chat,
@@ -23,8 +18,10 @@ export default function ChatReply({
   const containerRef = useRef(null);
   const [counter, setCounter] = useState(1);
   const encryptStorage = new EncryptStorage("y2knotokEncrypted");
-  
-  const [messagereplies,setMessageReplies] = useState("You need to chill and just tell me where you are right now.");
+  const audioRef = useRef();
+  const [messagereplies, setMessageReplies] = useState(
+    "You need to chill and just tell me where you are right now."
+  );
 
   let correctReplies = [
     {
@@ -65,16 +62,22 @@ export default function ChatReply({
 
   const handleSubmit = (e) => {
     // Counter state is incremented
- 
+
     setCounter(counter + 1);
 
     // { for krista message Flow 1.7" },
-    
+
     if (episodeone === "Flow1.7.1.1") {
-      let truereplies = ["red west control center","red west","control center","command center","red west command center","bunker"]
-      
-      if(truereplies.includes(message.toLocaleLowerCase())){
-        
+      let truereplies = [
+        "red west control center",
+        "red west",
+        "control center",
+        "command center",
+        "red west command center",
+        "bunker",
+      ];
+
+      if (truereplies.includes(message.toLocaleLowerCase())) {
         setReplyMessages([...replyMessages, { person: "Me", chat: message }]);
         setTimeout(function () {
           setReplyMessages([
@@ -85,10 +88,11 @@ export default function ChatReply({
               chat: "Don't tell anyone else.We need to keep you safe",
             },
           ]);
-
+          const audioElement = audioRef.current;
+          // Play the audio
+          audioElement.play();
           encryptStorage.removeItem(`chat-storage-${person.toLowerCase()}`);
           encryptStorage.setItem(`chat-storage-${person.toLowerCase()}`, [
-            
             ...replyMessages,
             { person: "Me", chat: message },
             {
@@ -99,17 +103,17 @@ export default function ChatReply({
           if (episodeone === "Flow1.7.1.1") {
             setEpisodeOne("Flow1.8");
           }
-        }, 3000);
+        }, 2000);
       }
 
       // if (
       //   truereplies.includes(message.toLocaleLowerCase())=== false
       // ) {
-    
+
       //   setReplyMessages([...replyMessages, { person: "Me", chat: message }]);
 
       //   setTimeout(function () {
-      //     setMessageReplies("Cool. I get it. Might be better if I don't know."); 
+      //     setMessageReplies("Cool. I get it. Might be better if I don't know.");
       //     setReplyMessages([
       //       ...replyMessages,
       //       { person: "Me", chat: message },
@@ -126,10 +130,11 @@ export default function ChatReply({
       //   }, 3000);
       // }
 
-      if(truereplies.includes(message.toLocaleLowerCase())===false){
-       
+      if (truereplies.includes(message.toLocaleLowerCase()) === false) {
         setReplyMessages([...replyMessages, { person: "Me", chat: message }]);
         setTimeout(function () {
+          const audioElement = audioRef.current;
+          audioElement.play();
           setReplyMessages([
             ...replyMessages,
             { person: "Me", chat: message },
@@ -141,7 +146,6 @@ export default function ChatReply({
 
           encryptStorage.removeItem(`chat-storage-${person.toLowerCase()}`);
           encryptStorage.setItem(`chat-storage-${person.toLowerCase()}`, [
-            
             ...replyMessages,
             { person: "Me", chat: message },
             {
@@ -149,16 +153,11 @@ export default function ChatReply({
               chat: "Cool. I get it. Might be better if I don't know.",
             },
           ]);
-           if (episodeone === "Flow1.7.1.1" && counter >= 2) {
+          if (episodeone === "Flow1.7.1.1" && counter >= 2) {
             setEpisodeOne("Flow1.8");
-       }
-        }, 3000);
+          }
+        }, 2000);
       }
-
-
-
-
-
 
       setmessage("");
     }
@@ -170,13 +169,26 @@ export default function ChatReply({
       episodeone === "Flow1.12" ||
       episodeone == "Flow1.11"
     ) {
-      if (message.toLowerCase().includes("yes")||message.toLowerCase().includes("yep")||message.toLowerCase().includes("yup")||message.toLowerCase().includes("sure")||message.toLowerCase().includes("you bet")||message.toLowerCase().includes("ok")||message.toLowerCase().includes(" okay")||message.toLowerCase().includes("affirmative")||message.toLowerCase().includes("yeah")||message.toLowerCase().includes("ya")) {
+      if (
+        message.toLowerCase().includes("yes") ||
+        message.toLowerCase().includes("yep") ||
+        message.toLowerCase().includes("yup") ||
+        message.toLowerCase().includes("sure") ||
+        message.toLowerCase().includes("you bet") ||
+        message.toLowerCase().includes("ok") ||
+        message.toLowerCase().includes(" okay") ||
+        message.toLowerCase().includes("affirmative") ||
+        message.toLowerCase().includes("yeah") ||
+        message.toLowerCase().includes("ya")
+      ) {
         setReplyMessages([
           ...replyMessages,
           { person: "Me", chat: message, time: 1 },
         ]);
 
         setTimeout(function () {
+          const audioElement = audioRef.current;
+          audioElement.play();
           if (episodeone === "Flow1.10.1") {
             setEpisodeOne("Flow1.11");
           }
@@ -190,11 +202,11 @@ export default function ChatReply({
               time: 1,
             },
           ]);
-        }, 3000);
+        }, 2000);
 
         setTimeout(function () {
           setrigthreply2(true);
-        }, 4000);
+        }, 3000);
 
         encryptStorage.removeItem(`chat-storage-timothee`);
         encryptStorage.setItem(`chat-storage-timothee`, [
@@ -216,12 +228,14 @@ export default function ChatReply({
         ]);
 
         setTimeout(function () {
+          const audioElement = audioRef.current;
+          audioElement.play();
           setReplyMessages([
             ...replyMessages,
             { person: "Me", chat: message, time: 1 },
             { person: "Timothee HR", chat: "JUST SAY YES, J", time: 1 },
           ]);
-        }, 3000);
+        }, 2000);
 
         encryptStorage.removeItem(`chat-storage-timothee`);
         encryptStorage.setItem(`chat-storage-timothee`, [
@@ -233,7 +247,6 @@ export default function ChatReply({
     }
     setmessage("");
     setOpenm(false);
-  
   };
 
   useEffect(() => {
@@ -346,6 +359,10 @@ export default function ChatReply({
           </div>
         </div>
       </div>
+      <audio
+        ref={audioRef}
+        src="https://images.stinkyfruit.com/New_Message-option2.wav"
+      />
     </div>
   );
 }
