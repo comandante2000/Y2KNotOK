@@ -23,8 +23,7 @@
     padding-left: 25px;
     padding-right: 25px;
     .Popup-Title {
-      //background-image: url("https://images.stinkyfruit.com/Text_pop.svg");
-      background-image: url("https://images.stinkyfruit.com/welcome.png");
+      background-image: url("https://images.stinkyfruit.com/welcome-v2.png");
       background-repeat: no-repeat;
       height: 143px;
       width: 434px;
@@ -38,20 +37,17 @@
       color: #10df0c;
       margin-top: 25px;
       margin-bottom: 25px;
-      //font-family: Eurostile;
       font-family: "EuroStyleNormal";
       -webkit-text-stroke: 1.2px #10df0c;
-      //font-family: 'eurostyle', sans-serif;
     }
     .instruction-text {
-      //font-family: Eurostile;
       font-family: "EuroStyleNormal";
-      //font-family: 'eurostyle', sans-serif;
       font-size: 32px;
       line-height: 34px;
       color: #10df0c;
       margin-bottom: 30px;
-      width: 500px;
+      width: 561px;
+      letter-spacing: 1px;
     }
     .next-button {
       background-image: url("https://images.stinkyfruit.com/desktop-green-box.png");
