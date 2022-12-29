@@ -18,9 +18,7 @@ export default function MapButton({
     if (episodeone == "Flow1.9") {
       setEpisodeOne("Flow1.9.1");
     }
-    if (episodeone == "Flow1.11") {
-      setEpisodeOne("Flow1.12");
-    }
+  
   };
   
   return (

@@ -12,6 +12,7 @@ function App() {
   const encryptStorage                  = new EncryptStorage('y2knotokEncrypted');
   const [press, setpress] = useState(0);
   const [video, SetVideo] = useState("Episode1");
+  const [episodeone, setEpisodeOne] = useState("notallowed");
   const cacheImages = async (assets) => {
      assets.map(asset => {
         const img = new Image();
@@ -83,8 +84,10 @@ useEffect(() => {
         
        <Route
           path="/"
-          element={video ==="Episode2"?<OutroVideo/>:
-         newuser?<BaseBoot newuser={newuser} setNewuser={setNewuser}  setpress={setpress} press={press} video={video}/>:<Device SetVideo={SetVideo} setNewuser={setNewuser}/>
+          element={video ==="Episode2"?<OutroVideo setNewuser={setNewuser} SetVideo={SetVideo}  episodeone={episodeone}
+          setEpisodeOne={setEpisodeOne}/>:
+         newuser?<BaseBoot newuser={newuser} setNewuser={setNewuser}  setpress={setpress} press={press} video={video}/>:<Device SetVideo={SetVideo} setNewuser={setNewuser}  episodeone={episodeone}
+         setEpisodeOne={setEpisodeOne}/>
           }
         />
        

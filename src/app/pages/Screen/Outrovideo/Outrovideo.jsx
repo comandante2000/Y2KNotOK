@@ -1,10 +1,12 @@
 import "./Outrovideo.scss";
 import { useState } from "react";
 import { useRef } from "react";
-export default function OutroVideo({ setNewuser }) {
+export default function OutroVideo({ setNewuser,SetVideo ,setEpisodeOne}) {
 
   const DonePlaying = () => {
     setNewuser(false);
+    SetVideo("");
+    setEpisodeOne("Flow1.13");
   };
   // let audio1 = "https://images.stinkyfruit.com/Episode-1-Outro-v1.mp4";
   let audio1 = "https://images.stinkyfruit.com/Episode1-Outro-v2.mp4";

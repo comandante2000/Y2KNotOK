@@ -7,7 +7,7 @@ export default function MapPageOne({ setZoom, setEpisodeOne, episodeone }) {
     setZoom(false);
     setTimeout(function() {
       setEpisodeOne("Flow1.10");
-    }, 10000);
+    }, 5000);
   };
 
   return (

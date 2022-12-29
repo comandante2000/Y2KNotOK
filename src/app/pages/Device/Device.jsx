@@ -10,19 +10,18 @@ import VoiceMailPage from "../Intro/VoiceMail/VoiceMailPage";
 import MapPage from "../Intro/Map/Map";
 import Cookies from "js-cookie";
 import OutroVideo from "../Screen/Outrovideo/Outrovideo";
-export default function Device({ newuser, SetVideo, setNewuser }) {
+export default function Device({
+  newuser,
+  SetVideo,
+  setNewuser,
+  episodeone,
+  setEpisodeOne,
+}) {
   const [screen, showScreen] = useState("HomeScreen");
   const [press, setpress] = useState(0); //to make the button unclikable must click next
-  const [episodeone, setEpisodeOne] = useState("notallowed");
+
   const [dtime, setTime] = useState("5:55 AM");
-  const [audio, setAudio] = useState(
-    false
-  );
-
-
-
-
-
+  const [audio, setAudio] = useState(false);
 
   useEffect(() => {
     if (episodeone === "Flow1.7.1") {
@@ -37,17 +36,15 @@ export default function Device({ newuser, SetVideo, setNewuser }) {
     if (episodeone === "Flow1.11") {
       setTime("6:25 AM");
     }
-    if (episodeone === "Flow1.11" || episodeone === "Flow1.12") {
-      setTime("6:35 AM");
-      // setTimeout(function() {
-      // SetVideo("Episode2");
-      // }, 5000);
-      setTimeout(function () {
-        setEpisodeOne("Flow1.13");
-      }, 1000);
-    }
-    if (episodeone === "Flow1.8.1"||episodeone === "Flow1.8") {
-      setAudio(true
+    // if (episodeone === "Flow1.11") {
+    //   setTime("6:35 AM");
+    //   setTimeout(function () {
+    //     SetVideo("Episode2")
+    //   }, 5000);
+    // }
+    if (episodeone === "Flow1.8.1" || episodeone === "Flow1.8") {
+      setAudio(
+        true
         // "https://images.stinkyfruit.com/audio_bed_ambience_mp3_v2_mom_flow.wav"
       );
     }
@@ -66,8 +63,39 @@ export default function Device({ newuser, SetVideo, setNewuser }) {
   });
   //cookies
 
-  console.log("flow",episodeone);
-  console.log("background",audio);
+  function handleClick() {
+    if (episodeone === "Flow1.11") {
+      setTime("6:35 AM");
+      setTimeout(function () {
+        SetVideo("Episode2");
+      }, 6000);
+    }
+  }
+
+  useEffect(() => {
+    // console.log("FLOW: ", episodeone);
+    // if (episodeone === "Flow1.11") {
+
+    //   function handleClick(event) {
+    //     if (episodeone === "Flow1.11") {
+    //       setEpisodeOne("Flow1.12");
+    //       setTime("6:35 AM");
+    //       setTimeout(function () {
+    //         console.log("fdghdgdfg", episodeone);
+    //         SetVideo("Episode2");
+    //         setEpisodeOne("Flow1.12");
+    //       }, 5000);
+    //       console.log('VIDEO PLAYED: ', episodeone);
+    //     } else {
+    //       alert("STOP");
+    //     }
+    //   }
+    // }
+    document.addEventListener("click", handleClick());
+  }, [episodeone]);
+
+  console.log("flow", episodeone);
+  console.log("background", audio);
   return (
     <div id="pda-device">
       <div
@@ -106,7 +134,7 @@ export default function Device({ newuser, SetVideo, setNewuser }) {
             <ChatPage
               episodeone={episodeone}
               setEpisodeOne={setEpisodeOne}
-              dtime={dtime}    
+              dtime={dtime}
             />
           )}
           {screen === "PhoneScreen" && <PhonePage dtime={dtime} />}
@@ -117,17 +145,23 @@ export default function Device({ newuser, SetVideo, setNewuser }) {
             setpress={setpress}
             episodeone={episodeone}
             setEpisodeOne={setEpisodeOne}
-            setTime={setTime} 
+            setTime={setTime}
           />
         </div>
       </div>
       <audio autoPlay loop muted={audio ? false : true}>
-        <source src="https://images.stinkyfruit.com/audio_bed_ambience_mp3_v2_mom_flow.mp3" type="audio/mp3"/>
+        <source
+          src="https://images.stinkyfruit.com/audio_bed_ambience_mp3_v2_mom_flow.mp3"
+          type="audio/mp3"
+        />
       </audio>
       <audio autoPlay loop muted={audio ? true : false}>
-        <source src="https://images.stinkyfruit.com/audio_bed_ambience_mp3_v2.mp3" type="audio/mp3"/>
+        <source
+          src="https://images.stinkyfruit.com/audio_bed_ambience_mp3_v2.mp3"
+          type="audio/mp3"
+        />
       </audio>
-     {/* {audio?<audio autoPlay loop>
+      {/* {audio?<audio autoPlay loop>
         <source src="https://images.stinkyfruit.com/audio_bed_ambience_mp3_v2_mom_flow.mp3" type="audio/mp3"/>
       </audio>:
       <audio autoPlay loop>

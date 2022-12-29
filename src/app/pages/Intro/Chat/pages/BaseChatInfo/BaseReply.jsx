@@ -69,18 +69,12 @@ export default function ChatReply({
     setCounter(counter + 1);
 
     // { for krista message Flow 1.7" },
+    
     if (episodeone === "Flow1.7.1.1") {
-      let truereplies = "Red West Control Center";
-      let truerepliesone = "Red West";
-      let truerepliestwo = "Control Center";
-      let truerepliesthree = "Bunker";
-
-      if (
-        message.toLowerCase() === truereplies.toLowerCase() ||
-        message.toLowerCase() === truerepliesone.toLowerCase() ||
-        message.toLowerCase() === truerepliestwo.toLowerCase() ||
-        message.toLowerCase() === truerepliesthree.toLowerCase()
-      ) {
+      let truereplies = ["red west control center","red west","control center","command center","red west command center","bunker"]
+      
+      if(truereplies.includes(message.toLocaleLowerCase())){
+        
         setReplyMessages([...replyMessages, { person: "Me", chat: message }]);
         setTimeout(function () {
           setReplyMessages([
@@ -94,6 +88,7 @@ export default function ChatReply({
 
           encryptStorage.removeItem(`chat-storage-${person.toLowerCase()}`);
           encryptStorage.setItem(`chat-storage-${person.toLowerCase()}`, [
+            
             ...replyMessages,
             { person: "Me", chat: message },
             {
@@ -109,11 +104,7 @@ export default function ChatReply({
       }
 
       if (
-        message.toLowerCase() !== truereplies.toLowerCase() &&
-        message !== "" &&
-        message.toLowerCase() !== truerepliesone.toLowerCase() &&
-        message.toLowerCase() !== truerepliestwo.toLowerCase() &&
-        message.toLowerCase() !== truerepliesthree.toLowerCase()||message == ""
+        !truereplies.includes(message.toLocaleLowerCase()) || message === ''
       ) {
         setReplyMessages([...replyMessages, { person: "Me", chat: message }]);
 
@@ -122,7 +113,7 @@ export default function ChatReply({
           setReplyMessages([
             ...replyMessages,
             { person: "Me", chat: message },
-            { person: "Krista", chat: messagereplies },
+           
           ]);
           encryptStorage.removeItem(`chat-storage-krista`);
           encryptStorage.setItem(`chat-storage-krista`, [
@@ -142,13 +133,13 @@ export default function ChatReply({
     }
 
     // { for Themothee message Flow 1.10" },
-    // Yes: Yes, Yep, Yup, Sure, You Bet, OK, K, Okay, affirmative
+    // Yes: Yes, Yep, Yup, Sure, You Bet, OK, K, Okay, affirmative,ya, yeah
     if (
       episodeone === "Flow1.10.1" ||
       episodeone === "Flow1.12" ||
       episodeone == "Flow1.11"
     ) {
-      if (message.toLowerCase().includes("yes")||message.toLowerCase().includes("yep")||message.toLowerCase().includes("yup")||message.toLowerCase().includes("sure")||message.toLowerCase().includes("you bet")||message.toLowerCase().includes("ok")||message.toLowerCase().includes(" okay")||message.toLowerCase().includes("affirmative")) {
+      if (message.toLowerCase().includes("yes")||message.toLowerCase().includes("yep")||message.toLowerCase().includes("yup")||message.toLowerCase().includes("sure")||message.toLowerCase().includes("you bet")||message.toLowerCase().includes("ok")||message.toLowerCase().includes(" okay")||message.toLowerCase().includes("affirmative")||message.toLowerCase().includes("yeah")||message.toLowerCase().includes("ya")) {
         setReplyMessages([
           ...replyMessages,
           { person: "Me", chat: message, time: 1 },

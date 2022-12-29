@@ -27,13 +27,7 @@ const [yes ,setyes] =useState(false);
   const handleSubmit = (e) => {
   }
 
-useEffect(() => {
-  if(episodeone === "Flow1.13.1"){
-    setyes(true);
- setNames([{   name: "Y2Knotok.AOL.com",}])
-  }
 
-},[episodeone]);
 
 const HandleYes = () => {
 setTimeout(function() {
@@ -100,7 +94,7 @@ SetVideo("Episode2");
           <div
             className={`${opentext?"delete_button":"reply_button"} d-flex justify-content-center align-items-center`}
             type="button"
-            onClick={OpenReplay}
+            onClick={""}
           >
             Reply
           </div>
