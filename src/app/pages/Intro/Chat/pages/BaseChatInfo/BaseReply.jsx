@@ -197,7 +197,7 @@ export default function ChatReply({
           setReplyMessages([
             ...replyMessages,
             { person: "Me", chat: message, time: 1 },
-            { person: "Timothee HR", chat: "Just say YES, J", time: 1 },
+            { person: "Timothee HR", chat: "JUST SAY YES, J", time: 1 },
           ]);
         }, 3000);
 
@@ -205,7 +205,7 @@ export default function ChatReply({
         encryptStorage.setItem(`chat-storage-timothee`, [
           ...replyMessages,
           { person: "Me", chat: message },
-          { person: "Timothee HR", chat: "Jusy say YES, J" },
+          { person: "Timothee HR", chat: "JUST SAY YES, J" },
         ]);
       }
     }
