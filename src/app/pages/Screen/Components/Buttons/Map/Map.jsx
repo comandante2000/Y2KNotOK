@@ -8,7 +8,9 @@ export default function MapButton({
   episodeone,
   setEpisodeOne,
 }) {
+  let mappermission =["Flow1.9"]
   const audioRef = useRef();
+  const audioRefmap = useRef();
   const handleClick5 = () => {
     const audioElement = audioRef.current;
     // Play the audio
@@ -22,6 +24,14 @@ export default function MapButton({
   
   };
   
+  useEffect(() => {
+    const audioElementmap = audioRefmap.current;
+    if (mappermission.includes(episodeone)) {
+      audioRefmap.current.muted = false; 
+      audioElementmap.play();
+    }
+  }, );
+
   return (
     <div id="map-button">
       <div
@@ -35,6 +45,11 @@ export default function MapButton({
         onClick={press >= 5 ? handleClick5 : null}
       ></div>
         <audio ref={audioRef} src="https://images.stinkyfruit.com/Button_Press.wav" />
+        <audio
+        loop={mappermission.includes(episodeone)?true:false}
+        ref={audioRefmap}
+        src="https://images.stinkyfruit.com/sound_all_btn.wav"
+      />
     </div>
   );
 }

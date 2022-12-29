@@ -1,5 +1,5 @@
 import "./VoiceMail.scss";
-import { useRef } from 'react';
+import { useRef,useEffect } from 'react';
 export default function VoiceMailButton({
   showScreen,
   setActive,
@@ -10,8 +10,10 @@ export default function VoiceMailButton({
   setEpisodeOne,
 }) {
 
-  const audioRef = useRef();
 
+  let voicepermission =["mailpop","Flow1.8","notallowed"]
+  const audioRef = useRef();
+  const audioRefvoice = useRef();
   const handleClick = () => {
     const audioElement = audioRef.current;
     // Play the audio
@@ -28,8 +30,15 @@ export default function VoiceMailButton({
     if (episodeone == "Flow1.8") {
       setEpisodeOne("Flow1.8.1");
     }
+   
   };
-
+  useEffect(() => {
+    const audioElementvoice = audioRefvoice.current;
+    if (voicepermission.includes(episodeone)) {
+      audioRefvoice.current.muted = false; 
+      audioElementvoice.play();
+    }
+  }, );
   return (
     <div id="voice-button">
       <div
@@ -45,6 +54,11 @@ export default function VoiceMailButton({
         onClick={press >= 5 ? handleClick : null}
       ></div>
       <audio ref={audioRef} src="https://images.stinkyfruit.com/Button_Press.wav" />
+      <audio
+        loop={voicepermission.includes(episodeone)?true:false}
+        ref={audioRefvoice}
+        src="https://images.stinkyfruit.com/sound_all_btn.wav"
+      />
     </div>
   );
 }
