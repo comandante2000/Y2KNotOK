@@ -68,7 +68,7 @@ export default function PopUps({
           </div>
           <div className=" text-center align-items-center d-flex justify-content-center">
             <div className="video-container d-flex flex-column">
-              <div>
+              <div className="video-child-container">
                 <video
                   className="video"
                   // autoplay="true"
