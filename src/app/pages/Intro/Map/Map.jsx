@@ -13,7 +13,7 @@ export default function MapPage({ setEpisodeOne, episodeone,dtime }) {
  
     setTimeout(function () {
             settimer(4)
-       },2000)
+       },1500)
   },[time])
 
   return (
