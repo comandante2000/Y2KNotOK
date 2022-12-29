@@ -89,7 +89,7 @@ export default function MailButton({
         src="https://images.stinkyfruit.com/Button_Press.wav"
       />
       <audio
-        loop
+        loop={episodeone =="allow"?true:false}
         ref={audioRefmail}
         src="https://images.stinkyfruit.com/New_Button_Blink_mail3.wav"
       />
