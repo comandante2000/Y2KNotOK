@@ -95,7 +95,7 @@ export default function Device({
   }, [episodeone]);
 
   console.log("flow", episodeone);
-  console.log("background", audio);
+
   return (
     <div id="pda-device">
       <div
@@ -146,6 +146,7 @@ export default function Device({
             episodeone={episodeone}
             setEpisodeOne={setEpisodeOne}
             setTime={setTime}
+            screen={screen}
           />
         </div>
       </div>

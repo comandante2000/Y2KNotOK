@@ -1,5 +1,5 @@
 import "./Mail.scss";
-import { useState, useEffect,useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function MailButton({
   showScreen,
@@ -8,20 +8,33 @@ export default function MailButton({
   press,
   episodeone,
   setEpisodeOne,
+  screen,
 }) {
   const audioRef = useRef();
   const [btnclick, setbtnclick] = useState(0);
   const handleClick = () => {
+    setbtnclick(btnclick + 1);
+  
     const audioElement = audioRef.current;
     // Play the audio
+    audioRef.current.currentTime = 0;
     audioElement.play();
-    showScreen("MailScreen");
-    setActive("mail");
+    if (btnclick >= 2) {
+      showScreen("MailScreen");
+      setActive("mail");
+    }
   };
+  useEffect(() => {
+    if (screen !== "MailScreen") {
+      setbtnclick(0);
+    }
+  }, [screen]);
 
   const handleClick3 = () => {
+
     const audioElement = audioRef.current;
-    // Play the audio
+    // Play the audio 
+    audioRef.current.currentTime = 0;
     audioElement.play();
     showScreen("MailScreen");
     setActive("mail");
@@ -29,8 +42,10 @@ export default function MailButton({
   };
 
   const handleClick1 = () => {
+ 
     const audioElement = audioRef.current;
     // Play the audio
+    audioRef.current.currentTime = 0;
     audioElement.play();
     showScreen("VoicemailScreen");
     setActive("voice");
@@ -40,13 +55,12 @@ export default function MailButton({
     });
   };
 
-
   return (
     <div id="mail-button">
       {episodeone == "allow" ? (
         <div
           className={`button-2 ${color == "mail" ? "red" : "black"} ${
-            episodeone == "allowed"? null : "button-glow"
+            episodeone == "allowed" ? null : "button-glow"
           }`}
           type="button"
           name="mail"
@@ -55,14 +69,17 @@ export default function MailButton({
       ) : (
         <div
           className={`button-2 ${color == "mail" ? "red" : "black"} ${
-            episodeone == "allow"? "button-glow" : null
+            episodeone == "allow" ? "button-glow" : null
           }`}
           type="button"
           name="mail"
           onClick={press >= 5 ? handleClick : null}
         ></div>
-        
-      )}  <audio ref={audioRef} src="https://images.stinkyfruit.com/Button_Press.wav" />
+      )}{" "}
+      <audio
+        ref={audioRef}
+        src="https://images.stinkyfruit.com/Button_Press.wav"
+      />
     </div>
   );
 }

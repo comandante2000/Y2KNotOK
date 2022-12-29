@@ -12,6 +12,7 @@ export default function MapButton({
   const handleClick5 = () => {
     const audioElement = audioRef.current;
     // Play the audio
+    audioRef.current.currentTime = 0;
     audioElement.play();
     showScreen("MapScreen");
     setActive("map");

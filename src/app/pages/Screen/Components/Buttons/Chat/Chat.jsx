@@ -15,6 +15,7 @@ export default function ChatButton({
   const handleClick4 = () => {
     const audioElement = audioRef.current;
     // Play the audio
+    audioRef.current.currentTime = 0;
     audioElement.play();
  
     showScreen("MessageScreen");
