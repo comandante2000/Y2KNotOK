@@ -12,7 +12,7 @@ export default function IntroVideo({ setNewuser }) {
   // let audio1 = "https://images.stinkyfruit.com/Boot_Sequence_v10.mp4";
   // let audio1 = "https://images.stinkyfruit.com/Boot_Sequence_v11_final.mp4";
   let audio1 = "https://images.stinkyfruit.com/Boot-Sequence-v13.mp4";
-  let audio2 = "https://images.stinkyfruit.com/Boot-Sequence-v12.mp4";
+  let audio2 = "https://images.stinkyfruit.com/Mobile-Boot-Sequencev13.mp4";
   return (
     <div id="pda-intro-screen">
       <div className="introvideo-desktop-tablet">

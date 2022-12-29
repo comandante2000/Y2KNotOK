@@ -96,39 +96,43 @@ export default function PopUp({ setOpen, setEpisodeOne, video, episodeone }) {
 
               <div className="timecontrols d-flex justify-content-bottom">
                 <div className="controls">
-                  {playing ? (
-                    <div
-                      className="controlsIcon--small-pause mx-1"
-                      onClick={() => videoHandler("pause")}
-                    />
+                  {playing  ? (
+                    <div id="pause-id" className="pause-container">
+                      <div
+                          className="controlsIcon--small-pause mx-1"
+                          onClick={() => videoHandler("pause")}
+                      />
+                    </div>
                   ) : (
-                    <div
-                      className="controlsIcon--small-play mx-1"
-                      onClick={() => videoHandler("play")}
-                    />
+                    <div id="play-id" className="play-container" onClick={() => videoHandler("play")} type="button">
+                      <div
+                          className="controlsIcon--small-play mx-1"
+                          onClick={() => videoHandler("play")}
+                      />
+                    </div>
                   )}
-                  <div className="controlsIconb mx-1" onClick={revert} />
-                  <div className="controlsIconf mx-1" onClick={fastForward} />
+                  {/*<div className="controlsIconb mx-1" onClick={revert} />*/}
+                  {/*<div className="controlsIconf mx-1" onClick={fastForward} />*/}
                 </div>
 
-                <p className="controlsTime d-flex justify-content-center a">
-                  {" "}
-                  {Math.floor(currentTime / 60) +
-                    ":" +
-                    ("0" + Math.floor(currentTime % 60)).slice(-2)}
-                </p>
-                <div className="time_progressbarContainer">
-                  <div
-                    style={{ width: `${progress}%` }}
-                    className="time_progressBar"
-                  ></div>
-                </div>
-                <p className="controlsTime">
-                  {" "}
-                  {Math.floor(videoTime / 60) +
-                    ":" +
-                    ("0" + Math.floor(videoTime % 60)).slice(-2)}
-                </p>
+                {/*<p className="controlsTime d-flex justify-content-center a">*/}
+                {/*  {" "}*/}
+                {/*  {Math.floor(currentTime / 60) +*/}
+                {/*    ":" +*/}
+                {/*    ("0" + Math.floor(currentTime % 60)).slice(-2)}*/}
+                {/*</p>*/}
+                {/*<div className="time_progressbarContainer">*/}
+                {/*  <div*/}
+                {/*    style={{ width: `${progress}%` }}*/}
+                {/*    className="time_progressBar"*/}
+                {/*  ></div>*/}
+                {/*</div>*/}
+                {/*<p className="controlsTime">*/}
+                {/*  {" "}*/}
+                {/*  {Math.floor(videoTime / 60) +*/}
+                {/*    ":" +*/}
+                {/*    ("0" + Math.floor(videoTime % 60)).slice(-2)}*/}
+                {/*</p>*/}
               </div>
             </div>
           </div>
