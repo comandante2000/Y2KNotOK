@@ -96,39 +96,70 @@ export default function ChatReply({
               chat: "Don't tell anyone else.We need to keep you safe",
             },
           ]);
-
           if (episodeone === "Flow1.7.1.1") {
             setEpisodeOne("Flow1.8");
           }
         }, 3000);
       }
 
-      if (
-        !truereplies.includes(message.toLocaleLowerCase()) || message === ''
-      ) {
-        setReplyMessages([...replyMessages, { person: "Me", chat: message }]);
+      // if (
+      //   truereplies.includes(message.toLocaleLowerCase())=== false
+      // ) {
+    
+      //   setReplyMessages([...replyMessages, { person: "Me", chat: message }]);
 
+      //   setTimeout(function () {
+      //     setMessageReplies("Cool. I get it. Might be better if I don't know."); 
+      //     setReplyMessages([
+      //       ...replyMessages,
+      //       { person: "Me", chat: message },
+      //     ]);
+      //     encryptStorage.removeItem(`chat-storage-krista`);
+      //     encryptStorage.setItem(`chat-storage-krista`, [
+      //       ...replyMessages,
+      //       { person: "Me", chat: message },
+      //       { person: "Krista", chat: messagereplies },
+      //     ]);
+      //     if (episodeone === "Flow1.7.1.1" && counter >= 2) {
+      //         setEpisodeOne("Flow1.8");
+      //     }
+      //   }, 3000);
+      // }
+
+      if(truereplies.includes(message.toLocaleLowerCase())===false){
+       
+        setReplyMessages([...replyMessages, { person: "Me", chat: message }]);
         setTimeout(function () {
-          setMessageReplies("Cool. I get it. Might be better if I don't know."); 
           setReplyMessages([
             ...replyMessages,
             { person: "Me", chat: message },
-           
+            {
+              person: "Krista",
+              chat: messagereplies,
+            },
           ]);
-          encryptStorage.removeItem(`chat-storage-krista`);
-          encryptStorage.setItem(`chat-storage-krista`, [
+
+          encryptStorage.removeItem(`chat-storage-${person.toLowerCase()}`);
+          encryptStorage.setItem(`chat-storage-${person.toLowerCase()}`, [
+            
             ...replyMessages,
             { person: "Me", chat: message },
-            { person: "Krista", chat: messagereplies },
+            {
+              person: "Krista",
+              chat: "Cool. I get it. Might be better if I don't know.",
+            },
           ]);
-          if (episodeone === "Flow1.7.1.1" && counter >= 2) {
-           
-              setEpisodeOne("Flow1.8");
-             
-         
-          }
+           if (episodeone === "Flow1.7.1.1" && counter >= 2) {
+            setEpisodeOne("Flow1.8");
+       }
         }, 3000);
       }
+
+
+
+
+
+
       setmessage("");
     }
 
