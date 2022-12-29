@@ -15,6 +15,7 @@ export default function VoiceMailButton({
   const handleClick = () => {
     const audioElement = audioRef.current;
     // Play the audio
+    audioRef.current.currentTime = 0;
     audioElement.play();
     showScreen("VoicemailScreen");
     setActive("voice");

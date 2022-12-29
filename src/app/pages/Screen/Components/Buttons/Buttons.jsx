@@ -13,6 +13,7 @@ export default function Buttons({
   setpress,
   episodeone,
   setEpisodeOne,
+  screen
 }) {
   const [active, setActive] = useState("");
 
@@ -29,6 +30,7 @@ export default function Buttons({
               press={press}
               episodeone={episodeone}
               setEpisodeOne={setEpisodeOne}
+              screen={screen}
             />
             <VoiceMailButton
               showScreen={showScreen}

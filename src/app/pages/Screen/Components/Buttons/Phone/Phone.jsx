@@ -6,6 +6,7 @@ export default function PhoneButton({ showScreen, setActive, color, press , epis
   const handleClick3 = () => {
     const audioElement = audioRef.current;
     // Play the audio
+    audioRef.current.currentTime = 0;
     audioElement.play();
     showScreen("PhoneScreen");
     setActive("phone");
