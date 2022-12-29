@@ -55,7 +55,7 @@ export default function VoiceMailButton({
       ></div>
       <audio ref={audioRef} src="https://images.stinkyfruit.com/Button_Press.wav" />
       <audio
-        loop={voicepermission.includes(episodeone)?true:false}
+        // loop={voicepermission.includes(episodeone)?true:false}
         ref={audioRefvoice}
         src="https://images.stinkyfruit.com/sound_all_btn.wav"
       />
