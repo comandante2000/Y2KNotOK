@@ -25,7 +25,7 @@ export default function OutroVideo({ setNewuser,SetVideo ,setEpisodeOne}) {
   };
   // let audio1 = "https://images.stinkyfruit.com/Episode-1-Outro-v1.mp4";
   let audio1 = "https://images.stinkyfruit.com/Episode1-Outro-v2.mp4";
-  let audio2 = "https://images.stinkyfruit.com/Mobile-outro-v3.mp4";
+  let audio2 = "https://images.stinkyfruit.com/Mobile-outro-v4.mp4";
   return (
     <div id="pda-outro-screen">
       <div className="outrovideo ">

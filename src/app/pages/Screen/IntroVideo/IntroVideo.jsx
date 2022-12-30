@@ -22,7 +22,7 @@ const videoRefMob = useRef(null);
   };
 
   let audio1 = "https://images.stinkyfruit.com/Boot-Sequence-v13.mp4";
-  let audio2 = "https://images.stinkyfruit.com/Mobile-Boot-Sequence-v14.mp4";
+  let audio2 = "https://images.stinkyfruit.com/Intro-Mobile-Boot-Sequence-v14.mp4";
   return (
     <div id="pda-intro-screen">
       <div className="introvideo-desktop-tablet">
