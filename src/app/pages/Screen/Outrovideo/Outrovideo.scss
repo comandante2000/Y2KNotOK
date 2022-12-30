@@ -1,21 +1,78 @@
 #pda-outro-screen {
     // margin-block: 50%;
     position:absolute;
-    .introvideo {
-      //width: 100%;
-      //height: auto;
-      //aspect-ratio: 16/9;
-      position: fixed;
-      right: 0;
-      bottom: 0;
-      min-width: 100%;
-      min-height: 100%;
-      background-color: black;
-      .video-size{
-        width: 100vw;
-        height: 100vh;
+    .outrovideo {
+      .outrovideo-desktop-tablet{
+        //width: 100%;
+        //height: auto;
+        //aspect-ratio: 16/9;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        background-color: black;
+        .video-size{
+          width: 100vw;
+          height: 100vh;
+        }
+      }
+      .outrovideo-mobile{
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        background-color: black;
+        display:none !important;
+        .video-size{
+          width: 100vw;
+          height: 100vh;
+        }
       }
     }
+  .play-container{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    //background-color: #12121240;
+    height: 100%;
+    width: 100%;
+    .controlsIcon--small-play {
+      background-image: url("https://images.stinkyfruit.com//Big-White-Play-Icon.svg");
+      background-repeat: no-repeat;
+      width: 105px;
+      height: 105px;
+      cursor: pointer;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-size: contain;
+    }
+  }
+  .pause-container{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    //background-color: #12121240;
+    height: 100%;
+    width: 100%;
+    .controlsIcon--small-pause {
+      //background-image: url("https://images.stinkyfruit.com//Icon_feather_pause_circle.svg");
+      //background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      //background-size: contain;
+    }
+  }
     //
     //@media (max-width: 991.98px) {
     //  .introvideo {
@@ -27,5 +84,23 @@
     //    height: auto;
     //  }
     //}
+}
+@media (max-width: 575.98px){
+  #pda-outro-screen{
+    .play-container{
+      .controlsIcon--small-play{
+        width: 50px;
+        height: 50px;
+      }
+    }
+    .outrovideo{
+      .outrovideo-desktop-tablet{
+        display:none !important;
+      }
+      .outrovideo-mobile{
+        display:block !important;
+      }
+    }
   }
+}
   
