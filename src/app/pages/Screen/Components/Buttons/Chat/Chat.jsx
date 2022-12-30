@@ -14,9 +14,13 @@ export default function ChatButton({
   const audioRefchat = useRef();
   let chatpermission = ["Flow1.10", "Flow1.7.1"];
   const handleClick4 = () => {
-    if(openchat){
-      setOpenchat(false)    }
-   
+    if (episodeone === "Flow1.11") {
+      SetVideo("Episode2");
+    }
+    if (openchat) {
+      setOpenchat(false);
+    }
+
     const audioElement = audioRef.current;
     // Play the audio
     audioRef.current.currentTime = 0;
@@ -34,7 +38,7 @@ export default function ChatButton({
       audioRefchat.current.muted = false;
       audioElementchat.play();
     }
-  },[episodeone]);
+  }, [episodeone]);
   return (
     <div id="chat-button">
       <div

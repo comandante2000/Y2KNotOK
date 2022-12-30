@@ -4,6 +4,12 @@ export default function PhoneButton({ showScreen, setActive, color, press , epis
 
   const audioRef = useRef();
   const handleClick3 = () => {
+
+    if (episodeone === "Flow1.11") {
+    
+      SetVideo("Episode2");
+   
+  }
     const audioElement = audioRef.current;
     // Play the audio
     audioRef.current.currentTime = 0;

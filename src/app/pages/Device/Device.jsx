@@ -63,36 +63,36 @@ export default function Device({
   });
   //cookies
  
-  function handleClick() {
-    if (episodeone === "Flow1.11") {
-      setTime("6:35 AM");
-      setTimeout(function () {
-        SetVideo("Episode2");
-      }, 20000);
-    }
-  }
+  // function handleClick() {
+  //   if (episodeone === "Flow1.11") {
+  //     setTime("6:35 AM");
+  //     setTimeout(function () {
+  //       SetVideo("Episode2");
+  //     }, 20000);
+  //   }
+  // }
 
-  useEffect(() => {
-    // console.log("FLOW: ", episodeone);
-    // if (episodeone === "Flow1.11") {
+  // useEffect(() => {
+  //   // console.log("FLOW: ", episodeone);
+  //   // if (episodeone === "Flow1.11") {
 
-    //   function handleClick(event) {
-    //     if (episodeone === "Flow1.11") {
-    //       setEpisodeOne("Flow1.12");
-    //       setTime("6:35 AM");
-    //       setTimeout(function () {
-    //         console.log("fdghdgdfg", episodeone);
-    //         SetVideo("Episode2");
-    //         setEpisodeOne("Flow1.12");
-    //       }, 5000);
-    //       console.log('VIDEO PLAYED: ', episodeone);
-    //     } else {
-    //       alert("STOP");
-    //     }
-    //   }
-    // }
-    document.addEventListener("click", handleClick());
-  }, [episodeone]);
+  //   //   function handleClick(event) {
+  //   //     if (episodeone === "Flow1.11") {
+  //   //       setEpisodeOne("Flow1.12");
+  //   //       setTime("6:35 AM");
+  //   //       setTimeout(function () {
+  //   //         console.log("fdghdgdfg", episodeone);
+  //   //         SetVideo("Episode2");
+  //   //         setEpisodeOne("Flow1.12");
+  //   //       }, 5000);
+  //   //       console.log('VIDEO PLAYED: ', episodeone);
+  //   //     } else {
+  //   //       alert("STOP");
+  //   //     }
+  //   //   }
+  //   // }
+  //   document.addEventListener("click", handleClick());
+  // }, [episodeone]);
 
   console.log("flow", episodeone);
 

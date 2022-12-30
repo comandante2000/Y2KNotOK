@@ -12,6 +12,12 @@ export default function MapButton({
   const audioRef = useRef();
   const audioRefmap = useRef();
   const handleClick5 = () => {
+
+    if (episodeone === "Flow1.11") {
+    
+      SetVideo("Episode2");
+   
+  }
     const audioElement = audioRef.current;
     // Play the audio
     audioRef.current.currentTime = 0;
