@@ -14,6 +14,13 @@ export default function MailButton({
   const audioRefmail = useRef();
   const [btnclick, setbtnclick] = useState(0);
   const handleClick = () => {
+
+
+    if (episodeone === "Flow1.11") {
+    
+      SetVideo("Episode2");
+   
+  }
     setbtnclick(btnclick + 1);
 
     const audioElement = audioRef.current;
