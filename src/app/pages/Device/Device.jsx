@@ -68,7 +68,7 @@ export default function Device({
       setTime("6:35 AM");
       setTimeout(function () {
         SetVideo("Episode2");
-      }, 6000);
+      }, 15000);
     }
   }
 

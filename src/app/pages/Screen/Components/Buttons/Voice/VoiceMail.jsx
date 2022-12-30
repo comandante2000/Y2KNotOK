@@ -30,6 +30,9 @@ export default function VoiceMailButton({
     if (episodeone == "Flow1.8") {
       setEpisodeOne("Flow1.8.1");
     }
+    if (episodeone == "notallowed") {
+      setEpisodeOne("notallowedsound");
+    }
    
   };
   useEffect(() => {

@@ -101,7 +101,9 @@ export default function ChatReply({
             },
           ]);
           if (episodeone === "Flow1.7.1.1") {
-            setEpisodeOne("Flow1.8");
+            setTimeout(function () {
+              setEpisodeOne("Flow1.8");
+            }, 4000);
           }
         }, 2000);
       }
@@ -154,7 +156,9 @@ export default function ChatReply({
             },
           ]);
           if (episodeone === "Flow1.7.1.1" && counter >= 2) {
-            setEpisodeOne("Flow1.8");
+            setTimeout(function () {
+              setEpisodeOne("Flow1.8");
+            }, 4000);
           }
         }, 2000);
       }
