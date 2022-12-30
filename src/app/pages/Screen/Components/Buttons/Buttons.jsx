@@ -13,7 +13,9 @@ export default function Buttons({
   setpress,
   episodeone,
   setEpisodeOne,
-  screen
+  screen,
+  openchat,
+              setOpenchat
 }) {
   const [active, setActive] = useState("");
 
@@ -55,6 +57,8 @@ export default function Buttons({
               press={press}
               episodeone={episodeone}
               setEpisodeOne={setEpisodeOne}
+              openchat={openchat}
+              setOpenchat={setOpenchat}
             />
             <MapButton
               showScreen={showScreen}
