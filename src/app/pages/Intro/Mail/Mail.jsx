@@ -427,7 +427,7 @@ export default function MailPage({ episodeone, setEpisodeOne,dtime ,SetVideo}) {
 
             {openvideo ? (
               <PopUps
-                video="https://images.stinkyfruit.com/Finn.mp4"
+                video="https://images.stinkyfruit.com/HR-TIMOTHEE-Y2K-NOT-OK.mp4"
                 setOpenvideo={setOpenvideo}
                 setEpisodeOne={setEpisodeOne}
                 episodeone={episodeone}

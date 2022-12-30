@@ -79,7 +79,7 @@ useEffect(() => {
   },[]);
  
   return (
-    <div className={`container-fluid app d-flex justify-content-center ${ !newuser ? 'fadeInOutApp' : ''} ${ video === "" ? '' : 'outroFadeInOut'}`}>
+    <div className={`container-fluid app d-flex justify-content-center ${ !newuser ? 'fadeInOutApp' : ''} ${ video === "" ? 'outroFadeInOut' : '' }`} >
       <Routes>
         
        <Route
