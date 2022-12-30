@@ -34,7 +34,7 @@ export default function ChatButton({
       audioRefchat.current.muted = false;
       audioElementchat.play();
     }
-  });
+  },[episodeone]);
   return (
     <div id="chat-button">
       <div

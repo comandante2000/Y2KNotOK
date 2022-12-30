@@ -22,14 +22,19 @@ export default function MapPage({ setEpisodeOne, episodeone, dtime }) {
     "Flow1.7.1.1",
     "Flow1.8",
     "Flow1.8.1",
+    "Flow1.9",
   ];
-  let Allpermission = ["flow Flow1.9.1","Flow1.10", "Flow1.10.1", "Flow1.11", "Flow1.13"];
+  let Allpermission = ["Flow1.10", "Flow1.10.1", "Flow1.10.2", "Flow1.11", "Flow1.13","Flow1.9.2"];
 
   useEffect(
     function () {
       setTimeout(function () {
         settimer(4);
-      }, 2000);
+      }, 2000); 
+      
+     if(time == 4&&episodeone === "Flow1.9.1"){
+      setEpisodeOne("Flow1.9.2")
+    }
     },
     [time]
   );
@@ -39,6 +44,7 @@ export default function MapPage({ setEpisodeOne, episodeone, dtime }) {
       settimer(4);
       console.log("ok")
     }
+    
   }, [episodeone]);
 
   return (

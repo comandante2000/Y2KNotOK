@@ -8,6 +8,7 @@ export default function VoiceMailButton({
   setpress,
   episodeone,
   setEpisodeOne,
+  SetVideo
 }) {
 
 
@@ -15,6 +16,11 @@ export default function VoiceMailButton({
   const audioRef = useRef();
   const audioRefvoice = useRef();
   const handleClick = () => {
+
+ 
+
+
+
     const audioElement = audioRef.current;
     // Play the audio
     audioRef.current.currentTime = 0;
@@ -41,7 +47,7 @@ export default function VoiceMailButton({
       audioRefvoice.current.muted = false; 
       audioElementvoice.play();
     }
-  }, );
+  },[episodeone]);
   return (
     <div id="voice-button">
       <div

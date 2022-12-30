@@ -1,11 +1,8 @@
 import "./MapPageTwo.scss";
 import { useState } from "react";
-export default function MapPageTwo({setZoom}) {
-
-
+export default function MapPageTwo({ setZoom }) {
   const Zoom = () => {
-setZoom(true);
-  
+    setZoom(true);
   };
   return (
     <div id="map-pagetwo-screen">
@@ -23,7 +20,7 @@ setZoom(true);
           </div>
           {/* Popup Modal End */}
           {/* <div className="zoomout" type="button" onClick={""}></div> */}
-          <div className="unzoomout" ></div>
+          <div className="unzoomout"></div>
           <div className="zoomout" type="button" onClick={Zoom}></div>
         </div>
       </div>

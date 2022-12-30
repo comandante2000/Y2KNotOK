@@ -30,7 +30,7 @@ export default function MapButton({
       audioRefmap.current.muted = false; 
       audioElementmap.play();
     }
-  }, );
+  }, [episodeone]);
 
   return (
     <div id="map-button">

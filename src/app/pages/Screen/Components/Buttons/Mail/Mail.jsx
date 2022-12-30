@@ -38,7 +38,7 @@ export default function MailButton({
     if (episodeone == "allow") {
       audioElementmail.play();
     }
-  }, );
+  }, [episodeone]);
 
   const handleClick3 = () => {
     const audioElement = audioRef.current;

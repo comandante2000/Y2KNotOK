@@ -31,7 +31,7 @@ export default function ChatReply({
     },
     {
       chatPerson: "Timothee HR",
-      flow: ["Flow1.10.1", "Flow1.12", "Flow1.11"],
+      flow: ["Flow1.10.1", "Flow1.12", "Flow1.11","Flow1.10.2"],
       reply: "yes",
     },
     { flow: "", reply: "Pilot Butte Substation" },
@@ -169,7 +169,7 @@ export default function ChatReply({
     // { for Themothee message Flow 1.10" },
     // Yes: Yes, Yep, Yup, Sure, You Bet, OK, K, Okay, affirmative,ya, yeah
     if (
-      episodeone === "Flow1.10.1" ||
+      episodeone === "Flow1.10.1" ||episodeone === "Flow1.10.2"||
       episodeone === "Flow1.12" ||
       episodeone == "Flow1.11"
     ) {
@@ -193,7 +193,7 @@ export default function ChatReply({
         setTimeout(function () {
           const audioElement = audioRef.current;
           audioElement.play();
-          if (episodeone === "Flow1.10.1") {
+          if (episodeone === "Flow1.10.1"||episodeone === "Flow1.10.2") {
             setEpisodeOne("Flow1.11");
           }
           setrigthreply(true);
