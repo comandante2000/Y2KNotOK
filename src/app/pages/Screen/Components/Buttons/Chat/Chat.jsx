@@ -1,5 +1,5 @@
 import "./Chat.scss";
-import {useEffect,useRef} from "react";
+import { useEffect, useRef } from "react";
 export default function ChatButton({
   showScreen,
   setActive,
@@ -7,17 +7,21 @@ export default function ChatButton({
   press,
   episodeone,
   setEpisodeOne,
+  openchat,
+  setOpenchat,
 }) {
-
   const audioRef = useRef();
   const audioRefchat = useRef();
-  let chatpermission =["Flow1.10","Flow1.7.1"]
+  let chatpermission = ["Flow1.10", "Flow1.7.1"];
   const handleClick4 = () => {
+    if(openchat){
+      setOpenchat(false)    }
+   
     const audioElement = audioRef.current;
     // Play the audio
     audioRef.current.currentTime = 0;
     audioElement.play();
- 
+
     showScreen("MessageScreen");
     setActive("message");
     if (episodeone === "Flow1.10") {
@@ -27,10 +31,10 @@ export default function ChatButton({
   useEffect(() => {
     const audioElementchat = audioRefchat.current;
     if (chatpermission.includes(episodeone)) {
-      audioRefchat.current.muted = false; 
+      audioRefchat.current.muted = false;
       audioElementchat.play();
     }
-  }, );
+  });
   return (
     <div id="chat-button">
       <div
@@ -45,9 +49,12 @@ export default function ChatButton({
         name="chat"
         onClick={press >= 5 ? handleClick4 : null}
       ></div>
-         <audio ref={audioRef} src="https://images.stinkyfruit.com/Button_Press.wav" />
+      <audio
+        ref={audioRef}
+        src="https://images.stinkyfruit.com/Button_Press.wav"
+      />
 
-         <audio
+      <audio
         // loop={chatpermission.includes(episodeone)?true:false}
         ref={audioRefchat}
         src="https://images.stinkyfruit.com/New_Message-option2.wav"

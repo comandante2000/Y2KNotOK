@@ -22,7 +22,7 @@ export default function Device({
 
   const [dtime, setTime] = useState("5:55 AM");
   const [audio, setAudio] = useState(false);
-
+  const [openchat, setOpenchat] = useState(false);
   useEffect(() => {
     if (episodeone === "Flow1.7.1") {
       setTime("6:15 AM");
@@ -135,6 +135,8 @@ export default function Device({
               episodeone={episodeone}
               setEpisodeOne={setEpisodeOne}
               dtime={dtime}
+              openchat={openchat}
+              setOpenchat={setOpenchat}
             />
           )}
           {screen === "PhoneScreen" && <PhonePage dtime={dtime} />}
@@ -147,6 +149,8 @@ export default function Device({
             setEpisodeOne={setEpisodeOne}
             setTime={setTime}
             screen={screen}
+            openchat={openchat}
+              setOpenchat={setOpenchat}
           />
         </div>
       </div>

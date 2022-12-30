@@ -64,15 +64,15 @@ const chatListsChange2 = [
   createChat(7, "Sylvie", "Resend Code", "", "", false, "12/15"),
 ];
 
-export default function ChatPage({ episodeone, setEpisodeOne, dtime }) {
-  const [open, setOpen] = useState(false);
+export default function ChatPage({ episodeone, setEpisodeOne, dtime,openchat, setOpenchat }) {
+ 
   const [hide, setHide] = useState(true);
   const [person, setPerson] = useState("");
   const [initChat, setInitChat] = useState("");
   const [listchat, setlistchat] = useState(chatListsInitial);
 
   const OpenMessage = (name, chat) => {
-    setOpen(true);
+    setOpenchat(true);
     setHide(false);
     setPerson(name);
     setInitChat(chat);
@@ -119,9 +119,9 @@ export default function ChatPage({ episodeone, setEpisodeOne, dtime }) {
           <Time time={dtime} />
           <Header name="Text" />
 
-          {open ? (
+          {openchat ? (
             <ChatReply
-              setOpen={setOpen}
+              setOpenchat={setOpenchat}
               setEpisodeOne={setEpisodeOne}
               episodeone={episodeone}
               person={person}

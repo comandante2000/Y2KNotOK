@@ -6,7 +6,7 @@ import { EncryptStorage } from "encrypt-storage";
 export default function ChatReply({
   person,
   chat,
-  setOpen,
+  setOpenchat,
   setEpisodeOne,
   episodeone,
 }) {
@@ -53,7 +53,7 @@ export default function ChatReply({
     setOpenm(true);
   };
   const OpenBack = () => {
-    setOpen(!setOpen);
+    setOpenchat(!setOpenchat);
   };
   const OpenCancel = () => {
     setOpenm(false);
