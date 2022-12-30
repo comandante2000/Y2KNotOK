@@ -35,7 +35,7 @@ export default function PopUp({ setOpen, setEpisodeOne, video, episodeone }) {
     setOpen(false);
     if (
       episodeone == "allow" ||
-      episodeone == "allowed" ||
+      episodeone == "allowed" || episodeone == "notallowedsound" ||
       episodeone == "notallowed" && video ==="https://images.stinkyfruit.com/HR_Timothee-V-0103.mp4"
     ) {
       setOpen(false);
