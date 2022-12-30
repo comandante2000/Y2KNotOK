@@ -56,7 +56,15 @@ const chatListsChange2 = [
     true,
     "12/30"
   ),
-  createChat(2, "Krista", "Where are you?", "Where are you? Everyone is looking for you", "Flow1.7.1", true, "12/30"),
+  createChat(
+    2,
+    "Krista",
+    "Where are you?",
+    "Where are you? Everyone is looking for you",
+    "Flow1.7.1",
+    true,
+    "12/30"
+  ),
   createChat(3, "Mateo", "Karoake tonight?", "", "", false, "12/27"),
   createChat(4, "Mom", "Did i do it right?", "", "", false, "12/20"),
   createChat(5, "Akari", "Crescent Lake", "", "", false, "12/19"),
@@ -64,8 +72,13 @@ const chatListsChange2 = [
   createChat(7, "Sylvie", "Resend Code", "", "", false, "12/15"),
 ];
 
-export default function ChatPage({ episodeone, setEpisodeOne, dtime,openchat, setOpenchat }) {
- 
+export default function ChatPage({
+  episodeone,
+  setEpisodeOne,
+  dtime,
+  openchat,
+  setOpenchat,
+}) {
   const [hide, setHide] = useState(true);
   const [person, setPerson] = useState("");
   const [initChat, setInitChat] = useState("");
@@ -79,6 +92,10 @@ export default function ChatPage({ episodeone, setEpisodeOne, dtime,openchat, se
     if (episodeone == "Flow1.7.1") {
       setEpisodeOne("Flow1.7.1.1");
     }
+    if (episodeone == "Flow1.10.1") {
+      setEpisodeOne("Flow1.10.2");
+    }
+    
   };
 
   useEffect(() => {
@@ -88,10 +105,12 @@ export default function ChatPage({ episodeone, setEpisodeOne, dtime,openchat, se
       "Flow1.8",
       "Flow1.7.1.1",
       "Flow1.9.1",
+      "Flow1.9.2",
       "Flow1.9",
       "Flow1.10",
     ];
     let change2 = [
+      "Flow1.10.2",
       "Flow1.10.1",
       "Flow1.11",
       "Flow1.11.1",

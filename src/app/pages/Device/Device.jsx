@@ -62,7 +62,7 @@ export default function Device({
     }
   });
   //cookies
-
+ 
   function handleClick() {
     if (episodeone === "Flow1.11") {
       setTime("6:35 AM");
@@ -151,6 +151,7 @@ export default function Device({
             screen={screen}
             openchat={openchat}
               setOpenchat={setOpenchat}
+              SetVideo={ SetVideo}
           />
         </div>
       </div>

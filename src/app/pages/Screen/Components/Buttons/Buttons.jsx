@@ -15,7 +15,7 @@ export default function Buttons({
   setEpisodeOne,
   screen,
   openchat,
-              setOpenchat
+              setOpenchat, SetVideo
 }) {
   const [active, setActive] = useState("");
 
@@ -42,6 +42,7 @@ export default function Buttons({
               setpress={setpress}
               episodeone={episodeone}
               setEpisodeOne={setEpisodeOne}
+              SetVideo={ SetVideo}
             />
             <PhoneButton
               showScreen={showScreen}
