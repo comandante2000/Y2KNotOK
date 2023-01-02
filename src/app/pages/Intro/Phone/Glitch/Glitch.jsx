@@ -24,6 +24,7 @@ export default function Glitch({setNewuser}) {
                     muted
                     playsInline
                     // controls
+                    // loop
                     // width="1920"
                     // height="auto"
                 ></video>
