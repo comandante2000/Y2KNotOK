@@ -1,6 +1,7 @@
+$image-name: "https://images.stinkyfruit.com/";
 #mail-button {
   .button-2 {
-    background-image: url("https://images.stinkyfruit.com/Message_Normal_state.png");
+    background-image: url("#{$image-name}Message_Normal_state.png");
     height: 60px;
     width: 60px;
     background-repeat: no-repeat;
@@ -13,7 +14,7 @@
     background-color: transparent;
   }
   .red {
-    //background-image: url("https://images.stinkyfruit.com/Small_Button_glow.png") , url("https://images.stinkyfruit.com/Message_Normal_state.png") ;
+    //background-image: url("#{$image-name}Small_Button_glow.png") , url("#{$image-name}Message_Normal_state.png") ;
     //background-repeat: no-repeat;
     //background-position: center;
     //background-size: 93.5%, cover;
@@ -52,38 +53,36 @@
   .button-glow {
     -webkit-animation-name: move !important;
     animation-name: move !important;
-    animation-duration:4700ms;
+    animation-duration: 4700ms;
     animation-iteration-count: infinite;
-  
   }
-  
-  @keyframes move{
+
+  @keyframes move {
     0% {
-      border-radius: 50%; 
+      border-radius: 50%;
       box-shadow: 0px 1px 8px 3px rgb(16, 14, 14) inset;
     }
     10% {
-      border-radius: 50%; 
+      border-radius: 50%;
       box-shadow: 0px 1px 8px 3px rgb(211, 12, 12) inset;
     }
-    20% { 
-      border-radius: 50%; 
+    20% {
+      border-radius: 50%;
       box-shadow: 0px 1px 8px 3px rgb(16, 14, 14) inset;
     }
     30% {
-      border-radius: 50%; 
+      border-radius: 50%;
       box-shadow: 0px 1px 8px 3px rgb(211, 12, 12) inset;
     }
-    40% { 
-      border-radius: 50%; 
+    40% {
+      border-radius: 50%;
       box-shadow: 0px 1px 8px 3px rgb(16, 14, 14) inset;
     }
     50% {
-      border-radius: 50%; 
+      border-radius: 50%;
       box-shadow: 0px 1px 8px 3px rgb(211, 12, 12) inset;
     }
   }
-
 }
 @media (max-width: 575.98px) {
   #mail-button {
@@ -93,8 +92,6 @@
     }
   }
 }
-
-
 
 @media (max-width: 320px) and (orientation: portrait) {
   #mail-button {

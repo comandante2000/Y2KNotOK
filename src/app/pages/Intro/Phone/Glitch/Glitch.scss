@@ -1,27 +1,28 @@
-#pda-Glitch-screen{
+$image-name: "https://images.stinkyfruit.com/";
+#pda-Glitch-screen {
   .introvideo {
     position: relative;
     width: 382.27px;
     height: 638.78px;
-    //background-image: url("https://images.stinkyfruit.com/PDA_Crack_Screen.svg");
+    //background-image: url("#{$image-name}PDA_Crack_Screen.svg");
     //background-color: #47b9b2;
     //background-size: cover;
     //background-repeat: no-repeat;
     //background-position: center;
     mix-blend-mode: multiply;
-    .video-size{
+    .video-size {
       width: 382.27px;
       height: 638.78px;
     }
   }
 }
 @media (max-width: 575.98px) {
-  #pda-Glitch-screen{
+  #pda-Glitch-screen {
     .introvideo {
       position: relative;
       width: 100%;
       height: 71vh;
-      .video-size{
+      .video-size {
         width: 100%;
         height: 100%;
         object-fit: fill;

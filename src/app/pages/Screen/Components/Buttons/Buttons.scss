@@ -1,3 +1,4 @@
+$image-name: "https://images.stinkyfruit.com/";
 #pda-buttons {
   .row-1 {
     height: 115px;
@@ -6,17 +7,17 @@
     height: 77px;
     background-size: cover;
     background-position: center;
-    width: 100%;;
+    width: 100%;
     height: 115px;
-    //background-image: url("https://images.stinkyfruit.com/BOTTOM_BAR.png");
+    //background-image: url("#{$image-name}BOTTOM_BAR.png");
     border-radius: 6px;
     -webkit-border-radius: 6px;
     -moz-bord1111er-radius: 6px;
     -ms-border-radius: 6px;
     -o-border-radius: 6px;
     -moz-border-radius: 6px;
-}
-    
+  }
+
   @media (max-width: 575.98px) {
     .row-1 {
       height: 15vh;
@@ -27,7 +28,7 @@
       background-color: #818181;
 
       .buttns {
-        background-image: url("https://images.stinkyfruit.com/BOTTOM-M.png");
+        background-image: url("#{$image-name}BOTTOM-M.png");
         background-color: none;
         height: 100%;
         //height: 15vh;
@@ -41,6 +42,6 @@
           width: 100vw;
         }
       }
-    } 
+    }
   }
 }

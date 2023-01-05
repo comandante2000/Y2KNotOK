@@ -1,17 +1,16 @@
+$image-name: "https://images.stinkyfruit.com/";
 #pda-chat-screen {
   .row-2 {
     padding: 0px;
     height: 643px;
     width: 504px;
-    
   }
   .inner-row-left {
     width: 15%;
-
-}
+  }
   .inner-row-center {
     //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/pda-crack-screen.png");
-    background-image: url("https://images.stinkyfruit.com/PDA_Crack_Screen.svg");
+    background-image: url("#{$image-name}PDA_Crack_Screen.svg");
     background-color: #47b9b2;
     background-blend-mode: multiply;
     background-size: cover;
@@ -22,30 +21,29 @@
     border: 2px solid #3c3838;
     height: 99.5%;
     overflow: hidden;
-    .container-message{
+    .container-message {
       padding-left: 10px;
       padding-right: 10px;
       height: 420px;
       width: 100%;
       margin-bottom: 20px;
-      overflow-y:auto;
+      overflow-y: auto;
       position: relative;
-      &::-webkit-scrollbar{
+      &::-webkit-scrollbar {
         //width: 10px;
         height: auto;
-        background-image: url("https://images.stinkyfruit.com/scroll-bar-bg.png");
+        background-image: url("#{$image-name}scroll-bar-bg.png");
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
         width: 20px;
       }
-      &::-webkit-scrollbar-track{
+      &::-webkit-scrollbar-track {
         -webkit-box-shadow: #47b9b2;
         //background-color: transparent;
-
       }
-      &::-webkit-scrollbar-thumb{
-        //background-image: url("https://images.stinkyfruit.com/scroll-bar-thumbnail.png");
+      &::-webkit-scrollbar-thumb {
+        //background-image: url("#{$image-name}scroll-bar-thumbnail.png");
         //background-repeat: no-repeat;
         //background-size: cover;
         //border-radius: 20px;
@@ -59,23 +57,23 @@
     }
   }
 
-  .chat-child-container{
+  .chat-child-container {
     border-top: 3px solid black;
   }
-  .child-border{
+  .child-border {
     border-bottom: 3px solid black;
     border-left: 3px solid black;
     border-right: 3px solid black;
   }
-  .base-chat-container{
+  .base-chat-container {
     height: 70px;
   }
 
-  .btn-delete-container{
+  .btn-delete-container {
     padding-left: 10px;
     padding-right: 27px;
-    .btn-delete{
-      background-image: url("https://images.stinkyfruit.com/box_img_bckground_gray.svg");
+    .btn-delete {
+      background-image: url("#{$image-name}box_img_bckground_gray.svg");
       background-repeat: no-repeat;
       font-family: "Palm OS";
       color: #326462;
@@ -88,21 +86,21 @@
   }
   .red-icon {
     //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/redicon.png");
-    background-image: url("https://images.stinkyfruit.com/Read.svg");
+    background-image: url("#{$image-name}Read.svg");
     background-repeat: no-repeat;
     background-position: center;
     width: 26px;
   }
   .chat-icon {
     //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/chat-icon.png");
-    background-image: url("https://images.stinkyfruit.com/Text_Icon.svg");
+    background-image: url("#{$image-name}Text_Icon.svg");
     background-repeat: no-repeat;
     background-position: center;
     width: 73px;
   }
   .unred-icon {
     //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/unredicon.png");
-    background-image: url("https://images.stinkyfruit.com/Un_read.svg");
+    background-image: url("#{$image-name}Un_read.svg");
     background-repeat: no-repeat;
     background-position: center;
     width: 25px;
@@ -113,7 +111,7 @@
     width: 15%;
   }
 
-  @media (max-width: 575.98px){
+  @media (max-width: 575.98px) {
     .row-2 {
       background-repeat: repeat-y;
       background-size: cover;
@@ -137,7 +135,7 @@
       background-size: cover;
       background-repeat: no-repeat;
       height: initial;
-      .container-message{
+      .container-message {
         height: calc(93vh - 420px);
       }
 
@@ -155,7 +153,7 @@
       width: 1% !important;
     }
   }
-  @media (max-width: 320px){
+  @media (max-width: 320px) {
     .inner-row-center {
       width: 100vw;
       border: 3px solid #1c1c1c;
@@ -165,7 +163,7 @@
       background-repeat: no-repeat;
       height: initial;
       overflow: hidden;
-      .container-message{
+      .container-message {
         height: 34vh;
       }
     }

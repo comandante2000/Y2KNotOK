@@ -1,3 +1,4 @@
+$image-name: "https://images.stinkyfruit.com/";
 #mail-screen-one {
   position: relative;
   .screen-dash {
@@ -7,9 +8,9 @@
     margin-left: 10px;
     margin-right: 10px;
     .email {
-      //background-image: url("https://images.stinkyfruit.com/Heading_Backdrop_v1.svg");
-      background-image: url("https://images.stinkyfruit.com/Text_Backdrop.svg");
-      background-size:cover;
+      //background-image: url("#{$image-name}Heading_Backdrop_v1.svg");
+      background-image: url("#{$image-name}Text_Backdrop.svg");
+      background-size: cover;
       height: 31px;
       width: 26%;
       //margin-left: 3px;
@@ -23,7 +24,7 @@
         text-transform: uppercase;
         font-family: "Palm OS";
       }
-      .overlay-text-email{
+      .overlay-text-email {
         color: rgb(48, 132, 132);
         text-align: center;
         font-size: 21px;
@@ -33,7 +34,7 @@
     }
     .logo {
       //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/slogov2.png");
-      background-image: url("https://images.stinkyfruit.com/Red_west_logo.svg");
+      background-image: url("#{$image-name}Red_west_logo.svg");
       background-repeat: no-repeat;
       height: 20px;
       width: 137px;
@@ -53,12 +54,12 @@
   }
 }
 
-@media (min-width: 321px) and  (max-width: 575.98px) and (orientation: portrait) {
-  #mail-screen-one{
-    .screen-dash{
+@media (min-width: 321px) and (max-width: 575.98px) and (orientation: portrait) {
+  #mail-screen-one {
+    .screen-dash {
       height: 45px;
       align-items: center;
-      .email{
+      .email {
         height: 38px;
         margin-top: 1px;
         background-repeat: no-repeat;
@@ -72,7 +73,7 @@
           font-size: 24px;
         }
       }
-      .logo{
+      .logo {
         width: 35vw;
         margin-top: 6px;
         margin-bottom: 6px;

@@ -1,31 +1,32 @@
-#pda-base-chat-unred{
-  .base-chat-unread-container{
+$image-name: "https://images.stinkyfruit.com/";
+#pda-base-chat-unred {
+  .base-chat-unread-container {
     height: 70px;
     border-left: 3px solid black;
     border-right: 3px solid black;
     border-bottom: 3px solid black;
-    .icon-container{
+    .icon-container {
       width: 30%;
       .red-icon {
         //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/redicon.png");
-        background-image: url("https://images.stinkyfruit.com/Read.svg");
+        background-image: url("#{$image-name}Read.svg");
         background-repeat: no-repeat;
         background-position: center;
         width: 26px;
       }
       .chat-icon {
         //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/chat-icon.png");
-        background-image: url("https://images.stinkyfruit.com/Text_Icon.svg");
+        background-image: url("#{$image-name}Text_Icon.svg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
         width: 51px;
-        margin-right:10px;
+        margin-right: 10px;
         height: 29px;
       }
       .unred-icon {
         //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/unredicon.png");
-        background-image: url("https://images.stinkyfruit.com/Un_read.svg");
+        background-image: url("#{$image-name}Un_read.svg");
         background-repeat: no-repeat;
         background-position: center;
         width: 26px;
@@ -34,22 +35,22 @@
         height: 13px;
       }
     }
-    .info-container{
+    .info-container {
       width: 70%;
       margin-top: 10px !important;
       margin-bottom: 10px !important;
-      .person-name{
+      .person-name {
         font-family: "Palm OS";
         font-size: 24px;
         text-transform: capitalize;
         line-height: 22px;
       }
-      .person-chat{
+      .person-chat {
         font-family: "Palm OS";
         font-size: 22px;
         line-height: 14px;
       }
-      .chat-date{
+      .chat-date {
         font-family: "Palm OS";
         font-size: 20px;
         line-height: 21px;

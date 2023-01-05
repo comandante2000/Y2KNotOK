@@ -1,3 +1,4 @@
+$image-name: "https://images.stinkyfruit.com/";
 #pda-pop-screen {
   // margin-block: 50%;
 
@@ -5,7 +6,7 @@
     z-index: 2;
 
     .voice-pop-ups {
-      background-image: url("https://images.stinkyfruit.com/Vpop.svg");
+      background-image: url("#{$image-name}Vpop.svg");
       background-repeat: no-repeat;
       height: 208px;
       width: 258px;
@@ -34,7 +35,7 @@
     }
 
     .x-button {
-      //background-image: url("https://images.stinkyfruit.com/Xbutton.svg");
+      //background-image: url("#{$image-name}Xbutton.svg");
       //background-repeat: no-repeat;
       height: 28px;
       width: 28px;
@@ -46,7 +47,7 @@
       //background-size: 50%;
     }
     .close-button {
-      //background-image: url("https://images.stinkyfruit.com/Close.svg");
+      //background-image: url("#{$image-name}Close.svg");
       //background-repeat: no-repeat;
       height: 28px;
       width: 28px;
@@ -61,7 +62,7 @@
     }
 
     .controlsIconb {
-      background-image: url("https://images.stinkyfruit.com//backwardicon.svg");
+      background-image: url("#{$image-name}/backwardicon.svg");
       width: 14px;
       height: 14px;
       cursor: pointer;
@@ -70,7 +71,7 @@
     }
 
     .controlsIconf {
-      background-image: url("https://images.stinkyfruit.com//forwardicon.svg");
+      background-image: url("#{$image-name}/forwardicon.svg");
       width: 14px;
       height: 14px;
       cursor: pointer;
@@ -87,7 +88,7 @@
       height: 144px;
       width: 100%;
       .controlsIcon--small-play {
-        background-image: url("https://images.stinkyfruit.com//black-Icon-feather-play-circle.svg");
+        background-image: url("#{$image-name}/black-Icon-feather-play-circle.svg");
         background-repeat: no-repeat;
         width: 33px;
         height: 33px;
@@ -108,7 +109,7 @@
       height: 144px;
       width: 100%;
       .controlsIcon--small-pause {
-        //background-image: url("https://images.stinkyfruit.com//Icon_feather_pause_circle.svg");
+        //background-image: url("#{$image-name}/Icon_feather_pause_circle.svg");
         //background-repeat: no-repeat;
         width: 100%;
         height: 100%;

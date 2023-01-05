@@ -1,21 +1,22 @@
 @import "node_modules/bootstrap/scss/bootstrap";
 @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/_variables.scss";
+
 @font-face {
   font-family: "Palm Os";
   src: url("../font/palm-os.ttf");
   font-weight: normal;
 }
-
+$image-name: "https://images.stinkyfruit.com/";
 #pda-device {
   .container {
     height: 100%;
     width: 100%;
 
     .box {
-      background-image: url("https://images.stinkyfruit.com/device_without_button.png");
-      //background-image: url("https://images.stinkyfruit.com/black_icon_device.png");
-      //background-image: url("https://images.stinkyfruit.com/Option-2B-black-icon-device.png");
+      background-image: url("#{$image-name}device_without_button.png");
+      //background-image: url("#{$image-name}black_icon_device.png");
+      //background-image: url("#{$image-name}Option-2B-black-icon-device.png");
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
@@ -26,7 +27,7 @@
       will-change: filter;
     }
   }
-  .deviceopacity{
+  .deviceopacity {
     opacity: 0;
     animation: opicityanimation 3000ms ease-in-out 2s;
     transition: ease-in-out;
@@ -34,17 +35,17 @@
   }
 
   @keyframes opicityanimation {
-    0%{
+    0% {
       opacity: 0;
     }
-    100%{
+    100% {
       opacity: 1;
     }
   }
   @media (max-width: 575.98px) {
     .container {
       background: #818181;
-      padding:0px !important;
+      padding: 0px !important;
       .box {
         background-image: none;
         height: 0% !important;
@@ -75,7 +76,7 @@
   //}
   ///temporary for joe screen
 }
-@media (min-width: 1921px){
+@media (min-width: 1921px) {
   body {
     #pda-device {
       .container {
@@ -86,7 +87,7 @@
     }
   }
 }
-@media (min-width: 1441px) and (max-width: 1890.75px){
+@media (min-width: 1441px) and (max-width: 1890.75px) {
   body {
     #pda-device {
       .container {
@@ -97,7 +98,7 @@
     }
   }
 }
-@media (max-width: 1440px){
+@media (max-width: 1440px) {
   body {
     #pda-device {
       .container {
@@ -108,7 +109,7 @@
     }
   }
 }
-@media (min-width: 1281px) and (max-width: 1366px){
+@media (min-width: 1281px) and (max-width: 1366px) {
   body {
     #pda-device {
       .container {
@@ -120,7 +121,7 @@
   }
 }
 
-@media (max-width: 1280px) and (orientation: landscape){
+@media (max-width: 1280px) and (orientation: landscape) {
   body {
     #pda-device {
       .container {
@@ -131,7 +132,7 @@
     }
   }
 }
-@media (max-width: 991.98px) and (orientation: portrait){
+@media (max-width: 991.98px) and (orientation: portrait) {
   body {
     #pda-device {
       .container {

@@ -1,86 +1,87 @@
-#pda-mail-base{
+$image-name: "https://images.stinkyfruit.com/";
+#pda-mail-base {
   .base-mail-container {
-      height: 70px;
-      //border-top: 3px solid black;
-      //border-left: 3px solid black;
-      //border-right: 3px solid black;
+    height: 70px;
+    //border-top: 3px solid black;
+    //border-left: 3px solid black;
+    //border-right: 3px solid black;
+  }
+  .icon-container {
+    width: 30%;
+    .red-icon {
+      background-image: url("#{$image-name}Read.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 26px;
+      margin: 10px;
+      height: 13px;
     }
-    .icon-container{
-      width: 30%;
-      .red-icon {
-        background-image: url("https://images.stinkyfruit.com/Read.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 26px;
-        margin: 10px;
-        height: 13px;
-      }
 
-      .mail-icon {
-        background-image: url("https://images.stinkyfruit.com/Mail_Icon.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 51px;
-        margin-right:10px;
-        height: 29px;
-      }
-    }
-    .info-container{
-      width: 70%;
-      margin-top: 10px !important;
-      margin-bottom: 10px !important;
-      .person-name{
-        font-family: "Palm OS";
-        font-size: 24px;
-        line-height: 22px;
-      }
-      .subject{
-        font-family: "Palm OS";
-        font-size: 22px;
-        line-height: 14px;
-      }
-      .mail-date{
-        font-family: "Palm OS";
-        font-size: 20px;
-        line-height: 21px;
-      }
-    }
-    .unred-icon {
-      background-image: url("https://images.stinkyfruit.com/Un_read.svg");
+    .mail-icon {
+      background-image: url("#{$image-name}Mail_Icon.svg");
       background-repeat: no-repeat;
       background-position: center;
-      width: 25px;
-      background-size: 100%;
-      margin: 10px;
-      height: 14px;
-    }
-    .blink-red-icon{
-      background-image: url("https://images.stinkyfruit.com/Read.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      width: 25px;
-      background-size: 100%;
-      margin: 10px;
-      height: 14px;
-      -webkit-animation-name: move !important;
-      animation-name: blinking !important;
-      animation-duration:1s;
-      animation-iteration-count: infinite;
-    }
-    @keyframes blinking{
-      0% {
-        opacity: .2;
-      }
+      width: 51px;
+      margin-right: 10px;
+      height: 29px;
     }
   }
+  .info-container {
+    width: 70%;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    .person-name {
+      font-family: "Palm OS";
+      font-size: 24px;
+      line-height: 22px;
+    }
+    .subject {
+      font-family: "Palm OS";
+      font-size: 22px;
+      line-height: 14px;
+    }
+    .mail-date {
+      font-family: "Palm OS";
+      font-size: 20px;
+      line-height: 21px;
+    }
+  }
+  .unred-icon {
+    background-image: url("#{$image-name}Un_read.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 25px;
+    background-size: 100%;
+    margin: 10px;
+    height: 14px;
+  }
+  .blink-red-icon {
+    background-image: url("#{$image-name}Read.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 25px;
+    background-size: 100%;
+    margin: 10px;
+    height: 14px;
+    -webkit-animation-name: move !important;
+    animation-name: blinking !important;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes blinking {
+    0% {
+      opacity: 0.2;
+    }
+  }
+}
 
-@media (max-width: 320px){
-  #pda-mail-base{
-    .base-mail-container{
-      .icon-container{
+@media (max-width: 320px) {
+  #pda-mail-base {
+    .base-mail-container {
+      .icon-container {
         width: 35%;
       }
-      .info-container{
+      .info-container {
         width: 65%;
       }
     }

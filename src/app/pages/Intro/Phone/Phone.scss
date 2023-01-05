@@ -1,3 +1,4 @@
+$image-name: "https://images.stinkyfruit.com/";
 #pda-phone-screen {
   .logo{
     display: none;
@@ -13,7 +14,7 @@
   }
   .inner-row-center {
     //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/pda-crack-screen.png");
-    background-image: url("https://images.stinkyfruit.com/PDA_Crack_Screen.svg");
+    background-image: url("#{$image-name}PDA_Crack_Screen.svg");
     border-radius: 10px;
     background-color: #47b9b2;
     background-blend-mode: multiply;
@@ -107,7 +108,7 @@
     line-height: 23px;
   }
   .redwest-btn-one{
-    background-image: url("https://images.stinkyfruit.com/keypad_bg.svg");
+    background-image: url("#{$image-name}keypad_bg.svg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -119,7 +120,7 @@
     opacity: 0.3;
   }
   .redwest-btn-two{
-    background-image: url("https://images.stinkyfruit.com/keypad_bg.svg");
+    background-image: url("#{$image-name}keypad_bg.svg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -132,7 +133,7 @@
     opacity: 0.3;
   }
   .redwest-btn-three{
-    background-image: url("https://images.stinkyfruit.com/keypad_bg.svg");
+    background-image: url("#{$image-name}keypad_bg.svg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -149,7 +150,7 @@
     padding-left: 10px;
     padding-right: 15px;
     .btn-call{
-      background-image: url("https://images.stinkyfruit.com/box_img_bckground_gray.svg");
+      background-image: url("#{$image-name}box_img_bckground_gray.svg");
       background-repeat: no-repeat;
       font-family: "Palm OS";
       color: #326462;

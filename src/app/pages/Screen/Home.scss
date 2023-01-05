@@ -1,5 +1,6 @@
+$image-name: "https://images.stinkyfruit.com/";
 #home {
-  .logo-container{
+  .logo-container {
     height: 576.5px;
     width: 100%;
   }
@@ -7,22 +8,22 @@
     height: 29.34px;
     width: 307.3px;
     background-position: center;
-    background-image: url("https://images.stinkyfruit.com/Red_west_logo.svg");
+    background-image: url("#{$image-name}Red_west_logo.svg");
     background-size: 85%;
     background-repeat: no-repeat;
   }
 }
-@media (max-width: 575.98px){
-  #home{
-    .logo-container{
+@media (max-width: 575.98px) {
+  #home {
+    .logo-container {
       height: 64vh;
       width: 100%;
     }
   }
 }
-@media (max-width: 320px){
-  #home{
-    .logo-container{
+@media (max-width: 320px) {
+  #home {
+    .logo-container {
       height: 60vh;
       width: 100%;
     }

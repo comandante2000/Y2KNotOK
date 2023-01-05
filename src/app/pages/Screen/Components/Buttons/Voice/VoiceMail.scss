@@ -1,6 +1,7 @@
+$image-name: "https://images.stinkyfruit.com/";
 #voice-button {
   .button-1 {
-    background-image: url("https://images.stinkyfruit.com/Record_Normal_state.png");
+    background-image: url("#{$image-name}Record_Normal_state.png");
     background-repeat: no-repeat;
     height: 60px;
     width: 60px;
@@ -11,12 +12,12 @@
     margin-top: -11px;
   }
   .red {
-    //background-image: url("https://images.stinkyfruit.com/Small_Button_glow.png") , url("https://images.stinkyfruit.com/Record_Normal_state.png") ;
+    //background-image: url("#{$image-name}Small_Button_glow.png") , url("#{$image-name}Record_Normal_state.png") ;
     //background-repeat: no-repeat;
     //background-position: center;
     //background-size: 93.5%, cover;
     border-radius: 50%;
-    box-shadow: 0px 1px 8px 3px rgb(123,42,42) inset;
+    box-shadow: 0px 1px 8px 3px rgb(123, 42, 42) inset;
   }
   .black {
     border-radius: 50%;
@@ -25,7 +26,7 @@
   .button-glow {
     animation: glowing 1000ms infinite;
     -webkit-animation: glowing 1000ms infinite;
-}
+  }
   @keyframes glowing {
     0% {
       border-radius: 50%;
@@ -42,12 +43,12 @@
       -moz-border-radius: 50%;
       -ms-border-radius: 50%;
       -o-border-radius: 50%;
-}
+    }
   }
 }
 @media (max-width: 575.98px) {
-  #voice-button{
-    .button-1{
+  #voice-button {
+    .button-1 {
       height: 55px;
       width: 55px;
     }
@@ -55,8 +56,8 @@
 }
 
 @media (max-width: 320px) and (orientation: portrait) {
-  #voice-button{
-    .button-1{
+  #voice-button {
+    .button-1 {
       height: 50px;
       width: 50px;
     }
