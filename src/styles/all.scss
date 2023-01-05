@@ -1,6 +1,7 @@
-@import '/node_modules/bootstrap/scss/bootstrap';
-@import './index';
+@import "/node_modules/bootstrap/scss/bootstrap";
+@import "./index";
 @font-face {
-    font-family: "Palm Os";
-    src: url('../assets/fonts/palm-os.ttf');
+  font-family: "Palm Os";
+  src: url("../assets/fonts/palm-os.ttf");
 }
+$image-name: "https://images.stinkyfruit.com/";

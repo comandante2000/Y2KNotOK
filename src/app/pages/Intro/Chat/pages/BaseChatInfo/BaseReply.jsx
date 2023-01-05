@@ -68,16 +68,16 @@ export default function ChatReply({
     // { for krista message Flow 1.7" },
 
     if (episodeone === "Flow1.7.1.1") {
-      let truereplies = [
-        "red west control center",
-        "red west",
-        "control center",
-        "command center",
-        "red west command center",
-        "bunker",
-      ];
-
-      if (truereplies.includes(message.toLocaleLowerCase())) {
+      // let truereplies = [
+      //   "red west control center",
+      //   "red west",
+      //   "control center",
+      //   "command center",
+      //   "red west command center",
+      //   "bunker",
+      // ];
+    
+      if ( message.toLowerCase().includes("red west control center") ||message.toLowerCase().includes("red west") ||message.toLowerCase().includes("control center") ||message.toLowerCase().includes("command center") ||message.toLowerCase().includes("red west command center") ||message.toLowerCase().includes("bunker") ) {
         setReplyMessages([...replyMessages, { person: "Me", chat: message }]);
         setTimeout(function () {
           setReplyMessages([

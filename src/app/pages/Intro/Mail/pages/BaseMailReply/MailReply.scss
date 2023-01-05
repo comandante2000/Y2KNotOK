@@ -1,3 +1,4 @@
+$image-name: "https://images.stinkyfruit.com/";
 #pda-mail-reply {
   .mail-reply-container {
     padding-left: 10px;
@@ -10,7 +11,7 @@
     &::-webkit-scrollbar {
       //width: 10px;
       height: auto;
-      background-image: url("https://images.stinkyfruit.com/scroll-bar-bg.png");
+      background-image: url("#{$image-name}scroll-bar-bg.png");
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
@@ -21,7 +22,7 @@
       //background-color: transparent;
     }
     &::-webkit-scrollbar-thumb {
-      //background-image: url("https://images.stinkyfruit.com/scroll-bar-thumbnail.png");
+      //background-image: url("#{$image-name}scroll-bar-thumbnail.png");
       //background-repeat: no-repeat;
       //background-size: cover;
       //border-radius: 20px;
@@ -40,7 +41,7 @@
       .icon-container {
         width: 40%;
         .red-icon {
-          background-image: url("https://images.stinkyfruit.com/Read.svg");
+          background-image: url("#{$image-name}Read.svg");
           background-repeat: no-repeat;
           background-position: center;
           width: 26px;
@@ -49,7 +50,7 @@
         }
 
         .mail-icon {
-          background-image: url("https://images.stinkyfruit.com/Mail_Icon.svg");
+          background-image: url("#{$image-name}Mail_Icon.svg");
           background-repeat: no-repeat;
           background-position: center left;
           width: 56px;
@@ -76,7 +77,7 @@
         }
       }
       .unred-icon {
-        background-image: url("https://images.stinkyfruit.com/Un_read.svg");
+        background-image: url("#{$image-name}Un_read.svg");
         background-repeat: no-repeat;
         background-position: center;
         width: 25px;
@@ -89,7 +90,7 @@
       margin-left: 15px;
     }
     .back_button {
-      background-image: url("https://images.stinkyfruit.com/box_img_bckground.svg");
+      background-image: url("#{$image-name}box_img_bckground.svg");
       background-repeat: no-repeat;
       font-family: "Palm OS";
       font-size: 24px;
@@ -99,7 +100,7 @@
       height: 36.67px;
     }
     .reply_button {
-      background-image: url("https://images.stinkyfruit.com/box_img_bckground.svg");
+      background-image: url("#{$image-name}box_img_bckground.svg");
       background-repeat: no-repeat;
       font-family: "Palm OS";
       font-size: 24px;
@@ -109,7 +110,7 @@
       height: 36.67px;
     }
     .delete_button {
-      background-image: url("https://images.stinkyfruit.com/box_img_bckground_gray.svg");
+      background-image: url("#{$image-name}box_img_bckground_gray.svg");
       background-repeat: no-repeat;
       font-family: "Palm OS";
       color: #326462;
@@ -131,7 +132,7 @@
     }
 
     .box-container {
-      background-image: url("https://images.stinkyfruit.com/attachment_box.svg");
+      background-image: url("#{$image-name}attachment_box.svg");
       height: 60px;
       width: 116px;
       background-repeat: no-repeat;
@@ -139,7 +140,7 @@
       margin-right: 15px;
 
       .clip {
-        background-image: url("https://images.stinkyfruit.com/clip_icon.svg");
+        background-image: url("#{$image-name}clip_icon.svg");
         height: 19px;
         width: 8px;
         background-repeat: no-repeat;
@@ -147,7 +148,7 @@
       .attachment {
         font-size: 24px;
       }
-      .noattachment{
+      .noattachment {
         font-size: 21px;
       }
     }

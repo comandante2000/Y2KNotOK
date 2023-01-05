@@ -23,6 +23,17 @@ export default function Device({
   const [dtime, setTime] = useState("5:55 AM");
   const [audio, setAudio] = useState(false);
   const [openchat, setOpenchat] = useState(false);
+
+  let secondmusic = [
+    "Flow1.8.1",
+    "Flow1.9",
+    "Flow1.10",
+    "Flow1.10.1",
+    "Flow1.10.2",
+    "Flow1.11",
+    "Flow1.13",
+    "Flow1.9.2",
+  ];
   useEffect(() => {
     if (episodeone === "Flow1.7.1") {
       setTime("6:15 AM");
@@ -42,11 +53,12 @@ export default function Device({
     //     SetVideo("Episode2")
     //   }, 5000);
     // }
-    if (episodeone === "Flow1.8.1" || episodeone === "Flow1.8") {
+    if (secondmusic.includes(episodeone)) {
       setAudio(
         true
         // "https://images.stinkyfruit.com/audio_bed_ambience_mp3_v2_mom_flow.wav"
       );
+      console.log("happynewyear");
     }
   });
 
@@ -62,8 +74,8 @@ export default function Device({
     }
   });
   //cookies
- 
-  // function handleClick() {
+
+  // function handleClick() { 
   //   if (episodeone === "Flow1.11") {
   //     setTime("6:35 AM");
   //     setTimeout(function () {
@@ -150,8 +162,8 @@ export default function Device({
             setTime={setTime}
             screen={screen}
             openchat={openchat}
-              setOpenchat={setOpenchat}
-              SetVideo={ SetVideo}
+            setOpenchat={setOpenchat}
+            SetVideo={SetVideo}
           />
         </div>
       </div>

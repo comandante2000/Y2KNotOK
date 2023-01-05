@@ -1,8 +1,8 @@
-#map-pageone-screen { 
+$image-name: "https://images.stinkyfruit.com/";
+#map-pageone-screen {
   .image {
-  
     .image-map {
-      background-image: url("https://images.stinkyfruit.com/map1.svg");
+      background-image: url("#{$image-name}map1.svg");
       // background-position: center;
       // background-repeat: no-repeat;
       // height: 553px;
@@ -11,7 +11,6 @@
       // margin-top: -30px;
       // background-blend-mode: darken;
       // background-size: 394px;
-
 
       background-position: center;
       background-repeat: no-repeat;
@@ -27,7 +26,7 @@
   }
 }
 .zoomin {
-  background-image: url("https://images.stinkyfruit.com/ZoomOut.svg");
+  background-image: url("#{$image-name}ZoomOut.svg");
   background-repeat: no-repeat;
   height: 65px;
   width: 38px;
@@ -35,14 +34,13 @@
   margin-left: 30px;
 }
 .zoomout {
-  background-image: url("https://images.stinkyfruit.com/inactive_minus_icon.svg");
+  background-image: url("#{$image-name}inactive_minus_icon.svg");
   background-repeat: no-repeat;
   height: 34px;
   width: 38px;
   margin-top: -36px;
   margin-left: 26px;
 }
-
 
 @media (max-width: 575.98px) {
   .image {

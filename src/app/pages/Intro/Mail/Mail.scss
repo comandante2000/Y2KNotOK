@@ -1,3 +1,4 @@
+$image-name: "https://images.stinkyfruit.com/";
 #pda-mail-screen {
   .row-2 {
     padding: 0px;
@@ -6,11 +7,10 @@
   }
   .inner-row-left {
     width: 15%;
-
   }
   .inner-row-center {
     //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/pda-crack-screen.png");
-    background-image: url("https://images.stinkyfruit.com/PDA_Crack_Screen.svg");
+    background-image: url("#{$image-name}PDA_Crack_Screen.svg");
     background-color: #47b9b2;
     background-blend-mode: multiply;
     background-size: cover;
@@ -30,30 +30,29 @@
     height: 99.5%;
     overflow: hidden;
     position: relative;
-    .mail-container{
+    .mail-container {
       padding-left: 10px;
       padding-right: 10px;
       height: 420px;
       width: 100%;
       margin-bottom: 20px;
-      overflow-y:auto;
+      overflow-y: auto;
       position: relative;
-      &::-webkit-scrollbar{
+      &::-webkit-scrollbar {
         //width: 10px;
         height: auto;
-        background-image: url("https://images.stinkyfruit.com/scroll-bar-bg.png");
+        background-image: url("#{$image-name}scroll-bar-bg.png");
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
         width: 20px;
       }
-      &::-webkit-scrollbar-track{
+      &::-webkit-scrollbar-track {
         -webkit-box-shadow: #47b9b2;
         //background-color: transparent;
-
       }
-      &::-webkit-scrollbar-thumb{
-        //background-image: url("https://images.stinkyfruit.com/scroll-bar-thumbnail.png");
+      &::-webkit-scrollbar-thumb {
+        //background-image: url("#{$image-name}scroll-bar-thumbnail.png");
         //background-repeat: no-repeat;
         //background-size: cover;
         //border-radius: 20px;
@@ -66,10 +65,10 @@
       }
     }
   }
-  .mail-child-container{
+  .mail-child-container {
     border-top: 3px solid black;
   }
-  .mail-border{
+  .mail-border {
     border-bottom: 3px solid black;
     border-left: 3px solid black;
     border-right: 3px solid black;
@@ -77,20 +76,20 @@
   //.mail-container div:nth-child(26){
   //  border-bottom: 3px solid black;
   //}
-  .unvoiceplay{
+  .unvoiceplay {
     background-color: #47b9b2;
   }
-  .voiceplay{
-   background-color:rgb(48, 132, 132);
+  .voiceplay {
+    background-color: rgb(48, 132, 132);
   }
   .inner-row-right {
     width: 15%;
   }
-  .btn-delete-container{
+  .btn-delete-container {
     padding-left: 10px;
     padding-right: 27px;
-    .btn-delete{
-      background-image: url("https://images.stinkyfruit.com/box_img_bckground_gray.svg");
+    .btn-delete {
+      background-image: url("#{$image-name}box_img_bckground_gray.svg");
       background-repeat: no-repeat;
       font-family: "Palm OS";
       color: #326462;
@@ -102,7 +101,7 @@
     }
   }
 
-  .scroll{
+  .scroll {
     overflow-y: scroll;
   }
   @media (max-width: 575.98px) {
@@ -130,7 +129,7 @@
       background-repeat: no-repeat;
       height: initial;
       overflow: hidden;
-      .mail-container{
+      .mail-container {
         height: calc(93vh - 420px);
       }
     }
@@ -139,7 +138,7 @@
       width: 1% !important;
     }
   }
-  @media (max-width: 320px){
+  @media (max-width: 320px) {
     .inner-row-center {
       width: 100vw;
       border: 3px solid #1c1c1c;
@@ -149,10 +148,9 @@
       background-repeat: no-repeat;
       height: initial;
       overflow: hidden;
-      .mail-container{
+      .mail-container {
         height: 34vh;
       }
     }
   }
 }
-

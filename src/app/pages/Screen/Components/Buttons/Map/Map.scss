@@ -1,63 +1,63 @@
-#map-button{
-    .button-5 {
-      background-image: url("https://images.stinkyfruit.com/map_Normal_state.png");
-      background-repeat: no-repeat;
-      height: 60px;
-      width: 60px;
-      margin: auto;
-      margin-inline: 3px;
-      background-position: center;
-      background-size: cover;
-      margin-top: -11px;
-      }
-      .red {
-        //background-image: url("https://images.stinkyfruit.com/Small_Button_glow.png") , url("https://images.stinkyfruit.com/map_Normal_state.png") ;
-        //background-repeat: no-repeat;
-        //background-position: 80% , 50%;
-        //background-size: 95.5%, cover;
-        border-radius: 50%;
-        box-shadow: 0px 1px 8px 3px rgb(123,42,42) inset;
-      }
-      .black{
-        border-radius: 50%;
-        //border: 4px solid rgba(16, 16, 16, 0.75);
-    }
-    .button-glow {
-      animation: glowing 1000ms infinite;
-      -webkit-animation: glowing 1000ms infinite;
-}
-    @keyframes glowing {
-      0% {
-        border-radius: 50%;
-        box-shadow: 0px 1px 8px 3px rgb(16, 14, 14) inset;
-      }
-      50% {
-        border-radius: 50%;
-        box-shadow: 0px 1px 8px 3px rgb(128, 66, 66) inset;
-      }
-      100% {
-        border-radius: 50%;
-        box-shadow: 0px 1px 8px 3px rgb(211, 12, 12) inset;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        -o-border-radius: 50%;
+$image-name: "https://images.stinkyfruit.com/";
+#map-button {
+  .button-5 {
+    background-image: url("#{$image-name}map_Normal_state.png");
+    background-repeat: no-repeat;
+    height: 60px;
+    width: 60px;
+    margin: auto;
+    margin-inline: 3px;
+    background-position: center;
+    background-size: cover;
+    margin-top: -11px;
   }
+  .red {
+    //background-image: url("#{$image-name}Small_Button_glow.png") , url("#{$image-name}map_Normal_state.png") ;
+    //background-repeat: no-repeat;
+    //background-position: 80% , 50%;
+    //background-size: 95.5%, cover;
+    border-radius: 50%;
+    box-shadow: 0px 1px 8px 3px rgb(123, 42, 42) inset;
+  }
+  .black {
+    border-radius: 50%;
+    //border: 4px solid rgba(16, 16, 16, 0.75);
+  }
+  .button-glow {
+    animation: glowing 1000ms infinite;
+    -webkit-animation: glowing 1000ms infinite;
+  }
+  @keyframes glowing {
+    0% {
+      border-radius: 50%;
+      box-shadow: 0px 1px 8px 3px rgb(16, 14, 14) inset;
     }
+    50% {
+      border-radius: 50%;
+      box-shadow: 0px 1px 8px 3px rgb(128, 66, 66) inset;
+    }
+    100% {
+      border-radius: 50%;
+      box-shadow: 0px 1px 8px 3px rgb(211, 12, 12) inset;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+    }
+  }
 }
 @media (max-width: 575.98px) {
-  #map-button{
-    .button-5{
+  #map-button {
+    .button-5 {
       height: 55px;
       width: 55px;
     }
   }
 }
 
-
 @media (max-width: 320px) and (orientation: portrait) {
-  #map-button{
-    .button-5{
+  #map-button {
+    .button-5 {
       height: 50px;
       width: 50px;
     }

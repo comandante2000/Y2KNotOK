@@ -1,22 +1,23 @@
-#pda-mail-base-unred{
+$image-name: "https://images.stinkyfruit.com/";
+#pda-mail-base-unred {
   .base-mail-unread-container {
     height: 70px;
     border-left: 3px solid black;
     border-right: 3px solid black;
     border-bottom: 3px solid black;
-    .icon-container{
+    .icon-container {
       width: 30%;
       .red-icon {
-        background-image: url("https://images.stinkyfruit.com/Read.svg");
+        background-image: url("#{$image-name}Read.svg");
         background-repeat: no-repeat;
         background-position: center;
         width: 26px;
         margin: 10px;
         height: 13px;
       }
-  
+
       .mail-icon {
-        background-image: url("https://images.stinkyfruit.com/Mail_Icon.svg");
+        background-image: url("#{$image-name}Mail_Icon.svg");
         background-repeat: no-repeat;
         background-position: center;
         width: 51px;
@@ -25,7 +26,7 @@
       }
       .unred-icon {
         //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/unredicon.png");
-        background-image: url("https://images.stinkyfruit.com/Un_read.svg");
+        background-image: url("#{$image-name}Un_read.svg");
         background-repeat: no-repeat;
         background-position: center;
         width: 25px;
@@ -33,30 +34,29 @@
         margin: 10px;
         height: 14px;
       }
-      
     }
-    .info-container{
+    .info-container {
       width: 70%;
       margin-top: 10px !important;
       margin-bottom: 10px !important;
-      .person-name{
+      .person-name {
         font-family: "Palm OS";
         font-size: 24px;
         line-height: 22px;
       }
-      .subject{
+      .subject {
         font-family: "Palm OS";
         font-size: 22px;
         line-height: 14px;
       }
-      .mail-date{
+      .mail-date {
         font-family: "Palm OS";
         font-size: 20px;
         line-height: 21px;
       }
     }
     .unred-icon {
-      background-image: url("https://images.stinkyfruit.com/Un_read.svg");
+      background-image: url("#{$image-name}Un_read.svg");
       background-repeat: no-repeat;
       background-position: center;
       width: 25px;
@@ -64,13 +64,13 @@
     }
   }
 }
-@media (max-width: 320px){
-  #pda-mail-base-unred{
-    .base-mail-unread-container{
-      .icon-container{
+@media (max-width: 320px) {
+  #pda-mail-base-unred {
+    .base-mail-unread-container {
+      .icon-container {
         width: 35%;
       }
-      .info-container{
+      .info-container {
         width: 65%;
       }
     }

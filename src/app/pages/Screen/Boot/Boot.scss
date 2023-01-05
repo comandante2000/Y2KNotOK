@@ -1,10 +1,11 @@
+$image-name: "https://images.stinkyfruit.com/";
 #pda-boot-screen {
   // margin-block: 50%;
 
   .pda-boot-container {
     height: 100vh;
     width: 100vw;
-    background-image: url("https://images.stinkyfruit.com/eula-background.png");
+    background-image: url("#{$image-name}eula-background.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -12,7 +13,7 @@
   .info-popup-container {
     width: 100%;
     height: 100%;
-    .image-popup{
+    .image-popup {
       width: 797.48px;
       height: 100%;
     }
@@ -23,7 +24,7 @@
     padding-left: 25px;
     padding-right: 25px;
     .Popup-Title {
-      background-image: url("https://images.stinkyfruit.com/welcome-v2.png");
+      background-image: url("#{$image-name}welcome-v2.png");
       background-repeat: no-repeat;
       height: 143px;
       width: 434px;
@@ -50,7 +51,7 @@
       letter-spacing: 1px;
     }
     .next-button {
-      background-image: url("https://images.stinkyfruit.com/desktop-green-box.png");
+      background-image: url("#{$image-name}desktop-green-box.png");
       height: 60.86px;
       width: 143.65px;
       font-size: 35px;
@@ -69,47 +70,47 @@
       height: 100vh;
       width: 100vw;
       background-color: black;
-      .Popup-Title{
+      .Popup-Title {
         height: 75px;
         width: 228.29px;
       }
-      .popup-text{
+      .popup-text {
         font-size: 30px;
         line-height: 30px;
         letter-spacing: 2px;
       }
-      .instruction-text{
+      .instruction-text {
         font-size: 24px;
         line-height: 26px;
         width: 100%;
         margin-bottom: 15px;
       }
-      .next-button{
+      .next-button {
         height: 60.86px;
         width: 100px;
         font-size: 23px;
       }
     }
   }
-  @media (max-width: 991.98px) and (orientation: landscape){
+  @media (max-width: 991.98px) and (orientation: landscape) {
     .pda-boot-container {
       height: 100vh;
       width: 100vw;
       background-color: black;
-      .Popup-Title{
+      .Popup-Title {
         height: 75px;
         width: 228.29px;
       }
-      .popup-text{
+      .popup-text {
         font-size: 30px;
         line-height: 30px;
         letter-spacing: 2px;
       }
-      .instruction-text{
+      .instruction-text {
         font-size: 24px;
         line-height: 26px;
       }
-      .next-button{
+      .next-button {
         height: 60.86px;
         width: 100px;
         font-size: 23px;

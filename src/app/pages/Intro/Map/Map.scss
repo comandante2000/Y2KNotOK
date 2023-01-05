@@ -1,3 +1,4 @@
+$image-name: "https://images.stinkyfruit.com/";
 #pda-map-screen {
   .row-2 {
     padding: 0px;
@@ -9,7 +10,7 @@
   }
   .inner-row-center {
     //background-image: url("https://images.stinkyfruit.y2k.sgp1.cdn.digitaloceanspaces.com/pda-crack-screen.png");
-    background-image: url("https://images.stinkyfruit.com/PDA_Crack_Screen.svg");
+    background-image: url("#{$image-name}PDA_Crack_Screen.svg");
     background-color: #47b9b2;
     background-blend-mode: multiply;
     background-size: cover;
@@ -31,11 +32,11 @@
       height: 576.5px;
       width: 100%;
       margin-top: -66px;
-      .warning{
+      .warning {
         font-family: "Palm OS";
         font-size: 39px;
         line-height: 35px;
-        background-image: url("https://images.stinkyfruit.com/locating_bg_border.svg");
+        background-image: url("#{$image-name}locating_bg_border.svg");
         background-repeat: no-repeat;
         width: 260px;
         height: 92px;
@@ -70,7 +71,7 @@
       background-size: cover;
       background-repeat: no-repeat;
       height: initial;
-      .Locating-map{
+      .Locating-map {
         height: 62vh;
       }
     }
@@ -81,5 +82,3 @@
     }
   }
 }
-
-

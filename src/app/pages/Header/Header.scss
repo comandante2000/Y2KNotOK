@@ -1,3 +1,4 @@
+$image-name: "https://images.stinkyfruit.com/";
 #pda-header {
   .row-3 {
     //height: 79px;
@@ -6,7 +7,7 @@
 
   @media (max-width: 575.98px) {
     .row-3 {
-      background-image: url("https://images.stinkyfruit.com/TheHeader.png");
+      background-image: url("#{$image-name}TheHeader.png");
       background-repeat: no-repeat;
       background-size: cover;
       margin: auto;
