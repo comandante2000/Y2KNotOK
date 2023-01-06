@@ -70,16 +70,18 @@ export default function ChatReply({
 
     if (episodeone === "Flow1.7.1.1") {
       
-      let truereplies = [
-        "red west control center",
-        "red west",
-        "control center",
-        "command center",
-        "red west command center",
-        "bunker",
-      ];
+      // let truereplies = [
+      //   "red west control center",
+      //   "red west",
+      //   "control center",
+      //   "command center",
+      //   "red west command center",
+      //   "bunker",
+      // ];
     
-      if ( message.toLowerCase().includes("red west control center") ||message.toLowerCase().includes("red west") ||message.toLowerCase().includes("control center") ||message.toLowerCase().includes("command center") ||message.toLowerCase().includes("red west command center") ||message.toLowerCase().includes("bunker") ) {
+      let userMessage = message.toLowerCase();
+      
+      if ( userMessage.includes("red west control center") || userMessage.includes("red west") || userMessage.includes("control center") || userMessage.includes("command center") || userMessage.includes("red west command center") || userMessage.includes("bunker") ) {
         setReplyMessages([...replyMessages, { person: "Me", chat: message }]);
         setTimeout(function () {
           setReplyMessages([
@@ -108,33 +110,7 @@ export default function ChatReply({
             }, 4000);
           }
         }, 2000);
-      }
-
-      // if (
-      //   truereplies.includes(message.toLocaleLowerCase())=== false
-      // ) {
-
-      //   setReplyMessages([...replyMessages, { person: "Me", chat: message }]);
-
-      //   setTimeout(function () {
-      //     setMessageReplies("Cool. I get it. Might be better if I don't know.");
-      //     setReplyMessages([
-      //       ...replyMessages,
-      //       { person: "Me", chat: message },
-      //     ]);
-      //     encryptStorage.removeItem(`chat-storage-krista`);
-      //     encryptStorage.setItem(`chat-storage-krista`, [
-      //       ...replyMessages,
-      //       { person: "Me", chat: message },
-      //       { person: "Krista", chat: messagereplies },
-      //     ]);
-      //     if (episodeone === "Flow1.7.1.1" && counter >= 2) {
-      //         setEpisodeOne("Flow1.8");
-      //     }
-      //   }, 3000);
-      // }
-
-      if (!truereplies.includes(message.toLocaleLowerCase())) {
+      }else{
         setFalseReplyCounter(falseReplyCounter + 1);
         setReplyMessages([...replyMessages, { person: "Me", chat: message }]);
         
