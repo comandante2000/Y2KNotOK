@@ -141,7 +141,6 @@ export default function ChatReply({
         setTimeout(function () {
           const audioElement = audioRef.current;
           audioElement.play();
-          alert(falseReplyCounter);
           if(falseReplyCounter >= 2){
             setReplyMessages([
               ...replyMessages,
