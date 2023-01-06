@@ -134,13 +134,14 @@ export default function ChatReply({
       //   }, 3000);
       // }
 
-      if (truereplies.includes(message.toLocaleLowerCase()) === false) {
+      if (!truereplies.includes(message.toLocaleLowerCase())) {
         setFalseReplyCounter(falseReplyCounter + 1);
         setReplyMessages([...replyMessages, { person: "Me", chat: message }]);
         
         setTimeout(function () {
           const audioElement = audioRef.current;
           audioElement.play();
+          
           if(falseReplyCounter >= 2){
             setReplyMessages([
               ...replyMessages,
@@ -171,11 +172,13 @@ export default function ChatReply({
               chat: messagereplies,
             },
           ]);
+          
           if (episodeone === "Flow1.7.1.1" && counter >= 2) {
             setTimeout(function () {
               setEpisodeOne("Flow1.8");
             }, 4000);
           }
+          
         }, 2000);
       }
       setmessage("");
