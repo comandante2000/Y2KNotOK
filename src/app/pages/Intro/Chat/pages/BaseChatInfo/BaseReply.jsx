@@ -22,6 +22,7 @@ export default function ChatReply({
   const [messagereplies, setMessageReplies] = useState(
     "You need to chill and just tell me where you are right now."
   );
+  const [falseReplyCounter, setFalseReplyCounter] = useState(1);
 
   let correctReplies = [
     {
@@ -134,18 +135,33 @@ export default function ChatReply({
       // }
 
       if (truereplies.includes(message.toLocaleLowerCase()) === false) {
+        setFalseReplyCounter(falseReplyCounter + 1);
         setReplyMessages([...replyMessages, { person: "Me", chat: message }]);
+        
         setTimeout(function () {
           const audioElement = audioRef.current;
           audioElement.play();
-          setReplyMessages([
-            ...replyMessages,
-            { person: "Me", chat: message },
-            {
-              person: "Krista",
-              chat: messagereplies,
-            },
-          ]);
+          alert(falseReplyCounter);
+          if(falseReplyCounter >= 2){
+            setReplyMessages([
+              ...replyMessages,
+              { person: "Me", chat: message },
+              {
+                person: "Krista",
+                chat: "Cool. I get it. Might be better if I don't know.",
+              },
+            ]);
+          }else{
+            setReplyMessages([
+              ...replyMessages,
+              { person: "Me", chat: message },
+              {
+                person: "Krista",
+                chat: messagereplies,
+              },
+            ]);
+          }
+          
 
           encryptStorage.removeItem(`chat-storage-${person.toLowerCase()}`);
           encryptStorage.setItem(`chat-storage-${person.toLowerCase()}`, [
@@ -153,7 +169,7 @@ export default function ChatReply({
             { person: "Me", chat: message },
             {
               person: "Krista",
-              chat: "Cool. I get it. Might be better if I don't know.",
+              chat: messagereplies,
             },
           ]);
           if (episodeone === "Flow1.7.1.1" && counter >= 2) {
@@ -163,7 +179,6 @@ export default function ChatReply({
           }
         }, 2000);
       }
-
       setmessage("");
     }
 
