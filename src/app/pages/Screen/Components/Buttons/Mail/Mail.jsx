@@ -8,7 +8,7 @@ export default function MailButton({
   press,
   episodeone,
   setEpisodeOne,
-  screen,
+  screen, SetVideo
 }) {
   const audioRef = useRef();
   const audioRefmail = useRef();

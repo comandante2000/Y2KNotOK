@@ -1,6 +1,6 @@
 import "./Phone.scss";
 import {useEffect,useRef} from "react";
-export default function PhoneButton({ showScreen, setActive, color, press , episodeone}) {
+export default function PhoneButton({ showScreen, setActive, color, press , episodeone, SetVideo}) {
 
   const audioRef = useRef();
   const handleClick3 = () => {

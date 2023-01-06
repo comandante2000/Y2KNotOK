@@ -8,7 +8,7 @@ export default function ChatButton({
   episodeone,
   setEpisodeOne,
   openchat,
-  setOpenchat,
+  setOpenchat, SetVideo
 }) {
   const audioRef = useRef();
   const audioRefchat = useRef();

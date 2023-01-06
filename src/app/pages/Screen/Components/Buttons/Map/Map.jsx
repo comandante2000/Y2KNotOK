@@ -6,7 +6,7 @@ export default function MapButton({
   color,
   press,
   episodeone,
-  setEpisodeOne,
+  setEpisodeOne, SetVideo
 }) {
   let mappermission =["Flow1.9"]
   const audioRef = useRef();
