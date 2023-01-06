@@ -254,13 +254,13 @@ export default function ChatReply({
   }, [handleSubmit]);
 
   useEffect(() => {
-    if (person === "Krista") {
+    if (person === "Krista" ) {
       let autoSaveChat = encryptStorage.getItem("chat-storage-krista");
       if (autoSaveChat !== undefined) {
         setReplyMessages(autoSaveChat);
       }
     }
-    if (person === "Timothee HR") {
+    if (person === "Timothee HR" ) {
       let autoSaveChat = encryptStorage.getItem("chat-storage-timothee");
       let rigthreply1 = encryptStorage.getItem(
         "chat-storage-timothee-right-reply"
@@ -269,10 +269,10 @@ export default function ChatReply({
         "chat-storage-timothee-right-reply-2"
       );
       if (autoSaveChat !== undefined) {
-        if (rigthreply1) {
+        if (rigthreply1 && episodeone ==="Flow1.13") {
           setrigthreply(true);
         }
-        if (rigthreply2) {
+        if (rigthreply2 && episodeone ==="Flow1.13") {
           setrigthreply2(true);
         }
         setReplyMessages(autoSaveChat);
