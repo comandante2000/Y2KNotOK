@@ -33,6 +33,7 @@ export default function Buttons({
               episodeone={episodeone}
               setEpisodeOne={setEpisodeOne}
               screen={screen}
+              SetVideo={ SetVideo}
             />
             <VoiceMailButton
               showScreen={showScreen}
@@ -50,6 +51,7 @@ export default function Buttons({
               color={active}
               press={press}
               episodeone={episodeone}
+              SetVideo={ SetVideo}
             />
             <ChatButton
               showScreen={showScreen}
@@ -60,6 +62,7 @@ export default function Buttons({
               setEpisodeOne={setEpisodeOne}
               openchat={openchat}
               setOpenchat={setOpenchat}
+              SetVideo={ SetVideo}
             />
             <MapButton
               showScreen={showScreen}
@@ -68,6 +71,7 @@ export default function Buttons({
               press={press}
               episodeone={episodeone}
               setEpisodeOne={setEpisodeOne}
+              SetVideo={ SetVideo}
             />
           </li>
         </div>

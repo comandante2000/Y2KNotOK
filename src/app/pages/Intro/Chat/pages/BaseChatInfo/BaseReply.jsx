@@ -200,11 +200,11 @@ export default function ChatReply({
               time: 1,
             },
           ]);
-        }, 2000);
+        }, 3000);
 
         setTimeout(function () {
           setrigthreply2(true);
-        }, 3000);
+        }, 6000);
 
         encryptStorage.removeItem(`chat-storage-timothee`);
         encryptStorage.setItem(`chat-storage-timothee`, [
