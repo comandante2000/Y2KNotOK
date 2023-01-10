@@ -9,6 +9,8 @@ export default function ChatReply({
   setOpenchat,
   setEpisodeOne,
   episodeone,
+  falseReplyCounter,
+  setFalseReplyCounter
 }) {
   const [replyMessages, setReplyMessages] = useState([]);
   const [rigthreply, setrigthreply] = useState(false);
@@ -22,7 +24,7 @@ export default function ChatReply({
   const [messagereplies, setMessageReplies] = useState(
     "You need to chill and just tell me where you are right now."
   );
-  const [falseReplyCounter, setFalseReplyCounter] = useState(1);
+ 
 
   let correctReplies = [
     {
@@ -62,23 +64,12 @@ export default function ChatReply({
   };
 
   const handleSubmit = (e) => {
-    // Counter state is incremented
-
-    setCounter(counter + 1);
+  
 
     // { for krista message Flow 1.7" },
 
     if (episodeone === "Flow1.7.1.1") {
       
-      // let truereplies = [
-      //   "red west control center",
-      //   "red west",
-      //   "control center",
-      //   "command center",
-      //   "red west command center",
-      //   "bunker",
-      // ];
-    
       let userMessage = message.toLowerCase();
       
       if ( userMessage.includes("red west control center") || userMessage.includes("red west") || userMessage.includes("control center") || userMessage.includes("command center") || userMessage.includes("red west command center") || userMessage.includes("bunker") ) {
@@ -149,7 +140,7 @@ export default function ChatReply({
             },
           ]);
           
-          if (episodeone === "Flow1.7.1.1" && counter >= 2) {
+          if (episodeone === "Flow1.7.1.1" && falseReplyCounter >= 2) {
             setTimeout(function () {
               setEpisodeOne("Flow1.8");
             }, 4000);
@@ -338,7 +329,7 @@ export default function ChatReply({
             onClick={openm ? handleSubmit : OpenBack}
           >
             {openm ? "Send" : "Back"}
-          </div>
+         </div>
           <div
             className={`${
               openm ? "unactive" : "btn-reply"

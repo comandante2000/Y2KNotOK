@@ -23,7 +23,7 @@ export default function Device({
   const [dtime, setTime] = useState("5:55 AM");
   const [audio, setAudio] = useState(false);
   const [openchat, setOpenchat] = useState(false);
-
+  const [falseReplyCounter, setFalseReplyCounter] = useState(1);
   let secondmusic = [
     "Flow1.8.1",
     "Flow1.9",
@@ -149,6 +149,8 @@ export default function Device({
               dtime={dtime}
               openchat={openchat}
               setOpenchat={setOpenchat}
+              falseReplyCounter={falseReplyCounter}
+               setFalseReplyCounter={setFalseReplyCounter}
             />
           )}
           {screen === "PhoneScreen" && <PhonePage dtime={dtime} />}

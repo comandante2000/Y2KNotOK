@@ -78,6 +78,8 @@ export default function ChatPage({
   dtime,
   openchat,
   setOpenchat,
+  falseReplyCounter,
+  setFalseReplyCounter,
 }) {
   const [hide, setHide] = useState(true);
   const [person, setPerson] = useState("");
@@ -95,7 +97,6 @@ export default function ChatPage({
     if (episodeone == "Flow1.10.1") {
       setEpisodeOne("Flow1.10.2");
     }
-    
   };
 
   useEffect(() => {
@@ -145,6 +146,8 @@ export default function ChatPage({
               episodeone={episodeone}
               person={person}
               chat={initChat}
+              falseReplyCounter={falseReplyCounter}
+              setFalseReplyCounter={setFalseReplyCounter}
             />
           ) : (
             <div className="container-message">
