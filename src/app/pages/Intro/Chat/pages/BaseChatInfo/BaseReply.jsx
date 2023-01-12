@@ -198,6 +198,7 @@ export default function ChatReply({
         setTimeout(function () {
           setrigthreply2(true);
           const audioElement = audioRef.current;
+          audioRef.current.currentTime = 0;
           audioElement.play();
         }, 6000);
 
