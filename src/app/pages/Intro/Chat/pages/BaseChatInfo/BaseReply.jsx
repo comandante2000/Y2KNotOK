@@ -10,7 +10,7 @@ export default function ChatReply({
   setEpisodeOne,
   episodeone,
   falseReplyCounter,
-  setFalseReplyCounter
+  setFalseReplyCounter,
 }) {
   const [replyMessages, setReplyMessages] = useState([]);
   const [rigthreply, setrigthreply] = useState(false);
@@ -24,7 +24,6 @@ export default function ChatReply({
   const [messagereplies, setMessageReplies] = useState(
     "You need to chill and just tell me where you are right now."
   );
- 
 
   let correctReplies = [
     {
@@ -34,7 +33,7 @@ export default function ChatReply({
     },
     {
       chatPerson: "Timothee HR",
-      flow: ["Flow1.10.1", "Flow1.12", "Flow1.11","Flow1.10.2"],
+      flow: ["Flow1.10.1", "Flow1.12", "Flow1.11", "Flow1.10.2"],
       reply: "yes",
     },
     { flow: "", reply: "Pilot Butte Substation" },
@@ -64,15 +63,19 @@ export default function ChatReply({
   };
 
   const handleSubmit = (e) => {
-  
-
     // { for krista message Flow 1.7" },
 
     if (episodeone === "Flow1.7.1.1") {
-      
       let userMessage = message.toLowerCase();
-      
-      if ( userMessage.includes("red west control center") || userMessage.includes("red west") || userMessage.includes("control center") || userMessage.includes("command center") || userMessage.includes("red west command center") || userMessage.includes("bunker") ) {
+
+      if (
+        userMessage.includes("red west control center") ||
+        userMessage.includes("red west") ||
+        userMessage.includes("control center") ||
+        userMessage.includes("command center") ||
+        userMessage.includes("red west command center") ||
+        userMessage.includes("bunker")
+      ) {
         setReplyMessages([...replyMessages, { person: "Me", chat: message }]);
         setTimeout(function () {
           setReplyMessages([
@@ -101,15 +104,15 @@ export default function ChatReply({
             }, 4000);
           }
         }, 2000);
-      }else{
+      } else {
         setFalseReplyCounter(falseReplyCounter + 1);
         setReplyMessages([...replyMessages, { person: "Me", chat: message }]);
-        
+
         setTimeout(function () {
           const audioElement = audioRef.current;
           audioElement.play();
-          
-          if(falseReplyCounter >= 2){
+
+          if (falseReplyCounter >= 2) {
             setReplyMessages([
               ...replyMessages,
               { person: "Me", chat: message },
@@ -118,7 +121,7 @@ export default function ChatReply({
                 chat: "Cool. I get it. Might be better if I don't know.",
               },
             ]);
-          }else{
+          } else {
             setReplyMessages([
               ...replyMessages,
               { person: "Me", chat: message },
@@ -128,7 +131,6 @@ export default function ChatReply({
               },
             ]);
           }
-          
 
           encryptStorage.removeItem(`chat-storage-${person.toLowerCase()}`);
           encryptStorage.setItem(`chat-storage-${person.toLowerCase()}`, [
@@ -139,13 +141,12 @@ export default function ChatReply({
               chat: messagereplies,
             },
           ]);
-          
+
           if (episodeone === "Flow1.7.1.1" && falseReplyCounter >= 2) {
             setTimeout(function () {
               setEpisodeOne("Flow1.8");
             }, 4000);
           }
-          
         }, 2000);
       }
       setmessage("");
@@ -154,7 +155,8 @@ export default function ChatReply({
     // { for Themothee message Flow 1.10" },
     // Yes: Yes, Yep, Yup, Sure, You Bet, OK, K, Okay, affirmative,ya, yeah
     if (
-      episodeone === "Flow1.10.1" ||episodeone === "Flow1.10.2"||
+      episodeone === "Flow1.10.1" ||
+      episodeone === "Flow1.10.2" ||
       episodeone === "Flow1.12" ||
       episodeone == "Flow1.11"
     ) {
@@ -178,7 +180,7 @@ export default function ChatReply({
         setTimeout(function () {
           const audioElement = audioRef.current;
           audioElement.play();
-          if (episodeone === "Flow1.10.1"||episodeone === "Flow1.10.2") {
+          if (episodeone === "Flow1.10.1" || episodeone === "Flow1.10.2") {
             setEpisodeOne("Flow1.11");
           }
           setrigthreply(true);
@@ -194,9 +196,9 @@ export default function ChatReply({
         }, 3000);
 
         setTimeout(function () {
+          setrigthreply2(true);
           const audioElement = audioRef.current;
           audioElement.play();
-          setrigthreply2(true);
         }, 6000);
 
         encryptStorage.removeItem(`chat-storage-timothee`);
@@ -245,13 +247,13 @@ export default function ChatReply({
   }, [handleSubmit]);
 
   useEffect(() => {
-    if (person === "Krista" ) {
+    if (person === "Krista") {
       let autoSaveChat = encryptStorage.getItem("chat-storage-krista");
       if (autoSaveChat !== undefined) {
         setReplyMessages(autoSaveChat);
       }
     }
-    if (person === "Timothee HR" ) {
+    if (person === "Timothee HR") {
       let autoSaveChat = encryptStorage.getItem("chat-storage-timothee");
       let rigthreply1 = encryptStorage.getItem(
         "chat-storage-timothee-right-reply"
@@ -260,10 +262,10 @@ export default function ChatReply({
         "chat-storage-timothee-right-reply-2"
       );
       if (autoSaveChat !== undefined) {
-        if (rigthreply1 && episodeone ==="Flow1.13") {
+        if (rigthreply1 && episodeone === "Flow1.13") {
           setrigthreply(true);
         }
-        if (rigthreply2 && episodeone ==="Flow1.13") {
+        if (rigthreply2 && episodeone === "Flow1.13") {
           setrigthreply2(true);
         }
         setReplyMessages(autoSaveChat);
@@ -329,7 +331,7 @@ export default function ChatReply({
             onClick={openm ? handleSubmit : OpenBack}
           >
             {openm ? "Send" : "Back"}
-         </div>
+          </div>
           <div
             className={`${
               openm ? "unactive" : "btn-reply"
@@ -352,7 +354,7 @@ export default function ChatReply({
       </div>
       <audio
         ref={audioRef}
-        src="https://images.stinkyfruit.com/New_Message-option2.wav"
+        src="https://images.stinkyfruit.com/New_Message-option2.mp3"
       />
     </div>
   );

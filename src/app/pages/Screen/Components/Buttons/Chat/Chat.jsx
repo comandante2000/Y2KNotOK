@@ -61,7 +61,7 @@ export default function ChatButton({
       <audio
         // loop={chatpermission.includes(episodeone)?true:false}
         ref={audioRefchat}
-        src="https://images.stinkyfruit.com/New_Message-option2.wav"
+        src="https://images.stinkyfruit.com/New_Message-option2.mp3"
       />
     </div>
   );

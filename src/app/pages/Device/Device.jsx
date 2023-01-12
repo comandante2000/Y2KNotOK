@@ -56,9 +56,7 @@ export default function Device({
     if (secondmusic.includes(episodeone)) {
       setAudio(
         true
-        // "https://images.stinkyfruit.com/audio_bed_ambience_mp3_v2_mom_flow.wav"
       );
-      console.log("happynewyear");
     }
   });
 
@@ -73,41 +71,6 @@ export default function Device({
       setpress(8);
     }
   });
-  //cookies
-
-  // function handleClick() { 
-  //   if (episodeone === "Flow1.11") {
-  //     setTime("6:35 AM");
-  //     setTimeout(function () {
-  //       SetVideo("Episode2");
-  //     }, 20000);
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   // console.log("FLOW: ", episodeone);
-  //   // if (episodeone === "Flow1.11") {
-
-  //   //   function handleClick(event) {
-  //   //     if (episodeone === "Flow1.11") {
-  //   //       setEpisodeOne("Flow1.12");
-  //   //       setTime("6:35 AM");
-  //   //       setTimeout(function () {
-  //   //         console.log("fdghdgdfg", episodeone);
-  //   //         SetVideo("Episode2");
-  //   //         setEpisodeOne("Flow1.12");
-  //   //       }, 5000);
-  //   //       console.log('VIDEO PLAYED: ', episodeone);
-  //   //     } else {
-  //   //       alert("STOP");
-  //   //     }
-  //   //   }
-  //   // }
-  //   document.addEventListener("click", handleClick());
-  // }, [episodeone]);
-
-  console.log("flow", episodeone);
-
   return (
     <div id="pda-device">
       <div
@@ -154,7 +117,7 @@ export default function Device({
             />
           )}
           {screen === "PhoneScreen" && <PhonePage dtime={dtime} />}
-          {/* {screen === "Episode2" && <OutroVideo />} */}
+         
           <Buttons
             showScreen={showScreen}
             press={press}
@@ -181,12 +144,6 @@ export default function Device({
           type="audio/mp3"
         />
       </audio>
-      {/* {audio?<audio autoPlay loop>
-        <source src="https://images.stinkyfruit.com/audio_bed_ambience_mp3_v2_mom_flow.mp3" type="audio/mp3"/>
-      </audio>:
-      <audio autoPlay loop>
-        <source src="https://images.stinkyfruit.com/audio_bed_ambience_mp3_v2.mp3" type="audio/mp3"/>
-      </audio>} */}
     </div>
   );
 }
