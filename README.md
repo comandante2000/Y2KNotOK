@@ -1,1 +1,1 @@
-# Y2knotok.com
+# Y2knotok
